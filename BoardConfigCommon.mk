@@ -25,7 +25,11 @@ AB_OTA_PARTITIONS += \
     vendor_boot \
     vendor_dlkm
 
-# Architecture
+TARGET_OTA_ADDITIONAL_OPTIONS := \
+    --enable_lz4diff=true \
+    --enable_vabc_xor=true
+
+# Primary (64-bit)
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv9-a
 TARGET_CPU_ABI := arm64-v8a
