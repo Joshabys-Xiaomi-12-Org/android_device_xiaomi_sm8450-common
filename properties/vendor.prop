@@ -82,6 +82,7 @@ ro.crypto.volume.options=::v2
 dalvik.vm.dex2oat64.enabled=true
 
 # Display
+ro.config.avoid_gfx_accel=true
 vendor.display.comp_mask=0
 vendor.display.disable_3d_adaptive_tm=0
 vendor.display.disable_excl_rect=0
