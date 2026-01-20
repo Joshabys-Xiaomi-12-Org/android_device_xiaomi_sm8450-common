@@ -25,7 +25,7 @@ import android.content.SharedPreferences;
 public class PowertoolBootReceiver extends BroadcastReceiver {
 
     private static final String GPU_DEFAULT_MIN = "220000000";
-    private static final String GPU_DEFAULT_MAX = "580000000";
+    private static final String GPU_DEFAULT_MAX = "821000000";
 
     private static final String CPU_LITTLE_DEFAULT_MIN = "300000";
     private static final String CPU_LITTLE_DEFAULT_MAX = "1804800";
