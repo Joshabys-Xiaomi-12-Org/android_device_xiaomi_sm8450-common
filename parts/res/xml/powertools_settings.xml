@@ -1,7 +1,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- Power Profile Section -->
-    <PreferenceCategory
+    <!-- <PreferenceCategory
         android:key="power_profile_category"
         android:title="@string/powerprofile_tile_label">
 
@@ -18,7 +18,7 @@
             android:summary="@string/power_profile_footer_summary"
             android:selectable="false" />
 
-    </PreferenceCategory>
+    </PreferenceCategory> -->
 
     <!-- GPU Optimizer Section -->
     <SwitchPreferenceCompat
