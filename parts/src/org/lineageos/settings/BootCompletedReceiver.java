@@ -34,11 +34,8 @@ import android.view.Display.HdrCapabilities;
 
 import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
-<<<<<<< HEAD
 import org.lineageos.settings.thermal.ThermalTileService;
 import org.lineageos.settings.powertools.PowerProfileTileService;
-=======
->>>>>>> bf1495c (sm8450-common: Parts: thermal-profiles rewrite in kotlin)
 
 public class BootCompletedReceiver extends BroadcastReceiver {
     private static final boolean DEBUG = false;
@@ -83,10 +80,11 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         DozeUtils.onBootCompleted(context);
 
         // Start Thermal Management Services
-        ThermalUtils.startService(context);
+        ThermalUtils.getInstance(context).startService();
 
         // Start Power Profile Tile Service
         context.startServiceAsUser(new Intent(context, PowerProfileTileService.class), UserHandle.CURRENT);
+    
     }
 
     private void overrideHdrTypes(Context context) {
