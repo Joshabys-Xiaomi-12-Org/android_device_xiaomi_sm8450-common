@@ -59,8 +59,8 @@ public class PowerProfileUtil {
     public static final int MODE_UNKNOWN = 4;
 
     private static final int POWERPROFILE_BALANCE = 0;
-    private static final int POWERPROFILE_GAMING = 10;
-    private static final int POWERPROFILE_PERFORMANCE = 23;
+    private static final int POWERPROFILE_GAMING = 13;
+    private static final int POWERPROFILE_PERFORMANCE = 20;
     private static final int POWERPROFILE_BATTERY_SAVER = 3;
 
     private Context mContext;
