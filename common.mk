@@ -45,7 +45,7 @@ PRODUCT_PACKAGES += \
     otapreopt_script
 
 # API
-PRODUCT_SHIPPING_API_LEVEL := 32
+PRODUCT_SHIPPING_API_LEVEL := 33
 BOARD_SHIPPING_API_LEVEL := 31
 
 # Audio
@@ -533,3 +533,9 @@ SYSTEMUI_OPTIMIZE_JAVA := true
 
 # Reduce system server verbosity
 PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
+PRODUCT_OTHER_JAVA_DEBUG_INFO := false
+
+# Strip the local variable table and the local variable type table to reduce
+# the size of the system image. This has no bearing on stack traces, but will
+# leave less information available via JDWP.
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
