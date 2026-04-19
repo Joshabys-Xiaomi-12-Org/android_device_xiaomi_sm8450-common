@@ -236,3 +236,6 @@ BOARD_SYSTEM_EXTIMAGE_EROFS_COMPRESS_HINTS := $(COMMON_PATH)/configs/erofs_compr
 BOARD_VENDORIMAGE_EROFS_COMPRESS_HINTS := $(COMMON_PATH)/configs/erofs_compress_hints.txt
 BOARD_PRODUCTIMAGE_EROFS_COMPRESS_HINTS := $(COMMON_PATH)/configs/erofs_compress_hints.txt
 BOARD_ODMIMAGE_EROFS_COMPRESS_HINTS := $(COMMON_PATH)/configs/erofs_compress_hints.txt
+
+# SurfaceFlinger
+TARGET_USE_AOSP_SURFACEFLINGER := true
