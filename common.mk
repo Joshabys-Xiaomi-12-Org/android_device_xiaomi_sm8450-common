@@ -553,3 +553,6 @@ USE_DEX2OAT_DEBUG := false
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings \
     SystemUI
+
+# SurfaceFlinger
+TARGET_USE_AOSP_SURFACEFLINGER := true
