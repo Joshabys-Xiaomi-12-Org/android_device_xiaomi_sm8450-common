@@ -143,6 +143,7 @@ debug.sf.earlyGl.sf.duration.60=15666666
 debug.sf.earlyGl.sf.duration.90=16111111
 debug.sf.earlyGl.sf.duration=15666666
 debug.sf.layer_caching_active_layer_timeout_ms=1000
+debug.sf.enable_transaction_tracing=false
 debug.sf.enable_gl_backpressure=1
 debug.sf.enable_egl_image_tracker=0
 debug.sf.enable_hwc_vds=1
