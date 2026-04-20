@@ -239,3 +239,7 @@ BOARD_ODMIMAGE_EROFS_COMPRESS_HINTS := $(COMMON_PATH)/configs/erofs_compress_hin
 
 # SurfaceFlinger
 TARGET_USE_AOSP_SURFACEFLINGER := true
+
+# Malloc
+MALLOC_SVELTE := true
+MALLOC_LOW_MEMORY := true
