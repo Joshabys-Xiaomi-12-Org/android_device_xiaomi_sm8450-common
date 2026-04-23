@@ -243,3 +243,8 @@ TARGET_USE_AOSP_SURFACEFLINGER := true
 # Malloc
 MALLOC_SVELTE := true
 MALLOC_LOW_MEMORY := true
+
+# Graphics: HWC and Gralloc
+TARGET_USES_HWC2 := true
+TARGET_USES_HWC2_4 := true 
+TARGET_USES_GRALLOC4 := true
