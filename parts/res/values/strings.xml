@@ -103,4 +103,9 @@
     
     <string name="hypercharge_description_title">About HyperCharge Control</string>
     <string name="hypercharge_description_summary">HyperCharge (120W) provides extreme charging speeds but generates significant heat, which can accelerate battery wear and reduce long-term lifespan. \n\n• ON (120W): Service is stopped — the kernel controls charging at full factory speed.\n• ON (other speed): Service enforces your selected speed limit.\n• OFF: Service runs and enforces a 33W protection limit to reduce battery wear and heat.\n\nNote: This service only intervenes when a Xiaomi HyperCharge power brick is detected.</string>
+    <!-- Aux Camera -->
+    <string name="aux_camera_title">Restrict Auxiliary Cameras</string>
+    <string name="aux_camera_summary">Hide auxiliary camera lenses from selected apps</string>
+    <string name="aux_camera_enable">Enable restrictions</string>
+    <string name="aux_camera_empty">No apps found</string>
 </resources>

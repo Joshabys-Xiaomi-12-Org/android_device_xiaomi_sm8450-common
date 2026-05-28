@@ -34,6 +34,7 @@ import android.view.Display.HdrCapabilities;
 import android.content.SharedPreferences;
 import androidx.preference.PreferenceManager;
 
+import org.lineageos.settings.auxcamera.AuxCameraUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
 import org.lineageos.settings.powertools.PowerProfileTileService;
 import org.lineageos.settings.hypercharge.HyperChargeService;
@@ -104,6 +105,8 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         // Start Power Profile Tile Service
         context.startServiceAsUser(new Intent(context, PowerProfileTileService.class), UserHandle.CURRENT);
     
+        // Restore aux camera restrictions
+        AuxCameraUtils.INSTANCE.restore(context);
     }
 
     private void overrideHdrTypes(Context context) {
