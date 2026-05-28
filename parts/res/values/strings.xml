@@ -85,4 +85,10 @@
     <!-- GPU Strings -->
     <string name="gpu_min_frequency">GPU Minimum Frequency</string>
     <string name="gpu_max_frequency">GPU Maximum Frequency</string>
+
+    <!-- Aux Camera -->
+    <string name="aux_camera_title">Restrict Auxiliary Cameras</string>
+    <string name="aux_camera_summary">Hide auxiliary camera lenses from selected apps</string>
+    <string name="aux_camera_enable">Enable restrictions</string>
+    <string name="aux_camera_empty">No apps found</string>
 </resources>
