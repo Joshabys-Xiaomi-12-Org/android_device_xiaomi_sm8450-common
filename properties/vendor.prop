@@ -260,3 +260,7 @@ persist.vendor.sensors.debug.hal=0
 pm.dexopt.install=speed-profile
 pm.dexopt.bg-dexopt=speed
 pm.dexopt.boot=verify
+
+# JNI/Kernel Optimization
+ro.kernel.android.checkjni=0
+ro.kernel.checkjni=0
