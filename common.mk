@@ -542,9 +542,14 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 
 # ART - PREOPT
+# Optimize System Server performance using speed-profile filter
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 # Enable DM file pre-opting to reduce first boot time
 PRODUCT_DEX_PREOPT_GENERATE_DM_FILES := true
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
+PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
+PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
+PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/boot/boot-image-profile.txt
 # Do not generate libartd.
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 USE_DEX2OAT_DEBUG := false
@@ -561,6 +566,3 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.arm64.memtag.app.com.google.android.bluetooth=off \
     persist.arm64.memtag.app.com.android.nfc=off \
     persist.arm64.memtag.process.system_server=off
-
-# Optimize System Server performance using speed-profile filter
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
