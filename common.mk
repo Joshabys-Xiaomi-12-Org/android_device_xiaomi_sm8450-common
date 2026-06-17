@@ -557,7 +557,12 @@ USE_DEX2OAT_DEBUG := false
 # Preopt critical applications
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings \
-    SystemUI
+    SettingsProvider \
+    SystemUI \
+    Launcher3 \
+    PixelLauncher \
+    NexusLauncherRelease \
+    FrameworkResAndroid
 
 # Disable async MTE on a few process
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
