@@ -12,7 +12,7 @@ import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.os.UserHandle
 import android.provider.MediaStore
-import android.telecom.DefaultDialerManager.getDefaultDialerApplication
+import android.telecom.TelecomManager
 import androidx.annotation.StringRes
 import androidx.preference.PreferenceManager
 import org.lineageos.settings.R
