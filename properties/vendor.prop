@@ -271,3 +271,6 @@ pm.dexopt.boot=verify
 # JNI/Kernel Optimization
 ro.kernel.android.checkjni=0
 ro.kernel.checkjni=0
+
+# Low RAM
+ro.config.low_ram=false
