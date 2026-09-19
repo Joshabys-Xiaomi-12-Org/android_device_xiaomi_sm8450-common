@@ -34,3 +34,7 @@ type sysfs_battery_custom, sysfs_type, fs_type;
 
 # Core Control
 type vendor_sysfs_corecontrol, fs_type, sysfs_type;
+
+# Walt
+type proc_walt, fs_type, proc_type;
+
