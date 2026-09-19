@@ -71,6 +71,8 @@ camera.disable_zsl_mode=true
 persist.vendor.vcb.enable=false
 ro.camera.enableCamera1MaxZsl=1
 ro.hardware.camera=xiaomi
+persist.vendor.camera.logLevel=0
+persist.vendor.camera.sensor=0
 
 # Chipset
 ro.soc.manufacturer=QTI
@@ -263,6 +265,7 @@ wifi.aware.interface=wifi-aware0
 ro.sf.blurs_are_expensive=1
 
 # Logging
+log.tag.libbinder.BackendUnifiedServiceManager=S
 persist.vendor.sensors.debug.hal=0
 
 # DexOPT Optimizer
