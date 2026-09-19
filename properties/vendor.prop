@@ -76,6 +76,8 @@ persist.vendor.camera.logInfoMask=false
 persist.vendor.vcb.enable=false
 ro.camera.enableCamera1MaxZsl=1
 ro.hardware.camera=xiaomi
+persist.vendor.camera.logLevel=0
+persist.vendor.camera.sensor=0
 
 # Chipset
 ro.soc.manufacturer=QTI
@@ -254,6 +256,7 @@ log.tag.SatelliteController=S
 log.tag.vendor.qti.hardware.iop@2.0-service=S
 log.tag.ContextImpl=S
 log.tag.libbinder.ServiceManagerCppClient=S
+log.tag.libbinder.BackendUnifiedServiceManager=S
 persist.vendor.sensors.debug.hal=0
 
 # DexOPT Optimizer
