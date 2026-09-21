@@ -141,6 +141,74 @@ on boot
     chmod 0664 /sys/devices/system/cpu/cpu6/online
     chmod 0664 /sys/devices/system/cpu/cpu7/online
 
+    # Cache L3
+    chown system system /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/be_stall_floor
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/be_stall_floor
+    chown system system /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/fe_stall_floor
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/fe_stall_floor
+    chown system system /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/freq_scale_limit_mhz
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/freq_scale_limit_mhz
+    chown system system /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/freq_scale_pct
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/freq_scale_pct
+    chown system system /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/ipm_ceil
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/ipm_ceil
+    chown system system /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/max_freq
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/max_freq
+    chown system system /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/min_freq
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/min_freq
+    chown system system /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/spm_drop_pct
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/spm_drop_pct
+    chown system system /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/spm_freq_map
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/spm_freq_map
+    chown system system /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/spm_thres
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/spm_thres
+    chown system system /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/spm_window_size
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/spm_window_size
+    chown system system /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/wb_filter_ipm
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/wb_filter_ipm
+    chown system system /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/wb_pct_thres
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/wb_pct_thres
+
+    # BWMON DDR
+    chown system system /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/ab_scale
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/ab_scale
+    chown system system /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/bw_step
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/bw_step
+    chown system system /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/decay_rate
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/decay_rate
+    chown system system /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/down_count
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/down_count
+    chown system system /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/down_thres
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/down_thres
+    chown system system /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/guard_band_mbps
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/guard_band_mbps
+    chown system system /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/hist_memory
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/hist_memory
+    chown system system /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/hyst_length
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/hyst_length
+    chown system system /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/hyst_trigger_count
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/hyst_trigger_count
+    chown system system /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/idle_mbps
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/idle_mbps
+    chown system system /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/io_percent
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/io_percent
+    chown system system /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/max_freq
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/max_freq
+    chown system system /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/mbps_zones
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/mbps_zones
+    chown system system /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/min_freq
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/min_freq
+    chown system system /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/sample_ms
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/sample_ms
+    chown system system /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/throttle_adj
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/throttle_adj
+    chown system system /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/up_scale
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/up_scale
+    chown system system /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/up_thres
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/up_thres
+    chown system system /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/window_ms
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/window_ms
+
 on post-fs-data
     # Create folder of camera
     mkdir /data/vendor/camera/offlinelog 0777 cameraserver audio
