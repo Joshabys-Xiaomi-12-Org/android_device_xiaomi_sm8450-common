@@ -153,7 +153,7 @@ private constructor(
         val prefix: String,
         @StringRes val label: Int,
     ) {
-        BENCHMARK(0, "10", "thermal.benchmark=", R.string.thermal_benchmark),
+        BENCHMARK(0, "20", "thermal.benchmark=", R.string.thermal_benchmark),
         BROWSER(1, "11", "thermal.browser=", R.string.thermal_browser),
         CAMERA(2, "12", "thermal.camera=", R.string.thermal_camera),
         DIALER(3, "8", "thermal.dialer=", R.string.thermal_dialer),
