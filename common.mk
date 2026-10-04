@@ -342,15 +342,11 @@ PRODUCT_PACKAGES += \
     WifiResCommon
 
 PRODUCT_PACKAGES += \
-    DialerResXiaomi \
     FrameworksResTarget \
     FrameworksResXiaomi \
     LineageResXiaomi \
     SettingsProviderResXiaomi \
-    SettingsResXiaomi \
-    WifiResTarget \
-    WifiResTarget_cape \
-    WifiResTarget_spf
+    SettingsResXiaomi
 
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
