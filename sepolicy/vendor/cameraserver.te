@@ -1,0 +1,3 @@
+# Torch strength (libcameraservice_extension)
+allow cameraserver sysfs_led_torch:dir search;
+allow cameraserver sysfs_led_torch:file rw_file_perms;

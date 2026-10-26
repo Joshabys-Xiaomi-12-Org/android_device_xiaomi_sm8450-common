@@ -129,6 +129,10 @@ on boot
     chown system system /sys/class/qcom-battery/reverse_chg_mode
     chmod 0664 /sys/class/qcom-battery/reverse_chg_mode
 
+    # Torch strength: the camera service retargets the torch current in mA
+    chown system camera /sys/class/leds/led:torch_0/brightness
+    chmod 0664 /sys/class/leds/led:torch_0/brightness
+
     # Allow Core Control
     chown system system /sys/devices/system/cpu/cpu0/online
     chown system system /sys/devices/system/cpu/cpu1/online
