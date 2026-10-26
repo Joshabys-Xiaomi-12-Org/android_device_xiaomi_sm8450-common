@@ -261,4 +261,18 @@
     <string name="aux_camera_enable">Ограничить дополнительные камеры</string>
     <string name="aux_camera_note">Выбранные приложения видят только основную и фронтальную камеры. Это исправляет приложения, которые открывают не тот объектив. После изменения перезапустите приложение.</string>
     <string name="aux_camera_limit_reached">Выбрано слишком много приложений. Сначала отключите другое.</string>
+
+    <!-- zeus -->
+    <string name="charge_boost_title">Ускорение быстрой зарядки</string>
+    <string name="charge_boost_summary">Более быстрая проводная зарядка, как в HyperOS. Во время зарядки телефон может сильнее нагреваться.</string>
+    <string name="reverse_charge_title">Обратная зарядка</string>
+    <string name="reverse_charge_switch">Обратная беспроводная зарядка</string>
+    <string name="reverse_charge_limit_title">Остановить на уровне заряда</string>
+    <string name="reverse_charge_note">Положите другое устройство на заднюю панель телефона. Обратная зарядка останавливается, когда заряд падает ниже выбранного уровня или когда этот телефон начинает заряжаться без проводов. При подключённом проводном зарядном устройстве она продолжает работать.</string>
+    <string name="reverse_charge_card_summary">Выкл., предел %1$d %%</string>
+    <string name="reverse_charge_blocked_wireless">Недоступно, пока этот телефон заряжается без проводов</string>
+    <string name="reverse_charge_blocked_low">Заряд ниже %1$d %%</string>
+    <string name="reverse_charge_stopped_title">Обратная зарядка остановлена</string>
+    <string name="reverse_charge_stopped_limit">Заряд упал ниже %1$d %%.</string>
+    <string name="reverse_charge_stopped_wireless">Этот телефон начал заряжаться без проводов.</string>
 </resources>

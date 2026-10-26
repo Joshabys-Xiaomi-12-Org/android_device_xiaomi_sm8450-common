@@ -129,6 +129,10 @@
             android:name=".hypercharge.HyperChargeService"
             android:exported="false" />
 
+        <service
+            android:name=".charge.ChargeService"
+            android:exported="false" />
+
         <!-- Quick settings tiles -->
         <service
             android:name=".display.FpsInfoTileService"

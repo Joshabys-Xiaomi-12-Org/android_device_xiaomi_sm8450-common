@@ -261,4 +261,18 @@
     <string name="aux_camera_enable">Restringir cámaras auxiliares</string>
     <string name="aux_camera_note">Las apps seleccionadas solo ven la cámara principal y la frontal, lo que arregla apps que eligen la lente equivocada. Vuelve a abrir la app tras cambiarlo.</string>
     <string name="aux_camera_limit_reached">Demasiadas apps seleccionadas. Desactiva otra primero.</string>
+
+    <!-- zeus -->
+    <string name="charge_boost_title">Impulso de carga rápida</string>
+    <string name="charge_boost_summary">Carga por cable más rápida, como en HyperOS. El teléfono puede calentarse más al cargar.</string>
+    <string name="reverse_charge_title">Carga inversa</string>
+    <string name="reverse_charge_switch">Carga inalámbrica inversa</string>
+    <string name="reverse_charge_limit_title">Detener en este nivel de batería</string>
+    <string name="reverse_charge_note">Coloca el otro dispositivo en la parte trasera del teléfono. La carga inversa se detiene cuando la batería baja del nivel elegido o cuando este teléfono empieza a cargarse de forma inalámbrica. Con un cargador por cable conectado, sigue activa.</string>
+    <string name="reverse_charge_card_summary">Desactivada, límite %1$d %%</string>
+    <string name="reverse_charge_blocked_wireless">No disponible mientras este teléfono se carga de forma inalámbrica</string>
+    <string name="reverse_charge_blocked_low">La batería está por debajo del %1$d %%</string>
+    <string name="reverse_charge_stopped_title">Carga inversa detenida</string>
+    <string name="reverse_charge_stopped_limit">La batería bajó del %1$d %%.</string>
+    <string name="reverse_charge_stopped_wireless">Este teléfono empezó a cargarse de forma inalámbrica.</string>
 </resources>

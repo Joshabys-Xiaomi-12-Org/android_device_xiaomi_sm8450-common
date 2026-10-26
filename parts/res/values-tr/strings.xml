@@ -261,4 +261,18 @@
     <string name="aux_camera_enable">Yardımcı kameraları kısıtla</string>
     <string name="aux_camera_note">Seçilen uygulamalar yalnızca ana ve ön kamerayı görür; yanlış lensi açan uygulamalar bununla düzelir. Değişiklikten sonra uygulamayı yeniden açın.</string>
     <string name="aux_camera_limit_reached">Çok fazla uygulama seçildi. Önce başka birini kapatın.</string>
+
+    <!-- zeus -->
+    <string name="charge_boost_title">Hızlı şarj takviyesi</string>
+    <string name="charge_boost_summary">HyperOS\'taki gibi daha hızlı kablolu şarj. Şarj sırasında telefon daha çok ısınabilir.</string>
+    <string name="reverse_charge_title">Ters şarj</string>
+    <string name="reverse_charge_switch">Ters kablosuz şarj</string>
+    <string name="reverse_charge_limit_title">Bu pil seviyesinde durdur</string>
+    <string name="reverse_charge_note">Diğer cihazı telefonun arkasına koy. Pil seçilen seviyenin altına inince ya da bu telefon kablosuz şarj olmaya başlayınca ters şarj durur. Kablolu şarj takılıyken çalışmaya devam eder.</string>
+    <string name="reverse_charge_card_summary">Kapalı, limit %%%1$d</string>
+    <string name="reverse_charge_blocked_wireless">Bu telefon kablosuz şarj olurken kullanılamaz</string>
+    <string name="reverse_charge_blocked_low">Pil %%%1$d seviyesinin altında</string>
+    <string name="reverse_charge_stopped_title">Ters şarj durdu</string>
+    <string name="reverse_charge_stopped_limit">Pil %%%1$d seviyesinin altına indi.</string>
+    <string name="reverse_charge_stopped_wireless">Bu telefon kablosuz şarj olmaya başladı.</string>
 </resources>

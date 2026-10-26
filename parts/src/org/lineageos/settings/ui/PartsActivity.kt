@@ -44,6 +44,7 @@ import org.lineageos.settings.ui.screens.KernelManagerScreen
 import org.lineageos.settings.ui.screens.PowerProfileScreen
 import org.lineageos.settings.ui.screens.RefreshRateScreen
 import org.lineageos.settings.ui.screens.ResolutionScreen
+import org.lineageos.settings.ui.screens.ReverseChargeScreen
 import org.lineageos.settings.ui.screens.SaturationScreen
 import org.lineageos.settings.ui.screens.SystemResolutionScreen
 import org.lineageos.settings.ui.screens.ThermalScreen
@@ -66,6 +67,7 @@ enum class Route(val key: String) {
     GPU_MANAGER("gpu_manager"),
     CORE_CONTROL("core_control"),
     HYPERCHARGE("hypercharge"),
+    REVERSE_CHARGE(PartsActivity.ROUTE_REVERSE_CHARGE),
     ZRAM("zram"),
     CLEAR_SPEAKER("clear_speaker"),
     AUX_CAMERA("aux_camera"),
@@ -86,6 +88,7 @@ class PartsActivity : ComponentActivity() {
         const val ROUTE_THERMAL = "thermal"
         const val ROUTE_SATURATION = "saturation"
         const val ROUTE_POWER_PROFILE = "power_profile"
+        const val ROUTE_REVERSE_CHARGE = "reverse_charge"
 
         /** Opens the dashboard directly on [route]; used by the QS tiles. */
         @JvmStatic
@@ -174,6 +177,7 @@ private fun PartsApp(pendingRoute: String?, onRouteConsumed: () -> Unit) {
                 Route.GPU_MANAGER -> GpuManagerScreen(onBack)
                 Route.CORE_CONTROL -> CoreControlScreen(onBack)
                 Route.HYPERCHARGE -> HyperChargeScreen(onBack)
+                Route.REVERSE_CHARGE -> ReverseChargeScreen(onBack)
                 Route.ZRAM -> ZramScreen(onBack)
                 Route.CLEAR_SPEAKER -> ClearSpeakerScreen(onBack)
                 Route.AUX_CAMERA -> AuxCameraScreen(onBack)

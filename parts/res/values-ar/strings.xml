@@ -261,4 +261,18 @@
     <string name="aux_camera_enable">تقييد الكاميرات الإضافية</string>
     <string name="aux_camera_note">ترى التطبيقات المحددة الكاميرا الرئيسية والأمامية فقط، وهذا يصلح التطبيقات التي تختار العدسة الخطأ. أعد فتح التطبيق بعد التغيير.</string>
     <string name="aux_camera_limit_reached">تم تحديد تطبيقات كثيرة جدًا. أوقف تطبيقًا آخر أولًا.</string>
+
+    <!-- zeus -->
+    <string name="charge_boost_title">تعزيز الشحن السريع</string>
+    <string name="charge_boost_summary">شحن سلكي أسرع كما في HyperOS. قد يسخن الهاتف أكثر أثناء الشحن.</string>
+    <string name="reverse_charge_title">الشحن العكسي</string>
+    <string name="reverse_charge_switch">الشحن اللاسلكي العكسي</string>
+    <string name="reverse_charge_limit_title">الإيقاف عند مستوى البطارية</string>
+    <string name="reverse_charge_note">ضع الجهاز الآخر على ظهر الهاتف. يتوقف الشحن العكسي عندما تنخفض البطارية عن المستوى المحدد أو عندما يبدأ هذا الهاتف بالشحن اللاسلكي. ويستمر في العمل عند توصيل شاحن سلكي.</string>
+    <string name="reverse_charge_card_summary">متوقف، الحد %1$d %%</string>
+    <string name="reverse_charge_blocked_wireless">غير متاح أثناء شحن هذا الهاتف لاسلكيًا</string>
+    <string name="reverse_charge_blocked_low">البطارية أقل من %1$d %%</string>
+    <string name="reverse_charge_stopped_title">توقف الشحن العكسي</string>
+    <string name="reverse_charge_stopped_limit">انخفضت البطارية عن %1$d %%.</string>
+    <string name="reverse_charge_stopped_wireless">بدأ هذا الهاتف بالشحن اللاسلكي.</string>
 </resources>

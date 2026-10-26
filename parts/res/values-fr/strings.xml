@@ -261,4 +261,18 @@
     <string name="aux_camera_enable">Restreindre les caméras auxiliaires</string>
     <string name="aux_camera_note">Les applis sélectionnées ne voient que la caméra principale et la caméra avant, ce qui corrige celles qui choisissent le mauvais objectif. Rouvrez l\'appli après un changement.</string>
     <string name="aux_camera_limit_reached">Trop d\'applis sélectionnées. Désactivez-en une autre d\'abord.</string>
+
+    <!-- zeus -->
+    <string name="charge_boost_title">Boost de charge rapide</string>
+    <string name="charge_boost_summary">Charge filaire plus rapide, comme sous HyperOS. Le téléphone peut chauffer davantage pendant la charge.</string>
+    <string name="reverse_charge_title">Recharge inversée</string>
+    <string name="reverse_charge_switch">Recharge sans fil inversée</string>
+    <string name="reverse_charge_limit_title">Arrêter à ce niveau de batterie</string>
+    <string name="reverse_charge_note">Posez l\'autre appareil au dos du téléphone. La recharge inversée s\'arrête quand la batterie passe sous le niveau choisi ou quand ce téléphone commence à se recharger sans fil. Avec un chargeur filaire branché, elle continue.</string>
+    <string name="reverse_charge_card_summary">Désactivée, limite %1$d %%</string>
+    <string name="reverse_charge_blocked_wireless">Indisponible pendant la recharge sans fil de ce téléphone</string>
+    <string name="reverse_charge_blocked_low">La batterie est sous %1$d %%</string>
+    <string name="reverse_charge_stopped_title">Recharge inversée arrêtée</string>
+    <string name="reverse_charge_stopped_limit">La batterie est passée sous %1$d %%.</string>
+    <string name="reverse_charge_stopped_wireless">Ce téléphone a commencé à se recharger sans fil.</string>
 </resources>

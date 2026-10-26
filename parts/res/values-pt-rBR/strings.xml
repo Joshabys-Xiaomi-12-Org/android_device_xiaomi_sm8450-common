@@ -261,4 +261,18 @@
     <string name="aux_camera_enable">Restringir câmeras auxiliares</string>
     <string name="aux_camera_note">Os apps selecionados veem só a câmera principal e a frontal, o que corrige apps que escolhem a lente errada. Abra o app de novo depois de mudar.</string>
     <string name="aux_camera_limit_reached">Apps demais selecionados. Desative outro primeiro.</string>
+
+    <!-- zeus -->
+    <string name="charge_boost_title">Impulso de carga rápida</string>
+    <string name="charge_boost_summary">Carga com fio mais rápida, como no HyperOS. O telefone pode esquentar mais ao carregar.</string>
+    <string name="reverse_charge_title">Carregamento reverso</string>
+    <string name="reverse_charge_switch">Carregamento sem fio reverso</string>
+    <string name="reverse_charge_limit_title">Parar neste nível de bateria</string>
+    <string name="reverse_charge_note">Coloque o outro dispositivo na traseira do telefone. O carregamento reverso para quando a bateria fica abaixo do nível escolhido ou quando este telefone começa a carregar sem fio. Com um carregador com fio conectado, ele continua ativo.</string>
+    <string name="reverse_charge_card_summary">Desativado, limite %1$d %%</string>
+    <string name="reverse_charge_blocked_wireless">Indisponível enquanto este telefone carrega sem fio</string>
+    <string name="reverse_charge_blocked_low">A bateria está abaixo de %1$d %%</string>
+    <string name="reverse_charge_stopped_title">Carregamento reverso interrompido</string>
+    <string name="reverse_charge_stopped_limit">A bateria ficou abaixo de %1$d %%.</string>
+    <string name="reverse_charge_stopped_wireless">Este telefone começou a carregar sem fio.</string>
 </resources>

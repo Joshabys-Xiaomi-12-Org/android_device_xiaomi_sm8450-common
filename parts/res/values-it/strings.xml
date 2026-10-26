@@ -261,4 +261,18 @@
     <string name="aux_camera_enable">Limita le fotocamere ausiliarie</string>
     <string name="aux_camera_note">Le app selezionate vedono solo la fotocamera principale e quella frontale, così si correggono le app che scelgono l\'obiettivo sbagliato. Riapri l\'app dopo la modifica.</string>
     <string name="aux_camera_limit_reached">Troppe app selezionate. Disattivane prima un\'altra.</string>
+
+    <!-- zeus -->
+    <string name="charge_boost_title">Boost ricarica rapida</string>
+    <string name="charge_boost_summary">Ricarica via cavo più veloce, come in HyperOS. Il telefono può scaldarsi di più durante la ricarica.</string>
+    <string name="reverse_charge_title">Ricarica inversa</string>
+    <string name="reverse_charge_switch">Ricarica wireless inversa</string>
+    <string name="reverse_charge_limit_title">Interrompi a questo livello di batteria</string>
+    <string name="reverse_charge_note">Appoggia l\'altro dispositivo sul retro del telefono. La ricarica inversa si interrompe quando la batteria scende sotto il livello scelto o quando questo telefono inizia a ricaricarsi in wireless. Con un caricatore via cavo collegato, continua a funzionare.</string>
+    <string name="reverse_charge_card_summary">Disattivata, limite %1$d %%</string>
+    <string name="reverse_charge_blocked_wireless">Non disponibile mentre questo telefono si ricarica in wireless</string>
+    <string name="reverse_charge_blocked_low">La batteria è sotto il %1$d %%</string>
+    <string name="reverse_charge_stopped_title">Ricarica inversa interrotta</string>
+    <string name="reverse_charge_stopped_limit">La batteria è scesa sotto il %1$d %%.</string>
+    <string name="reverse_charge_stopped_wireless">Questo telefono ha iniziato a ricaricarsi in wireless.</string>
 </resources>

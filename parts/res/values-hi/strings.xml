@@ -261,4 +261,18 @@
     <string name="aux_camera_enable">सहायक कैमरों को सीमित करें</string>
     <string name="aux_camera_note">चुने गए ऐप्स को सिर्फ़ मुख्य और फ़्रंट कैमरा दिखता है, इससे गलत लेंस चुनने वाले ऐप्स ठीक हो जाते हैं। बदलाव के बाद ऐप फिर से खोलें।</string>
     <string name="aux_camera_limit_reached">बहुत सारे ऐप्स चुने गए हैं। पहले किसी दूसरे को बंद करें।</string>
+
+    <!-- zeus -->
+    <string name="charge_boost_title">फ़ास्ट चार्ज बूस्ट</string>
+    <string name="charge_boost_summary">HyperOS की तरह तेज़ वायर्ड चार्जिंग। चार्जिंग के दौरान फ़ोन ज़्यादा गर्म हो सकता है।</string>
+    <string name="reverse_charge_title">रिवर्स चार्जिंग</string>
+    <string name="reverse_charge_switch">रिवर्स वायरलेस चार्जिंग</string>
+    <string name="reverse_charge_limit_title">इस बैटरी स्तर पर रोकें</string>
+    <string name="reverse_charge_note">दूसरे डिवाइस को फ़ोन के पीछे रखें। बैटरी चुने गए स्तर से नीचे जाने पर या इस फ़ोन के वायरलेस चार्ज होने पर रिवर्स चार्जिंग रुक जाती है। वायर्ड चार्जर लगा हो तो यह चलती रहती है।</string>
+    <string name="reverse_charge_card_summary">बंद, सीमा %1$d %%</string>
+    <string name="reverse_charge_blocked_wireless">यह फ़ोन वायरलेस चार्ज होते समय उपलब्ध नहीं है</string>
+    <string name="reverse_charge_blocked_low">बैटरी %1$d %% से कम है</string>
+    <string name="reverse_charge_stopped_title">रिवर्स चार्जिंग रुक गई</string>
+    <string name="reverse_charge_stopped_limit">बैटरी %1$d %% से नीचे चली गई।</string>
+    <string name="reverse_charge_stopped_wireless">यह फ़ोन वायरलेस चार्ज होने लगा।</string>
 </resources>
