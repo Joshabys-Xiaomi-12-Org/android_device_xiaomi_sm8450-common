@@ -28,6 +28,7 @@ android_app {
         "androidx.core_core",
         "org.lineageos.settings.resources",
         "SettingsLib",
+        "SpaLib",
         "androidx.activity_activity-compose",
         "androidx.compose.animation_animation-core",
         "androidx.compose.foundation_foundation",
@@ -42,6 +43,7 @@ android_app {
    kotlincflags: [
         "-Xjvm-default=all",
         "-opt-in=kotlin.RequiresOptIn",
+        "-opt-in=androidx.compose.material3.ExperimentalMaterial3ExpressiveApi",
         "-P plugin:androidx.compose.compiler.plugins.kotlin:sourceInformation=true",
     ],
 
