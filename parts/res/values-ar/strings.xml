@@ -255,4 +255,10 @@
     <string name="credits_work_power">دمج ملفات الطاقة مع الوضع الحراري لكل تطبيق ليعملا معًا</string>
     <string name="credits_source_joshaby">شجرة جهاز sm8450 والنواة ومنطق ملفات الطاقة والحرارة</string>
     <string name="credits_source_hypercharge">حدود شحن HyperCharge</string>
+
+    <!-- zeus -->
+    <string name="aux_camera_title">الكاميرات الإضافية</string>
+    <string name="aux_camera_enable">تقييد الكاميرات الإضافية</string>
+    <string name="aux_camera_note">ترى التطبيقات المحددة الكاميرا الرئيسية والأمامية فقط، وهذا يصلح التطبيقات التي تختار العدسة الخطأ. أعد فتح التطبيق بعد التغيير.</string>
+    <string name="aux_camera_limit_reached">تم تحديد تطبيقات كثيرة جدًا. أوقف تطبيقًا آخر أولًا.</string>
 </resources>

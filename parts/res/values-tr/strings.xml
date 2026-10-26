@@ -255,4 +255,10 @@
     <string name="credits_work_power">Güç profilleri uygulama başına termal ile birleştirildi, ikisi birlikte çalışıyor</string>
     <string name="credits_source_joshaby">sm8450 cihaz ağacı, kernel, güç profili ve termal mantığı</string>
     <string name="credits_source_hypercharge">HyperCharge şarj sınırları</string>
+
+    <!-- zeus -->
+    <string name="aux_camera_title">Yardımcı kameralar</string>
+    <string name="aux_camera_enable">Yardımcı kameraları kısıtla</string>
+    <string name="aux_camera_note">Seçilen uygulamalar yalnızca ana ve ön kamerayı görür; yanlış lensi açan uygulamalar bununla düzelir. Değişiklikten sonra uygulamayı yeniden açın.</string>
+    <string name="aux_camera_limit_reached">Çok fazla uygulama seçildi. Önce başka birini kapatın.</string>
 </resources>

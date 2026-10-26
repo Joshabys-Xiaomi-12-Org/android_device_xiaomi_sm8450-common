@@ -12,13 +12,11 @@ import android.content.pm.PackageManager
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -51,12 +49,15 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringArrayResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.core.graphics.drawable.toBitmap
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.lineageos.settings.R
+import android.widget.Toast
+import org.lineageos.settings.auxcamera.AuxCameraUtils
+import org.lineageos.settings.ui.components.MainSwitchCard
+import org.lineageos.settings.ui.components.SwitchRow
 import org.lineageos.settings.refreshrate.RefreshUtils
 import org.lineageos.settings.resolution.ResolutionUtils
 import org.lineageos.settings.thermal.ThermalUtils
@@ -115,6 +116,69 @@ fun ThermalScreen(onBack: () -> Unit) {
         store = remember { PerAppStore(utils::getStateForPackage, utils::writePackage) },
         onBack = onBack,
     )
+}
+
+/** Apps picked here do not see the auxiliary (ultra wide, tele) lenses. */
+@Composable
+fun AuxCameraScreen(onBack: () -> Unit) {
+    val context = LocalContext.current
+    val apps by produceState<List<LaunchableApp>?>(null) {
+        value = withContext(Dispatchers.IO) {
+            loadLaunchableApps(context).filterNot { it.packageName == context.packageName }
+        }
+    }
+    var enabled by remember { mutableStateOf(AuxCameraUtils.isEnabled(context)) }
+    var query by rememberSaveable { mutableStateOf("") }
+    val hidden = remember { mutableStateMapOf<String, Boolean>() }
+
+    PartsPage(stringResource(R.string.aux_camera_title), onBack) {
+        item {
+            MainSwitchCard(stringResource(R.string.aux_camera_enable), enabled) {
+                AuxCameraUtils.setEnabled(context, it)
+                enabled = it
+            }
+        }
+        item { NoteText(stringResource(R.string.aux_camera_note)) }
+        item { SearchField(query) { query = it } }
+        val list = apps
+        if (list == null) {
+            item {
+                Box(Modifier.fillMaxWidth().padding(32.dp), contentAlignment = Alignment.Center) {
+                    CircularProgressIndicator(color = MaterialTheme.colorScheme.primary)
+                }
+            }
+        } else {
+            val filtered = if (query.isBlank()) list
+            else list.filter { it.label.contains(query.trim(), ignoreCase = true) }
+            itemsIndexed(filtered, key = { _, app -> app.packageName }) { index, app ->
+                Column(Modifier.padding(bottom = 3.dp)) {
+                    SwitchRow(
+                        shape = groupShape(index, filtered.size),
+                        title = app.label,
+                        checked = hidden[app.packageName] ?: AuxCameraUtils.isAppEnabled(context, app.packageName),
+                        enabled = enabled,
+                        leading = { AppIcon(app.packageName) },
+                    ) { hide ->
+                        if (AuxCameraUtils.setAppEnabled(context, app.packageName, hide)) {
+                            hidden[app.packageName] = hide
+                        } else {
+                            Toast.makeText(context, R.string.aux_camera_limit_reached, Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                }
+            }
+            if (filtered.isEmpty()) {
+                item {
+                    Text(
+                        stringResource(R.string.search_no_results),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.padding(16.dp),
+                    )
+                }
+            }
+        }
+    }
 }
 
 @Composable

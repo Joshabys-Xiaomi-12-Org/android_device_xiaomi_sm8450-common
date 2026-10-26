@@ -35,6 +35,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.AspectRatio
 import androidx.compose.material.icons.rounded.Bolt
+import androidx.compose.material.icons.rounded.CameraAlt
 import androidx.compose.material.icons.rounded.BrightnessAuto
 import androidx.compose.material.icons.rounded.Brush
 import androidx.compose.material.icons.rounded.DeveloperBoard
@@ -77,6 +78,7 @@ import androidx.preference.PreferenceManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.lineageos.settings.R
+import org.lineageos.settings.auxcamera.AuxCameraUtils
 import org.lineageos.settings.corecontrol.CoreControlUtils
 import org.lineageos.settings.display.FpsInfoService
 import org.lineageos.settings.gpumanager.GpuManagerUtils
@@ -177,6 +179,8 @@ fun DashboardScreen(refreshTick: Int, navigate: (Route) -> Unit) {
             Card(Route.CLEAR_SPEAKER, Icons.Rounded.WaterDrop, R.string.clear_speaker_title, stringResource(R.string.clear_speaker_card_summary)),
         )),
         Section(R.string.section_extras, listOf(
+            Card(Route.AUX_CAMERA, Icons.Rounded.CameraAlt, R.string.aux_camera_title,
+                if (AuxCameraUtils.isEnabled(context)) on else off),
             Card(Route.FPS_OVERLAY, Icons.Rounded.Timer, R.string.fps_overlay_title,
                 if (!fpsSupported) unsupported else if (fpsOn) on else off),
             Card(Route.USELESS, Icons.Rounded.SentimentVerySatisfied, R.string.useless_mode_title, if (state.useless) on else off),
