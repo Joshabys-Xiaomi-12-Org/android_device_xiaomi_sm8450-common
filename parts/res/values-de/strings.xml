@@ -261,4 +261,18 @@
     <string name="aux_camera_enable">Zusatzkameras einschränken</string>
     <string name="aux_camera_note">Ausgewählte Apps sehen nur die Haupt- und Frontkamera. Das hilft bei Apps, die das falsche Objektiv wählen. Öffne die App nach einer Änderung neu.</string>
     <string name="aux_camera_limit_reached">Zu viele Apps ausgewählt. Schalte zuerst eine andere aus.</string>
+
+    <!-- zeus -->
+    <string name="charge_boost_title">Schnellladen-Boost</string>
+    <string name="charge_boost_summary">Schnelleres Laden per Kabel wie in HyperOS. Das Telefon kann beim Laden wärmer werden.</string>
+    <string name="reverse_charge_title">Umgekehrtes Laden</string>
+    <string name="reverse_charge_switch">Umgekehrtes kabelloses Laden</string>
+    <string name="reverse_charge_limit_title">Bei diesem Akkustand stoppen</string>
+    <string name="reverse_charge_note">Lege das andere Gerät auf die Rückseite des Telefons. Das umgekehrte Laden stoppt, wenn der Akku unter den gewählten Stand fällt oder dieses Telefon kabellos geladen wird. Mit angeschlossenem Ladekabel läuft es weiter.</string>
+    <string name="reverse_charge_card_summary">Aus, Grenze %1$d %%</string>
+    <string name="reverse_charge_blocked_wireless">Nicht verfügbar, während dieses Telefon kabellos lädt</string>
+    <string name="reverse_charge_blocked_low">Akku liegt unter %1$d %%</string>
+    <string name="reverse_charge_stopped_title">Umgekehrtes Laden gestoppt</string>
+    <string name="reverse_charge_stopped_limit">Akku ist unter %1$d %% gefallen.</string>
+    <string name="reverse_charge_stopped_wireless">Dieses Telefon wird jetzt kabellos geladen.</string>
 </resources>

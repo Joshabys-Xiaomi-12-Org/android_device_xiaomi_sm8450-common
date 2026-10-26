@@ -34,6 +34,7 @@ import androidx.compose.foundation.lazy.staggeredgrid.StaggeredGridItemSpan
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.AspectRatio
+import androidx.compose.material.icons.rounded.BatteryChargingFull
 import androidx.compose.material.icons.rounded.Bolt
 import androidx.compose.material.icons.rounded.CameraAlt
 import androidx.compose.material.icons.rounded.BrightnessAuto
@@ -83,6 +84,7 @@ import org.lineageos.settings.corecontrol.CoreControlUtils
 import org.lineageos.settings.display.FpsInfoService
 import org.lineageos.settings.gpumanager.GpuManagerUtils
 import org.lineageos.settings.hbm.HbmUtils
+import org.lineageos.settings.charge.ChargeUtils
 import org.lineageos.settings.hypercharge.HyperChargeUtils
 import org.lineageos.settings.kernelmanager.KernelManagerUtils
 import org.lineageos.settings.powerprofile.PowerProfileUtil
@@ -107,6 +109,8 @@ private data class DashboardState(
     val coresOnline: Int = CoreControlUtils.NUM_CORES,
     val powerProfile: Int = PowerProfileUtil.MODE_BALANCE,
     val hyperChargeLimit: Int = -1,
+    val reverseOn: Boolean = false,
+    val reverseLimit: Int = 0,
     val zramCompression: String = "",
     val swappiness: Int = 0,
     val useless: Boolean = false,
@@ -133,6 +137,7 @@ fun DashboardScreen(refreshTick: Int, navigate: (Route) -> Unit) {
     val hbmSupported = remember { HbmUtils.isSupported() }
     val fpsSupported = remember { File(FpsInfoService.FPS_PATH).exists() }
     val hyperChargeSupported = remember { HyperChargeUtils.isSupported() }
+    val reverseSupported = remember { ChargeUtils.isReverseSupported() }
 
     val on = stringResource(R.string.state_on)
     val off = stringResource(R.string.state_off)
@@ -171,6 +176,12 @@ fun DashboardScreen(refreshTick: Int, navigate: (Route) -> Unit) {
                     !hyperChargeSupported -> unsupported
                     !hyperChargeOn -> off
                     else -> hyperChargeLimits.getOrNull(state.hyperChargeLimit) ?: on
+                }),
+            Card(Route.REVERSE_CHARGE, Icons.Rounded.BatteryChargingFull, R.string.reverse_charge_title,
+                when {
+                    !reverseSupported -> unsupported
+                    state.reverseOn -> on
+                    else -> stringResource(R.string.reverse_charge_card_summary, state.reverseLimit)
                 }),
             Card(Route.ZRAM, Icons.Rounded.Layers, R.string.zram_title,
                 stringResource(R.string.zram_card_summary, state.zramCompression, state.swappiness)),
@@ -330,6 +341,8 @@ private fun readDashboardState(context: Context): DashboardState {
         powerProfile = PowerProfileUtil.getMode(context),
         hyperChargeLimit = context.resources.getStringArray(R.array.hypercharge_limit_values)
             .indexOf(HyperChargeUtils.getLimit(context)),
+        reverseOn = ChargeUtils.isReverseSupported() && ChargeUtils.isReverseOn(),
+        reverseLimit = ChargeUtils.getReverseLimit(context),
         zramCompression = zram.currentCompression,
         swappiness = zram.currentSwappiness,
         useless = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(USELESS_PREF, false),

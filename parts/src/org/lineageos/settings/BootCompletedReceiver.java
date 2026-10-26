@@ -26,6 +26,7 @@ import android.view.Display;
 import android.view.Display.HdrCapabilities;
 
 import org.lineageos.settings.auxcamera.AuxCameraUtils;
+import org.lineageos.settings.charge.ChargeUtils;
 import org.lineageos.settings.hypercharge.HyperChargeUtils;
 import org.lineageos.settings.refreshrate.RefreshUtils;
 import org.lineageos.settings.resolution.ResolutionUtils;
@@ -59,6 +60,13 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             HyperChargeUtils.update(context);
         } catch (Exception e) {
             Log.e(TAG, "Failed to start HyperChargeService on boot", e);
+        }
+
+        // Wired boost and the reverse charging limit
+        try {
+            ChargeUtils.startService(context);
+        } catch (Exception e) {
+            Log.e(TAG, "Failed to start ChargeService on boot", e);
         }
     }
 

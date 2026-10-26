@@ -261,4 +261,18 @@
     <string name="aux_camera_enable">Hạn chế camera phụ</string>
     <string name="aux_camera_note">Ứng dụng được chọn chỉ thấy camera chính và camera trước, giúp sửa ứng dụng chọn sai ống kính. Mở lại ứng dụng sau khi thay đổi.</string>
     <string name="aux_camera_limit_reached">Đã chọn quá nhiều ứng dụng. Hãy tắt một ứng dụng khác trước.</string>
+
+    <!-- zeus -->
+    <string name="charge_boost_title">Tăng tốc sạc nhanh</string>
+    <string name="charge_boost_summary">Sạc có dây nhanh hơn, như trên HyperOS. Điện thoại có thể ấm hơn khi sạc.</string>
+    <string name="reverse_charge_title">Sạc ngược</string>
+    <string name="reverse_charge_switch">Sạc không dây ngược</string>
+    <string name="reverse_charge_limit_title">Dừng ở mức pin</string>
+    <string name="reverse_charge_note">Đặt thiết bị kia lên mặt lưng điện thoại. Sạc ngược dừng khi pin xuống dưới mức đã chọn hoặc khi điện thoại này bắt đầu sạc không dây. Khi cắm sạc có dây, nó vẫn tiếp tục chạy.</string>
+    <string name="reverse_charge_card_summary">Tắt, giới hạn %1$d %%</string>
+    <string name="reverse_charge_blocked_wireless">Không khả dụng khi điện thoại này đang sạc không dây</string>
+    <string name="reverse_charge_blocked_low">Pin dưới %1$d %%</string>
+    <string name="reverse_charge_stopped_title">Đã dừng sạc ngược</string>
+    <string name="reverse_charge_stopped_limit">Pin đã xuống dưới %1$d %%.</string>
+    <string name="reverse_charge_stopped_wireless">Điện thoại này đã bắt đầu sạc không dây.</string>
 </resources>

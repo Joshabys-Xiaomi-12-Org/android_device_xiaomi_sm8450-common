@@ -261,4 +261,18 @@
     <string name="aux_camera_enable">限制辅助摄像头</string>
     <string name="aux_camera_note">所选应用只能看到主摄和前置摄像头，可修复选错镜头的应用。更改后请重新打开应用。</string>
     <string name="aux_camera_limit_reached">所选应用过多。请先关闭另一个。</string>
+
+    <!-- zeus -->
+    <string name="charge_boost_title">快充加速</string>
+    <string name="charge_boost_summary">与 HyperOS 相同的更快有线充电。充电时手机可能更热。</string>
+    <string name="reverse_charge_title">反向充电</string>
+    <string name="reverse_charge_switch">无线反向充电</string>
+    <string name="reverse_charge_limit_title">在此电量时停止</string>
+    <string name="reverse_charge_note">将另一台设备放在手机背面。电量低于所选水平或本机开始无线充电时，反向充电会停止。连接有线充电器时会继续工作。</string>
+    <string name="reverse_charge_card_summary">关闭，限制 %1$d %%</string>
+    <string name="reverse_charge_blocked_wireless">本机无线充电时不可用</string>
+    <string name="reverse_charge_blocked_low">电量低于 %1$d %%</string>
+    <string name="reverse_charge_stopped_title">反向充电已停止</string>
+    <string name="reverse_charge_stopped_limit">电量已低于 %1$d %%。</string>
+    <string name="reverse_charge_stopped_wireless">本机已开始无线充电。</string>
 </resources>

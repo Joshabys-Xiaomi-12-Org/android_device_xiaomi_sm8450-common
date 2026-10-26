@@ -266,4 +266,18 @@
     <string name="aux_camera_enable">Restrict auxiliary cameras</string>
     <string name="aux_camera_note">Selected apps only see the main and front cameras, which fixes apps that pick the wrong lens. Reopen an app after changing it.</string>
     <string name="aux_camera_limit_reached">Too many apps selected. Turn another one off first.</string>
+
+    <!-- zeus -->
+    <string name="charge_boost_title">Fast charge boost</string>
+    <string name="charge_boost_summary">Faster wired charging, as in HyperOS. The phone may get warmer while charging.</string>
+    <string name="reverse_charge_title">Reverse charging</string>
+    <string name="reverse_charge_switch">Reverse wireless charging</string>
+    <string name="reverse_charge_limit_title">Stop at battery level</string>
+    <string name="reverse_charge_note">Place the other device on the back of the phone. Reverse charging stops when the battery falls below the chosen level or when this phone starts charging wirelessly. With a wired charger plugged in, it keeps running.</string>
+    <string name="reverse_charge_card_summary">Off, limit %1$d %%</string>
+    <string name="reverse_charge_blocked_wireless">Not available while this phone charges wirelessly</string>
+    <string name="reverse_charge_blocked_low">Battery is below %1$d %%</string>
+    <string name="reverse_charge_stopped_title">Reverse charging stopped</string>
+    <string name="reverse_charge_stopped_limit">Battery fell below %1$d %%.</string>
+    <string name="reverse_charge_stopped_wireless">This phone started charging wirelessly.</string>
 </resources>

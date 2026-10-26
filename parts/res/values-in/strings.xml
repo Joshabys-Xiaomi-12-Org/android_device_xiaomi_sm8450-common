@@ -261,4 +261,18 @@
     <string name="aux_camera_enable">Batasi kamera tambahan</string>
     <string name="aux_camera_note">Aplikasi yang dipilih hanya melihat kamera utama dan depan, sehingga aplikasi yang memilih lensa yang salah jadi benar. Buka ulang aplikasi setelah mengubahnya.</string>
     <string name="aux_camera_limit_reached">Terlalu banyak aplikasi dipilih. Matikan yang lain terlebih dahulu.</string>
+
+    <!-- zeus -->
+    <string name="charge_boost_title">Peningkatan pengisian cepat</string>
+    <string name="charge_boost_summary">Pengisian kabel lebih cepat, seperti di HyperOS. Ponsel bisa lebih hangat saat mengisi daya.</string>
+    <string name="reverse_charge_title">Pengisian terbalik</string>
+    <string name="reverse_charge_switch">Pengisian nirkabel terbalik</string>
+    <string name="reverse_charge_limit_title">Berhenti pada level baterai</string>
+    <string name="reverse_charge_note">Letakkan perangkat lain di bagian belakang ponsel. Pengisian terbalik berhenti saat baterai turun di bawah level yang dipilih atau saat ponsel ini mulai diisi secara nirkabel. Saat pengisi daya kabel terpasang, pengisian tetap berjalan.</string>
+    <string name="reverse_charge_card_summary">Nonaktif, batas %1$d %%</string>
+    <string name="reverse_charge_blocked_wireless">Tidak tersedia saat ponsel ini diisi secara nirkabel</string>
+    <string name="reverse_charge_blocked_low">Baterai di bawah %1$d %%</string>
+    <string name="reverse_charge_stopped_title">Pengisian terbalik dihentikan</string>
+    <string name="reverse_charge_stopped_limit">Baterai turun di bawah %1$d %%.</string>
+    <string name="reverse_charge_stopped_wireless">Ponsel ini mulai diisi secara nirkabel.</string>
 </resources>
