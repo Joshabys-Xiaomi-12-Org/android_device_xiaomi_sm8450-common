@@ -103,19 +103,18 @@
     
     <string name="hypercharge_description_title">About HyperCharge Control</string>
     <string name="hypercharge_description_summary">HyperCharge (120W) provides extreme charging speeds but generates significant heat, which can accelerate battery wear and reduce long-term lifespan. \n\n• ON (120W): Service is stopped — the kernel controls charging at full factory speed.\n• ON (other speed): Service enforces your selected speed limit.\n• OFF: Service runs and enforces a 33W protection limit to reduce battery wear and heat.\n\nNote: This service only intervenes when a Xiaomi HyperCharge power brick is detected.</string>
-    
     <!-- Core Control -->
     <string name="core_control_title">Core Control</string>
     <string name="core_control_summary">Manually enable or disable individual CPU cores</string>
     <string name="core_control_description">Advanced CPU control. Turning off cores may save battery or thermal load, but may affect performance and stability.\n\nAt least two little cores must remain online at all times.</string>
-    <string name="core_0">Core 0 (Little)</string>
-    <string name="core_1">Core 1 (Little)</string>
-    <string name="core_2">Core 2 (Little)</string>
-    <string name="core_3">Core 3 (Little)</string>
-    <string name="core_4">Core 4 (Big)</string>
-    <string name="core_5">Core 5 (Big)</string>
+    <string name="core_0">Core 0</string>
+    <string name="core_1">Core 1</string>
+    <string name="core_2">Core 2</string>
+    <string name="core_3">Core 3</string>
+    <string name="core_4">Core 4</string>
+    <string name="core_5">Core 5</string>
     <string name="core_6">Core 6 (Big)</string>
-    <string name="core_7">Core 7 (Prime)</string>
+    <string name="core_7">Core 7 (Big)</string>
     
     <!-- Charge bypass strings -->
     <string name="charge_bypass_title">Bypass charging</string>
