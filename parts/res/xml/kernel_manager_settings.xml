@@ -9,33 +9,23 @@
             android:summary="@string/cpu_governor_summary" />
     </PreferenceCategory>
 
-    <!-- Little Cluster -->
-    <PreferenceCategory android:title="@string/little_cluster_title">
+    <!-- Efficiency Cluster -->
+    <PreferenceCategory android:title="@string/efficiency_cluster_title">
         <ListPreference
-            android:key="little_min_freq"
+            android:key="efficiency_min_freq"
             android:title="@string/cpu_min_freq_title" />
         <ListPreference
-            android:key="little_max_freq"
+            android:key="efficiency_max_freq"
             android:title="@string/cpu_max_freq_title" />
     </PreferenceCategory>
     
-    <!-- Big Cluster -->
-    <PreferenceCategory android:title="@string/big_cluster_title">
+    <!-- Performance Cluster -->
+    <PreferenceCategory android:title="@string/performance_cluster_title">
         <ListPreference
-            android:key="big_min_freq"
+            android:key="performance_min_freq"
             android:title="@string/cpu_min_freq_title" />
         <ListPreference
-            android:key="big_max_freq"
-            android:title="@string/cpu_max_freq_title" />
-    </PreferenceCategory>
-
-    <!-- Prime Cluster -->
-    <PreferenceCategory android:title="@string/prime_cluster_title">
-        <ListPreference
-            android:key="prime_min_freq"
-            android:title="@string/cpu_min_freq_title" />
-        <ListPreference
-            android:key="prime_max_freq"
+            android:key="performance_max_freq"
             android:title="@string/cpu_max_freq_title" />
     </PreferenceCategory>
 
