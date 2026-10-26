@@ -35,9 +35,7 @@ android_app {
         "androidx.compose.material_material-icons-core",
         "androidx.compose.runtime_runtime",
         "androidx.compose.ui_ui",
-        "androidx.core_core",
         "androidx.lifecycle_lifecycle-viewmodel-compose",
-        "androidx.preference_preference",
         "kotlinx-coroutines-core",
     ],
 
