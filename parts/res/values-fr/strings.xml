@@ -255,4 +255,10 @@
     <string name="credits_work_power">Profils d\'énergie fusionnés avec le thermique par appli pour qu\'ils fonctionnent ensemble</string>
     <string name="credits_source_joshaby">Arbre de l\'appareil sm8450, noyau et logique des profils d\'énergie et thermiques</string>
     <string name="credits_source_hypercharge">Limites de charge HyperCharge</string>
+
+    <!-- zeus -->
+    <string name="aux_camera_title">Caméras auxiliaires</string>
+    <string name="aux_camera_enable">Restreindre les caméras auxiliaires</string>
+    <string name="aux_camera_note">Les applis sélectionnées ne voient que la caméra principale et la caméra avant, ce qui corrige celles qui choisissent le mauvais objectif. Rouvrez l\'appli après un changement.</string>
+    <string name="aux_camera_limit_reached">Trop d\'applis sélectionnées. Désactivez-en une autre d\'abord.</string>
 </resources>

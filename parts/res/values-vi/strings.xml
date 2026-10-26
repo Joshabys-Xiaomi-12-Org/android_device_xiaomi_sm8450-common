@@ -255,4 +255,10 @@
     <string name="credits_work_power">Gộp cấu hình năng lượng với nhiệt theo ứng dụng để cả hai cùng hoạt động</string>
     <string name="credits_source_joshaby">Device tree sm8450, kernel và logic cấu hình năng lượng, nhiệt</string>
     <string name="credits_source_hypercharge">Giới hạn sạc HyperCharge</string>
+
+    <!-- zeus -->
+    <string name="aux_camera_title">Camera phụ</string>
+    <string name="aux_camera_enable">Hạn chế camera phụ</string>
+    <string name="aux_camera_note">Ứng dụng được chọn chỉ thấy camera chính và camera trước, giúp sửa ứng dụng chọn sai ống kính. Mở lại ứng dụng sau khi thay đổi.</string>
+    <string name="aux_camera_limit_reached">Đã chọn quá nhiều ứng dụng. Hãy tắt một ứng dụng khác trước.</string>
 </resources>

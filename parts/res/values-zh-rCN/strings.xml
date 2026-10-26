@@ -255,4 +255,10 @@
     <string name="credits_work_power">电源配置与按应用温控合并，二者可同时生效</string>
     <string name="credits_source_joshaby">sm8450 设备树、内核，以及电源配置与温控逻辑</string>
     <string name="credits_source_hypercharge">HyperCharge 充电限制</string>
+
+    <!-- zeus -->
+    <string name="aux_camera_title">辅助摄像头</string>
+    <string name="aux_camera_enable">限制辅助摄像头</string>
+    <string name="aux_camera_note">所选应用只能看到主摄和前置摄像头，可修复选错镜头的应用。更改后请重新打开应用。</string>
+    <string name="aux_camera_limit_reached">所选应用过多。请先关闭另一个。</string>
 </resources>

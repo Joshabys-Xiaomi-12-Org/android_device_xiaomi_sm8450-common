@@ -260,4 +260,10 @@
     <string name="credits_source_hypercharge">HyperCharge charging limits</string>
     <string name="hypercharge_title" translatable="false">HyperCharge</string>
     <string name="quick_hypercharge" translatable="false">HyperCharge</string>
+
+    <!-- zeus -->
+    <string name="aux_camera_title">Auxiliary cameras</string>
+    <string name="aux_camera_enable">Restrict auxiliary cameras</string>
+    <string name="aux_camera_note">Selected apps only see the main and front cameras, which fixes apps that pick the wrong lens. Reopen an app after changing it.</string>
+    <string name="aux_camera_limit_reached">Too many apps selected. Turn another one off first.</string>
 </resources>

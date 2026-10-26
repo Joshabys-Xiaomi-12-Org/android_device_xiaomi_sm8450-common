@@ -255,4 +255,10 @@
     <string name="credits_work_power">Профили питания объединены с тепловыми режимами приложений, теперь они работают вместе</string>
     <string name="credits_source_joshaby">Дерево устройства sm8450, ядро и логика профилей питания и тепловых режимов</string>
     <string name="credits_source_hypercharge">Ограничения зарядки HyperCharge</string>
+
+    <!-- zeus -->
+    <string name="aux_camera_title">Дополнительные камеры</string>
+    <string name="aux_camera_enable">Ограничить дополнительные камеры</string>
+    <string name="aux_camera_note">Выбранные приложения видят только основную и фронтальную камеры. Это исправляет приложения, которые открывают не тот объектив. После изменения перезапустите приложение.</string>
+    <string name="aux_camera_limit_reached">Выбрано слишком много приложений. Сначала отключите другое.</string>
 </resources>

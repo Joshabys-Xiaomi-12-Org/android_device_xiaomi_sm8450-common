@@ -255,4 +255,10 @@
     <string name="credits_work_power">Profili energetici uniti al termico per app, così funzionano insieme</string>
     <string name="credits_source_joshaby">Albero del dispositivo sm8450, kernel e logica dei profili energetici e termici</string>
     <string name="credits_source_hypercharge">Limiti di ricarica HyperCharge</string>
+
+    <!-- zeus -->
+    <string name="aux_camera_title">Fotocamere ausiliarie</string>
+    <string name="aux_camera_enable">Limita le fotocamere ausiliarie</string>
+    <string name="aux_camera_note">Le app selezionate vedono solo la fotocamera principale e quella frontale, così si correggono le app che scelgono l\'obiettivo sbagliato. Riapri l\'app dopo la modifica.</string>
+    <string name="aux_camera_limit_reached">Troppe app selezionate. Disattivane prima un\'altra.</string>
 </resources>

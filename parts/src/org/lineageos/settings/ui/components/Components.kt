@@ -346,6 +346,7 @@ fun SwitchRow(
     summary: String? = null,
     checked: Boolean,
     enabled: Boolean = true,
+    leading: (@Composable () -> Unit)? = null,
     onCheckedChange: (Boolean) -> Unit,
 ) {
     Row(
@@ -359,6 +360,10 @@ fun SwitchRow(
             .heightIn(min = 64.dp)
             .padding(horizontal = 18.dp, vertical = 14.dp),
     ) {
+        if (leading != null) {
+            leading()
+            Spacer(Modifier.width(14.dp))
+        }
         RowText(title, summary, Modifier.weight(1f))
         Spacer(Modifier.width(12.dp))
         Switch(checked = checked, onCheckedChange = null, enabled = enabled)

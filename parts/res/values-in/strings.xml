@@ -255,4 +255,10 @@
     <string name="credits_work_power">Profil daya digabung dengan termal per aplikasi sehingga keduanya bekerja bersama</string>
     <string name="credits_source_joshaby">Device tree sm8450, kernel, serta logika profil daya dan termal</string>
     <string name="credits_source_hypercharge">Batas pengisian HyperCharge</string>
+
+    <!-- zeus -->
+    <string name="aux_camera_title">Kamera tambahan</string>
+    <string name="aux_camera_enable">Batasi kamera tambahan</string>
+    <string name="aux_camera_note">Aplikasi yang dipilih hanya melihat kamera utama dan depan, sehingga aplikasi yang memilih lensa yang salah jadi benar. Buka ulang aplikasi setelah mengubahnya.</string>
+    <string name="aux_camera_limit_reached">Terlalu banyak aplikasi dipilih. Matikan yang lain terlebih dahulu.</string>
 </resources>

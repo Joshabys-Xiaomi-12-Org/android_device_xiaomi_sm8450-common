@@ -25,6 +25,7 @@ import android.util.Log;
 import android.view.Display;
 import android.view.Display.HdrCapabilities;
 
+import org.lineageos.settings.auxcamera.AuxCameraUtils;
 import org.lineageos.settings.hypercharge.HyperChargeUtils;
 import org.lineageos.settings.refreshrate.RefreshUtils;
 import org.lineageos.settings.resolution.ResolutionUtils;
@@ -49,6 +50,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         // Auto HBM
         FileUtils.enableService(context);
+
+        // Aux camera restrictions
+        AuxCameraUtils.INSTANCE.restore(context);
 
         // HyperCharge
         try {

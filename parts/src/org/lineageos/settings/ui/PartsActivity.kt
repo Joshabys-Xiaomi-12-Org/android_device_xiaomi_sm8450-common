@@ -31,6 +31,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.compose.LifecycleResumeEffect
 import org.lineageos.settings.ui.screens.AppearanceScreen
+import org.lineageos.settings.ui.screens.AuxCameraScreen
 import org.lineageos.settings.ui.screens.ClearSpeakerScreen
 import org.lineageos.settings.ui.screens.CoreControlScreen
 import org.lineageos.settings.ui.screens.CreditsScreen
@@ -67,6 +68,7 @@ enum class Route(val key: String) {
     HYPERCHARGE("hypercharge"),
     ZRAM("zram"),
     CLEAR_SPEAKER("clear_speaker"),
+    AUX_CAMERA("aux_camera"),
     FPS_OVERLAY("fps_overlay"),
     USELESS("useless"),
     APPEARANCE("appearance"),
@@ -174,6 +176,7 @@ private fun PartsApp(pendingRoute: String?, onRouteConsumed: () -> Unit) {
                 Route.HYPERCHARGE -> HyperChargeScreen(onBack)
                 Route.ZRAM -> ZramScreen(onBack)
                 Route.CLEAR_SPEAKER -> ClearSpeakerScreen(onBack)
+                Route.AUX_CAMERA -> AuxCameraScreen(onBack)
                 Route.FPS_OVERLAY -> FpsOverlayScreen(onBack)
                 Route.USELESS -> UselessScreen(onBack)
                 Route.APPEARANCE -> AppearanceScreen(colorMode, onBack) {
