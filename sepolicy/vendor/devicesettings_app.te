@@ -3,24 +3,3 @@ allow devicesettings_app vendor_sysfs_graphics:file rw_file_perms;
 allow devicesettings_app vendor_sysfs_kgsl:dir search;
 allow devicesettings_app vendor_sysfs_kgsl:{ file lnk_file } rw_file_perms;
 allow devicesettings_app init:unix_stream_socket connectto;
-
-# Hypercharge and Bypass Charging
-allow devicesettings_app vendor_sysfs_battery_supply:file rw_file_perms;
-allow devicesettings_app vendor_sysfs_battery_supply:dir search;
-allow devicesettings_app vendor_sysfs_power_supply:file rw_file_perms;
-allow devicesettings_app vendor_sysfs_power_supply:dir search;
-
-# Core Control
-allow devicesettings_app vendor_sysfs_corecontrol:file rw_file_perms;
-allow devicesettings_app vendor_sysfs_corecontrol:dir search;
-
-# Kernel Manager
-allow devicesettings_app sysfs_devices_system_cpu:file rw_file_perms;
-allow devicesettings_app sysfs_devices_system_cpu:dir search;
-
-# GPU Manager
-allow devicesettings_app sysfs_kgsl:file rw_file_perms;
-allow devicesettings_app sysfs_kgsl:dir search;
-allow devicesettings_app vendor_sysfs_kgsl_gpuclk:file rw_file_perms;
-allow devicesettings_app vendor_sysfs_kgsl_gpuclk:dir search;
-allow devicesettings_app sysfs_kgsl:lnk_file r_file_perms;

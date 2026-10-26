@@ -22,7 +22,7 @@ public class KernelManagerFragment extends PreferenceFragment
 
     private static final String KEY_CPU_GOVERNOR = "cpu_governor";
     private static final String KEY_LITTLE_MIN_FREQ = "little_min_freq";
-    private static final String KEY_LITTLE_MAX_FREQ = "little_max_freq";
+    private static final String KEY_LITTLE_MAX_FREQ = "little__max_freq";
     private static final String KEY_BIG_MIN_FREQ = "big_min_freq";
     private static final String KEY_BIG_MAX_FREQ = "big_max_freq";
     private static final String KEY_PRIME_MIN_FREQ = "prime_min_freq";
