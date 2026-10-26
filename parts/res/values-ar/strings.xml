@@ -106,7 +106,7 @@
     <string name="min_frequency">أدنى تردد</string>
     <string name="max_frequency">أقصى تردد</string>
     <string name="frequencies_unavailable">لا يمكن قراءة ترددات المعالج في هذه النواة.</string>
-    <string name="kernel_manager_note">تُطبَّق التغييرات عند النقر على تطبيق وتستمر حتى إعادة التشغيل التالية.</string>
+    <string name="kernel_manager_note">تُطبَّق التغييرات عند النقر على تطبيق وتُستعاد بعد إعادة التشغيل. إعادة الضبط تعيد walt والنطاق الكامل للترددات.</string>
 
     <string name="gpu_manager_title">مدير معالج الرسومات</string>
     <string name="gpu_model">معالج الرسومات</string>
@@ -127,7 +127,7 @@
     <string name="gpu_force_no_nap_summary">منع معالج الرسومات من الغفو بين الإطارات</string>
     <string name="gpu_bus_split">فصل الناقل</string>
     <string name="gpu_bus_split_summary">ضبط ناقل الذاكرة بشكل منفصل عن ساعة معالج الرسومات</string>
-    <string name="gpu_manager_note">تُطبَّق مفاتيح الطاقة فورًا. يُطبَّق الحاكم والترددات عند النقر على تطبيق. تتم إعادة ضبط كل شيء بعد إعادة التشغيل.</string>
+    <string name="gpu_manager_note">تُطبَّق مفاتيح الطاقة فورًا. يُطبَّق المنظِّم والترددات عند النقر على تطبيق. يُستعاد نطاق الترددات بعد إعادة التشغيل، ويُعاد ضبط المنظِّم ومفاتيح الطاقة.</string>
 
     <string name="core_control_title">التحكم في الأنوية</string>
     <string name="core_label">المعالج <xliff:g id="core">%1$d</xliff:g></string>

@@ -106,7 +106,7 @@
     <string name="min_frequency">En düşük frekans</string>
     <string name="max_frequency">En yüksek frekans</string>
     <string name="frequencies_unavailable">Bu kernelde CPU frekansları okunamıyor.</string>
-    <string name="kernel_manager_note">Değişiklikler Uygula\'ya dokunduğunuzda uygulanır ve bir sonraki yeniden başlatmaya kadar geçerlidir.</string>
+    <string name="kernel_manager_note">Değişiklikler Uygula\'ya dokununca geçerli olur ve yeniden başlatmadan sonra geri yüklenir. Sıfırla, walt\'a ve tam frekans aralığına döner.</string>
 
     <string name="gpu_manager_title">GPU yöneticisi</string>
     <string name="gpu_model">GPU</string>
@@ -127,7 +127,7 @@
     <string name="gpu_force_no_nap_summary">GPU\'nun kareler arasında uyuklamasını engelle</string>
     <string name="gpu_bus_split">Veri yolu ayırma</string>
     <string name="gpu_bus_split_summary">Bellek veri yolunu GPU saatinden ayrı ölçekle</string>
-    <string name="gpu_manager_note">Güç anahtarları hemen uygulanır. Yönetici ve frekanslar Uygula\'ya dokunduğunuzda uygulanır. Yeniden başlatmadan sonra hepsi sıfırlanır.</string>
+    <string name="gpu_manager_note">Güç anahtarları hemen uygulanır. Governor ve frekanslar Uygula\'ya dokununca geçerli olur. Frekans aralığı yeniden başlatmadan sonra geri yüklenir; governor ve güç anahtarları sıfırlanır.</string>
 
     <string name="core_control_title">Çekirdek kontrolü</string>
     <string name="core_label">CPU <xliff:g id="core">%1$d</xliff:g></string>

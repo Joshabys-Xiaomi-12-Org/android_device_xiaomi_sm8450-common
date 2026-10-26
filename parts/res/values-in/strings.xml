@@ -106,7 +106,7 @@
     <string name="min_frequency">Frekuensi minimum</string>
     <string name="max_frequency">Frekuensi maksimum</string>
     <string name="frequencies_unavailable">Frekuensi CPU tidak dapat dibaca pada kernel ini.</string>
-    <string name="kernel_manager_note">Perubahan diterapkan saat Anda mengetuk Terapkan dan berlaku hingga mulai ulang berikutnya.</string>
+    <string name="kernel_manager_note">Perubahan berlaku saat Anda mengetuk Terapkan dan dipulihkan setelah mulai ulang. Reset kembali ke walt dan rentang frekuensi penuh.</string>
 
     <string name="gpu_manager_title">Pengelola GPU</string>
     <string name="gpu_model">GPU</string>
@@ -127,7 +127,7 @@
     <string name="gpu_force_no_nap_summary">Cegah GPU tidur singkat di antara frame</string>
     <string name="gpu_bus_split">Pemisahan bus</string>
     <string name="gpu_bus_split_summary">Skalakan bus memori terpisah dari clock GPU</string>
-    <string name="gpu_manager_note">Sakelar daya langsung diterapkan. Governor dan frekuensi diterapkan saat Anda mengetuk Terapkan. Semuanya kembali setelah mulai ulang.</string>
+    <string name="gpu_manager_note">Sakelar daya langsung berlaku. Governor dan frekuensi berlaku saat Anda mengetuk Terapkan. Rentang frekuensi dipulihkan setelah mulai ulang; governor dan sakelar daya direset.</string>
 
     <string name="core_control_title">Kontrol inti</string>
     <string name="core_label">CPU <xliff:g id="core">%1$d</xliff:g></string>

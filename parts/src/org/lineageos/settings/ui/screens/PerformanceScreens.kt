@@ -18,6 +18,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateListOf
+import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
@@ -85,21 +86,30 @@ fun PowerProfileScreen(onBack: () -> Unit) {
     }
 }
 
-/** Frequencies of one CPU policy, as written to sysfs (kHz strings). */
-private class ClusterFreqs(val available: List<String>, val min: String, val max: String)
-
-private class KernelState(
+/** One CPU policy: its governors and frequencies, as written to sysfs (kHz strings). */
+private class ClusterState(
+    val policy: Int,
+    val title: Int,
     val governors: List<String>,
     val governor: String,
-    val efficiency: ClusterFreqs?,
-    val performance: ClusterFreqs?,
-    val prime: ClusterFreqs?,
+    val available: List<String>,
+    val min: String,
+    val max: String,
 )
 
-private fun readCluster(utils: KernelManagerUtils, cluster: Int): ClusterFreqs? {
-    val available = utils.getAvailableFrequencies(cluster)?.toList()?.filter { it.isNotBlank() }
+private val Clusters = listOf(
+    KernelManagerUtils.EFFICIENCY_CLUSTER to R.string.efficiency_cluster,
+    KernelManagerUtils.PERFORMANCE_CLUSTER to R.string.performance_cluster,
+    KernelManagerUtils.PRIME_CLUSTER to R.string.prime_cluster,
+)
+
+private fun readCluster(utils: KernelManagerUtils, policy: Int, title: Int): ClusterState? {
+    val available = utils.getAvailableFrequencies(policy)?.toList()?.filter { it.isNotBlank() }
     if (available.isNullOrEmpty()) return null
-    return ClusterFreqs(available, utils.getCurrentMinFrequency(cluster), utils.getCurrentMaxFrequency(cluster))
+    return ClusterState(
+        policy, title, utils.getAvailableGovernors(policy).toList(), utils.getCurrentGovernor(policy),
+        available, utils.getCurrentMinFrequency(policy), utils.getCurrentMaxFrequency(policy),
+    )
 }
 
 private fun khzLabel(value: String) = value.toLongOrNull()?.let { "${it / 1000} MHz" } ?: value
@@ -110,104 +120,54 @@ fun KernelManagerScreen(onBack: () -> Unit) {
     val context = LocalContext.current
     val utils = remember { KernelManagerUtils() }
     var reload by remember { mutableIntStateOf(0) }
-    val state by produceState<KernelState?>(null, reload) {
-        value = withContext(Dispatchers.IO) {
-            KernelState(
-                governors = utils.availableGovernors.toList(),
-                governor = utils.getCurrentGovernor(KernelManagerUtils.EFFICIENCY_CLUSTER),
-                efficiency = readCluster(utils, KernelManagerUtils.EFFICIENCY_CLUSTER),
-                performance = readCluster(utils, KernelManagerUtils.PERFORMANCE_CLUSTER),
-                prime = readCluster(utils, KernelManagerUtils.PRIME_CLUSTER),
-            )
-        }
+    val clusters by produceState<List<ClusterState>?>(null, reload) {
+        value = withContext(Dispatchers.IO) { Clusters.mapNotNull { (policy, title) -> readCluster(utils, policy, title) } }
     }
-    // Selections are only written when Apply is pressed, as before.
-    var governor by remember(state) { mutableStateOf(state?.governor) }
-    var effMin by remember(state) { mutableStateOf(state?.efficiency?.min) }
-    var effMax by remember(state) { mutableStateOf(state?.efficiency?.max) }
-    var perfMin by remember(state) { mutableStateOf(state?.performance?.min) }
-    var perfMax by remember(state) { mutableStateOf(state?.performance?.max) }
-    var primeMin by remember(state) { mutableStateOf(state?.prime?.min) }
-    var primeMax by remember(state) { mutableStateOf(state?.prime?.max) }
+    // Selections per policy; only written when Apply is pressed.
+    val governor = remember(clusters) { mutableStateMapOf<Int, String>().apply { clusters?.forEach { put(it.policy, it.governor) } } }
+    val min = remember(clusters) { mutableStateMapOf<Int, String>().apply { clusters?.forEach { put(it.policy, it.min) } } }
+    val max = remember(clusters) { mutableStateMapOf<Int, String>().apply { clusters?.forEach { put(it.policy, it.max) } } }
 
     PartsPage(stringResource(R.string.kernel_manager_title), onBack) {
-        val s = state ?: return@PartsPage
-        item {
-            Group(
-                { shape ->
-                    ChoiceRow(
-                        shape = shape,
-                        title = stringResource(R.string.cpu_governor),
-                        options = s.governors,
-                        selected = s.governors.indexOf(governor).coerceAtLeast(0),
-                    ) { governor = s.governors[it] }
-                },
-            )
-        }
-        s.efficiency?.let { cluster ->
-            item { SectionTitle(stringResource(R.string.efficiency_cluster)) }
+        val list = clusters ?: return@PartsPage
+        list.forEach { cluster ->
+            item { SectionTitle(stringResource(cluster.title)) }
             item {
                 val labels = cluster.available.map(::khzLabel)
                 Group(
                     { shape ->
+                        ChoiceRow(shape, stringResource(R.string.cpu_governor), cluster.governors,
+                            cluster.governors.indexOf(governor[cluster.policy]).coerceAtLeast(0)) {
+                            governor[cluster.policy] = cluster.governors[it]
+                        }
+                    },
+                    { shape ->
                         ChoiceRow(shape, stringResource(R.string.min_frequency), labels,
-                            cluster.available.indexOf(effMin).coerceAtLeast(0)) { effMin = cluster.available[it] }
+                            cluster.available.indexOf(min[cluster.policy]).coerceAtLeast(0)) {
+                            min[cluster.policy] = cluster.available[it]
+                        }
                     },
                     { shape ->
                         ChoiceRow(shape, stringResource(R.string.max_frequency), labels,
-                            cluster.available.indexOf(effMax).coerceAtLeast(0)) { effMax = cluster.available[it] }
+                            cluster.available.indexOf(max[cluster.policy]).coerceAtLeast(0)) {
+                            max[cluster.policy] = cluster.available[it]
+                        }
                     },
                 )
             }
         }
-        s.performance?.let { cluster ->
-            item { SectionTitle(stringResource(R.string.performance_cluster)) }
-            item {
-                val labels = cluster.available.map(::khzLabel)
-                Group(
-                    { shape ->
-                        ChoiceRow(shape, stringResource(R.string.min_frequency), labels,
-                            cluster.available.indexOf(perfMin).coerceAtLeast(0)) { perfMin = cluster.available[it] }
-                    },
-                    { shape ->
-                        ChoiceRow(shape, stringResource(R.string.max_frequency), labels,
-                            cluster.available.indexOf(perfMax).coerceAtLeast(0)) { perfMax = cluster.available[it] }
-                    },
-                )
-            }
-        }
-        s.prime?.let { cluster ->
-            item { SectionTitle(stringResource(R.string.prime_cluster)) }
-            item {
-                val labels = cluster.available.map(::khzLabel)
-                Group(
-                    { shape ->
-                        ChoiceRow(shape, stringResource(R.string.min_frequency), labels,
-                            cluster.available.indexOf(primeMin).coerceAtLeast(0)) { primeMin = cluster.available[it] }
-                    },
-                    { shape ->
-                        ChoiceRow(shape, stringResource(R.string.max_frequency), labels,
-                            cluster.available.indexOf(primeMax).coerceAtLeast(0)) { primeMax = cluster.available[it] }
-                    },
-                )
-            }
-        }
-        if (s.efficiency == null && s.performance == null && s.prime == null) {
+        if (list.isEmpty()) {
             item { NoteText(stringResource(R.string.frequencies_unavailable)) }
         }
         item {
             ApplyResetButtons(
                 onApply = {
-                    governor?.let { utils.setGovernor(it) }
-                    val eMin = effMin
-                    val eMax = effMax
-                    if (eMin != null && eMax != null) utils.setEfficiencyClusterFrequency(eMin, eMax)
-                    val pMin = perfMin
-                    val pMax = perfMax
-                    if (pMin != null && pMax != null) utils.setPerformanceClusterFrequency(pMin, pMax)
-                    val prMin = primeMin
-                    val prMax = primeMax
-                    if (prMin != null && prMax != null) utils.setPrimeClusterFrequency(prMin, prMax)
+                    list.forEach { cluster ->
+                        governor[cluster.policy]?.let { utils.setGovernor(cluster.policy, it) }
+                        val lo = min[cluster.policy]
+                        val hi = max[cluster.policy]
+                        if (lo != null && hi != null) utils.setFrequencyRange(cluster.policy, lo, hi)
+                    }
                     Toast.makeText(context, R.string.settings_applied, Toast.LENGTH_SHORT).show()
                 },
                 onReset = {

@@ -10,6 +10,8 @@
 
 package org.lineageos.settings.gpumanager;
 
+import android.os.SystemProperties;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -40,6 +42,11 @@ public class GpuManagerUtils {
     private static final String GPU_MAX_GPUCLK = "/max_gpuclk";
     private static final String GPU_MIN_CLOCK_MHZ = "/min_clock_mhz";
     private static final String GPU_MAX_CLOCK_MHZ = "/max_clock_mhz";
+
+    private static final String PROP_MIN_FREQ = "persist.sys.parts.gpu.min_frequency";
+    private static final String PROP_MAX_FREQ = "persist.sys.parts.gpu.max_frequency";
+    private static final String PROP_MIN_CLOCK = "persist.sys.parts.gpu.min_clock";
+    private static final String PROP_MAX_CLOCK = "persist.sys.parts.gpu.max_clock";
 
     public String getGpuModel() {
         try {
@@ -180,7 +187,19 @@ public class GpuManagerUtils {
         }
     }
 
+    /** Applies the range now and stores it; init restores it at boot (init.xiaomi_sm8450.rc). */
     public void setFrequencyRange(String minFreq, String maxFreq) {
+        try {
+            // The clock props must be set first: the frequency triggers read them.
+            int minMhz = Integer.parseInt(minFreq) / 1000000;
+            int maxMhz = Integer.parseInt(maxFreq) / 1000000;
+            SystemProperties.set(PROP_MIN_CLOCK, String.valueOf(minMhz));
+            SystemProperties.set(PROP_MAX_CLOCK, String.valueOf(maxMhz));
+            SystemProperties.set(PROP_MIN_FREQ, minFreq);
+            SystemProperties.set(PROP_MAX_FREQ, maxFreq);
+        } catch (RuntimeException e) {
+            // Not stored; the values below still apply until reboot.
+        }
         try {
             writeFile(GPU_BASE_PATH + GPU_MIN_FREQ, minFreq);
             writeFile(GPU_BASE_PATH + GPU_MAX_FREQ, maxFreq);

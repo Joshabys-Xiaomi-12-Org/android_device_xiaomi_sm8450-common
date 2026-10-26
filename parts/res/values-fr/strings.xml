@@ -106,7 +106,7 @@
     <string name="min_frequency">Fréquence minimale</string>
     <string name="max_frequency">Fréquence maximale</string>
     <string name="frequencies_unavailable">Les fréquences du CPU ne peuvent pas être lues sur ce noyau.</string>
-    <string name="kernel_manager_note">Les modifications s\'appliquent quand vous appuyez sur Appliquer et durent jusqu\'au prochain redémarrage.</string>
+    <string name="kernel_manager_note">Les changements s\'appliquent en appuyant sur Appliquer et sont restaurés après un redémarrage. Réinitialiser revient à walt et à la plage de fréquences complète.</string>
 
     <string name="gpu_manager_title">Gestionnaire du GPU</string>
     <string name="gpu_model">GPU</string>
@@ -127,7 +127,7 @@
     <string name="gpu_force_no_nap_summary">Empêcher le GPU de se mettre en veille entre les images</string>
     <string name="gpu_bus_split">Séparation du bus</string>
     <string name="gpu_bus_split_summary">Ajuster le bus mémoire séparément de l\'horloge du GPU</string>
-    <string name="gpu_manager_note">Les interrupteurs d\'alimentation s\'appliquent immédiatement. Le gouverneur et les fréquences s\'appliquent quand vous appuyez sur Appliquer. Tout est réinitialisé après un redémarrage.</string>
+    <string name="gpu_manager_note">Les interrupteurs d\'alimentation s\'appliquent tout de suite. Le gouverneur et les fréquences s\'appliquent en appuyant sur Appliquer. La plage de fréquences est restaurée après un redémarrage ; le gouverneur et les interrupteurs sont réinitialisés.</string>
 
     <string name="core_control_title">Contrôle des cœurs</string>
     <string name="core_label">CPU <xliff:g id="core">%1$d</xliff:g></string>

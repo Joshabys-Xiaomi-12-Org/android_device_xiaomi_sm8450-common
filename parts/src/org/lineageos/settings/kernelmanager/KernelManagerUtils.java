@@ -10,6 +10,8 @@
 
 package org.lineageos.settings.kernelmanager;
 
+import android.os.SystemProperties;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -24,6 +26,23 @@ public class KernelManagerUtils {
     
     private static final int[] POLICIES = {EFFICIENCY_CLUSTER, PERFORMANCE_CLUSTER, PRIME_CLUSTER};
     private static final String DEFAULT_GOVERNOR = "walt";
+
+    /** persist.sys.parts.cpu.<name>.* props, restored at boot by init.xiaomi_sm8450.rc. */
+    private static String propPrefix(int cluster) {
+        switch (cluster) {
+            case PERFORMANCE_CLUSTER: return "persist.sys.parts.cpu.big.";
+            case PRIME_CLUSTER: return "persist.sys.parts.cpu.prime.";
+            default: return "persist.sys.parts.cpu.little.";
+        }
+    }
+
+    private static void store(int cluster, String key, String value) {
+        try {
+            SystemProperties.set(propPrefix(cluster) + key, value);
+        } catch (RuntimeException e) {
+            // Not stored; the sysfs write still applies until reboot.
+        }
+    }
     
     // CPU frequency and governor paths
     private static final String CPU_BASE_PATH = "/sys/devices/system/cpu/cpufreq/policy";
@@ -87,15 +106,31 @@ public class KernelManagerUtils {
 
     public void setGovernor(String governor) {
         for (int cluster : POLICIES) {
-            try {
-                writeFile(CPU_BASE_PATH + cluster + SCALING_GOVERNOR, governor);
-            } catch (Exception e) {
-                // Continue with other clusters
-            }
+            setGovernor(cluster, governor);
+        }
+    }
+
+    public void setGovernor(int cluster, String governor) {
+        store(cluster, "governor", governor);
+        try {
+            writeFile(CPU_BASE_PATH + cluster + SCALING_GOVERNOR, governor);
+        } catch (Exception e) {
+            // Ignore errors
+        }
+    }
+
+    public String[] getAvailableGovernors(int cluster) {
+        try {
+            String governors = readFile(CPU_BASE_PATH + cluster + SCALING_AVAILABLE_GOVERNORS);
+            return governors.trim().split("\\s+");
+        } catch (Exception e) {
+            return getAvailableGovernors();
         }
     }
 
     public void setFrequencyRange(int cluster, String minFreq, String maxFreq) {
+        store(cluster, "min_frequency", minFreq);
+        store(cluster, "max_frequency", maxFreq);
         try {
             // Set min frequency first
             writeFile(CPU_BASE_PATH + cluster + SCALING_MIN_FREQ, minFreq);
