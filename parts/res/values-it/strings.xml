@@ -106,7 +106,7 @@
     <string name="min_frequency">Frequenza minima</string>
     <string name="max_frequency">Frequenza massima</string>
     <string name="frequencies_unavailable">Impossibile leggere le frequenze della CPU su questo kernel.</string>
-    <string name="kernel_manager_note">Le modifiche si applicano toccando Applica e durano fino al prossimo riavvio.</string>
+    <string name="kernel_manager_note">Le modifiche si applicano toccando Applica e vengono ripristinate dopo il riavvio. Ripristina torna a walt e all\'intervallo di frequenze completo.</string>
 
     <string name="gpu_manager_title">Gestione GPU</string>
     <string name="gpu_model">GPU</string>
@@ -127,7 +127,7 @@
     <string name="gpu_force_no_nap_summary">Impedisci alla GPU di riposare tra un fotogramma e l\'altro</string>
     <string name="gpu_bus_split">Separazione del bus</string>
     <string name="gpu_bus_split_summary">Scala il bus di memoria separatamente dal clock della GPU</string>
-    <string name="gpu_manager_note">Gli interruttori di alimentazione si applicano subito. Governor e frequenze si applicano toccando Applica. Tutto si ripristina dopo il riavvio.</string>
+    <string name="gpu_manager_note">Gli interruttori di alimentazione si applicano subito. Governor e frequenze si applicano toccando Applica. L\'intervallo di frequenze viene ripristinato dopo il riavvio; governor e interruttori vengono reimpostati.</string>
 
     <string name="core_control_title">Controllo dei core</string>
     <string name="core_label">CPU <xliff:g id="core">%1$d</xliff:g></string>

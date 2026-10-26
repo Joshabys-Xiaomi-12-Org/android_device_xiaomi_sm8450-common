@@ -106,7 +106,7 @@
     <string name="min_frequency">न्यूनतम फ़्रीक्वेंसी</string>
     <string name="max_frequency">अधिकतम फ़्रीक्वेंसी</string>
     <string name="frequencies_unavailable">इस कर्नेल पर CPU फ़्रीक्वेंसी नहीं पढ़ी जा सकतीं।</string>
-    <string name="kernel_manager_note">बदलाव \"लागू करें\" पर टैप करने पर लागू होते हैं और अगले रीबूट तक रहते हैं।</string>
+    <string name="kernel_manager_note">बदलाव Apply पर टैप करने पर लागू होते हैं और रीबूट के बाद फिर से लागू हो जाते हैं। रीसेट walt और पूरी फ़्रीक्वेंसी रेंज पर लौटा देता है।</string>
 
     <string name="gpu_manager_title">GPU मैनेजर</string>
     <string name="gpu_model">GPU</string>
@@ -127,7 +127,7 @@
     <string name="gpu_force_no_nap_summary">फ़्रेम के बीच GPU को आराम करने से रोकें</string>
     <string name="gpu_bus_split">बस स्प्लिट</string>
     <string name="gpu_bus_split_summary">मेमोरी बस को GPU क्लॉक से अलग स्केल करें</string>
-    <string name="gpu_manager_note">पावर स्विच तुरंत लागू होते हैं। गवर्नर और फ़्रीक्वेंसी \"लागू करें\" पर टैप करने पर लागू होती हैं। रीबूट के बाद सब रीसेट हो जाता है।</string>
+    <string name="gpu_manager_note">पावर स्विच तुरंत लागू होते हैं। गवर्नर और फ़्रीक्वेंसी Apply पर टैप करने पर लागू होते हैं। रीबूट के बाद फ़्रीक्वेंसी रेंज फिर से लागू होती है; गवर्नर और पावर स्विच रीसेट हो जाते हैं।</string>
 
     <string name="core_control_title">कोर कंट्रोल</string>
     <string name="core_label">CPU <xliff:g id="core">%1$d</xliff:g></string>

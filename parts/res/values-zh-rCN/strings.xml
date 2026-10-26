@@ -106,7 +106,7 @@
     <string name="min_frequency">最低频率</string>
     <string name="max_frequency">最高频率</string>
     <string name="frequencies_unavailable">无法在此内核上读取 CPU 频率。</string>
-    <string name="kernel_manager_note">点按“应用”后更改生效，并保持到下次重启。</string>
+    <string name="kernel_manager_note">点按“应用”后生效，重启后会自动恢复。重置会恢复为 walt 和完整频率范围。</string>
 
     <string name="gpu_manager_title">GPU 管理</string>
     <string name="gpu_model">GPU</string>
@@ -127,7 +127,7 @@
     <string name="gpu_force_no_nap_summary">防止 GPU 在帧之间进入小睡状态</string>
     <string name="gpu_bus_split">总线分离</string>
     <string name="gpu_bus_split_summary">将内存总线与 GPU 时钟分开调节</string>
-    <string name="gpu_manager_note">电源开关立即生效。调速器和频率在点按“应用”后生效。重启后全部恢复。</string>
+    <string name="gpu_manager_note">电源开关立即生效。调速器和频率在点按“应用”后生效。重启后会恢复频率范围；调速器和电源开关会被重置。</string>
 
     <string name="core_control_title">核心控制</string>
     <string name="core_label">CPU <xliff:g id="core">%1$d</xliff:g></string>

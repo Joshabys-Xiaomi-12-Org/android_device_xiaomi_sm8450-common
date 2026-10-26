@@ -106,7 +106,7 @@
     <string name="min_frequency">Minimale Frequenz</string>
     <string name="max_frequency">Maximale Frequenz</string>
     <string name="frequencies_unavailable">CPU-Frequenzen können auf diesem Kernel nicht gelesen werden.</string>
-    <string name="kernel_manager_note">Änderungen werden beim Tippen auf Anwenden übernommen und gelten bis zum nächsten Neustart.</string>
+    <string name="kernel_manager_note">Änderungen gelten nach Tippen auf Übernehmen und werden nach einem Neustart wiederhergestellt. Zurücksetzen stellt walt und den vollen Frequenzbereich ein.</string>
 
     <string name="gpu_manager_title">GPU-Manager</string>
     <string name="gpu_model">GPU</string>
@@ -127,7 +127,7 @@
     <string name="gpu_force_no_nap_summary">Verhindert, dass die GPU zwischen Frames ruht</string>
     <string name="gpu_bus_split">Bus-Split</string>
     <string name="gpu_bus_split_summary">Speicherbus getrennt vom GPU-Takt skalieren</string>
-    <string name="gpu_manager_note">Energieschalter wirken sofort. Governor und Frequenzen werden beim Tippen auf Anwenden übernommen. Nach einem Neustart wird alles zurückgesetzt.</string>
+    <string name="gpu_manager_note">Energieschalter gelten sofort. Governor und Frequenzen gelten nach Tippen auf Übernehmen. Der Frequenzbereich wird nach einem Neustart wiederhergestellt; Governor und Energieschalter werden zurückgesetzt.</string>
 
     <string name="core_control_title">Kernsteuerung</string>
     <string name="core_label">CPU <xliff:g id="core">%1$d</xliff:g></string>

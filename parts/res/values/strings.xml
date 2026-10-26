@@ -130,7 +130,7 @@
     <string name="min_frequency">Minimum frequency</string>
     <string name="max_frequency">Maximum frequency</string>
     <string name="frequencies_unavailable">CPU frequencies can\'t be read on this kernel.</string>
-    <string name="kernel_manager_note">Changes apply when you tap Apply and last until the next reboot.</string>
+    <string name="kernel_manager_note">Changes apply when you tap Apply and are restored after a reboot. Reset goes back to walt and the full frequency range.</string>
 
     <!-- GPU manager -->
     <string name="gpu_manager_title">GPU manager</string>
@@ -152,7 +152,7 @@
     <string name="gpu_force_no_nap_summary">Prevent the GPU from napping between frames</string>
     <string name="gpu_bus_split">Bus split</string>
     <string name="gpu_bus_split_summary">Scale the memory bus separately from the GPU clock</string>
-    <string name="gpu_manager_note">Power switches apply right away. Governor and frequencies apply when you tap Apply. Everything resets after a reboot.</string>
+    <string name="gpu_manager_note">Power switches apply right away. Governor and frequencies apply when you tap Apply. The frequency range is restored after a reboot; governor and power switches reset.</string>
 
     <!-- Core control -->
     <string name="core_control_title">Core control</string>

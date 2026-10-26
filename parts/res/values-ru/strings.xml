@@ -106,7 +106,7 @@
     <string name="min_frequency">Минимальная частота</string>
     <string name="max_frequency">Максимальная частота</string>
     <string name="frequencies_unavailable">Частоты CPU невозможно прочитать на этом ядре.</string>
-    <string name="kernel_manager_note">Изменения применяются при нажатии «Применить» и действуют до следующей перезагрузки.</string>
+    <string name="kernel_manager_note">Изменения применяются по кнопке «Применить» и восстанавливаются после перезагрузки. Сброс возвращает walt и полный диапазон частот.</string>
 
     <string name="gpu_manager_title">Менеджер GPU</string>
     <string name="gpu_model">GPU</string>
@@ -127,7 +127,7 @@
     <string name="gpu_force_no_nap_summary">Не давать GPU дремать между кадрами</string>
     <string name="gpu_bus_split">Разделение шины</string>
     <string name="gpu_bus_split_summary">Масштабировать шину памяти отдельно от частоты GPU</string>
-    <string name="gpu_manager_note">Переключатели питания применяются сразу. Регулятор и частоты применяются при нажатии «Применить». После перезагрузки всё сбрасывается.</string>
+    <string name="gpu_manager_note">Переключатели питания применяются сразу. Регулятор и частоты применяются по кнопке «Применить». Диапазон частот восстанавливается после перезагрузки; регулятор и переключатели сбрасываются.</string>
 
     <string name="core_control_title">Управление ядрами</string>
     <string name="core_label">CPU <xliff:g id="core">%1$d</xliff:g></string>
