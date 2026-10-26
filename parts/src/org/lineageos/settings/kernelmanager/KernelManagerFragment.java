@@ -47,10 +47,10 @@ public class KernelManagerFragment extends PreferenceFragment
 
     private void initializePreferences() {
         mGovernorPreference = (ListPreference) findPreference(KEY_CPU_GOVERNOR);
-        mLittleMinFreq = (ListPreference) findPreference(KEY_LITTLE_MIN_FREQ);
-        mLittleMaxFreq = (ListPreference) findPreference(KEY_LITTLE_MAX_FREQ);
-        mBigMinFreq = (ListPreference) findPreference(KEY_BIG_MIN_FREQ);
-        mBigMaxFreq = (ListPreference) findPreference(KEY_BIG_MAX_FREQ);
+        mLittleMinFreq = (ListPreference) findPreference(KEY_EFFICIENCY_MIN_FREQ);
+        mLittleMaxFreq = (ListPreference) findPreference(KEY_EFFICIENCY_MAX_FREQ);
+        mBigMinFreq = (ListPreference) findPreference(KEY_PERFORMANCE_MIN_FREQ);
+        mBigMaxFreq = (ListPreference) findPreference(KEY_PERFORMANCE_MAX_FREQ);
         mPrimeMinFreq = (ListPreference) findPreference(KEY_PRIME_MIN_FREQ);
         mPrimeMaxFreq = (ListPreference) findPreference(KEY_PRIME_MAX_FREQ);
         

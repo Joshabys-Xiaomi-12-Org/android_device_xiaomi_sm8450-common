@@ -136,6 +136,8 @@
         </activity>
 
         <activity
+            android:name=".refreshrate.RefreshSettingsActivity"
+
             android:name=".kernelmanager.KernelManagerActivity"
             android:label="@string/kernel_manager_title">
             <intent-filter>
@@ -161,8 +163,22 @@
             <meta-data
                 android:name="com.android.settings.summary"
                 android:resource="@string/gpu_manager_summary" />
-        </activity>
+            </activity>
 
+        <activity
+            android:name=".refreshrate.RefreshSettingsActivity"
+            android:label="@string/refresh_title"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.display" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/refresh_summary" />
+        </activity>
 
         <!-- Display Saturation activity -->
         <activity
