@@ -275,4 +275,20 @@
     <string name="reverse_charge_stopped_title">Ters şarj durdu</string>
     <string name="reverse_charge_stopped_limit">Pil %%%1$d seviyesinin altına indi.</string>
     <string name="reverse_charge_stopped_wireless">Bu telefon kablosuz şarj olmaya başladı.</string>
+    <string name="misound_switch">MiSound kullan</string>
+    <string name="misound_card_dolby">Kapalı, Dolby açık</string>
+    <string name="misound_scenario_title">Senaryo</string>
+    <string name="misound_scenario_smart">Akıllı</string>
+    <string name="misound_scenario_music">Müzik</string>
+    <string name="misound_scenario_video">Video</string>
+    <string name="misound_scenario_vocal">Ses</string>
+    <string name="misound_headset_title">Kulaklık tipi</string>
+    <string name="misound_headset_general">Genel kulaklık</string>
+    <string name="misound_headset_inear">Kulak içi kulaklık</string>
+    <string name="misound_3d_title">3D surround</string>
+    <string name="misound_3d_summary">Yalnızca kulaklıkta</string>
+    <string name="misound_dolby_on">Dolby açık. MiSound ile Dolby birlikte çalışamaz, önce Dolby\'yi kapat.</string>
+    <string name="misound_open_dolby">Dolby\'yi aç</string>
+    <string name="misound_note">Senaryo hoparlörde de geçerlidir. Kulaklık tipi ve 3D surround yalnızca kulaklık bağlıyken uygulanır.</string>
+    <string name="misound_unsupported">Bu cihazda MiSound efekti yok.</string>
 </resources>

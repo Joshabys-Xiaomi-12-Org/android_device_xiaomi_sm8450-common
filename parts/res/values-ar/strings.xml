@@ -275,4 +275,20 @@
     <string name="reverse_charge_stopped_title">توقف الشحن العكسي</string>
     <string name="reverse_charge_stopped_limit">انخفضت البطارية عن %1$d %%.</string>
     <string name="reverse_charge_stopped_wireless">بدأ هذا الهاتف بالشحن اللاسلكي.</string>
+    <string name="misound_switch">استخدام MiSound</string>
+    <string name="misound_card_dolby">متوقف، Dolby قيد التشغيل</string>
+    <string name="misound_scenario_title">السيناريو</string>
+    <string name="misound_scenario_smart">ذكي</string>
+    <string name="misound_scenario_music">موسيقى</string>
+    <string name="misound_scenario_video">فيديو</string>
+    <string name="misound_scenario_vocal">صوت</string>
+    <string name="misound_headset_title">نوع سماعة الرأس</string>
+    <string name="misound_headset_general">سماعات عامة</string>
+    <string name="misound_headset_inear">سماعات داخل الأذن</string>
+    <string name="misound_3d_title">صوت محيطي ثلاثي الأبعاد</string>
+    <string name="misound_3d_summary">مع سماعات الرأس فقط</string>
+    <string name="misound_dolby_on">Dolby قيد التشغيل. لا يمكن تشغيل MiSound وDolby معًا، أوقف Dolby أولًا.</string>
+    <string name="misound_open_dolby">فتح Dolby</string>
+    <string name="misound_note">ينطبق السيناريو على مكبر الصوت أيضًا. يعمل نوع سماعة الرأس والصوت المحيطي ثلاثي الأبعاد فقط عند توصيل سماعات الرأس.</string>
+    <string name="misound_unsupported">لا يحتوي هذا الجهاز على تأثير MiSound.</string>
 </resources>

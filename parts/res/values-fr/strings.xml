@@ -275,4 +275,20 @@
     <string name="reverse_charge_stopped_title">Recharge inversée arrêtée</string>
     <string name="reverse_charge_stopped_limit">La batterie est passée sous %1$d %%.</string>
     <string name="reverse_charge_stopped_wireless">Ce téléphone a commencé à se recharger sans fil.</string>
+    <string name="misound_switch">Utiliser MiSound</string>
+    <string name="misound_card_dolby">Désactivé, Dolby activé</string>
+    <string name="misound_scenario_title">Scénario</string>
+    <string name="misound_scenario_smart">Intelligent</string>
+    <string name="misound_scenario_music">Musique</string>
+    <string name="misound_scenario_video">Vidéo</string>
+    <string name="misound_scenario_vocal">Voix</string>
+    <string name="misound_headset_title">Type d\'écouteurs</string>
+    <string name="misound_headset_general">Écouteurs standards</string>
+    <string name="misound_headset_inear">Écouteurs intra-auriculaires</string>
+    <string name="misound_3d_title">Son surround 3D</string>
+    <string name="misound_3d_summary">Écouteurs uniquement</string>
+    <string name="misound_dolby_on">Dolby est activé. MiSound et Dolby ne peuvent pas fonctionner ensemble, désactivez d\'abord Dolby.</string>
+    <string name="misound_open_dolby">Ouvrir Dolby</string>
+    <string name="misound_note">Le scénario s\'applique aussi au haut-parleur. Le type d\'écouteurs et le son surround 3D ne s\'appliquent qu\'avec des écouteurs connectés.</string>
+    <string name="misound_unsupported">Cet appareil n\'a pas l\'effet MiSound.</string>
 </resources>

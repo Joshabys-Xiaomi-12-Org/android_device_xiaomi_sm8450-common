@@ -7,6 +7,7 @@
 package org.lineageos.settings.ui.screens
 
 import android.app.Activity
+import android.content.ActivityNotFoundException
 import android.content.Context
 import android.media.AudioAttributes
 import android.media.AudioManager
@@ -35,6 +36,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -45,11 +47,20 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.withContext
 import org.lineageos.settings.R
+import org.lineageos.settings.misound.MiSoundUtils
+import org.lineageos.settings.ui.components.ActionRow
+import org.lineageos.settings.ui.components.ChoiceRow
+import org.lineageos.settings.ui.components.Group
+import org.lineageos.settings.ui.components.MainSwitchCard
 import org.lineageos.settings.ui.components.NoteText
 import org.lineageos.settings.ui.components.PartsCard
 import org.lineageos.settings.ui.components.PartsPage
+import org.lineageos.settings.ui.components.SwitchRow
+import org.lineageos.settings.ui.components.WarningCard
 import java.io.IOException
 
 private const val CLEAN_DURATION_SECONDS = 30
@@ -160,5 +171,99 @@ fun ClearSpeakerScreen(onBack: () -> Unit) {
             }
         }
         item { NoteText(stringResource(R.string.clear_speaker_description)) }
+    }
+}
+
+@Composable
+fun MiSoundScreen(onBack: () -> Unit) {
+    val context = LocalContext.current
+    val utils = remember { MiSoundUtils.getInstance(context) }
+    val supported = remember { MiSoundUtils.isSupported() }
+    var enabled by remember { mutableStateOf(utils.isEnabled) }
+    var scenario by remember { mutableIntStateOf(MiSoundUtils.SCENARIOS.indexOf(utils.scenario)) }
+    var headset by remember { mutableIntStateOf(MiSoundUtils.HEADSETS.indexOf(utils.headsetType)) }
+    var surround by remember { mutableStateOf(utils.is3dSurroundEnabled()) }
+    // Dolby can be switched in its own app while this page is in the background.
+    var resumeTick by remember { mutableIntStateOf(0) }
+    var dolbyOn by remember { mutableStateOf(false) }
+    LifecycleEventEffect(Lifecycle.Event.ON_RESUME) { resumeTick++ }
+    LaunchedEffect(resumeTick) {
+        dolbyOn = withContext(Dispatchers.IO) { MiSoundUtils.isDolbyEnabled() }
+    }
+    val active = supported && enabled
+
+    PartsPage(stringResource(R.string.misound_title), onBack) {
+        item {
+            // Turning off is always allowed; turning on waits for Dolby to be off.
+            MainSwitchCard(stringResource(R.string.misound_switch), active, enabled = supported && (enabled || !dolbyOn)) {
+                utils.setEnabled(it)
+                enabled = it
+            }
+        }
+        if (supported && dolbyOn) {
+            item { WarningCard(stringResource(R.string.misound_dolby_on)) }
+            item {
+                Group({ shape ->
+                    ActionRow(shape, stringResource(R.string.misound_open_dolby)) {
+                        try {
+                            context.startActivity(MiSoundUtils.dolbySettingsIntent())
+                        } catch (e: ActivityNotFoundException) {
+                            Log.w("MiSound", "Dolby settings not installed", e)
+                        }
+                    }
+                })
+            }
+        }
+        item {
+            Group(
+                { shape ->
+                    ChoiceRow(
+                        shape = shape,
+                        title = stringResource(R.string.misound_scenario_title),
+                        options = listOf(
+                            stringResource(R.string.misound_scenario_smart),
+                            stringResource(R.string.misound_scenario_music),
+                            stringResource(R.string.misound_scenario_video),
+                            stringResource(R.string.misound_scenario_vocal),
+                        ),
+                        selected = scenario,
+                        enabled = active,
+                    ) {
+                        utils.setScenario(MiSoundUtils.SCENARIOS[it])
+                        scenario = it
+                    }
+                },
+                { shape ->
+                    ChoiceRow(
+                        shape = shape,
+                        title = stringResource(R.string.misound_headset_title),
+                        options = listOf(
+                            stringResource(R.string.misound_headset_general),
+                            stringResource(R.string.misound_headset_inear),
+                        ),
+                        selected = headset,
+                        enabled = active,
+                    ) {
+                        utils.setHeadsetType(MiSoundUtils.HEADSETS[it])
+                        headset = it
+                    }
+                },
+                { shape ->
+                    SwitchRow(
+                        shape = shape,
+                        title = stringResource(R.string.misound_3d_title),
+                        summary = stringResource(R.string.misound_3d_summary),
+                        checked = surround,
+                        enabled = active,
+                    ) {
+                        utils.set3dSurroundEnabled(it)
+                        surround = it
+                    }
+                },
+            )
+        }
+        item {
+            NoteText(stringResource(if (supported) R.string.misound_note else R.string.misound_unsupported))
+        }
     }
 }

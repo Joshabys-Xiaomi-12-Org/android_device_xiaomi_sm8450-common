@@ -275,4 +275,20 @@
     <string name="reverse_charge_stopped_title">Umgekehrtes Laden gestoppt</string>
     <string name="reverse_charge_stopped_limit">Akku ist unter %1$d %% gefallen.</string>
     <string name="reverse_charge_stopped_wireless">Dieses Telefon wird jetzt kabellos geladen.</string>
+    <string name="misound_switch">MiSound verwenden</string>
+    <string name="misound_card_dolby">Aus, Dolby ist an</string>
+    <string name="misound_scenario_title">Szenario</string>
+    <string name="misound_scenario_smart">Smart</string>
+    <string name="misound_scenario_music">Musik</string>
+    <string name="misound_scenario_video">Video</string>
+    <string name="misound_scenario_vocal">Stimme</string>
+    <string name="misound_headset_title">Kopfhörertyp</string>
+    <string name="misound_headset_general">Allgemeine Kopfhörer</string>
+    <string name="misound_headset_inear">In-Ear-Kopfhörer</string>
+    <string name="misound_3d_title">3D-Surround</string>
+    <string name="misound_3d_summary">Nur mit Kopfhörern</string>
+    <string name="misound_dolby_on">Dolby ist an. MiSound und Dolby können nicht gleichzeitig laufen, schalte zuerst Dolby aus.</string>
+    <string name="misound_open_dolby">Dolby öffnen</string>
+    <string name="misound_note">Das Szenario gilt auch für den Lautsprecher. Kopfhörertyp und 3D-Surround wirken nur bei verbundenen Kopfhörern.</string>
+    <string name="misound_unsupported">Dieses Gerät hat keinen MiSound-Effekt.</string>
 </resources>

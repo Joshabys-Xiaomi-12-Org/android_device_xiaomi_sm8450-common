@@ -28,6 +28,7 @@ import android.view.Display.HdrCapabilities;
 import org.lineageos.settings.auxcamera.AuxCameraUtils;
 import org.lineageos.settings.charge.ChargeUtils;
 import org.lineageos.settings.hypercharge.HyperChargeUtils;
+import org.lineageos.settings.misound.MiSoundUtils;
 import org.lineageos.settings.refreshrate.RefreshUtils;
 import org.lineageos.settings.resolution.ResolutionUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
@@ -67,6 +68,11 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             ChargeUtils.startService(context);
         } catch (Exception e) {
             Log.e(TAG, "Failed to start ChargeService on boot", e);
+        }
+
+        // MiSound: the persistent process owns the effect and restores its settings
+        if (MiSoundUtils.isSupported()) {
+            MiSoundUtils.getInstance(context);
         }
     }
 

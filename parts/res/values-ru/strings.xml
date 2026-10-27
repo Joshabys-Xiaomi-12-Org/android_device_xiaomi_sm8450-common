@@ -275,4 +275,20 @@
     <string name="reverse_charge_stopped_title">Обратная зарядка остановлена</string>
     <string name="reverse_charge_stopped_limit">Заряд упал ниже %1$d %%.</string>
     <string name="reverse_charge_stopped_wireless">Этот телефон начал заряжаться без проводов.</string>
+    <string name="misound_switch">Использовать MiSound</string>
+    <string name="misound_card_dolby">Выкл., включён Dolby</string>
+    <string name="misound_scenario_title">Сценарий</string>
+    <string name="misound_scenario_smart">Умный</string>
+    <string name="misound_scenario_music">Музыка</string>
+    <string name="misound_scenario_video">Видео</string>
+    <string name="misound_scenario_vocal">Голос</string>
+    <string name="misound_headset_title">Тип наушников</string>
+    <string name="misound_headset_general">Обычные наушники</string>
+    <string name="misound_headset_inear">Наушники-вкладыши</string>
+    <string name="misound_3d_title">Объёмный 3D-звук</string>
+    <string name="misound_3d_summary">Только в наушниках</string>
+    <string name="misound_dolby_on">Dolby включён. MiSound и Dolby не работают вместе, сначала выключите Dolby.</string>
+    <string name="misound_open_dolby">Открыть Dolby</string>
+    <string name="misound_note">Сценарий действует и для динамика. Тип наушников и объёмный 3D-звук работают только с подключёнными наушниками.</string>
+    <string name="misound_unsupported">На этом устройстве нет эффекта MiSound.</string>
 </resources>

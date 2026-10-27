@@ -275,4 +275,20 @@
     <string name="reverse_charge_stopped_title">反向充电已停止</string>
     <string name="reverse_charge_stopped_limit">电量已低于 %1$d %%。</string>
     <string name="reverse_charge_stopped_wireless">本机已开始无线充电。</string>
+    <string name="misound_switch">使用 MiSound</string>
+    <string name="misound_card_dolby">已关闭，Dolby 已开启</string>
+    <string name="misound_scenario_title">场景</string>
+    <string name="misound_scenario_smart">智能</string>
+    <string name="misound_scenario_music">音乐</string>
+    <string name="misound_scenario_video">视频</string>
+    <string name="misound_scenario_vocal">人声</string>
+    <string name="misound_headset_title">耳机类型</string>
+    <string name="misound_headset_general">通用耳机</string>
+    <string name="misound_headset_inear">入耳式耳机</string>
+    <string name="misound_3d_title">3D 环绕声</string>
+    <string name="misound_3d_summary">仅限耳机</string>
+    <string name="misound_dolby_on">Dolby 已开启。MiSound 与 Dolby 无法同时运行，请先关闭 Dolby。</string>
+    <string name="misound_open_dolby">打开 Dolby</string>
+    <string name="misound_note">场景也适用于扬声器。耳机类型和 3D 环绕声仅在连接耳机时生效。</string>
+    <string name="misound_unsupported">此设备没有 MiSound 音效。</string>
 </resources>

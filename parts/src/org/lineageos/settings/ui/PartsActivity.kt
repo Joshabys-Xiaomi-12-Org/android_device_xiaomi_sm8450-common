@@ -41,6 +41,7 @@ import org.lineageos.settings.ui.screens.GpuManagerScreen
 import org.lineageos.settings.ui.screens.HbmScreen
 import org.lineageos.settings.ui.screens.HyperChargeScreen
 import org.lineageos.settings.ui.screens.KernelManagerScreen
+import org.lineageos.settings.ui.screens.MiSoundScreen
 import org.lineageos.settings.ui.screens.PowerProfileScreen
 import org.lineageos.settings.ui.screens.RefreshRateScreen
 import org.lineageos.settings.ui.screens.ResolutionScreen
@@ -70,6 +71,7 @@ enum class Route(val key: String) {
     REVERSE_CHARGE(PartsActivity.ROUTE_REVERSE_CHARGE),
     ZRAM("zram"),
     CLEAR_SPEAKER("clear_speaker"),
+    MISOUND("misound"),
     AUX_CAMERA("aux_camera"),
     FPS_OVERLAY("fps_overlay"),
     USELESS("useless"),
@@ -180,6 +182,7 @@ private fun PartsApp(pendingRoute: String?, onRouteConsumed: () -> Unit) {
                 Route.REVERSE_CHARGE -> ReverseChargeScreen(onBack)
                 Route.ZRAM -> ZramScreen(onBack)
                 Route.CLEAR_SPEAKER -> ClearSpeakerScreen(onBack)
+                Route.MISOUND -> MiSoundScreen(onBack)
                 Route.AUX_CAMERA -> AuxCameraScreen(onBack)
                 Route.FPS_OVERLAY -> FpsOverlayScreen(onBack)
                 Route.USELESS -> UselessScreen(onBack)
