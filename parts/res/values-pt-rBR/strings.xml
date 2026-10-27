@@ -289,6 +289,18 @@
     <string name="misound_3d_summary">Somente com fones</string>
     <string name="misound_dolby_on">O Dolby está ativado. MiSound e Dolby não funcionam juntos, desative o Dolby primeiro.</string>
     <string name="misound_open_dolby">Abrir Dolby</string>
-    <string name="misound_note">O cenário também vale para o alto-falante. Tipo de fone e surround 3D só se aplicam com fones conectados.</string>
+    <string name="misound_note">O cenário também vale para o alto-falante. Tipo de fone, surround 3D e equalizador só se aplicam com fones conectados.</string>
     <string name="misound_unsupported">Este dispositivo não tem o efeito MiSound.</string>
+    <string name="misound_eq_title">Equalizador</string>
+    <string name="misound_eq_preset">Predefinição</string>
+    <string name="misound_eq_band">Banda <xliff:g id="band">%1$d</xliff:g></string>
+    <string name="misound_eq_custom">Personalizado</string>
+    <string name="misound_eq_rock">Rock</string>
+    <string name="misound_eq_jazz">Jazz</string>
+    <string name="misound_eq_pop">Pop</string>
+    <string name="misound_eq_classical">Clássica</string>
+    <string name="misound_eq_hiphop">Hip hop</string>
+    <string name="misound_eq_blues">Blues</string>
+    <string name="misound_eq_electronic">Eletrônica</string>
+    <string name="misound_eq_metal">Metal</string>
 </resources>

@@ -289,6 +289,18 @@
     <string name="misound_3d_summary">مع سماعات الرأس فقط</string>
     <string name="misound_dolby_on">Dolby قيد التشغيل. لا يمكن تشغيل MiSound وDolby معًا، أوقف Dolby أولًا.</string>
     <string name="misound_open_dolby">فتح Dolby</string>
-    <string name="misound_note">ينطبق السيناريو على مكبر الصوت أيضًا. يعمل نوع سماعة الرأس والصوت المحيطي ثلاثي الأبعاد فقط عند توصيل سماعات الرأس.</string>
+    <string name="misound_note">ينطبق السيناريو على مكبر الصوت أيضًا. يعمل نوع سماعة الرأس والصوت المحيطي ثلاثي الأبعاد والمعادل فقط عند توصيل سماعات الرأس.</string>
     <string name="misound_unsupported">لا يحتوي هذا الجهاز على تأثير MiSound.</string>
+    <string name="misound_eq_title">المعادل</string>
+    <string name="misound_eq_preset">إعداد مسبق</string>
+    <string name="misound_eq_band">النطاق <xliff:g id="band">%1$d</xliff:g></string>
+    <string name="misound_eq_custom">مخصص</string>
+    <string name="misound_eq_rock">روك</string>
+    <string name="misound_eq_jazz">جاز</string>
+    <string name="misound_eq_pop">بوب</string>
+    <string name="misound_eq_classical">كلاسيكي</string>
+    <string name="misound_eq_hiphop">هيب هوب</string>
+    <string name="misound_eq_blues">بلوز</string>
+    <string name="misound_eq_electronic">إلكتروني</string>
+    <string name="misound_eq_metal">ميتال</string>
 </resources>

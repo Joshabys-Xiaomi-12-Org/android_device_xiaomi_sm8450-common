@@ -289,6 +289,18 @@
     <string name="misound_3d_summary">Yalnızca kulaklıkta</string>
     <string name="misound_dolby_on">Dolby açık. MiSound ile Dolby birlikte çalışamaz, önce Dolby\'yi kapat.</string>
     <string name="misound_open_dolby">Dolby\'yi aç</string>
-    <string name="misound_note">Senaryo hoparlörde de geçerlidir. Kulaklık tipi ve 3D surround yalnızca kulaklık bağlıyken uygulanır.</string>
+    <string name="misound_note">Senaryo hoparlörde de geçerlidir. Kulaklık tipi, 3D surround ve ekolayzer yalnızca kulaklık bağlıyken uygulanır.</string>
     <string name="misound_unsupported">Bu cihazda MiSound efekti yok.</string>
+    <string name="misound_eq_title">Ekolayzer</string>
+    <string name="misound_eq_preset">Ön ayar</string>
+    <string name="misound_eq_band">Bant <xliff:g id="band">%1$d</xliff:g></string>
+    <string name="misound_eq_custom">Özel</string>
+    <string name="misound_eq_rock">Rock</string>
+    <string name="misound_eq_jazz">Caz</string>
+    <string name="misound_eq_pop">Pop</string>
+    <string name="misound_eq_classical">Klasik</string>
+    <string name="misound_eq_hiphop">Hip hop</string>
+    <string name="misound_eq_blues">Blues</string>
+    <string name="misound_eq_electronic">Elektronik</string>
+    <string name="misound_eq_metal">Metal</string>
 </resources>

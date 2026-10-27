@@ -8,6 +8,8 @@ package org.lineageos.settings.misound;
 
 import android.media.audiofx.AudioEffect;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Locale;
 import java.util.UUID;
 
 /**
@@ -17,6 +19,7 @@ import java.util.UUID;
 public class MiSound extends AudioEffect {
 
     private static final int PARAM_HEADSET_TYPE = 1;
+    private static final int PARAM_EQ_LEVEL = 2;
     private static final int PARAM_SCENARIO = 15;
     private static final int PARAM_3D_SURROUND = 20;
     // Native effect enable: issues EFFECT_CMD_ENABLE/DISABLE inside the library.
@@ -29,6 +32,10 @@ public class MiSound extends AudioEffect {
 
     public static final int HEADSET_GENERAL = 5;
     public static final int HEADSET_GENERAL_INEAR = 6;
+
+    public static final int EQ_BANDS = 10;
+    // The HyperOS equalizer maps its -100..100 % sliders to this range in dB.
+    public static final float EQ_MAX_DB = 6f;
 
     static final UUID EFFECT_TYPE_MISOUND = UUID.fromString("5b8e36a5-144a-4c38-b1d7-0002a5d5c51b");
 
@@ -110,6 +117,16 @@ public class MiSound extends AudioEffect {
 
     public void setHeadsetType(int type) {
         checkStatus(setParameter(PARAM_HEADSET_TYPE, type));
+    }
+
+    /** Gain of one of the 10 bands in dB; the library only applies it with headphones. */
+    public void setLevel(int band, float db) {
+        if (band < 0 || band >= EQ_BANDS || Float.isNaN(db) || Math.abs(db) > EQ_MAX_DB) {
+            throw new IllegalArgumentException("Invalid level " + db + " for band " + band);
+        }
+        // The library runs stof on the first 8 bytes, so keep it short and NUL-terminated.
+        checkStatus(setParameter(new int[]{PARAM_EQ_LEVEL, band},
+                (String.format(Locale.ROOT, "%.2f", db) + "\0").getBytes(StandardCharsets.US_ASCII)));
     }
 
     public void setScenario(int scenario) {

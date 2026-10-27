@@ -37,6 +37,26 @@ public final class MiSoundUtils {
     private static final String PREF_SCENARIO = "misound_scenario";
     private static final String PREF_HEADSET = "misound_headset";
     private static final String PREF_3D_SURROUND = "misound_3d_surround";
+    private static final String PREF_EQ_PRESET = "misound_eq_preset";
+    private static final String PREF_EQ_CUSTOM = "misound_eq_custom";
+
+    /**
+     * HyperOS presets in dB, in its order: custom, rock, jazz, pop, classical, hip hop, blues,
+     * electronic, metal (MiSound app, dax_geq_preset_values). Index 0 uses the saved custom bands.
+     */
+    private static final String[] EQ_PRESETS = {
+            "0,0,0,0,0,0,0,0,0,0",
+            "4,1,-2,-0.25,0,-2,0,-2,0.5,4",
+            "0,0,0,-1,-1,-3,-0.5,0,0,0",
+            "-2,-0.5,-5,-1,0,0,-0.5,-3,-0.5,0",
+            "0,0,0,0,0.5,3,1,6,2,6",
+            "3,0,-3,-0.5,-0.5,-3,-0.5,0,0,2",
+            "2,2,-6,-2,3,1,0,1,0,2",
+            "3,1,-1,0,-0.5,-3,-0.5,0,0,0",
+            "2,0,0,-1.25,-1,-4,0,0,0,0",
+    };
+    public static final int EQ_PRESET_CUSTOM = 0;
+    public static final int EQ_PRESET_COUNT = EQ_PRESETS.length;
 
     public static final int[] SCENARIOS = {
             MiSound.SCENARIO_SMART, MiSound.SCENARIO_MUSIC, MiSound.SCENARIO_VIDEO,
@@ -185,6 +205,70 @@ public final class MiSoundUtils {
         submit(() -> requireEffect().set3dSurround(enabled));
     }
 
+    public int getEqPreset() {
+        int preset = mPrefs.getInt(PREF_EQ_PRESET, EQ_PRESET_CUSTOM);
+        return preset >= 0 && preset < EQ_PRESET_COUNT ? preset : EQ_PRESET_CUSTOM;
+    }
+
+    /** Band gains in dB of the selected preset. */
+    public float[] getEqLevels() {
+        int preset = getEqPreset();
+        if (preset != EQ_PRESET_CUSTOM) return parseLevels(EQ_PRESETS[preset]);
+        try {
+            return parseLevels(mPrefs.getString(PREF_EQ_CUSTOM, EQ_PRESETS[EQ_PRESET_CUSTOM]));
+        } catch (IllegalArgumentException e) {
+            Log.w(TAG, "Discarding invalid custom equalizer", e);
+            mPrefs.edit().remove(PREF_EQ_CUSTOM).apply();
+            return parseLevels(EQ_PRESETS[EQ_PRESET_CUSTOM]);
+        }
+    }
+
+    public void setEqPreset(int preset) {
+        if (preset < 0 || preset >= EQ_PRESET_COUNT) throw new IllegalArgumentException("Preset " + preset);
+        mPrefs.edit().putInt(PREF_EQ_PRESET, preset).apply();
+        float[] levels = getEqLevels();
+        submit(() -> applyEq(requireEffect(), levels));
+    }
+
+    /** Saves the bands as the custom preset and selects it. */
+    public void setEqCustom(float[] levels) {
+        String saved = formatLevels(levels);
+        mPrefs.edit().putString(PREF_EQ_CUSTOM, saved).putInt(PREF_EQ_PRESET, EQ_PRESET_CUSTOM).apply();
+        float[] parsed = parseLevels(saved);
+        submit(() -> applyEq(requireEffect(), parsed));
+    }
+
+    private static float[] parseLevels(String value) {
+        String[] parts = value.split(",");
+        if (parts.length != MiSound.EQ_BANDS) {
+            throw new IllegalArgumentException("Expected " + MiSound.EQ_BANDS + " bands: " + value);
+        }
+        float[] levels = new float[MiSound.EQ_BANDS];
+        for (int i = 0; i < levels.length; i++) {
+            levels[i] = Float.parseFloat(parts[i].trim());
+            if (Float.isNaN(levels[i]) || Math.abs(levels[i]) > MiSound.EQ_MAX_DB) {
+                throw new IllegalArgumentException("Invalid level in " + value);
+            }
+        }
+        return levels;
+    }
+
+    private static String formatLevels(float[] levels) {
+        if (levels.length != MiSound.EQ_BANDS) throw new IllegalArgumentException("Band count");
+        StringBuilder sb = new StringBuilder();
+        for (float level : levels) {
+            if (sb.length() > 0) sb.append(',');
+            sb.append(Math.max(-MiSound.EQ_MAX_DB, Math.min(MiSound.EQ_MAX_DB, level)));
+        }
+        return sb.toString();
+    }
+
+    private static void applyEq(MiSound effect, float[] levels) {
+        for (int band = 0; band < levels.length; band++) {
+            effect.setLevel(band, levels[band]);
+        }
+    }
+
     private static int validOr(int value, int[] allowed, int fallback) {
         for (int v : allowed) {
             if (v == value) return value;
@@ -285,6 +369,7 @@ public final class MiSoundUtils {
         effect.setHeadsetType(getHeadsetType());
         effect.setScenario(getScenario());
         effect.set3dSurround(is3dSurroundEnabled());
+        applyEq(effect, getEqLevels());
     }
 
     private static void applyEnabled(MiSound effect, boolean enable) {

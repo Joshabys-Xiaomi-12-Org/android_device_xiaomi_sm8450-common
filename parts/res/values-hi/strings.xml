@@ -289,6 +289,18 @@
     <string name="misound_3d_summary">केवल हेडफ़ोन पर</string>
     <string name="misound_dolby_on">Dolby चालू है। MiSound और Dolby एक साथ नहीं चल सकते, पहले Dolby बंद करें।</string>
     <string name="misound_open_dolby">Dolby खोलें</string>
-    <string name="misound_note">परिदृश्य स्पीकर पर भी लागू होता है। हेडफ़ोन का प्रकार और 3D सराउंड केवल हेडफ़ोन जुड़े होने पर लागू होते हैं।</string>
+    <string name="misound_note">परिदृश्य स्पीकर पर भी लागू होता है। हेडफ़ोन का प्रकार, 3D सराउंड और इक्वलाइज़र केवल हेडफ़ोन जुड़े होने पर लागू होते हैं।</string>
     <string name="misound_unsupported">इस डिवाइस में MiSound इफ़ेक्ट नहीं है।</string>
+    <string name="misound_eq_title">इक्वलाइज़र</string>
+    <string name="misound_eq_preset">प्रीसेट</string>
+    <string name="misound_eq_band">बैंड <xliff:g id="band">%1$d</xliff:g></string>
+    <string name="misound_eq_custom">कस्टम</string>
+    <string name="misound_eq_rock">रॉक</string>
+    <string name="misound_eq_jazz">जैज़</string>
+    <string name="misound_eq_pop">पॉप</string>
+    <string name="misound_eq_classical">क्लासिकल</string>
+    <string name="misound_eq_hiphop">हिप हॉप</string>
+    <string name="misound_eq_blues">ब्लूज़</string>
+    <string name="misound_eq_electronic">इलेक्ट्रॉनिक</string>
+    <string name="misound_eq_metal">मेटल</string>
 </resources>

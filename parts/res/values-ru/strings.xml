@@ -289,6 +289,18 @@
     <string name="misound_3d_summary">Только в наушниках</string>
     <string name="misound_dolby_on">Dolby включён. MiSound и Dolby не работают вместе, сначала выключите Dolby.</string>
     <string name="misound_open_dolby">Открыть Dolby</string>
-    <string name="misound_note">Сценарий действует и для динамика. Тип наушников и объёмный 3D-звук работают только с подключёнными наушниками.</string>
+    <string name="misound_note">Сценарий действует и для динамика. Тип наушников, объёмный 3D-звук и эквалайзер работают только с подключёнными наушниками.</string>
     <string name="misound_unsupported">На этом устройстве нет эффекта MiSound.</string>
+    <string name="misound_eq_title">Эквалайзер</string>
+    <string name="misound_eq_preset">Пресет</string>
+    <string name="misound_eq_band">Полоса <xliff:g id="band">%1$d</xliff:g></string>
+    <string name="misound_eq_custom">Свой</string>
+    <string name="misound_eq_rock">Рок</string>
+    <string name="misound_eq_jazz">Джаз</string>
+    <string name="misound_eq_pop">Поп</string>
+    <string name="misound_eq_classical">Классика</string>
+    <string name="misound_eq_hiphop">Хип-хоп</string>
+    <string name="misound_eq_blues">Блюз</string>
+    <string name="misound_eq_electronic">Электроника</string>
+    <string name="misound_eq_metal">Метал</string>
 </resources>
