@@ -40,6 +40,7 @@ import androidx.compose.material.icons.rounded.CameraAlt
 import androidx.compose.material.icons.rounded.BrightnessAuto
 import androidx.compose.material.icons.rounded.Brush
 import androidx.compose.material.icons.rounded.DeveloperBoard
+import androidx.compose.material.icons.rounded.GraphicEq
 import androidx.compose.material.icons.rounded.GridView
 import androidx.compose.material.icons.rounded.Layers
 import androidx.compose.material.icons.rounded.LightMode
@@ -86,6 +87,7 @@ import org.lineageos.settings.gpumanager.GpuManagerUtils
 import org.lineageos.settings.hbm.HbmUtils
 import org.lineageos.settings.charge.ChargeUtils
 import org.lineageos.settings.hypercharge.HyperChargeUtils
+import org.lineageos.settings.misound.MiSoundUtils
 import org.lineageos.settings.kernelmanager.KernelManagerUtils
 import org.lineageos.settings.powerprofile.PowerProfileUtil
 import org.lineageos.settings.resolution.ResolutionUtils
@@ -114,6 +116,9 @@ private data class DashboardState(
     val zramCompression: String = "",
     val swappiness: Int = 0,
     val useless: Boolean = false,
+    val misoundSupported: Boolean = true,
+    val misoundOn: Boolean = false,
+    val dolbyOn: Boolean = false,
 )
 
 private class Card(val route: Route, val icon: ImageVector, val title: Int, val summary: String)
@@ -187,6 +192,13 @@ fun DashboardScreen(refreshTick: Int, navigate: (Route) -> Unit) {
                 stringResource(R.string.zram_card_summary, state.zramCompression, state.swappiness)),
         )),
         Section(R.string.section_audio, listOf(
+            Card(Route.MISOUND, Icons.Rounded.GraphicEq, R.string.misound_title,
+                when {
+                    !state.misoundSupported -> unsupported
+                    state.misoundOn -> on
+                    state.dolbyOn -> stringResource(R.string.misound_card_dolby)
+                    else -> off
+                }),
             Card(Route.CLEAR_SPEAKER, Icons.Rounded.WaterDrop, R.string.clear_speaker_title, stringResource(R.string.clear_speaker_card_summary)),
         )),
         Section(R.string.section_extras, listOf(
@@ -346,5 +358,8 @@ private fun readDashboardState(context: Context): DashboardState {
         zramCompression = zram.currentCompression,
         swappiness = zram.currentSwappiness,
         useless = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(USELESS_PREF, false),
+        misoundSupported = MiSoundUtils.isSupported(),
+        misoundOn = MiSoundUtils.getInstance(context).isEnabled,
+        dolbyOn = MiSoundUtils.isDolbyEnabled(),
     )
 }

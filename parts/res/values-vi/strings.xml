@@ -275,4 +275,20 @@
     <string name="reverse_charge_stopped_title">Đã dừng sạc ngược</string>
     <string name="reverse_charge_stopped_limit">Pin đã xuống dưới %1$d %%.</string>
     <string name="reverse_charge_stopped_wireless">Điện thoại này đã bắt đầu sạc không dây.</string>
+    <string name="misound_switch">Dùng MiSound</string>
+    <string name="misound_card_dolby">Tắt, Dolby đang bật</string>
+    <string name="misound_scenario_title">Kịch bản</string>
+    <string name="misound_scenario_smart">Thông minh</string>
+    <string name="misound_scenario_music">Nhạc</string>
+    <string name="misound_scenario_video">Video</string>
+    <string name="misound_scenario_vocal">Giọng nói</string>
+    <string name="misound_headset_title">Loại tai nghe</string>
+    <string name="misound_headset_general">Tai nghe thông thường</string>
+    <string name="misound_headset_inear">Tai nghe nhét tai</string>
+    <string name="misound_3d_title">Âm thanh vòm 3D</string>
+    <string name="misound_3d_summary">Chỉ với tai nghe</string>
+    <string name="misound_dolby_on">Dolby đang bật. MiSound và Dolby không thể chạy cùng lúc, hãy tắt Dolby trước.</string>
+    <string name="misound_open_dolby">Mở Dolby</string>
+    <string name="misound_note">Kịch bản cũng áp dụng cho loa ngoài. Loại tai nghe và âm thanh vòm 3D chỉ áp dụng khi có tai nghe kết nối.</string>
+    <string name="misound_unsupported">Thiết bị này không có hiệu ứng MiSound.</string>
 </resources>

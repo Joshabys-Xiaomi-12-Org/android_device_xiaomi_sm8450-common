@@ -275,4 +275,20 @@
     <string name="reverse_charge_stopped_title">Carga inversa detenida</string>
     <string name="reverse_charge_stopped_limit">La batería bajó del %1$d %%.</string>
     <string name="reverse_charge_stopped_wireless">Este teléfono empezó a cargarse de forma inalámbrica.</string>
+    <string name="misound_switch">Usar MiSound</string>
+    <string name="misound_card_dolby">Desactivado, Dolby activado</string>
+    <string name="misound_scenario_title">Escenario</string>
+    <string name="misound_scenario_smart">Inteligente</string>
+    <string name="misound_scenario_music">Música</string>
+    <string name="misound_scenario_video">Vídeo</string>
+    <string name="misound_scenario_vocal">Voz</string>
+    <string name="misound_headset_title">Tipo de auriculares</string>
+    <string name="misound_headset_general">Auriculares generales</string>
+    <string name="misound_headset_inear">Auriculares intraurales</string>
+    <string name="misound_3d_title">Sonido envolvente 3D</string>
+    <string name="misound_3d_summary">Solo con auriculares</string>
+    <string name="misound_dolby_on">Dolby está activado. MiSound y Dolby no pueden funcionar a la vez, desactiva Dolby primero.</string>
+    <string name="misound_open_dolby">Abrir Dolby</string>
+    <string name="misound_note">El escenario también se aplica al altavoz. El tipo de auriculares y el sonido envolvente 3D solo se aplican con auriculares conectados.</string>
+    <string name="misound_unsupported">Este dispositivo no tiene el efecto MiSound.</string>
 </resources>

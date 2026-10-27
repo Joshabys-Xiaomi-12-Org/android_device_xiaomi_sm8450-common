@@ -275,4 +275,20 @@
     <string name="reverse_charge_stopped_title">रिवर्स चार्जिंग रुक गई</string>
     <string name="reverse_charge_stopped_limit">बैटरी %1$d %% से नीचे चली गई।</string>
     <string name="reverse_charge_stopped_wireless">यह फ़ोन वायरलेस चार्ज होने लगा।</string>
+    <string name="misound_switch">MiSound इस्तेमाल करें</string>
+    <string name="misound_card_dolby">बंद, Dolby चालू है</string>
+    <string name="misound_scenario_title">परिदृश्य</string>
+    <string name="misound_scenario_smart">स्मार्ट</string>
+    <string name="misound_scenario_music">संगीत</string>
+    <string name="misound_scenario_video">वीडियो</string>
+    <string name="misound_scenario_vocal">आवाज़</string>
+    <string name="misound_headset_title">हेडफ़ोन का प्रकार</string>
+    <string name="misound_headset_general">सामान्य हेडफ़ोन</string>
+    <string name="misound_headset_inear">इन-ईयर हेडफ़ोन</string>
+    <string name="misound_3d_title">3D सराउंड</string>
+    <string name="misound_3d_summary">केवल हेडफ़ोन पर</string>
+    <string name="misound_dolby_on">Dolby चालू है। MiSound और Dolby एक साथ नहीं चल सकते, पहले Dolby बंद करें।</string>
+    <string name="misound_open_dolby">Dolby खोलें</string>
+    <string name="misound_note">परिदृश्य स्पीकर पर भी लागू होता है। हेडफ़ोन का प्रकार और 3D सराउंड केवल हेडफ़ोन जुड़े होने पर लागू होते हैं।</string>
+    <string name="misound_unsupported">इस डिवाइस में MiSound इफ़ेक्ट नहीं है।</string>
 </resources>

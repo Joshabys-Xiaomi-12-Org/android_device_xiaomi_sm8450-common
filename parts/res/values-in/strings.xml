@@ -275,4 +275,20 @@
     <string name="reverse_charge_stopped_title">Pengisian terbalik dihentikan</string>
     <string name="reverse_charge_stopped_limit">Baterai turun di bawah %1$d %%.</string>
     <string name="reverse_charge_stopped_wireless">Ponsel ini mulai diisi secara nirkabel.</string>
+    <string name="misound_switch">Gunakan MiSound</string>
+    <string name="misound_card_dolby">Nonaktif, Dolby aktif</string>
+    <string name="misound_scenario_title">Skenario</string>
+    <string name="misound_scenario_smart">Pintar</string>
+    <string name="misound_scenario_music">Musik</string>
+    <string name="misound_scenario_video">Video</string>
+    <string name="misound_scenario_vocal">Suara</string>
+    <string name="misound_headset_title">Jenis headphone</string>
+    <string name="misound_headset_general">Headphone umum</string>
+    <string name="misound_headset_inear">Headphone in-ear</string>
+    <string name="misound_3d_title">Surround 3D</string>
+    <string name="misound_3d_summary">Hanya headphone</string>
+    <string name="misound_dolby_on">Dolby aktif. MiSound dan Dolby tidak bisa berjalan bersamaan, matikan Dolby terlebih dahulu.</string>
+    <string name="misound_open_dolby">Buka Dolby</string>
+    <string name="misound_note">Skenario juga berlaku untuk speaker. Jenis headphone dan surround 3D hanya berlaku saat headphone terhubung.</string>
+    <string name="misound_unsupported">Perangkat ini tidak memiliki efek MiSound.</string>
 </resources>
