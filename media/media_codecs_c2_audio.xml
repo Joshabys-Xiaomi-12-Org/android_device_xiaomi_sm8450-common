@@ -20,6 +20,8 @@
 <Included>
     <!-- LunarisDolby decoders (hardware/dolby) -->
     <Include href="media_codecs_dolby_audio.xml" />
+    <!-- Dolby Vision decoders (hardware/dolby, TARGET_INCLUDES_DolbyVision) -->
+    <Include href="media_codecs_dolby_vision.xml" />
     <Decoders>
         <!-- C2 audio decoders -->
         <MediaCodec name="c2.qti.alac.sw.decoder" type="audio/alac" rank="0">
