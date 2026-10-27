@@ -295,6 +295,19 @@
     <string name="misound_3d_summary">Headphones only</string>
     <string name="misound_dolby_on">Dolby is on. MiSound and Dolby can\'t run together, so turn Dolby off first.</string>
     <string name="misound_open_dolby">Open Dolby</string>
-    <string name="misound_note">Scenario also applies to the speaker. Headphone type and 3D surround only apply while headphones are connected.</string>
+    <string name="misound_note">Scenario also applies to the speaker. Headphone type, 3D surround and the equalizer only apply while headphones are connected.</string>
     <string name="misound_unsupported">This device has no MiSound effect.</string>
+    <string name="misound_eq_percent" translatable="false">%1$d %%</string>
+    <string name="misound_eq_title">Equalizer</string>
+    <string name="misound_eq_preset">Preset</string>
+    <string name="misound_eq_band">Band <xliff:g id="band">%1$d</xliff:g></string>
+    <string name="misound_eq_custom">Custom</string>
+    <string name="misound_eq_rock">Rock</string>
+    <string name="misound_eq_jazz">Jazz</string>
+    <string name="misound_eq_pop">Pop</string>
+    <string name="misound_eq_classical">Classical</string>
+    <string name="misound_eq_hiphop">Hip hop</string>
+    <string name="misound_eq_blues">Blues</string>
+    <string name="misound_eq_electronic">Electronic</string>
+    <string name="misound_eq_metal">Metal</string>
 </resources>

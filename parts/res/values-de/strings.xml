@@ -289,6 +289,18 @@
     <string name="misound_3d_summary">Nur mit Kopfhörern</string>
     <string name="misound_dolby_on">Dolby ist an. MiSound und Dolby können nicht gleichzeitig laufen, schalte zuerst Dolby aus.</string>
     <string name="misound_open_dolby">Dolby öffnen</string>
-    <string name="misound_note">Das Szenario gilt auch für den Lautsprecher. Kopfhörertyp und 3D-Surround wirken nur bei verbundenen Kopfhörern.</string>
+    <string name="misound_note">Das Szenario gilt auch für den Lautsprecher. Kopfhörertyp, 3D-Surround und Equalizer wirken nur bei verbundenen Kopfhörern.</string>
     <string name="misound_unsupported">Dieses Gerät hat keinen MiSound-Effekt.</string>
+    <string name="misound_eq_title">Equalizer</string>
+    <string name="misound_eq_preset">Voreinstellung</string>
+    <string name="misound_eq_band">Band <xliff:g id="band">%1$d</xliff:g></string>
+    <string name="misound_eq_custom">Benutzerdefiniert</string>
+    <string name="misound_eq_rock">Rock</string>
+    <string name="misound_eq_jazz">Jazz</string>
+    <string name="misound_eq_pop">Pop</string>
+    <string name="misound_eq_classical">Klassik</string>
+    <string name="misound_eq_hiphop">Hip-Hop</string>
+    <string name="misound_eq_blues">Blues</string>
+    <string name="misound_eq_electronic">Elektronisch</string>
+    <string name="misound_eq_metal">Metal</string>
 </resources>

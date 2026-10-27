@@ -289,6 +289,18 @@
     <string name="misound_3d_summary">仅限耳机</string>
     <string name="misound_dolby_on">Dolby 已开启。MiSound 与 Dolby 无法同时运行，请先关闭 Dolby。</string>
     <string name="misound_open_dolby">打开 Dolby</string>
-    <string name="misound_note">场景也适用于扬声器。耳机类型和 3D 环绕声仅在连接耳机时生效。</string>
+    <string name="misound_note">场景也适用于扬声器。耳机类型、3D 环绕声和均衡器仅在连接耳机时生效。</string>
     <string name="misound_unsupported">此设备没有 MiSound 音效。</string>
+    <string name="misound_eq_title">均衡器</string>
+    <string name="misound_eq_preset">预设</string>
+    <string name="misound_eq_band">频段 <xliff:g id="band">%1$d</xliff:g></string>
+    <string name="misound_eq_custom">自定义</string>
+    <string name="misound_eq_rock">摇滚</string>
+    <string name="misound_eq_jazz">爵士</string>
+    <string name="misound_eq_pop">流行</string>
+    <string name="misound_eq_classical">古典</string>
+    <string name="misound_eq_hiphop">嘻哈</string>
+    <string name="misound_eq_blues">蓝调</string>
+    <string name="misound_eq_electronic">电子</string>
+    <string name="misound_eq_metal">金属</string>
 </resources>

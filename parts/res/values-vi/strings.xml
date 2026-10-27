@@ -289,6 +289,18 @@
     <string name="misound_3d_summary">Chỉ với tai nghe</string>
     <string name="misound_dolby_on">Dolby đang bật. MiSound và Dolby không thể chạy cùng lúc, hãy tắt Dolby trước.</string>
     <string name="misound_open_dolby">Mở Dolby</string>
-    <string name="misound_note">Kịch bản cũng áp dụng cho loa ngoài. Loại tai nghe và âm thanh vòm 3D chỉ áp dụng khi có tai nghe kết nối.</string>
+    <string name="misound_note">Kịch bản cũng áp dụng cho loa ngoài. Loại tai nghe, âm thanh vòm 3D và bộ cân bằng chỉ áp dụng khi có tai nghe kết nối.</string>
     <string name="misound_unsupported">Thiết bị này không có hiệu ứng MiSound.</string>
+    <string name="misound_eq_title">Bộ cân bằng</string>
+    <string name="misound_eq_preset">Cài đặt sẵn</string>
+    <string name="misound_eq_band">Dải <xliff:g id="band">%1$d</xliff:g></string>
+    <string name="misound_eq_custom">Tùy chỉnh</string>
+    <string name="misound_eq_rock">Rock</string>
+    <string name="misound_eq_jazz">Jazz</string>
+    <string name="misound_eq_pop">Pop</string>
+    <string name="misound_eq_classical">Cổ điển</string>
+    <string name="misound_eq_hiphop">Hip hop</string>
+    <string name="misound_eq_blues">Blues</string>
+    <string name="misound_eq_electronic">Điện tử</string>
+    <string name="misound_eq_metal">Metal</string>
 </resources>

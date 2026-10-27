@@ -289,6 +289,18 @@
     <string name="misound_3d_summary">Écouteurs uniquement</string>
     <string name="misound_dolby_on">Dolby est activé. MiSound et Dolby ne peuvent pas fonctionner ensemble, désactivez d\'abord Dolby.</string>
     <string name="misound_open_dolby">Ouvrir Dolby</string>
-    <string name="misound_note">Le scénario s\'applique aussi au haut-parleur. Le type d\'écouteurs et le son surround 3D ne s\'appliquent qu\'avec des écouteurs connectés.</string>
+    <string name="misound_note">Le scénario s\'applique aussi au haut-parleur. Le type d\'écouteurs, le son surround 3D et l\'égaliseur ne s\'appliquent qu\'avec des écouteurs connectés.</string>
     <string name="misound_unsupported">Cet appareil n\'a pas l\'effet MiSound.</string>
+    <string name="misound_eq_title">Égaliseur</string>
+    <string name="misound_eq_preset">Préréglage</string>
+    <string name="misound_eq_band">Bande <xliff:g id="band">%1$d</xliff:g></string>
+    <string name="misound_eq_custom">Personnalisé</string>
+    <string name="misound_eq_rock">Rock</string>
+    <string name="misound_eq_jazz">Jazz</string>
+    <string name="misound_eq_pop">Pop</string>
+    <string name="misound_eq_classical">Classique</string>
+    <string name="misound_eq_hiphop">Hip-hop</string>
+    <string name="misound_eq_blues">Blues</string>
+    <string name="misound_eq_electronic">Électronique</string>
+    <string name="misound_eq_metal">Métal</string>
 </resources>

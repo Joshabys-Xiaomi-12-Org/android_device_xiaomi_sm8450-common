@@ -38,6 +38,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.toMutableStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -51,6 +52,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 import org.lineageos.settings.R
+import org.lineageos.settings.misound.MiSound
 import org.lineageos.settings.misound.MiSoundUtils
 import org.lineageos.settings.ui.components.ActionRow
 import org.lineageos.settings.ui.components.ChoiceRow
@@ -59,9 +61,12 @@ import org.lineageos.settings.ui.components.MainSwitchCard
 import org.lineageos.settings.ui.components.NoteText
 import org.lineageos.settings.ui.components.PartsCard
 import org.lineageos.settings.ui.components.PartsPage
+import org.lineageos.settings.ui.components.SectionTitle
+import org.lineageos.settings.ui.components.SliderCard
 import org.lineageos.settings.ui.components.SwitchRow
 import org.lineageos.settings.ui.components.WarningCard
 import java.io.IOException
+import kotlin.math.roundToInt
 
 private const val CLEAN_DURATION_SECONDS = 30
 private const val TAG = "ClearSpeaker"
@@ -183,6 +188,8 @@ fun MiSoundScreen(onBack: () -> Unit) {
     var scenario by remember { mutableIntStateOf(MiSoundUtils.SCENARIOS.indexOf(utils.scenario)) }
     var headset by remember { mutableIntStateOf(MiSoundUtils.HEADSETS.indexOf(utils.headsetType)) }
     var surround by remember { mutableStateOf(utils.is3dSurroundEnabled()) }
+    var eqPreset by remember { mutableIntStateOf(utils.eqPreset) }
+    val eqLevels = remember { utils.eqLevels.toMutableList().toMutableStateList() }
     // Dolby can be switched in its own app while this page is in the background.
     var resumeTick by remember { mutableIntStateOf(0) }
     var dolbyOn by remember { mutableStateOf(false) }
@@ -261,6 +268,45 @@ fun MiSoundScreen(onBack: () -> Unit) {
                     }
                 },
             )
+        }
+        item { SectionTitle(stringResource(R.string.misound_eq_title)) }
+        item {
+            Group({ shape ->
+                ChoiceRow(
+                    shape = shape,
+                    title = stringResource(R.string.misound_eq_preset),
+                    options = listOf(
+                        R.string.misound_eq_custom, R.string.misound_eq_rock, R.string.misound_eq_jazz,
+                        R.string.misound_eq_pop, R.string.misound_eq_classical, R.string.misound_eq_hiphop,
+                        R.string.misound_eq_blues, R.string.misound_eq_electronic, R.string.misound_eq_metal,
+                    ).map { stringResource(it) },
+                    selected = eqPreset,
+                    enabled = active,
+                ) {
+                    utils.setEqPreset(it)
+                    eqPreset = it
+                    utils.eqLevels.forEachIndexed { band, db -> eqLevels[band] = db }
+                }
+            })
+        }
+        // Like HyperOS: sliders in % of the +-6 dB range; moving one saves all bands as custom.
+        eqLevels.indices.forEach { band ->
+            item {
+                SliderCard(
+                    title = stringResource(R.string.misound_eq_band, band + 1),
+                    value = (eqLevels[band] / MiSound.EQ_MAX_DB * 100).roundToInt(),
+                    range = -100..100,
+                    step = 5,
+                    defaultValue = 0,
+                    enabled = active,
+                    format = { context.getString(R.string.misound_eq_percent, it) },
+                    onValueChange = { eqLevels[band] = it * MiSound.EQ_MAX_DB / 100 },
+                    onValueChangeFinished = {
+                        utils.setEqCustom(eqLevels.toFloatArray())
+                        eqPreset = MiSoundUtils.EQ_PRESET_CUSTOM
+                    },
+                )
+            }
         }
         item {
             NoteText(stringResource(if (supported) R.string.misound_note else R.string.misound_unsupported))
