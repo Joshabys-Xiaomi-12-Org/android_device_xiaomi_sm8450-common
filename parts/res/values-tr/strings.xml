@@ -288,7 +288,7 @@
     <string name="misound_3d_title">3D surround</string>
     <string name="misound_3d_summary">Yalnızca kulaklıkta</string>
     <string name="misound_dolby_on">Dolby açık. MiSound ile Dolby birlikte çalışamaz, önce Dolby\'yi kapat.</string>
-    <string name="misound_open_dolby">Dolby\'yi aç</string>
+    <string name="misound_open_dolby">Dolby ayarlarını aç</string>
     <string name="misound_note">Senaryo hoparlörde de geçerlidir. Kulaklık tipi, 3D surround ve ekolayzer yalnızca kulaklık bağlıyken uygulanır.</string>
     <string name="misound_unsupported">Bu cihazda MiSound efekti yok.</string>
     <string name="misound_eq_title">Ekolayzer</string>
