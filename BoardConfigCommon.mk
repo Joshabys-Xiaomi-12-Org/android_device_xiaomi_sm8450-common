@@ -215,7 +215,11 @@ $(foreach sku, $(call to-upper, $(DEVICE_MANIFEST_SKUS)), \
         $(COMMON_PATH)/vintf/manifest.xml \
         $(COMMON_PATH)/vintf/manifest_xiaomi.xml \
         $(if $(TARGET_NFC_SUPPORTED_SKUS),$(COMMON_PATH)/vintf/manifest_no_nfc.xml,) \
+        $(DEVICE_MANIFEST_FILE) \
     ))
+# hardware/dolby adds its HALs to DEVICE_MANIFEST_FILE, which builds a SKU-less
+# manifest without target-level and fails checkvintf; keep them in the SKUs only.
+DEVICE_MANIFEST_FILE :=
 
 ifneq ($(TARGET_NFC_SUPPORTED_SKUS),)
 ODM_MANIFEST_SKUS += $(TARGET_NFC_SUPPORTED_SKUS)
