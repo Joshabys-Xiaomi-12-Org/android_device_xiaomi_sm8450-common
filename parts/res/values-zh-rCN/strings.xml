@@ -250,7 +250,7 @@
     <string name="hypercharge_limit_33w">33W（保护电池）</string>
     <string name="hypercharge_limit_30w">30W（慢速）</string>
     <string name="quick_auto_hbm">自动 HBM</string>
-    <string name="made_for_zeus">由 acerhizmq 为 zeus 打造</string>
+    <string name="made_for_device">由 acerhizmq 为 %1$s 打造</string>
     <string name="credits_work_zeus">zeus 移植：mi_disp HBM、SM8450 CPU 集群、ZRAM 控制和 SELinux 规则</string>
     <string name="credits_work_power">电源配置与按应用温控合并，二者可同时生效</string>
     <string name="credits_source_joshaby">sm8450 设备树、内核，以及电源配置与温控逻辑</string>

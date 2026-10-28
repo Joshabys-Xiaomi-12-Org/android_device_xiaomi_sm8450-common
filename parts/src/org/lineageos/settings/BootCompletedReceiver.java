@@ -43,36 +43,29 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         if (DEBUG)
             Log.d(TAG, "Received boot completed intent");
 
-        // Thermal Profiles
-        ThermalUtils.startService(context);
-        RefreshUtils.startService(context);
-        overrideHdrTypes(context);
-        // Per-App-Resolution
-        ResolutionUtils.startService(context);
-
-        // Auto HBM
-        FileUtils.enableService(context);
-
-        // Aux camera restrictions
-        AuxCameraUtils.INSTANCE.restore(context);
-
-        // HyperCharge
-        try {
-            HyperChargeUtils.update(context);
-        } catch (Exception e) {
-            Log.e(TAG, "Failed to start HyperChargeService on boot", e);
-        }
-
+        // Each step on its own, so a feature this device lacks can't skip the rest.
+        restore("thermal profiles", () -> ThermalUtils.startService(context));
+        restore("refresh rate", () -> RefreshUtils.startService(context));
+        restore("HDR types", () -> overrideHdrTypes(context));
+        restore("per-app resolution", () -> ResolutionUtils.startService(context));
+        restore("auto HBM", () -> FileUtils.enableService(context));
+        restore("aux camera restrictions", () -> AuxCameraUtils.INSTANCE.restore(context));
+        restore("HyperCharge", () -> HyperChargeUtils.update(context));
         // Wired boost and the reverse charging limit
-        try {
-            ChargeUtils.startService(context);
-        } catch (Exception e) {
-            Log.e(TAG, "Failed to start ChargeService on boot", e);
-        }
-
+        restore("charge service", () -> ChargeUtils.startService(context));
         // MiSound: the persistent process owns the effect and restores its settings
-        if (MiSoundUtils.isSupported()) {
-            MiSoundUtils.getInstance(context);
+        restore("MiSound", () -> {
+            if (MiSoundUtils.isSupported()) {
+                MiSoundUtils.getInstance(context);
+            }
+        });
+    }
+
+    private static void restore(String what, Runnable step) {
+        try {
+            step.run();
+        } catch (Exception e) {
+            Log.e(TAG, "Failed to restore " + what + " on boot", e);
         }
     }
 

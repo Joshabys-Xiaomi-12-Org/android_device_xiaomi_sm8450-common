@@ -250,7 +250,7 @@
     <string name="hypercharge_limit_33w">33W (salva batteria)</string>
     <string name="hypercharge_limit_30w">30W (lento)</string>
     <string name="quick_auto_hbm">HBM auto</string>
-    <string name="made_for_zeus">Creato per zeus da acerhizmq</string>
+    <string name="made_for_device">Creato per %1$s da acerhizmq</string>
     <string name="credits_work_zeus">Port per zeus: HBM con mi_disp, cluster CPU SM8450, controlli ZRAM e regole SELinux</string>
     <string name="credits_work_power">Profili energetici uniti al termico per app, così funzionano insieme</string>
     <string name="credits_source_joshaby">Albero del dispositivo sm8450, kernel e logica dei profili energetici e termici</string>

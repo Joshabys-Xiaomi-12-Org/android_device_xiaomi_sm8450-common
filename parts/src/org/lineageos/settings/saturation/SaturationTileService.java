@@ -47,6 +47,7 @@ public class SaturationTileService extends TileService {
 
     private void updateTile() {
         final Tile tile = getQsTile();
+        if (tile == null) return;
         tile.setState(Tile.STATE_ACTIVE);
         tile.updateTile();
     }

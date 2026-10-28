@@ -250,7 +250,7 @@
     <string name="hypercharge_limit_33w">33W (pil dostu)</string>
     <string name="hypercharge_limit_30w">30W (yavaş)</string>
     <string name="quick_auto_hbm">Oto HBM</string>
-    <string name="made_for_zeus">acerhizmq tarafından zeus için yapıldı</string>
+    <string name="made_for_device">acerhizmq tarafından %1$s için yapıldı</string>
     <string name="credits_work_zeus">zeus portu: mi_disp HBM, SM8450 CPU kümeleri, ZRAM ayarları ve SELinux kuralları</string>
     <string name="credits_work_power">Güç profilleri uygulama başına termal ile birleştirildi, ikisi birlikte çalışıyor</string>
     <string name="credits_source_joshaby">sm8450 cihaz ağacı, kernel, güç profili ve termal mantığı</string>

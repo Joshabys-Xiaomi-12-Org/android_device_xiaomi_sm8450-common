@@ -22,7 +22,6 @@
     <string name="app_name" translatable="false">XiaomiParts</string>
     <string name="app_title">Xiaomi Settings</string>
     <string name="settings_entry_summary">Display, performance, battery, and audio tweaks</string>
-    <string name="device_family" translatable="false">Xiaomi 12 Pro</string>
     <string name="device_prompt" translatable="false">root@<xliff:g id="codename">%1$s</xliff:g>:~#</string>
     <string name="device_details">device: <xliff:g id="codename">%1$s</xliff:g> · Android <xliff:g id="android">%2$s</xliff:g> · kernel <xliff:g id="kernel">%3$s</xliff:g></string>
     <string name="navigate_up">Back</string>
@@ -253,7 +252,7 @@
     <string name="hypercharge_limit_33w">33W (battery saver)</string>
     <string name="hypercharge_limit_30w">30W (slow)</string>
     <string name="quick_auto_hbm">Auto HBM</string>
-    <string name="made_for_zeus">Made for zeus by acerhizmq</string>
+    <string name="made_for_device">Made for %1$s by acerhizmq</string>
     <string name="credits_work_zeus">zeus port: mi_disp HBM, SM8450 CPU clusters, ZRAM controls, and SELinux rules</string>
     <string name="credits_work_power">Power profiles merged with per-app thermal so both work together</string>
     <string name="credits_source_joshaby">sm8450 device tree, kernel, and the power profile and thermal logic</string>

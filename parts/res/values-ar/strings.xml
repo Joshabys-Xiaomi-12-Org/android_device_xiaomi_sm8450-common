@@ -250,7 +250,7 @@
     <string name="hypercharge_limit_33w">33W (يحافظ على البطارية)</string>
     <string name="hypercharge_limit_30w">30W (بطيء)</string>
     <string name="quick_auto_hbm">HBM تلقائي</string>
-    <string name="made_for_zeus">صُنع لجهاز zeus بواسطة acerhizmq</string>
+    <string name="made_for_device">صُنع لجهاز %1$s بواسطة acerhizmq</string>
     <string name="credits_work_zeus">نقل إلى zeus: HBM عبر mi_disp ومجموعات معالج SM8450 وإعدادات ZRAM وقواعد SELinux</string>
     <string name="credits_work_power">دمج ملفات الطاقة مع الوضع الحراري لكل تطبيق ليعملا معًا</string>
     <string name="credits_source_joshaby">شجرة جهاز sm8450 والنواة ومنطق ملفات الطاقة والحرارة</string>

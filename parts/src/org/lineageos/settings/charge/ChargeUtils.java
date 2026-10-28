@@ -51,7 +51,8 @@ public final class ChargeUtils {
     }
 
     public static boolean isBoostEnabled(Context context) {
-        return prefs(context).getBoolean(KEY_BOOST, true);
+        // Off until the user turns it on: the values are zeus' (HyperOS) charger and thermal tuning
+        return prefs(context).getBoolean(KEY_BOOST, false);
     }
 
     public static void setBoostEnabled(Context context, boolean enabled) {

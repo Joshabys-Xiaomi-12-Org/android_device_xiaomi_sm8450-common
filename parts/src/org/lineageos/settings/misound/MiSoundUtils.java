@@ -18,6 +18,7 @@ import android.util.Log;
 
 import androidx.preference.PreferenceManager;
 
+import java.io.File;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.UUID;
@@ -127,8 +128,12 @@ public final class MiSoundUtils {
         return sInstance;
     }
 
-    /** Whether this vendor ships libmisoundfx (registered in audio_effects.xml). */
+    // DSP tuning the effect loads; only some devices' vendor trees ship it
+    private static final String SPEAKER_RES = "/vendor/lib/rfsa/adsp/misound_res_spk.bin";
+
+    /** Whether this vendor ships libmisoundfx (registered in audio_effects.xml) and its tuning. */
     public static boolean isSupported() {
+        if (!new File(SPEAKER_RES).exists()) return false;
         try {
             for (AudioEffect.Descriptor d : AudioEffect.queryEffects()) {
                 if (MiSound.EFFECT_TYPE_MISOUND.equals(d.uuid)) return true;

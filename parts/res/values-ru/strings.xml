@@ -250,7 +250,7 @@
     <string name="hypercharge_limit_33w">33W (бережёт батарею)</string>
     <string name="hypercharge_limit_30w">30W (медленно)</string>
     <string name="quick_auto_hbm">Авто HBM</string>
-    <string name="made_for_zeus">Сделано для zeus, автор acerhizmq</string>
+    <string name="made_for_device">Сделано для %1$s, автор acerhizmq</string>
     <string name="credits_work_zeus">Порт на zeus: HBM через mi_disp, кластеры CPU SM8450, настройки ZRAM и правила SELinux</string>
     <string name="credits_work_power">Профили питания объединены с тепловыми режимами приложений, теперь они работают вместе</string>
     <string name="credits_source_joshaby">Дерево устройства sm8450, ядро и логика профилей питания и тепловых режимов</string>

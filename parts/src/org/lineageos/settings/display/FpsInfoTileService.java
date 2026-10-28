@@ -50,6 +50,7 @@ public class FpsInfoTileService extends TileService {
     public void onStartListening() {
         super.onStartListening();
         final Tile tile = getQsTile();
+        if (tile == null) return;
 
         if (!new File(FpsInfoService.FPS_PATH).exists()) {
             tile.setState(Tile.STATE_UNAVAILABLE);
@@ -85,6 +86,7 @@ public class FpsInfoTileService extends TileService {
 
     private void updateTile() {
         final Tile tile = getQsTile();
+        if (tile == null) return;
         tile.setState(mIsShowing ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
         tile.updateTile();
     }

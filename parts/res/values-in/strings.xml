@@ -250,7 +250,7 @@
     <string name="hypercharge_limit_33w">33W (ramah baterai)</string>
     <string name="hypercharge_limit_30w">30W (lambat)</string>
     <string name="quick_auto_hbm">HBM otomatis</string>
-    <string name="made_for_zeus">Dibuat untuk zeus oleh acerhizmq</string>
+    <string name="made_for_device">Dibuat untuk %1$s oleh acerhizmq</string>
     <string name="credits_work_zeus">Port zeus: HBM mi_disp, kluster CPU SM8450, kontrol ZRAM, dan aturan SELinux</string>
     <string name="credits_work_power">Profil daya digabung dengan termal per aplikasi sehingga keduanya bekerja bersama</string>
     <string name="credits_source_joshaby">Device tree sm8450, kernel, serta logika profil daya dan termal</string>

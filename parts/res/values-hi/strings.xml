@@ -250,7 +250,7 @@
     <string name="hypercharge_limit_33w">33W (बैटरी के लिए बेहतर)</string>
     <string name="hypercharge_limit_30w">30W (धीमा)</string>
     <string name="quick_auto_hbm">ऑटो HBM</string>
-    <string name="made_for_zeus">acerhizmq ने zeus के लिए बनाया</string>
+    <string name="made_for_device">acerhizmq ने %1$s के लिए बनाया</string>
     <string name="credits_work_zeus">zeus पोर्ट: mi_disp HBM, SM8450 CPU क्लस्टर, ZRAM कंट्रोल और SELinux नियम</string>
     <string name="credits_work_power">पावर प्रोफ़ाइल को प्रति-ऐप थर्मल के साथ जोड़ा गया, ताकि दोनों साथ काम करें</string>
     <string name="credits_source_joshaby">sm8450 डिवाइस ट्री, कर्नेल और पावर प्रोफ़ाइल व थर्मल लॉजिक</string>

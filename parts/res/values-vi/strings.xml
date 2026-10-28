@@ -250,7 +250,7 @@
     <string name="hypercharge_limit_33w">33W (bảo vệ pin)</string>
     <string name="hypercharge_limit_30w">30W (chậm)</string>
     <string name="quick_auto_hbm">HBM tự động</string>
-    <string name="made_for_zeus">Làm cho zeus bởi acerhizmq</string>
+    <string name="made_for_device">Làm cho %1$s bởi acerhizmq</string>
     <string name="credits_work_zeus">Port cho zeus: HBM qua mi_disp, cụm CPU SM8450, điều khiển ZRAM và quy tắc SELinux</string>
     <string name="credits_work_power">Gộp cấu hình năng lượng với nhiệt theo ứng dụng để cả hai cùng hoạt động</string>
     <string name="credits_source_joshaby">Device tree sm8450, kernel và logic cấu hình năng lượng, nhiệt</string>

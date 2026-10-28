@@ -282,7 +282,7 @@ fun DashboardScreen(refreshTick: Int, navigate: (Route) -> Unit) {
                 Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.fillMaxWidth()) {
                     Spacer(Modifier.height(18.dp))
                     Text(
-                        stringResource(R.string.made_for_zeus),
+                        stringResource(R.string.made_for_device, SystemProperties.get("ro.product.device", Build.DEVICE)),
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                         textAlign = TextAlign.Center,
@@ -300,6 +300,7 @@ private fun DeviceCard() {
     val androidVersion = remember { Build.VERSION.RELEASE }
     val kernelVersion = remember { System.getProperty("os.version").orEmpty().substringBefore('-') }
     val codename = remember { SystemProperties.get("ro.product.device", Build.DEVICE) }
+    val marketName = remember { SystemProperties.get("ro.product.marketname", Build.MODEL) }
     PartsCard(contentPadding = PaddingValues(20.dp)) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Column(Modifier.weight(1f)) {
@@ -311,7 +312,7 @@ private fun DeviceCard() {
                 )
                 Spacer(Modifier.height(8.dp))
                 Text(
-                    stringResource(R.string.device_family),
+                    marketName,
                     style = MaterialTheme.typography.titleLarge,
                     color = MaterialTheme.colorScheme.onSurface,
                 )
