@@ -110,7 +110,6 @@ on property:sys.boot_completed=1
     setprop dalvik.vm.image-dex2oat-threads 6
 
     # Configure uclamp
-    setprop kernel.sched_util_clamp_min_rt_default 128
     write /proc/sys/kernel/sched_util_clamp_min_rt_default 128
 
     write /dev/cpuctl/top-app/cpu.uclamp.min 15
