@@ -239,3 +239,6 @@ vendor.usb.use_gadget_hal=1
 
 # WiFi
 wifi.aware.interface=wifi-aware0
+
+# Blur
+ro.sf.blurs_are_expensive=1
