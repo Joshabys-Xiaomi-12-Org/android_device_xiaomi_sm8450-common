@@ -242,3 +242,8 @@ wifi.aware.interface=wifi-aware0
 
 # Blur
 ro.sf.blurs_are_expensive=1
+
+# DexOPT Optimizer
+pm.dexopt.install=speed-profile
+pm.dexopt.bg-dexopt=speed
+pm.dexopt.boot=verify
