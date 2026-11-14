@@ -108,7 +108,7 @@ if [ $rev == "1.0" ]; then
 else
 	echo 1171200 0 0 0 0 0 0 0 > /proc/sys/walt/input_boost/input_boost_freq
 fi
-echo 100 > /proc/sys/walt/input_boost/input_boost_ms
+echo 250 > /proc/sys/walt/input_boost/input_boost_ms
 
 # configure governor settings for gold cluster
 echo "walt" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
