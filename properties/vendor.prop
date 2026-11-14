@@ -193,6 +193,7 @@ vendor.gralloc.disable_ubwc=0
 ro.surface_flinger.support_kernel_idle_timer=true
 
 # HWUI
+ro.hwui.render_ahead=3
 debug.hwui.skia_atrace_enabled=false
 
 # Incremental
