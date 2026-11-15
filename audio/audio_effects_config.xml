@@ -74,7 +74,7 @@
         <library name="volume_listener" path="libvolumelistener.so"/>
         <library name="audiosphere" path="libasphere.so"/>
         <!--DOLBY DAP-->
-        <library name="dap" path="libswdapaidl.so"/>
+        <library name="dap" path="libhwdapaidl.so"/>
         <library name="dvl" path="libdlbvolaidl.so"/>
         <!--DOLBY GAME-->
         <library name="gamedap" path="libswgamedapaidl.so"/>
