@@ -203,11 +203,14 @@ ro.surface_flinger.support_kernel_idle_timer=true
 
 # HWUI
 ro.hwui.render_ahead=3
+debug.hwui.target_cpu_time_percent=30
 debug.hwui.skia_atrace_enabled=false
 debug.hwui.skia_tracing_enabled=false
 debug.hwui.skia_use_perfetto_track_events=false
 debug.hwui.skip_empty_frames=false
 debug.renderengine.blur_algorithm=kawase2
+ro.egl.blobcache.multifile=true
+ro.egl.blobcache.multifile_limit=33554432
 
 # Incremental
 ro.incremental.enable=yes
