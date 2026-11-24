@@ -72,7 +72,7 @@
     <string name="aux_camera_summary">Nascondi gli obiettivi ausiliari alle app selezionate</string>
     <string name="aux_camera_enable">Attiva restrizioni</string>
     <string name="aux_camera_empty">Nessuna app trovata</string>
-    <string name="aux_camera_limit_reached">Troppe app selezionate, disattivarne prima un'altra</string>
+    <string name="aux_camera_limit_reached">Troppe app selezionate, disattivarne prima un\'altra</string>
     <string name="powertools_general_category">Generale</string>
     <string name="powertools_preset_title">Preimpostazione energia</string>
     <string name="powertools_preset_default">Predefinito</string>

@@ -40,11 +40,11 @@
     <string name="thermal_profile_footer">El perfil seleccionat s\'aplica automàticament mentre l\'aplicació està en ús.</string>
     <string name="thermal_apps_title">Aplicacions</string>
     <string name="saturation_reset">Restableix als valors predeterminats</string>
-    <string name="Powertools_summary">Personalitza perfils d'energia, freqüències de CPU/GPU i governadors</string>
-    <string name="powertools_gpu_enable_title">Activa l'optimitzador de GPU</string>
+    <string name="Powertools_summary">Personalitza perfils d\'energia, freqüències de CPU/GPU i governadors</string>
+    <string name="powertools_gpu_enable_title">Activa l\'optimitzador de GPU</string>
     <string name="powertools_gpu_enable_summary">Commuta les optimitzacions de GPU</string>
     <string name="powertools_gpu_freq_category">Configura la GPU</string>
-    <string name="powertools_cpu_enable_title">Activa l'optimitzador de CPU</string>
+    <string name="powertools_cpu_enable_title">Activa l\'optimitzador de CPU</string>
     <string name="powertools_cpu_enable_summary">Commuta les optimitzacions de CPU</string>
     <string name="powertools_cpu_little_category">Configura el clúster Little de CPU</string>
     <string name="powertools_cpu_big_category">Configura el clúster Big de CPU</string>
@@ -57,8 +57,8 @@
     <string name="aux_camera_title">Restringeix les càmeres auxiliars</string>
     <string name="aux_camera_summary">Amaga les lents auxiliars a les aplicacions seleccionades</string>
     <string name="aux_camera_enable">Activa les restriccions</string>
-    <string name="aux_camera_empty">No s'ha trobat cap aplicació</string>
-    <string name="aux_camera_limit_reached">Massa aplicacions seleccionades, desactiva'n una altra primer</string>
+    <string name="aux_camera_empty">No s\'ha trobat cap aplicació</string>
+    <string name="aux_camera_limit_reached">Massa aplicacions seleccionades, desactiva\'n una altra primer</string>
     <string name="powertools_general_category">General</string>
     <string name="powertools_preset_title">Preajust d\'energia</string>
     <string name="powertools_preset_default">Predeterminat</string>

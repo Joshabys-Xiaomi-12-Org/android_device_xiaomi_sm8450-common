@@ -41,13 +41,13 @@
     <string name="thermal_apps_title">Applications</string>
     <string name="saturation_reset">Réinitialiser par défaut</string>
     <string name="Powertools_title">Powertools</string>
-    <string name="Powertools_summary">Personnaliser les profils d'alimentation, fréquences CPU/GPU et gouverneurs pour optimiser performances et efficacité</string>
+    <string name="Powertools_summary">Personnaliser les profils d\'alimentation, fréquences CPU/GPU et gouverneurs pour optimiser performances et efficacité</string>
     <string name="powertools_gpu_category">GPU</string>
-    <string name="powertools_gpu_enable_title">Activer l'optimiseur GPU</string>
+    <string name="powertools_gpu_enable_title">Activer l\'optimiseur GPU</string>
     <string name="powertools_gpu_enable_summary">Activer/désactiver les optimisations GPU</string>
     <string name="powertools_gpu_freq_category">Configurer le GPU</string>
     <string name="powertools_cpu_category">CPU</string>
-    <string name="powertools_cpu_enable_title">Activer l'optimiseur CPU</string>
+    <string name="powertools_cpu_enable_title">Activer l\'optimiseur CPU</string>
     <string name="powertools_cpu_enable_summary">Activer/désactiver les optimisations CPU</string>
     <string name="powertools_cpu_little_category">Configurer le cluster Little CPU</string>
     <string name="powertools_cpu_big_category">Configurer le cluster Big CPU</string>
@@ -57,7 +57,7 @@
     <string name="powertools_cpu_governor">Gouverneur</string>
     <string name="gpu_min_frequency">Fréquence minimale GPU</string>
     <string name="gpu_max_frequency">Fréquence maximale GPU</string>
-    <string name="powerprofile_tile_label">Profil d'alimentation</string>
+    <string name="powerprofile_tile_label">Profil d\'alimentation</string>
     <string name="powerprofile_mode_balance">Équilibré</string>
     <string name="powerprofile_mode_performance">Performances</string>
     <string name="powerprofile_mode_battery_saver">Économiseur de batterie</string>
@@ -72,7 +72,7 @@
     <string name="aux_camera_summary">Masquer les objectifs auxiliaires aux applications sélectionnées</string>
     <string name="aux_camera_enable">Activer les restrictions</string>
     <string name="aux_camera_empty">Aucune application trouvée</string>
-    <string name="aux_camera_limit_reached">Trop d'applications sélectionnées, désactivez-en une d'abord</string>
+    <string name="aux_camera_limit_reached">Trop d\'applications sélectionnées, désactivez-en une d\'abord</string>
     <string name="powertools_general_category">Général</string>
     <string name="powertools_preset_title">Préréglage d\'alimentation</string>
     <string name="powertools_preset_default">Par défaut</string>
