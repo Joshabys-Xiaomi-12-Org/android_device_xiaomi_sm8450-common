@@ -209,6 +209,38 @@
                 android:resource="@string/battery_health_summary" />
         </activity>
 
+        <!-- Xiaomi Thermal Config Editor -->
+        <activity
+            android:name=".thermaleditor.ThermalEditorActivity"
+            android:label="@string/thermal_editor_title"
+            android:theme="@style/Theme.Parts.Expressive"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.battery" />
+            <meta-data
+                android:name="com.android.settings.order"
+                android:value="103" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/thermal_editor_summary" />
+        </activity>
+
+        <activity
+            android:name=".thermaleditor.ThermalFileEditorActivity"
+            android:label="@string/thermal_editor_title"
+            android:theme="@style/Theme.Parts.Expressive"
+            android:exported="false" />
+
+        <activity
+            android:name=".thermaleditor.ThermalHelpActivity"
+            android:label="@string/thermal_editor_help_title"
+            android:theme="@style/Theme.Parts.Expressive"
+            android:exported="false" />
+
         <!-- Per-App Refresh Rate Activity & Service -->
         <activity
             android:name=".refreshrate.RefreshActivity"

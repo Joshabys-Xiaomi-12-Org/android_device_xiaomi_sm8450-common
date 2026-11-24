@@ -365,3 +365,16 @@ on property:sys.parts.cpu.uclamp=default
 on property:sys.parts.cpu.uclamp=performance
     write /dev/cpuctl/top-app/cpu.uclamp.min 20
     write /dev/cpuctl/top-app/cpu.uclamp.max max
+
+# Xiaomi Thermal Editor (apply/reset encrypted overrides in /data/vendor/thermal/config)
+on property:sys.parts.thermal.action=apply
+    copy /data/user_de/0/org.lineageos.settings/files/thermal_staging/${sys.parts.thermal.file} /data/vendor/thermal/config/${sys.parts.thermal.file}
+    chown root system /data/vendor/thermal/config/${sys.parts.thermal.file}
+    chmod 0664 /data/vendor/thermal/config/${sys.parts.thermal.file}
+    restart mi_thermald
+    setprop sys.parts.thermal.action idle
+
+on property:sys.parts.thermal.action=reset
+    rm /data/vendor/thermal/config/${sys.parts.thermal.file}
+    restart mi_thermald
+    setprop sys.parts.thermal.action idle

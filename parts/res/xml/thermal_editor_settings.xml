@@ -1,0 +1,23 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="thermal_editor_tools_category"
+        android:title="@string/thermal_editor_tools_category">
+
+        <Preference
+            android:key="thermal_editor_help"
+            android:title="@string/thermal_editor_help_title"
+            android:summary="@string/thermal_editor_help_summary" />
+
+        <Preference
+            android:key="thermal_editor_reset_all"
+            android:title="@string/thermal_editor_reset_all_title"
+            android:summary="@string/thermal_editor_reset_all_summary" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="thermal_editor_files_category"
+        android:title="@string/thermal_editor_files_category" />
+
+</PreferenceScreen>

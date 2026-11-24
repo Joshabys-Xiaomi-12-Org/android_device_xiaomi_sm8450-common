@@ -135,4 +135,38 @@
     <string name="refresh_rate_enable_summary">Mudar automaticamente a taxa de atualização por aplicação</string>
     <string name="refresh_rate_apps_category">Aplicações</string>
     <string name="refresh_rate_default">Predefinido</string>
+    <string name="thermal_editor_title">Editor Térmico Xiaomi</string>
+    <string name="thermal_editor_summary">Desencripte, edite e volte a encriptar ficheiros de configuração do mi_thermald</string>
+    <string name="thermal_editor_tools_category">Guia e Ferramentas</string>
+    <string name="thermal_editor_help_title">Como editar ficheiros térmicos</string>
+    <string name="thermal_editor_help_summary">Estrutura do ficheiro, limites de temperatura e guia de frequências CPU/GPU</string>
+    <string name="thermal_editor_reset_all_title">Repor todas as modificações</string>
+    <string name="thermal_editor_reset_all_summary">Remove todos os ficheiros térmicos modificados e repõe os originais</string>
+    <string name="thermal_editor_reset_all_confirm">Remover todos os ficheiros térmicos modificados e reiniciar o mi_thermald com os originais?</string>
+    <string name="thermal_editor_reset_all_done">Todas as modificações térmicas foram removidas</string>
+    <string name="thermal_editor_files_category">Ficheiros de Configuração Térmica</string>
+    <string name="thermal_editor_no_files">Nenhum ficheiro de configuração térmica encontrado em /vendor/etc</string>
+    <string name="thermal_editor_status_stock">Original (/vendor/etc)</string>
+    <string name="thermal_editor_status_modified">Modificado (override ativo)</string>
+    <string name="thermal_editor_format_encrypted">Encriptado em AES-128-CBC</string>
+    <string name="thermal_editor_format_plain">Texto simples</string>
+    <string name="thermal_editor_btn_help">Ajuda</string>
+    <string name="thermal_editor_btn_reset">Repor</string>
+    <string name="thermal_editor_btn_save">Guardar e Aplicar</string>
+    <string name="thermal_editor_saved">Encriptado, aplicado e mi_thermald reiniciado</string>
+    <string name="thermal_editor_load_error">Falha ao desencriptar ou ler o ficheiro térmico</string>
+    <string name="thermal_editor_save_error">Falha ao encriptar ou guardar o ficheiro térmico</string>
+    <string name="thermal_editor_empty_error">A configuração não pode estar vazia</string>
+    <string name="thermal_editor_reset_confirm">Repor este ficheiro para a versão original de /vendor/etc?</string>
+    <string name="thermal_editor_reset_done">Reposto para a configuração original</string>
+    <string name="thermal_help_intro_title">Como funciona</string>
+    <string name="thermal_help_intro_body">Os ficheiros térmicos da Xiaomi em /vendor/etc/thermal-*.conf são encriptados com AES-128-CBC para o mi_thermald. Ao abrir um ficheiro aqui, é desencriptado automaticamente para edição. Ao tocar em Guardar e Aplicar, é novamente encriptado e aplicado em /data/vendor/thermal/config/, reiniciando o mi_thermald. Os ficheiros originais em /vendor/etc/ nunca são alterados.</string>
+    <string name="thermal_help_structure_title">Estrutura do ficheiro</string>
+    <string name="thermal_help_structure_body">Cada secção entre [PARÊNTESES RETOS] define um sensor virtual ou uma regra térmica:\n• algo_type: algoritmo (ss = limitação de frequência, monitor = ações por nível, Virtual = sensor combinado)\n• sensor: sensor monitorizado (normalmente VIRTUAL-SENSOR0 ou battery)\n• device: componente controlado (cpu0 = Little, cpu4 = Big, cpu7 = Prime, gpu, battery, lcd)\n• polling: intervalo de leitura em milissegundos (1000 = 1 segundo)</string>
+    <string name="thermal_help_temp_title">Ajustar temperaturas (trig e clr)</string>
+    <string name="thermal_help_temp_body">As temperaturas estão em miligraus Celsius (m°C): 40000 = 40 °C, 45000 = 45 °C, 48000 = 48 °C.\n• trig: temperatura em que o limite é ativado.\n• clr: temperatura em que o limite é desativado (deve ser sempre inferior ao trig correspondente).\n• Mantenha os valores por ordem crescente e assegure que trig, clr e target têm exatamente o mesmo número de colunas separadas por TAB.</string>
+    <string name="thermal_help_clock_title">Ajustar frequências e limites (target)</string>
+    <string name="thermal_help_clock_body">• CPU (cpu0, cpu4, cpu7): frequências em kHz (ex.: 1766400 = 1766 MHz, 2227200 = 2227 MHz). Utilize sempre frequências válidas suportadas pelo cluster.\n• GPU (gpu): frequência ou nível no mesmo formato original do ficheiro.\n• Bateria (battery): níveis de limitação de corrente de carregamento (nível maior = menor corrente).</string>
+    <string name="thermal_help_safety_title">Dicas de segurança</string>
+    <string name="thermal_help_safety_body">• Aumente os limites de temperatura gradualmente (2 a 3 °C de cada vez) e vigie a temperatura da bateria.\n• Nunca desative totalmente a proteção térmica — o calor excessivo degrada a bateria ou provoca encerramento térmico.\n• Se algo correr mal, toque em Repor no ficheiro (ou Repor todas as modificações) para regressar de imediato ao original.</string>
 </resources>
