@@ -23,7 +23,6 @@ import android.os.Looper;
 import android.util.Log;
 
 import org.lineageos.settings.Constants;
-import org.lineageos.settings.saturation.SaturationFragment;
 import org.lineageos.settings.utils.ComponentUtils;
 import org.lineageos.settings.utils.FileUtils;
 import org.lineageos.settings.saturation.SaturationUtils;

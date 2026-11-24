@@ -121,7 +121,8 @@ private constructor(
             NAVIGATION_PACKAGES.contains(packageName) -> ThermalState.NAVIGATION
             VIDEO_CALL_PACKAGES.contains(packageName) -> ThermalState.VIDEOCALL
             BENCHMARKING_APPS.contains(packageName) -> ThermalState.BENCHMARK
-            getDefaultDialerApplication(context) == packageName -> ThermalState.DIALER
+            context.getSystemService(TelecomManager::class.java)
+                ?.defaultDialerPackage == packageName -> ThermalState.DIALER
             isBrowserApp(context, packageName, UserHandle.myUserId()) -> ThermalState.BROWSER
             isCameraApp(packageName) -> ThermalState.CAMERA
             else -> ThermalState.DEFAULT
