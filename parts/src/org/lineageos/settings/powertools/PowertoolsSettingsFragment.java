@@ -70,18 +70,18 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
     private ListPreference mCpuPrimeMaxFreqPref;
     private ListPreference mCpuPrimeGovernorPref;
 
-    // Dynamic defaults loaded from sysfs
-    private String mGpuDefaultMin = "220000000";
-    private String mGpuDefaultMax = "818000000";
-    private String mCpuLittleDefaultMin = "307200";
-    private String mCpuLittleDefaultMax = "1785600";
-    private String mCpuLittleDefaultGov = "walt";
-    private String mCpuBigDefaultMin = "633600";
-    private String mCpuBigDefaultMax = "2496000";
-    private String mCpuBigDefaultGov = "walt";
-    private String mCpuPrimeDefaultMin = "787200";
-    private String mCpuPrimeDefaultMax = "2995200";
-    private String mCpuPrimeDefaultGov = "walt";
+    // Dynamic defaults loaded strictly from sysfs
+    private String mGpuDefaultMin;
+    private String mGpuDefaultMax;
+    private String mCpuLittleDefaultMin;
+    private String mCpuLittleDefaultMax;
+    private String mCpuLittleDefaultGov;
+    private String mCpuBigDefaultMin;
+    private String mCpuBigDefaultMax;
+    private String mCpuBigDefaultGov;
+    private String mCpuPrimeDefaultMin;
+    private String mCpuPrimeDefaultMax;
+    private String mCpuPrimeDefaultGov;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -145,9 +145,6 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
 
     private void setupGpuPreferences() {
         String[] values = GPUUtils.getAvailableFrequencies();
-        if (values.length == 0) {
-            values = getResources().getStringArray(R.array.gpu_frequency_values);
-        }
         String[] entries = new String[values.length];
         for (int i = 0; i < values.length; i++) {
             entries[i] = formatGpuFreq(Long.parseLong(values[i]));
@@ -193,8 +190,10 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
         String[] govValues = CPUUtils.getAvailableGovernors(policyCpu);
         String curGov = CPUUtils.getCurrentGovernor(policyCpu);
         String defGov = !TextUtils.isEmpty(curGov) ? curGov
-                : (govValues.length > 0 ? govValues[0] : "walt");
-        defaultGovOut.accept(defGov);
+                : (govValues.length > 0 ? govValues[0] : null);
+        if (defGov != null) {
+            defaultGovOut.accept(defGov);
+        }
         configureListPref(govPref, govValues, govValues, defGov);
     }
 
@@ -298,10 +297,14 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
         if (preference == mGpuEnablePref) {
             boolean enable = (Boolean) newValue;
             if (!enable) {
-                GPUUtils.setGPUMinFrequency(mGpuDefaultMin);
-                GPUUtils.setGPUMaxFrequency(mGpuDefaultMax);
-                if (mGpuMinFreqPref != null) mGpuMinFreqPref.setValue(mGpuDefaultMin);
-                if (mGpuMaxFreqPref != null) mGpuMaxFreqPref.setValue(mGpuDefaultMax);
+                if (!TextUtils.isEmpty(mGpuDefaultMin)) {
+                    GPUUtils.setGPUMinFrequency(mGpuDefaultMin);
+                    if (mGpuMinFreqPref != null) mGpuMinFreqPref.setValue(mGpuDefaultMin);
+                }
+                if (!TextUtils.isEmpty(mGpuDefaultMax)) {
+                    GPUUtils.setGPUMaxFrequency(mGpuDefaultMax);
+                    if (mGpuMaxFreqPref != null) mGpuMaxFreqPref.setValue(mGpuDefaultMax);
+                }
                 Toast.makeText(getActivity(),
                         "GPU disabled, defaults restored",
                         Toast.LENGTH_SHORT).show();
@@ -354,21 +357,33 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
         if (preference == mCpuEnablePref) {
             boolean enable = (Boolean) newValue;
             if (!enable) {
-                CPUUtils.setCPULittleFreq(
-                        mCpuLittleDefaultMin, mCpuLittleDefaultMax, mCpuLittleDefaultGov);
-                CPUUtils.setCPUBigFreq(
-                        mCpuBigDefaultMin, mCpuBigDefaultMax, mCpuBigDefaultGov);
-                CPUUtils.setCPUPrimeFreq(
-                        mCpuPrimeDefaultMin, mCpuPrimeDefaultMax, mCpuPrimeDefaultGov);
-                if (mCpuLittleMinFreqPref != null) mCpuLittleMinFreqPref.setValue(mCpuLittleDefaultMin);
-                if (mCpuLittleMaxFreqPref != null) mCpuLittleMaxFreqPref.setValue(mCpuLittleDefaultMax);
-                if (mCpuLittleGovernorPref != null) mCpuLittleGovernorPref.setValue(mCpuLittleDefaultGov);
-                if (mCpuBigMinFreqPref != null) mCpuBigMinFreqPref.setValue(mCpuBigDefaultMin);
-                if (mCpuBigMaxFreqPref != null) mCpuBigMaxFreqPref.setValue(mCpuBigDefaultMax);
-                if (mCpuBigGovernorPref != null) mCpuBigGovernorPref.setValue(mCpuBigDefaultGov);
-                if (mCpuPrimeMinFreqPref != null) mCpuPrimeMinFreqPref.setValue(mCpuPrimeDefaultMin);
-                if (mCpuPrimeMaxFreqPref != null) mCpuPrimeMaxFreqPref.setValue(mCpuPrimeDefaultMax);
-                if (mCpuPrimeGovernorPref != null) mCpuPrimeGovernorPref.setValue(mCpuPrimeDefaultGov);
+                if (!TextUtils.isEmpty(mCpuLittleDefaultMin)
+                        && !TextUtils.isEmpty(mCpuLittleDefaultMax)
+                        && !TextUtils.isEmpty(mCpuLittleDefaultGov)) {
+                    CPUUtils.setCPULittleFreq(
+                            mCpuLittleDefaultMin, mCpuLittleDefaultMax, mCpuLittleDefaultGov);
+                    if (mCpuLittleMinFreqPref != null) mCpuLittleMinFreqPref.setValue(mCpuLittleDefaultMin);
+                    if (mCpuLittleMaxFreqPref != null) mCpuLittleMaxFreqPref.setValue(mCpuLittleDefaultMax);
+                    if (mCpuLittleGovernorPref != null) mCpuLittleGovernorPref.setValue(mCpuLittleDefaultGov);
+                }
+                if (!TextUtils.isEmpty(mCpuBigDefaultMin)
+                        && !TextUtils.isEmpty(mCpuBigDefaultMax)
+                        && !TextUtils.isEmpty(mCpuBigDefaultGov)) {
+                    CPUUtils.setCPUBigFreq(
+                            mCpuBigDefaultMin, mCpuBigDefaultMax, mCpuBigDefaultGov);
+                    if (mCpuBigMinFreqPref != null) mCpuBigMinFreqPref.setValue(mCpuBigDefaultMin);
+                    if (mCpuBigMaxFreqPref != null) mCpuBigMaxFreqPref.setValue(mCpuBigDefaultMax);
+                    if (mCpuBigGovernorPref != null) mCpuBigGovernorPref.setValue(mCpuBigDefaultGov);
+                }
+                if (!TextUtils.isEmpty(mCpuPrimeDefaultMin)
+                        && !TextUtils.isEmpty(mCpuPrimeDefaultMax)
+                        && !TextUtils.isEmpty(mCpuPrimeDefaultGov)) {
+                    CPUUtils.setCPUPrimeFreq(
+                            mCpuPrimeDefaultMin, mCpuPrimeDefaultMax, mCpuPrimeDefaultGov);
+                    if (mCpuPrimeMinFreqPref != null) mCpuPrimeMinFreqPref.setValue(mCpuPrimeDefaultMin);
+                    if (mCpuPrimeMaxFreqPref != null) mCpuPrimeMaxFreqPref.setValue(mCpuPrimeDefaultMax);
+                    if (mCpuPrimeGovernorPref != null) mCpuPrimeGovernorPref.setValue(mCpuPrimeDefaultGov);
+                }
                 Toast.makeText(getActivity(),
                         "CPU optimizer disabled, defaults restored",
                         Toast.LENGTH_SHORT).show();
