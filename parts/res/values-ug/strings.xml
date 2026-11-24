@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_title">Xiaomi تەڭشەكلىرى</string>
+    <string name="tile_add">كاشى قوشۇش</string>
+    <string name="tile_added">كاشى قوشۇلدى</string>
+    <string name="tile_not_added">كاشى قوشۇلمىدى</string>
+    <string name="tile_already_added">كاشى ئاللىبۇرۇن قوشۇلغان</string>
+    <string name="tile_on">ئوچۇق</string>
+    <string name="tile_off">ئېتىلگەن</string>
+    <string name="thermal_title">ئىسسىقلىق ئارخىپلىرى</string>
+    <string name="thermal_summary">ئەڭ ياخشى ئىقتىدار ئۈچۈن ھەر بىر ئەپنىڭ ئىسسىقلىق ئارخىپىنى تەڭشەڭ</string>
+    <string name="thermal_default">ئەلالاشتۇرۇش يوق</string>
+    <string name="thermal_benchmark">ئىقتىدار</string>
+    <string name="thermal_browser">تور كۆرگۈچ</string>
+    <string name="thermal_camera">كامېرا</string>
+    <string name="thermal_dialer">تېلېفون</string>
+    <string name="thermal_gaming">ئويۇن</string>
+    <string name="thermal_streaming">ئېقىم</string>
+    <string name="clear_speaker_title">ياڭراتقۇنى تازىلاش</string>
+    <string name="clear_speaker_summary">ياڭراتقۇنى تازىلاش ئۈچۈن 30 سېكۇنتلۇق ئاۋازنى قويۇڭ</string>
+    <string name="clear_speaker_description">ياڭراتقۇڭىز چاڭ بىلەن يېنىك توسۇلغان بولسا، بۇ ئىقتىدارنى بىر ياكى ئىككى قېتىم ئىجرا قىلىڭ. مېدىيا ئاۋازىنى ئەڭ يۇقىرىغا تەڭشەڭ.\n\nياڭراتقۇ قاتتىق توسۇلغان بولسا، ئۈسكۈنىنى ياڭراتقۇنى تۆۋەنگە قارىتىپ سىلكىۋېتىپ بۇ ئىقتىدارنى 2-5 قېتىم ئىجرا قىلىڭ.</string>
+    <string name="saturation_title">ئېكران تويۇنۇشى</string>
+    <string name="saturation_summary">ئېكراننىڭ تويۇنۇش دەرىجىسىنى كونترول قىلىڭ</string>
+    <string name="saturation_footer_summary">ئېكران تەڭشەكلىرىدىكى رەڭ ھالىتىنى ئۆزگەرتىش تويۇنۇش دەرىجىسىنى بېسىپ چۈشىدۇ، قايتا قوللىنىشقا توغرا كېلىدۇ.</string>
+    <string name="image_preview_content_description">ئالدىن كۆرۈش</string>
+    <string name="image_preview_next_page_content_description">كېيىنكى</string>
+    <string name="image_preview_previous_page_content_description">ئالدىنقى</string>
+    <string name="custom_seekbar_value">قىممەت: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">سۈكۈتتىكى</string>
+    <string name="custom_seekbar_default_value_to_set">سۈكۈتتىكى قىممەت: <xliff:g id="v">%s</xliff:g>\nتەڭشەش ئۈچۈن ئۇزۇن بېسىڭ</string>
+    <string name="custom_seekbar_default_value_is_set">سۈكۈتتىكى قىممەت تەڭشەلدى</string>
+    <string name="thermal_default_desc">ھەر ئەپ ئۈچۈن ئىسسىقلىق تەڭشىكى يوق، سىستېمىنىڭ كۆڭۈلدىكى ھەرىكىتى.</string>
+    <string name="thermal_benchmark_desc">بوشىتىلغان ئىسسىقلىق چېكى بىلەن ئەڭ يۇقىرى ئىقتىدار. ئۈسكۈنە قىزىپ كېتىشى مۇمكىن.</string>
+    <string name="thermal_browser_desc">تور كۆرۈش ۋە ئوقۇش ئۈچۈن تەڭپۇڭ تەڭشەك.</string>
+    <string name="thermal_camera_desc">سۈرەت تارتىش ۋە سىن ئېلىش ئۈچۈن تەڭشەلگەن.</string>
+    <string name="thermal_dialer_desc">ئاۋازلىق چاقىرىقلار ئۈچۈن يېنىك تەڭشەك، ئىسسىقلىق ۋە توك سەرپىياتى تۆۋەن.</string>
+    <string name="thermal_gaming_desc">يۇقىرى تېمپېراتۇرىغا يول قويىدىغان، ئويۇنلار ئۈچۈن داۋاملىق ئىقتىدار.</string>
+    <string name="thermal_streaming_desc">ئۇزۇن سىن ۋە مۇزىكا ئېقىمى ئۈچۈن تەڭپۇڭ تەڭشەك.</string>
+    <string name="thermal_search_hint_short">ئىزدەش\u2026</string>
+    <string name="thermal_profile_footer">تاللانغان ئارخىپ ئەپ ئىشلىتىلىۋاتقاندا ئاپتوماتىك قوللىنىلىدۇ.</string>
+    <string name="thermal_apps_title">ئەپلەر</string>
+    <string name="saturation_reset">سۈكۈتكە قايتۇرۇش</string>
+    <string name="powertools_gpu_enable_title">GPU ئەلالاشتۇرغۇچنى قوزغىتىش</string>
+    <string name="powertools_cpu_enable_title">CPU ئەلالاشتۇرغۇچنى قوزغىتىش</string>
+    <string name="powertools_cpu_min_freq">ئەڭ تۆۋەن چاستوتا</string>
+    <string name="powertools_cpu_max_freq">ئەڭ يۇقىرى چاستوتا</string>
+    <string name="aux_camera_title">قوشۇمچە كامېرالارنى چەكلەش</string>
+    <string name="aux_camera_enable">چەكلەشنى قوزغىتىش</string>
+    <string name="aux_camera_empty">ئەپ تېپىلمىدى</string>
+</resources>

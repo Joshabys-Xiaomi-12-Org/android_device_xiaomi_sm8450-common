@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_title">Xiaomi Parametrləri</string>
+    <string name="tile_add">Plitə əlavə et</string>
+    <string name="tile_added">Plitə əlavə edildi</string>
+    <string name="tile_not_added">Plitə əlavə edilmədi</string>
+    <string name="tile_already_added">Plitə artıq əlavə edilib</string>
+    <string name="tile_on">Açıq</string>
+    <string name="tile_off">Bağlı</string>
+    <string name="thermal_title">Termal profillər</string>
+    <string name="thermal_summary">Optimal performans üçün tətbiq üzrə termal profilləri tənzimləyin</string>
+    <string name="thermal_default">Optimallaşdırma yoxdur</string>
+    <string name="thermal_benchmark">Performans</string>
+    <string name="thermal_browser">Brauzer</string>
+    <string name="thermal_camera">Kamera</string>
+    <string name="thermal_dialer">Zənglər</string>
+    <string name="thermal_gaming">Oyun</string>
+    <string name="thermal_streaming">Yayım</string>
+    <string name="clear_speaker_title">Dinamiki təmizlə</string>
+    <string name="clear_speaker_summary">Dinamiki təmizləmək üçün 30 saniyəlik səs çalın</string>
+    <string name="clear_speaker_description">Dinamikiniz tozla yüngül tutulubsa, bu funksiyanı bir və ya iki dəfə işə salın. Media səsini maksimuma qoyun.\n\nDinamik güclü tutulubsa, cihazı dinamik aşağı baxaraq silkələyərkən bu funksiyanı 2-5 dəfə işə salın.</string>
+    <string name="saturation_title">Ekran doyğunluğu</string>
+    <string name="saturation_summary">Ekranın doyğunluq səviyyəsini idarə edin</string>
+    <string name="saturation_footer_summary">Ekran parametrlərində rəng rejimini dəyişmək doyğunluq səviyyəsini əvəz edəcək və onun yenidən tətbiq olunması tələb olunacaq.</string>
+    <string name="image_preview_content_description">Önizləmə</string>
+    <string name="image_preview_next_page_content_description">Növbəti</string>
+    <string name="image_preview_previous_page_content_description">Əvvəlki</string>
+    <string name="custom_seekbar_value">Dəyər: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">standart olaraq</string>
+    <string name="custom_seekbar_default_value_to_set">Standart dəyər: <xliff:g id="v">%s</xliff:g>\nTəyin etmək üçün uzun basın</string>
+    <string name="custom_seekbar_default_value_is_set">Standart dəyər təyin edildi</string>
+    <string name="thermal_default_desc">Sistemin standart davranışı, hər tətbiq üçün istilik tənzimləməsi yoxdur.</string>
+    <string name="thermal_benchmark_desc">Zəiflədilmiş istilik limitləri ilə maksimum performans. Cihaz qıza bilər.</string>
+    <string name="thermal_browser_desc">Vebdə gəzmək və oxumaq üçün balanslaşdırılmış tənzimləmə.</string>
+    <string name="thermal_camera_desc">Foto çəkmək və video yazmaq üçün tənzimlənib.</string>
+    <string name="thermal_dialer_desc">Az istilik və enerji sərfi ilə səsli zənglər üçün yüngül tənzimləmə.</string>
+    <string name="thermal_gaming_desc">Daha yüksək temperatura icazə verən, oyunlar üçün davamlı performans.</string>
+    <string name="thermal_streaming_desc">Uzun video və musiqi yayımı sessiyaları üçün balanslaşdırılmış tənzimləmə.</string>
+    <string name="thermal_search_hint_short">Axtar\u2026</string>
+    <string name="thermal_profile_footer">Seçilmiş profil tətbiq istifadə olunarkən avtomatik tətbiq edilir.</string>
+    <string name="thermal_apps_title">Tətbiqlər</string>
+    <string name="saturation_reset">Standarta sıfırla</string>
+    <string name="powertools_gpu_enable_title">GPU optimallaşdırıcını aktiv et</string>
+    <string name="powertools_gpu_enable_summary">GPU optimallaşdırmalarını dəyiş</string>
+    <string name="powertools_gpu_freq_category">GPU tezliyini tənzimlə</string>
+    <string name="powertools_cpu_enable_title">CPU optimallaşdırıcını aktiv et</string>
+    <string name="powertools_cpu_enable_summary">CPU optimallaşdırmalarını dəyiş</string>
+    <string name="powertools_cpu_min_freq">Min. tezlik</string>
+    <string name="powertools_cpu_max_freq">Maks. tezlik</string>
+    <string name="gpu_min_frequency">GPU min. tezlik</string>
+    <string name="gpu_max_frequency">GPU maks. tezlik</string>
+    <string name="aux_camera_title">Köməkçi kameraları məhdudlaşdır</string>
+    <string name="aux_camera_enable">Məhdudiyyətləri aktiv et</string>
+    <string name="aux_camera_empty">Tətbiq tapılmadı</string>
+</resources>

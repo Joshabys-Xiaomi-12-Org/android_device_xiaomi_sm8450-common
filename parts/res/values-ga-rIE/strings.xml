@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_title">Socruithe Xiaomi</string>
+    <string name="tile_add">Cuir tíl leis</string>
+    <string name="tile_added">Tíl curtha leis</string>
+    <string name="tile_not_added">Níor cuireadh tíl leis</string>
+    <string name="tile_already_added">Tá an tíl curtha leis cheana</string>
+    <string name="tile_on">Ar siúl</string>
+    <string name="tile_off">As</string>
+    <string name="thermal_title">Próifílí teirmeacha</string>
+    <string name="thermal_summary">Coigeartaigh próifílí teirmeacha in aghaidh an aip le haghaidh feidhmíochta is fearr</string>
+    <string name="thermal_default">Gan aon optamú</string>
+    <string name="thermal_benchmark">Feidhmíocht</string>
+    <string name="thermal_browser">Brabhsálaí</string>
+    <string name="thermal_camera">Ceamara</string>
+    <string name="thermal_dialer">Dialaí</string>
+    <string name="thermal_gaming">Cluichí</string>
+    <string name="thermal_streaming">Sruthú</string>
+    <string name="clear_speaker_title">Glan an callaire</string>
+    <string name="clear_speaker_summary">Seinn fuaim 30 soicind chun an callaire a ghlanadh</string>
+    <string name="clear_speaker_description">Rith an ghné seo uair nó dhó má tá do challaire beagán bactha le deannach. Socraigh toirt na meán ar a huasmhéid.\n\nMá tá an callaire bactha go trom, rith an ghné seo 2-5 huaire agus tú ag croitheadh do ghléis leis an gcallaire ag féachaint síos.</string>
+    <string name="saturation_title">Sáithiú an taispeántais</string>
+    <string name="saturation_summary">Rialaigh leibhéal sáithithe an taispeántais</string>
+    <string name="saturation_footer_summary">Athróidh mód datha sna socruithe taispeántais an leibhéal sáithithe, agus beidh ort é a athchur i bhfeidhm.</string>
+    <string name="image_preview_content_description">Réamhamharc</string>
+    <string name="image_preview_next_page_content_description">Ar aghaidh</string>
+    <string name="image_preview_previous_page_content_description">Roimhe seo</string>
+    <string name="custom_seekbar_value">Luach: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">de réir réamhshocraithe</string>
+    <string name="custom_seekbar_default_value_to_set">Luach réamhshocraithe: <xliff:g id="v">%s</xliff:g>\nBrúigh go fada chun a shocrú</string>
+    <string name="custom_seekbar_default_value_is_set">Tá an luach réamhshocraithe socraithe</string>
+    <string name="thermal_default_desc">Iompar réamhshocraithe an chórais, gan aon tiúnáil theirmeach in aghaidh an aip.</string>
+    <string name="thermal_benchmark_desc">Feidhmíocht uasta le teorainneacha teirmeacha scaoilte. D\'fhéadfadh an gléas éirí te.</string>
+    <string name="thermal_browser_desc">Tiúnáil chothromaithe chun an gréasán a bhrabhsáil agus a léamh.</string>
+    <string name="thermal_camera_desc">Tiúnta chun grianghraif a thógáil agus físeáin a thaifeadadh.</string>
+    <string name="thermal_dialer_desc">Tiúnáil éadrom do ghlaonna gutha, le teas agus úsáid íseal.</string>
+    <string name="thermal_gaming_desc">Feidhmíocht leanúnach do chluichí, ag ceadú teochtaí níos airde.</string>
+    <string name="thermal_streaming_desc">Tiúnáil chothromaithe do sheisiúin fhada sruthaithe físe agus ceoil.</string>
+    <string name="thermal_search_hint_short">Cuardaigh\u2026</string>
+    <string name="thermal_profile_footer">Cuirtear an phróifíl roghnaithe i bhfeidhm go huathoibríoch fad atá an aip in úsáid.</string>
+    <string name="thermal_apps_title">Aipeanna</string>
+    <string name="saturation_reset">Athshocraigh go réamhshocrú</string>
+    <string name="powertools_gpu_enable_title">Cumasaigh optamóir GPU</string>
+    <string name="powertools_cpu_enable_title">Cumasaigh optamóir CPU</string>
+    <string name="powertools_cpu_min_freq">Íos-mhinicíocht</string>
+    <string name="powertools_cpu_max_freq">Uas-mhinicíocht</string>
+    <string name="aux_camera_title">Cuir srian ar cheamaraí cúnta</string>
+    <string name="aux_camera_enable">Cumasaigh srianta</string>
+    <string name="aux_camera_empty">Níor aimsíodh aon aip</string>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_title">Xiaomi-innstillingar</string>
+    <string name="tile_add">Legg til flis</string>
+    <string name="tile_added">Flis lagt til</string>
+    <string name="tile_not_added">Flis ikkje lagt til</string>
+    <string name="tile_already_added">Flisa er allereie lagt til</string>
+    <string name="tile_on">På</string>
+    <string name="tile_off">Av</string>
+    <string name="thermal_title">Termiske profilar</string>
+    <string name="thermal_summary">Juster termiske profilar per app for best mogleg yting</string>
+    <string name="thermal_default">Inga optimalisering</string>
+    <string name="thermal_benchmark">Yting</string>
+    <string name="thermal_browser">Nettlesar</string>
+    <string name="thermal_camera">Kamera</string>
+    <string name="thermal_dialer">Oppringing</string>
+    <string name="thermal_gaming">Spel</string>
+    <string name="thermal_streaming">Strøyming</string>
+    <string name="clear_speaker_title">Reingjer høgtalaren</string>
+    <string name="clear_speaker_summary">Spel av ein 30-sekunds lyd for å reingjere høgtalaren</string>
+    <string name="clear_speaker_description">Køyr denne funksjonen ein eller to gonger om høgtalaren din er lett blokkert av støv. Set medielydstyrken til maksimum.\n\nOm høgtalaren er sterkt blokkert, køyr denne funksjonen 2-5 gonger medan du ristar eininga med høgtalaren nedover.</string>
+    <string name="saturation_title">Metting på skjermen</string>
+    <string name="saturation_summary">Styr mettingsnivået på skjermen</string>
+    <string name="saturation_footer_summary">Om du endrar fargemodus i skjerminnstillingane, vil det overstyre mettingsnivået, og det må brukast på nytt.</string>
+    <string name="image_preview_content_description">Førehandsvising</string>
+    <string name="image_preview_next_page_content_description">Neste</string>
+    <string name="image_preview_previous_page_content_description">Førre</string>
+    <string name="custom_seekbar_value">Verdi: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">som standard</string>
+    <string name="custom_seekbar_default_value_to_set">Standardverdi: <xliff:g id="v">%s</xliff:g>\nTrykk lenge for å stille inn</string>
+    <string name="custom_seekbar_default_value_is_set">Standardverdi er sett</string>
+    <string name="thermal_default_desc">Standardåtferda til systemet, utan termisk justering per app.</string>
+    <string name="thermal_benchmark_desc">Maksimal yting med avslappa termiske grenser. Eininga kan bli varm.</string>
+    <string name="thermal_browser_desc">Balansert justering for nettsurfing og lesing.</string>
+    <string name="thermal_camera_desc">Justert for å ta bilete og spele inn video.</string>
+    <string name="thermal_dialer_desc">Lett justering for talesamtalar, med låg varme og straumbruk.</string>
+    <string name="thermal_gaming_desc">Vedvarande yting for spel, med høgare temperaturar tillatne.</string>
+    <string name="thermal_streaming_desc">Balansert justering for lange video- og musikkstraumingsøkter.</string>
+    <string name="thermal_search_hint_short">Søk\u2026</string>
+    <string name="thermal_profile_footer">Den valde profilen blir brukt automatisk medan appen er i bruk.</string>
+    <string name="thermal_apps_title">Appar</string>
+    <string name="saturation_reset">Tilbakestill til standard</string>
+    <string name="powertools_gpu_enable_title">Aktiver GPU-optimalisering</string>
+    <string name="powertools_gpu_enable_summary">Slå av/på GPU-optimalisering</string>
+    <string name="powertools_gpu_freq_category">Konfigurer GPU-frekvens</string>
+    <string name="powertools_cpu_enable_title">Aktiver CPU-optimalisering</string>
+    <string name="powertools_cpu_enable_summary">Slå av/på CPU-optimalisering</string>
+    <string name="powertools_cpu_min_freq">Min. frekvens</string>
+    <string name="powertools_cpu_max_freq">Maks. frekvens</string>
+    <string name="gpu_min_frequency">GPU min. frekvens</string>
+    <string name="gpu_max_frequency">GPU maks. frekvens</string>
+    <string name="aux_camera_title">Avgrens hjelpekamera</string>
+    <string name="aux_camera_enable">Aktiver avgrensingar</string>
+    <string name="aux_camera_empty">Ingen appar funne</string>
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_title">ڕێکخستنەکانی Xiaomi</string>
+    <string name="tile_add">کاشی زیاد بکە</string>
+    <string name="tile_added">کاشی زیاد کرا</string>
+    <string name="tile_not_added">کاشی زیاد نەکرا</string>
+    <string name="tile_already_added">کاشی پێشتر زیاد کراوە</string>
+    <string name="tile_on">داگیرساوە</string>
+    <string name="tile_off">کوژاوەتەوە</string>
+    <string name="thermal_title">پرۆفایلە گەرمییەکان</string>
+    <string name="thermal_summary">پرۆفایلە گەرمییەکان بۆ هەر بەرنامەیەک ڕێکبخە بۆ باشترین کارایی</string>
+    <string name="thermal_default">هیچ باشترکردنێک نییە</string>
+    <string name="thermal_benchmark">کارایی</string>
+    <string name="thermal_browser">وێبگەڕ</string>
+    <string name="thermal_camera">کامێرا</string>
+    <string name="thermal_dialer">تەلەفۆن</string>
+    <string name="thermal_gaming">یاری</string>
+    <string name="thermal_streaming">پەخش</string>
+    <string name="clear_speaker_title">بلندگۆ پاک بکەرەوە</string>
+    <string name="clear_speaker_summary">دەنگێکی 30 چرکەیی لێبدە بۆ پاککردنەوەی بلندگۆکە</string>
+    <string name="clear_speaker_description">ئەگەر بلندگۆکەت بە سووکی بە تۆز گیراوە، ئەم تایبەتمەندییە یەک یان دوو جار کارپێبکە. دەنگی میدیا بکە بە زۆرترین.\n\nئەگەر بلندگۆکە زۆر گیراوە، ئەم تایبەتمەندییە 2-5 جار کارپێبکە لە کاتێکدا ئامێرەکە دەلەرزێنیت و بلندگۆکە ڕوو لە خوارەوە بێت.</string>
+    <string name="saturation_title">تێری ڕەنگی ڕوونما</string>
+    <string name="saturation_summary">ئاستی تێری ڕەنگی ڕوونما کۆنتڕۆڵ بکە</string>
+    <string name="saturation_footer_summary">گۆڕینی دۆخی ڕەنگ لە ڕێکخستنەکانی ڕوونمادا ئاستی تێری ڕەنگ دەگۆڕێت و پێویستی بە دووبارە جێبەجێکردن دەبێت.</string>
+    <string name="image_preview_content_description">پێشبینین</string>
+    <string name="image_preview_next_page_content_description">دواتر</string>
+    <string name="image_preview_previous_page_content_description">پێشتر</string>
+    <string name="custom_seekbar_value">نرخ: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">بە شێوەی بنەڕەتی</string>
+    <string name="custom_seekbar_default_value_to_set">نرخی بنەڕەتی: <xliff:g id="v">%s</xliff:g>\nبۆ دانان درێژ دایبگرە</string>
+    <string name="custom_seekbar_default_value_is_set">نرخی بنەڕەتی دانراوە</string>
+    <string name="thermal_default_desc">ڕەفتاری بنەڕەتی سیستەم، بەبێ ڕێکخستنی گەرمی بۆ هەر ئەپێک.</string>
+    <string name="thermal_benchmark_desc">بەرزترین کارایی بە سنوورە گەرمییە ئاسانکراوەکان. لەوانەیە ئامێرەکە گەرم ببێت.</string>
+    <string name="thermal_browser_desc">ڕێکخستنی هاوسەنگ بۆ گەڕان لە وێب و خوێندنەوە.</string>
+    <string name="thermal_camera_desc">ڕێکخراوە بۆ گرتنی وێنە و تۆمارکردنی ڤیدیۆ.</string>
+    <string name="thermal_dialer_desc">ڕێکخستنی سووک بۆ پەیوەندیی دەنگی، بە گەرمی و بەکارهێنانی کەم.</string>
+    <string name="thermal_gaming_desc">کارایی بەردەوام بۆ یارییەکان، بە ڕێگەدان بە پلەی گەرمی بەرزتر.</string>
+    <string name="thermal_streaming_desc">ڕێکخستنی هاوسەنگ بۆ دانیشتنە درێژەکانی پەخشی ڤیدیۆ و میوزیک.</string>
+    <string name="thermal_search_hint_short">گەڕان\u2026</string>
+    <string name="thermal_profile_footer">پرۆفایلە هەڵبژێردراوەکە بە خۆکارانە جێبەجێ دەکرێت کاتێک ئەپەکە بەکاردێت.</string>
+    <string name="thermal_apps_title">بەرنامەکان</string>
+    <string name="saturation_reset">گەڕاندنەوە بۆ بنەڕەتی</string>
+    <string name="powertools_gpu_enable_title">چالاککردنی باشکەری GPU</string>
+    <string name="powertools_cpu_enable_title">چالاککردنی باشکەری CPU</string>
+    <string name="powertools_cpu_min_freq">کەمترین فرێکوێنسی</string>
+    <string name="powertools_cpu_max_freq">زۆرترین فرێکوێنسی</string>
+    <string name="aux_camera_title">سنووردارکردنی کامێرا یاریدەدەرەکان</string>
+    <string name="aux_camera_enable">چالاککردنی سنووردارکردن</string>
+    <string name="aux_camera_empty">هیچ بەرنامەیەک نەدۆزرایەوە</string>
+</resources>

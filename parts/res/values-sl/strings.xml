@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_title">Nastavitve Xiaomi</string>
+    <string name="tile_add">Dodaj ploščico</string>
+    <string name="tile_added">Ploščica dodana</string>
+    <string name="tile_not_added">Ploščica ni dodana</string>
+    <string name="tile_already_added">Ploščica je že dodana</string>
+    <string name="tile_on">Vklopljeno</string>
+    <string name="tile_off">Izklopljeno</string>
+    <string name="thermal_title">Toplotni profili</string>
+    <string name="thermal_summary">Prilagodite toplotne profile za posamezne aplikacije za optimalno delovanje</string>
+    <string name="thermal_default">Brez optimizacije</string>
+    <string name="thermal_benchmark">Zmogljivost</string>
+    <string name="thermal_browser">Brskalnik</string>
+    <string name="thermal_camera">Kamera</string>
+    <string name="thermal_dialer">Klicalnik</string>
+    <string name="thermal_gaming">Igre</string>
+    <string name="thermal_streaming">Pretakanje</string>
+    <string name="clear_speaker_title">Počisti zvočnik</string>
+    <string name="clear_speaker_summary">Predvajajte 30-sekundni zvok za čiščenje zvočnika</string>
+    <string name="clear_speaker_description">To funkcijo zaženite enkrat ali dvakrat, če je vaš zvočnik rahlo zamašen s prahom. Glasnost medijev nastavite na najvišjo.\n\nČe je zvočnik močno zamašen, to funkcijo zaženite 2-5 krat, medtem ko napravo tresete z zvočnikom obrnjenim navzdol.</string>
+    <string name="saturation_title">Nasičenost zaslona</string>
+    <string name="saturation_summary">Nadzirajte raven nasičenosti zaslona</string>
+    <string name="saturation_footer_summary">Sprememba barvnega načina v nastavitvah zaslona bo prepisala raven nasičenosti, zato jo bo treba znova uporabiti.</string>
+    <string name="image_preview_content_description">Predogled</string>
+    <string name="image_preview_next_page_content_description">Naprej</string>
+    <string name="image_preview_previous_page_content_description">Nazaj</string>
+    <string name="custom_seekbar_value">Vrednost: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">privzeto</string>
+    <string name="custom_seekbar_default_value_to_set">Privzeta vrednost: <xliff:g id="v">%s</xliff:g>\nZa nastavitev pritisnite in zadržite</string>
+    <string name="custom_seekbar_default_value_is_set">Privzeta vrednost je nastavljena</string>
+    <string name="thermal_default_desc">Privzeto vedenje sistema, brez toplotnega prilagajanja za vsako aplikacijo.</string>
+    <string name="thermal_benchmark_desc">Največja zmogljivost s sproščenimi toplotnimi omejitvami. Naprava se lahko segreje.</string>
+    <string name="thermal_browser_desc">Uravnoteženo prilagajanje za brskanje po spletu in branje.</string>
+    <string name="thermal_camera_desc">Prilagojeno za fotografiranje in snemanje videoposnetkov.</string>
+    <string name="thermal_dialer_desc">Lahko prilagajanje za glasovne klice, z nizko toploto in porabo.</string>
+    <string name="thermal_gaming_desc">Trajna zmogljivost za igre, z dovoljenimi višjimi temperaturami.</string>
+    <string name="thermal_streaming_desc">Uravnoteženo prilagajanje za dolge seje pretakanja videa in glasbe.</string>
+    <string name="thermal_search_hint_short">Iskanje\u2026</string>
+    <string name="thermal_profile_footer">Izbrani profil se samodejno uporabi, ko je aplikacija v uporabi.</string>
+    <string name="thermal_apps_title">Aplikacije</string>
+    <string name="saturation_reset">Ponastavi na privzeto</string>
+    <string name="powertools_gpu_enable_title">Omogoči optimizator GPE</string>
+    <string name="powertools_gpu_enable_summary">Preklopi optimizacije GPE</string>
+    <string name="powertools_gpu_freq_category">Nastavi frekvenco GPE</string>
+    <string name="powertools_cpu_enable_title">Omogoči optimizator CPE</string>
+    <string name="powertools_cpu_enable_summary">Preklopi optimizacije CPE</string>
+    <string name="powertools_cpu_min_freq">Najnižja frekvenca</string>
+    <string name="powertools_cpu_max_freq">Najvišja frekvenca</string>
+    <string name="gpu_min_frequency">Najnižja frekvenca GPE</string>
+    <string name="gpu_max_frequency">Najvišja frekvenca GPE</string>
+    <string name="aux_camera_title">Omeji pomožne kamere</string>
+    <string name="aux_camera_enable">Omogoči omejitve</string>
+    <string name="aux_camera_empty">Ni najdenih aplikacij</string>
+</resources>

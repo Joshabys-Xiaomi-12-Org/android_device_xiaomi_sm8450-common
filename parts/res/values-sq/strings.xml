@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_title">Cilësimet e Xiaomi</string>
+    <string name="tile_add">Shto pllakë</string>
+    <string name="tile_added">Pllaka u shtua</string>
+    <string name="tile_not_added">Pllaka nuk u shtua</string>
+    <string name="tile_already_added">Pllaka është shtuar tashmë</string>
+    <string name="tile_on">Aktiv</string>
+    <string name="tile_off">Joaktiv</string>
+    <string name="thermal_title">Profilet termike</string>
+    <string name="thermal_summary">Rregullo profilet termike për çdo aplikacion për performancë optimale</string>
+    <string name="thermal_default">Pa optimizim</string>
+    <string name="thermal_benchmark">Performanca</string>
+    <string name="thermal_browser">Shfletuesi</string>
+    <string name="thermal_camera">Kamera</string>
+    <string name="thermal_dialer">Telefoni</string>
+    <string name="thermal_gaming">Lojëra</string>
+    <string name="thermal_streaming">Transmetim</string>
+    <string name="clear_speaker_title">Pastro altoparlantin</string>
+    <string name="clear_speaker_summary">Luaj një audio 30-sekondëshe për të pastruar altoparlantin</string>
+    <string name="clear_speaker_description">Ekzekuto këtë funksion një ose dy herë nëse altoparlanti yt është i bllokuar lehtë nga pluhuri. Vendos volumin e medias në maksimum.\n\nNëse altoparlanti është i bllokuar rëndë, ekzekuto këtë funksion 2-5 herë ndërsa tund pajisjen me altoparlantin drejtuar poshtë.</string>
+    <string name="saturation_title">Ngopja e ekranit</string>
+    <string name="saturation_summary">Kontrollo nivelin e ngopjes së ekranit</string>
+    <string name="saturation_footer_summary">Ndryshimi i modalitetit të ngjyrave në cilësimet e ekranit do të anashkalojë nivelin e ngopjes, duke kërkuar riaplikimin e tij.</string>
+    <string name="image_preview_content_description">Pamje paraprake</string>
+    <string name="image_preview_next_page_content_description">Tjetra</string>
+    <string name="image_preview_previous_page_content_description">E mëparshmja</string>
+    <string name="custom_seekbar_value">Vlera: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">si parazgjedhje</string>
+    <string name="custom_seekbar_default_value_to_set">Vlera e parazgjedhur: <xliff:g id="v">%s</xliff:g>\nMbaj shtypur për ta vendosur</string>
+    <string name="custom_seekbar_default_value_is_set">Vlera e parazgjedhur është vendosur</string>
+    <string name="thermal_default_desc">Sjellja e parazgjedhur e sistemit, pa rregullim termik për çdo aplikacion.</string>
+    <string name="thermal_benchmark_desc">Performancë maksimale me kufij termikë të relaksuar. Pajisja mund të nxehet.</string>
+    <string name="thermal_browser_desc">Rregullim i ekuilibruar për shfletim në ueb dhe lexim.</string>
+    <string name="thermal_camera_desc">Rregulluar për të bërë foto dhe për të regjistruar video.</string>
+    <string name="thermal_dialer_desc">Rregullim i lehtë për thirrjet zanore, me nxehtësi dhe konsum të ulët.</string>
+    <string name="thermal_gaming_desc">Performancë e qëndrueshme për lojëra, duke lejuar temperatura më të larta.</string>
+    <string name="thermal_streaming_desc">Rregullim i ekuilibruar për sesione të gjata transmetimi video dhe muzike.</string>
+    <string name="thermal_search_hint_short">Kërko\u2026</string>
+    <string name="thermal_profile_footer">Profili i zgjedhur zbatohet automatikisht ndërsa aplikacioni është në përdorim.</string>
+    <string name="thermal_apps_title">Aplikacionet</string>
+    <string name="saturation_reset">Rikthe parazgjedhjet</string>
+    <string name="powertools_gpu_enable_title">Aktivizo optimizuesin e GPU</string>
+    <string name="powertools_gpu_enable_summary">Ndrysho optimizimet e GPU</string>
+    <string name="powertools_gpu_freq_category">Konfiguro frekuencën e GPU</string>
+    <string name="powertools_cpu_enable_title">Aktivizo optimizuesin e CPU</string>
+    <string name="powertools_cpu_enable_summary">Ndrysho optimizimet e CPU</string>
+    <string name="powertools_cpu_min_freq">Frekuenca minimale</string>
+    <string name="powertools_cpu_max_freq">Frekuenca maksimale</string>
+    <string name="gpu_min_frequency">Frekuenca minimale e GPU</string>
+    <string name="gpu_max_frequency">Frekuenca maksimale e GPU</string>
+    <string name="aux_camera_title">Kufizo kamerat ndihmëse</string>
+    <string name="aux_camera_enable">Aktivizo kufizimet</string>
+    <string name="aux_camera_empty">Nuk u gjet asnjë aplikacion</string>
+</resources>

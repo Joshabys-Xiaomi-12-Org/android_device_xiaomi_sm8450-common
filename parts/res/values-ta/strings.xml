@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_title">Xiaomi அமைப்புகள்</string>
+    <string name="tile_add">ஓடு சேர்</string>
+    <string name="tile_added">ஓடு சேர்க்கப்பட்டது</string>
+    <string name="tile_not_added">ஓடு சேர்க்கப்படவில்லை</string>
+    <string name="tile_already_added">ஓடு ஏற்கனவே சேர்க்கப்பட்டது</string>
+    <string name="tile_on">இயக்கம்</string>
+    <string name="tile_off">முடக்கம்</string>
+    <string name="thermal_title">வெப்ப சுயவிவரங்கள்</string>
+    <string name="thermal_summary">சிறந்த செயல்திறனுக்காக ஒவ்வொரு பயன்பாட்டிற்கும் வெப்ப சுயவிவரங்களை சரிசெய்யவும்</string>
+    <string name="thermal_default">உகந்ததாக்கம் இல்லை</string>
+    <string name="thermal_benchmark">செயல்திறன்</string>
+    <string name="thermal_browser">உலாவி</string>
+    <string name="thermal_camera">கேமரா</string>
+    <string name="thermal_dialer">டயலர்</string>
+    <string name="thermal_gaming">விளையாட்டு</string>
+    <string name="thermal_streaming">ஸ்ட்ரீமிங்</string>
+    <string name="clear_speaker_title">ஒலிப்பெருக்கியை சுத்தம் செய்</string>
+    <string name="clear_speaker_summary">ஒலிப்பெருக்கியை சுத்தம் செய்ய 30 வினாடி ஆடியோவை இயக்கவும்</string>
+    <string name="clear_speaker_description">உங்கள் ஒலிப்பெருக்கி தூசியால் லேசாக அடைக்கப்பட்டிருந்தால் இந்த அம்சத்தை ஒன்று அல்லது இரண்டு முறை இயக்கவும். மீடியா ஒலியளவை அதிகபட்சமாக அமைக்கவும்.\n\nஒலிப்பெருக்கி அதிகமாக அடைக்கப்பட்டிருந்தால், ஒலிப்பெருக்கி கீழ்நோக்கி இருக்கும் வகையில் சாதனத்தை அசைத்து இந்த அம்சத்தை 2-5 முறை இயக்கவும்.</string>
+    <string name="saturation_title">திரை செறிவு</string>
+    <string name="saturation_summary">திரையின் செறிவு அளவைக் கட்டுப்படுத்தவும்</string>
+    <string name="saturation_footer_summary">திரை அமைப்புகளில் வண்ணப் பயன்முறையை மாற்றுவது செறிவு அளவை மேலெழுதும், அதை மீண்டும் பயன்படுத்த வேண்டும்.</string>
+    <string name="image_preview_content_description">முன்னோட்டம்</string>
+    <string name="image_preview_next_page_content_description">அடுத்து</string>
+    <string name="image_preview_previous_page_content_description">முந்தைய</string>
+    <string name="custom_seekbar_value">மதிப்பு: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">இயல்புநிலையாக</string>
+    <string name="custom_seekbar_default_value_to_set">இயல்புநிலை மதிப்பு: <xliff:g id="v">%s</xliff:g>\nஅமைக்க நீண்ட நேரம் அழுத்தவும்</string>
+    <string name="custom_seekbar_default_value_is_set">இயல்புநிலை மதிப்பு அமைக்கப்பட்டது</string>
+    <string name="thermal_default_desc">ஒவ்வொரு பயன்பாட்டிற்கும் வெப்பச் சரிசெய்தல் இல்லாத, அமைப்பின் இயல்புநிலை நடத்தை.</string>
+    <string name="thermal_benchmark_desc">தளர்வான வெப்ப வரம்புகளுடன் அதிகபட்ச செயல்திறன். சாதனம் சூடாகலாம்.</string>
+    <string name="thermal_browser_desc">வலை உலாவல் மற்றும் வாசிப்பிற்கான சமநிலையான சரிசெய்தல்.</string>
+    <string name="thermal_camera_desc">புகைப்படங்கள் எடுப்பதற்கும் வீடியோ பதிவு செய்வதற்கும் சரிசெய்யப்பட்டது.</string>
+    <string name="thermal_dialer_desc">குறைந்த வெப்பம் மற்றும் மின் பயன்பாட்டுடன், குரல் அழைப்புகளுக்கான இலகுவான சரிசெய்தல்.</string>
+    <string name="thermal_gaming_desc">அதிக வெப்பநிலையை அனுமதித்து, விளையாட்டுகளுக்கான நீடித்த செயல்திறன்.</string>
+    <string name="thermal_streaming_desc">நீண்ட வீடியோ மற்றும் இசை ஸ்ட்ரீமிங் அமர்வுகளுக்கான சமநிலையான சரிசெய்தல்.</string>
+    <string name="thermal_search_hint_short">தேடு\u2026</string>
+    <string name="thermal_profile_footer">தேர்ந்தெடுக்கப்பட்ட சுயவிவரம் பயன்பாடு பயன்பாட்டில் இருக்கும்போது தானாகவே பயன்படுத்தப்படும்.</string>
+    <string name="thermal_apps_title">செயலிகள்</string>
+    <string name="saturation_reset">இயல்புநிலைக்கு மீட்டமை</string>
+    <string name="powertools_gpu_enable_title">GPU மேம்படுத்தியை இயக்கு</string>
+    <string name="powertools_cpu_enable_title">CPU மேம்படுத்தியை இயக்கு</string>
+    <string name="powertools_cpu_min_freq">குறைந்தபட்ச அதிர்வெண்</string>
+    <string name="powertools_cpu_max_freq">அதிகபட்ச அதிர்வெண்</string>
+    <string name="gpu_min_frequency">GPU குறைந்தபட்ச அதிர்வெண்</string>
+    <string name="gpu_max_frequency">GPU அதிகபட்ச அதிர்வெண்</string>
+    <string name="aux_camera_title">துணை கேமராக்களை கட்டுப்படுத்து</string>
+    <string name="aux_camera_enable">கட்டுப்பாடுகளை இயக்கு</string>
+    <string name="aux_camera_empty">செயலிகள் எதுவும் இல்லை</string>
+</resources>
