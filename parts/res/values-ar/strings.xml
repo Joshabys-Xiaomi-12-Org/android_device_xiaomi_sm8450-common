@@ -184,4 +184,8 @@
     <string name="thermal_arvr_desc">مضبوط لتطبيقات الواقع المعزز والافتراضي.</string>
     <string name="thermal_cool">بارد / توفير البطارية</string>
     <string name="thermal_cool_desc">حدود حرارية محافظة للحفاظ على برودة الجهاز وتوفير البطارية.</string>
+    <string name="thermal_global_category">عام</string>
+    <string name="thermal_global_title">الملف الحراري العام</string>
+    <string name="thermal_global_tile_label">الملف الحراري</string>
+    <string name="thermal_global_footer">يُطبق على جميع التطبيقات المضبوطة على الافتراضي. تبقى ملفات كل تطبيق ذات أولوية دائماً.</string>
 </resources>

@@ -159,4 +159,8 @@
     <string name="thermal_arvr_desc">Tiúnta d\'aipeanna réaltachta méadaithe agus fíorúla.</string>
     <string name="thermal_cool">Fionnuar / Coigilt Ceallraí</string>
     <string name="thermal_cool_desc">Teorainneacha teirmeacha coimeádacha chun an gléas a choinneáil fionnuar.</string>
+    <string name="thermal_global_category">Domhanda</string>
+    <string name="thermal_global_title">Próifíl theirmeach dhomhanda</string>
+    <string name="thermal_global_tile_label">Próifíl theirmeach</string>
+    <string name="thermal_global_footer">Baineann sé le gach aip atá socraithe go Réamhshocrú. Bíonn tosaíocht i gcónaí ag próifílí in aghaidh na haipe.</string>
 </resources>

@@ -184,4 +184,8 @@
     <string name="thermal_arvr_desc">Настроен для приложений дополненной и виртуальной реальности.</string>
     <string name="thermal_cool">Холодный / Экономия батареи</string>
     <string name="thermal_cool_desc">Консервативные тепловые лимиты для низкого нагрева и экономии заряда.</string>
+    <string name="thermal_global_category">Глобальный</string>
+    <string name="thermal_global_title">Глобальный термопрофиль</string>
+    <string name="thermal_global_tile_label">Термопрофиль</string>
+    <string name="thermal_global_footer">Применяется ко всем приложениям со значением По умолчанию. Профили для отдельных приложений всегда имеют приоритет.</string>
 </resources>

@@ -184,4 +184,8 @@
     <string name="thermal_arvr_desc">Tinh chỉnh cho các ứng dụng thực tế tăng cường và thực tế ảo.</string>
     <string name="thermal_cool">Mát mẻ / Tiết kiệm pin</string>
     <string name="thermal_cool_desc">Giới hạn nhiệt thận trọng để giữ máy mát và tiết kiệm pin.</string>
+    <string name="thermal_global_category">Toàn cục</string>
+    <string name="thermal_global_title">Hồ sơ nhiệt toàn cục</string>
+    <string name="thermal_global_tile_label">Hồ sơ nhiệt</string>
+    <string name="thermal_global_footer">Áp dụng cho tất cả ứng dụng ở chế độ Mặc định. Hồ sơ nhiệt theo từng ứng dụng luôn được ưu tiên.</string>
 </resources>

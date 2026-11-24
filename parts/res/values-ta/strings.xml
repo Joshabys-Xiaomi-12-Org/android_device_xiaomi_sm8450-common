@@ -161,4 +161,8 @@
     <string name="thermal_arvr_desc">AR மற்றும் VR செயலிகளுக்காக அமைக்கப்பட்டது.</string>
     <string name="thermal_cool">குளிர்ச்சி / பேட்டரி சேமிப்பு</string>
     <string name="thermal_cool_desc">சாதனத்தை குளிர்ச்சியாக வைத்திருக்கவும் பேட்டரி சேமிக்கவும் கட்டுப்படுத்தப்பட்ட வெப்ப வரம்புகள்.</string>
+    <string name="thermal_global_category">உலகளாவிய</string>
+    <string name="thermal_global_title">உலகளாவிய வெப்ப சுயவிவரம்</string>
+    <string name="thermal_global_tile_label">வெப்ப சுயவிவரம்</string>
+    <string name="thermal_global_footer">இயல்புநிலையாக உள்ள அனைத்து செயலிகளுக்கும் பொருந்தும். செயலி வாரியான சுயவிவரங்களுக்கு எப்போதும் முன்னுரிமை உண்டு.</string>
 </resources>

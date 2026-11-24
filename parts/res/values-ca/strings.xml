@@ -170,4 +170,8 @@
     <string name="thermal_arvr_desc">Ajustat per a aplicacions de realitat augmentada i virtual.</string>
     <string name="thermal_cool">Fred / Estalvi de bateria</string>
     <string name="thermal_cool_desc">Límits tèrmics conservadors per mantenir el dispositiu fresc i estalviar bateria.</string>
+    <string name="thermal_global_category">Global</string>
+    <string name="thermal_global_title">Perfil tèrmic global</string>
+    <string name="thermal_global_tile_label">Perfil tèrmic</string>
+    <string name="thermal_global_footer">S\'aplica a totes les aplicacions en Predeterminat. Els perfils per aplicació sempre tenen prioritat.</string>
 </resources>

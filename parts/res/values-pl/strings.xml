@@ -184,4 +184,8 @@
     <string name="thermal_arvr_desc">Dostosowany do aplikacji rzeczywistości rozszerzonej i wirtualnej.</string>
     <string name="thermal_cool">Chłodny / Oszczędzanie baterii</string>
     <string name="thermal_cool_desc">Konserwatywne limity termiczne utrzymujące niską temperaturę i oszczędzające baterię.</string>
+    <string name="thermal_global_category">Globalny</string>
+    <string name="thermal_global_title">Globalny profil termiczny</string>
+    <string name="thermal_global_tile_label">Profil termiczny</string>
+    <string name="thermal_global_footer">Dotyczy wszystkich aplikacji ustawionych na Domyślny. Profile dla pojedynczych aplikacji mają zawsze pierwszeństwo.</string>
 </resources>

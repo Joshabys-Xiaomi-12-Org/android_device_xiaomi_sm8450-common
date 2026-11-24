@@ -184,4 +184,8 @@
     <string name="thermal_arvr_desc">Artırılmış ve sanal gerçeklik uygulamaları için ayarlandı.</string>
     <string name="thermal_cool">Serin / Pil Tasarrufu</string>
     <string name="thermal_cool_desc">Cihazı serin tutmak ve pil tasarrufu sağlamak için tutucu sıcaklık sınırları.</string>
+    <string name="thermal_global_category">Genel</string>
+    <string name="thermal_global_title">Genel termal profil</string>
+    <string name="thermal_global_tile_label">Termal Profil</string>
+    <string name="thermal_global_footer">Varsayılan olarak ayarlanan tüm uygulamalara uygulanır. Uygulama başına termal profiller her zaman önceliklidir.</string>
 </resources>

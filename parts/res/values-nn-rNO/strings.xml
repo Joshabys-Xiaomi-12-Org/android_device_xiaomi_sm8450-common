@@ -163,4 +163,8 @@
     <string name="thermal_arvr_desc">Tilpassa appar for utvida og virtuell røyndom.</string>
     <string name="thermal_cool">Kjølig / Batterisparing</string>
     <string name="thermal_cool_desc">Konservative temperaturgrenser for kjølig eining og lågare straumbruk.</string>
+    <string name="thermal_global_category">Globalt</string>
+    <string name="thermal_global_title">Global termisk profil</string>
+    <string name="thermal_global_tile_label">Termisk profil</string>
+    <string name="thermal_global_footer">Gjeld for alle appar sette til Standard. App-spesifikke termiske profilar har alltid prioritet.</string>
 </resources>

@@ -64,6 +64,10 @@
     <string name="thermal_video">Video</string>
     <string name="thermal_search_hint_short">Search\u2026</string>
     <string name="thermal_profile_footer">The selected profile is applied automatically while the app is in use.</string>
+    <string name="thermal_global_category">Global</string>
+    <string name="thermal_global_title">Global thermal profile</string>
+    <string name="thermal_global_tile_label">Thermal Profile</string>
+    <string name="thermal_global_footer">Applies to all apps set to Default. Per-app thermal profiles always take priority.</string>
     <string name="thermal_reset">Reset to defaults</string>
     <string name="thermal_reset_message">Are you sure you want to reset thermal profile for all apps?</string>
 

@@ -163,4 +163,8 @@
     <string name="thermal_arvr_desc">Artırılmış və virtual reallıq tətbiqləri üçün tənzimlənib.</string>
     <string name="thermal_cool">Sərin / Batareya qənaəti</string>
     <string name="thermal_cool_desc">Cihazı sərin saxlamaq və batareyaya qənaət etmək üçün mühafizəkar profil.</string>
+    <string name="thermal_global_category">Qlobal</string>
+    <string name="thermal_global_title">Qlobal istilik profili</string>
+    <string name="thermal_global_tile_label">İstilik profili</string>
+    <string name="thermal_global_footer">Standart olaraq təyin edilmiş bütün tətbiqlərə tətbiq edilir. Tətbiqə özəl profillər həmişə üstünlük təşkil edir.</string>
 </resources>

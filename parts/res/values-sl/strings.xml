@@ -163,4 +163,8 @@
     <string name="thermal_arvr_desc">Prilagojeno aplikacijam obogatene in navidezne resničnosti.</string>
     <string name="thermal_cool">Hladno / Varčevanje z baterijo</string>
     <string name="thermal_cool_desc">Konservativne toplotne omejitve za hladnejšo napravo in varčevanje z baterijo.</string>
+    <string name="thermal_global_category">Globalno</string>
+    <string name="thermal_global_title">Globalni toplotni profil</string>
+    <string name="thermal_global_tile_label">Toplotni profil</string>
+    <string name="thermal_global_footer">Velja za vse aplikacije z nastavitvijo Privzeto. Profili za posamezne aplikacije imajo vedno prednost.</string>
 </resources>

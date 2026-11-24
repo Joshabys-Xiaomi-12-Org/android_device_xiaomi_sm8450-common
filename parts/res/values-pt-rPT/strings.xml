@@ -184,4 +184,8 @@
     <string name="thermal_arvr_desc">Ajustado para aplicações de realidade aumentada e virtual.</string>
     <string name="thermal_cool">Fresco / Poupança de bateria</string>
     <string name="thermal_cool_desc">Limites térmicos conservadores para manter o dispositivo fresco e poupar bateria.</string>
+    <string name="thermal_global_category">Global</string>
+    <string name="thermal_global_title">Perfil térmico global</string>
+    <string name="thermal_global_tile_label">Perfil térmico</string>
+    <string name="thermal_global_footer">Aplica-se a todas as aplicações em Predefinido. Os perfis por aplicação têm sempre prioridade.</string>
 </resources>

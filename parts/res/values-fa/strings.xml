@@ -170,4 +170,8 @@
     <string name="thermal_arvr_desc">تنظیم شده برای برنامه‌های واقعیت افزوده و مجازی.</string>
     <string name="thermal_cool">خنک / ذخیره باتری</string>
     <string name="thermal_cool_desc">محدودیت دمایی محافظه‌کارانه برای خنک ماندن دستگاه و ذخیره باتری.</string>
+    <string name="thermal_global_category">سراسری</string>
+    <string name="thermal_global_title">پروفایل دمایی سراسری</string>
+    <string name="thermal_global_tile_label">پروفایل دمایی</string>
+    <string name="thermal_global_footer">برای تمام برنامه‌های روی حالت پیش‌فرض اعمال می‌شود. پروفایل هر برنامه همیشه اولویت دارد.</string>
 </resources>

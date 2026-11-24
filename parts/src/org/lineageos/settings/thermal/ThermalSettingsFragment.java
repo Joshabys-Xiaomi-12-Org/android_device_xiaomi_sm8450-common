@@ -47,6 +47,7 @@ import java.util.concurrent.Executors;
 public class ThermalSettingsFragment extends SettingsBasePreferenceFragment {
 
     private ThermalUtils mThermalUtils;
+    private Preference mGlobalProfilePref;
     private PreferenceCategory mAppsCategory;
 
     private final List<AppEntry> mAllEntries = new ArrayList<>();
@@ -75,6 +76,23 @@ public class ThermalSettingsFragment extends SettingsBasePreferenceFragment {
         mThermalUtils = new ThermalUtils(context);
 
         PreferenceScreen screen = getPreferenceManager().createPreferenceScreen(context);
+
+        PreferenceCategory globalCategory = new PreferenceCategory(context);
+        globalCategory.setTitle(R.string.thermal_global_category);
+        screen.addPreference(globalCategory);
+
+        mGlobalProfilePref = new Preference(context);
+        mGlobalProfilePref.setKey("thermal_global_profile_entry");
+        mGlobalProfilePref.setTitle(R.string.thermal_global_title);
+        mGlobalProfilePref.setSummary(
+                ThermalUtils.getProfileNameRes(mThermalUtils.getGlobalProfile()));
+        mGlobalProfilePref.setPersistent(false);
+        mGlobalProfilePref.setOnPreferenceClickListener(p -> {
+            startActivity(new Intent(requireContext(), ThermalGlobalProfileActivity.class));
+            return true;
+        });
+        globalCategory.addPreference(mGlobalProfilePref);
+
         mAppsCategory = new PreferenceCategory(context);
         mAppsCategory.setTitle(R.string.thermal_apps_title);
         screen.addPreference(mAppsCategory);
@@ -86,6 +104,10 @@ public class ThermalSettingsFragment extends SettingsBasePreferenceFragment {
     @Override
     public void onResume() {
         super.onResume();
+        if (mGlobalProfilePref != null && mThermalUtils != null) {
+            mGlobalProfilePref.setSummary(
+                    ThermalUtils.getProfileNameRes(mThermalUtils.getGlobalProfile()));
+        }
         if (!mAllEntries.isEmpty()) {
             refreshEntryStates();
             renderFilteredApps();

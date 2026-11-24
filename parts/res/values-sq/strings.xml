@@ -163,4 +163,8 @@
     <string name="thermal_arvr_desc">I rregulluar për aplikacione të realitetit të shtuar dhe virtual.</string>
     <string name="thermal_cool">I freskët / Kursim baterie</string>
     <string name="thermal_cool_desc">Kufij termikë konservatorë për ta mbajtur pajisjen të freskët dhe për të kursyer bateri.</string>
+    <string name="thermal_global_category">Global</string>
+    <string name="thermal_global_title">Profili termik global</string>
+    <string name="thermal_global_tile_label">Profili termik</string>
+    <string name="thermal_global_footer">Zbatohet për të gjitha aplikacionet në Parazgjedhje. Profilet për aplikacion kanë gjithmonë përparësi.</string>
 </resources>

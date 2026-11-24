@@ -170,4 +170,8 @@
     <string name="thermal_arvr_desc">מותאם ליישומי מציאות רבודה ומציאות מדומה.</string>
     <string name="thermal_cool">קריר / חיסכון בסוללה</string>
     <string name="thermal_cool_desc">מגבלות תרמיות שמרניות לשמירה על מכשיר קריר וחיסכון בסוללה.</string>
+    <string name="thermal_global_category">גלובלי</string>
+    <string name="thermal_global_title">פרופיל תרמי גלובלי</string>
+    <string name="thermal_global_tile_label">פרופיל תרמי</string>
+    <string name="thermal_global_footer">חל על כל האפליקציות המוגדרות כברירת מחדל. פרופילים לפי אפליקציה תמיד בעדיפות גבוהה יותר.</string>
 </resources>

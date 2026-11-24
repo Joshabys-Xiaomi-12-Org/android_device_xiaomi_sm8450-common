@@ -30,6 +30,7 @@ public final class ThermalUtils {
 
     private static final String THERMAL_CONTROL = "thermal_control";
     private static final String KEY_APP_STATE_PREFIX = "thermal_app_state_";
+    private static final String KEY_GLOBAL_PROFILE = "thermal_global_profile";
 
     public static final int STATE_DEFAULT = 0;
     public static final int STATE_BENCHMARK = 1;
@@ -158,12 +159,25 @@ public final class ThermalUtils {
         return STATE_DEFAULT;
     }
 
+    public int getGlobalProfile() {
+        int state = mSharedPrefs.getInt(KEY_GLOBAL_PROFILE, STATE_DEFAULT);
+        return state >= 0 && state < PROFILE_COUNT ? state : STATE_DEFAULT;
+    }
+
+    public void setGlobalProfile(int state) {
+        int valid = state >= 0 && state < PROFILE_COUNT ? state : STATE_DEFAULT;
+        mSharedPrefs.edit().putInt(KEY_GLOBAL_PROFILE, valid).apply();
+        FileUtils.writeLine(THERMAL_SCONFIG, mMapResolver.getCodeForState(valid));
+    }
+
     protected void setDefaultThermalProfile() {
         FileUtils.writeLine(THERMAL_SCONFIG, mMapResolver.getDefaultCode());
     }
 
     protected void setThermalProfile(String packageName) {
-        int state = getStateForPackage(packageName);
-        FileUtils.writeLine(THERMAL_SCONFIG, mMapResolver.getCodeForState(state));
+        int appState = getStateForPackage(packageName);
+        // Per-app profile takes priority; apps set to Default follow the global profile.
+        int effectiveState = appState != STATE_DEFAULT ? appState : getGlobalProfile();
+        FileUtils.writeLine(THERMAL_SCONFIG, mMapResolver.getCodeForState(effectiveState));
     }
 }

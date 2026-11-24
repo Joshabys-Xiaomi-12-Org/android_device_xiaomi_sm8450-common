@@ -184,4 +184,8 @@
     <string name="thermal_arvr_desc">Dioptimalkan untuk aplikasi augmented dan virtual reality.</string>
     <string name="thermal_cool">Sejuk / Hemat Baterai</string>
     <string name="thermal_cool_desc">Batas termal konservatif agar perangkat tetap sejuk dan hemat baterai.</string>
+    <string name="thermal_global_category">Global</string>
+    <string name="thermal_global_title">Profil termal global</string>
+    <string name="thermal_global_tile_label">Profil Termal</string>
+    <string name="thermal_global_footer">Berlaku untuk semua aplikasi yang disetel ke Bawaan. Profil termal per aplikasi selalu diprioritaskan.</string>
 </resources>

@@ -159,4 +159,8 @@
     <string name="thermal_arvr_desc">ڕێکخراو بۆ بەرنامەکانی واقیعی زیادکراو و خەیاڵی.</string>
     <string name="thermal_cool">سارد / پاشەکەوتی پاتری</string>
     <string name="thermal_cool_desc">سنووری گەرمای پارێزگار بۆ هێشتنەوەی ئامێر بە ساردی و پاشەکەوتی پاتری.</string>
+    <string name="thermal_global_category">گشتی</string>
+    <string name="thermal_global_title">پڕۆفایلی گەرمی گشتی</string>
+    <string name="thermal_global_tile_label">پڕۆفایلی گەرمی</string>
+    <string name="thermal_global_footer">بۆ هەموو بەرنامەکانی سەر بنەڕەتی جێبەجێ دەکرێت. پڕۆفایلی هەر بەرنامەیەک هەمیشە لەپێشترە.</string>
 </resources>

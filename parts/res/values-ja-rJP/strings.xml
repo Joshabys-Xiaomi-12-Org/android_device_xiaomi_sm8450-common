@@ -184,4 +184,8 @@
     <string name="thermal_arvr_desc">拡張現実・仮想現実アプリ向けに調整。</string>
     <string name="thermal_cool">クール / 省電力</string>
     <string name="thermal_cool_desc">発熱を抑えてバッテリーを節約する控えめな温度制限。</string>
+    <string name="thermal_global_category">グローバル</string>
+    <string name="thermal_global_title">グローバルサーマルプロファイル</string>
+    <string name="thermal_global_tile_label">サーマルプロファイル</string>
+    <string name="thermal_global_footer">デフォルトに設定されたすべてのアプリに適用されます。アプリ個別のプロファイルが常に優先されます。</string>
 </resources>

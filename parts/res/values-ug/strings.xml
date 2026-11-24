@@ -159,4 +159,8 @@
     <string name="thermal_arvr_desc">كۈچەيتىلگەن ۋە مەۋھۇم رېئاللىق ئەپلىرى ئۈچۈن تەڭشەلگەن.</string>
     <string name="thermal_cool">سالقىن / باتارېيە تېجەش</string>
     <string name="thermal_cool_desc">ئۈسكۈنىنى سالقىن تۇتۇش ۋە باتارېيە تېجەش ئۈچۈن ئېھتىياتچان تېمپېراتۇرا چەكلىمىسى.</string>
+    <string name="thermal_global_category">ئومۇمىي</string>
+    <string name="thermal_global_title">ئومۇمىي تېمپېراتۇرا سەپلىمىسى</string>
+    <string name="thermal_global_tile_label">تېمپېراتۇرا سەپلىمىسى</string>
+    <string name="thermal_global_footer">سۈكۈتتىكى قىلىپ تەڭشەلگەن بارلىق ئەپلەرگە قوللىنىلىدۇ. ئەپ بويىچە سەپلىمە ھەمىشە ئالدىنقى ئورۇندا تۇرىدۇ.</string>
 </resources>

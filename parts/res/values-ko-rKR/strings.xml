@@ -184,4 +184,8 @@
     <string name="thermal_arvr_desc">증강 현실 및 가상 현실 앱에 맞게 조정됨.</string>
     <string name="thermal_cool">저발열 / 배터리 절약</string>
     <string name="thermal_cool_desc">기기를 시원하게 유지하고 배터리를 절약하는 보수적인 열 제한.</string>
+    <string name="thermal_global_category">전역</string>
+    <string name="thermal_global_title">전역 서멀 프로필</string>
+    <string name="thermal_global_tile_label">서멀 프로필</string>
+    <string name="thermal_global_footer">기본값으로 설정된 모든 앱에 적용됩니다. 앱별 서멀 프로필이 항상 우선 적용됩니다.</string>
 </resources>

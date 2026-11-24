@@ -170,4 +170,8 @@
     <string name="thermal_arvr_desc">Kiterjesztett és virtuális valóság alkalmazásokhoz hangolva.</string>
     <string name="thermal_cool">Hűvös / Akkumulátorkímélő</string>
     <string name="thermal_cool_desc">Konzervatív hőkorlátok a hűvös működéshez és az akkumulátor kíméléséhez.</string>
+    <string name="thermal_global_category">Globális</string>
+    <string name="thermal_global_title">Globális hőprofil</string>
+    <string name="thermal_global_tile_label">Hőprofil</string>
+    <string name="thermal_global_footer">Minden Alapértelmezett beállítású alkalmazásra vonatkozik. Az alkalmazásonkénti profilok mindig elsőbbséget élveznek.</string>
 </resources>

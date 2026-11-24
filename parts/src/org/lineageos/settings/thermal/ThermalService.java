@@ -69,6 +69,7 @@ public class ThermalService extends Service {
             // Do nothing
         }
         mThermalUtils = new ThermalUtils(this);
+        setThermalProfile();
         registerReceiver();
         super.onCreate();
     }

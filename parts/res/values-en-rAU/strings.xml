@@ -146,4 +146,8 @@
     <string name="thermal_arvr_desc">Tuned for augmented and virtual reality applications.</string>
     <string name="thermal_cool">Cool / Battery Saver</string>
     <string name="thermal_cool_desc">Conservative thermal limits to keep the device cool and save battery.</string>
+    <string name="thermal_global_category">Global</string>
+    <string name="thermal_global_title">Global thermal profile</string>
+    <string name="thermal_global_tile_label">Thermal Profile</string>
+    <string name="thermal_global_footer">Applies to all apps set to Default. Per-app thermal profiles always take priority.</string>
 </resources>

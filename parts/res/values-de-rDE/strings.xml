@@ -184,4 +184,8 @@
     <string name="thermal_arvr_desc">Abgestimmt für Augmented- und Virtual-Reality-Apps.</string>
     <string name="thermal_cool">Kühl / Akkusparmodus</string>
     <string name="thermal_cool_desc">Konservative Temperaturgrenzen für kühlen Betrieb und längere Akkulaufzeit.</string>
+    <string name="thermal_global_category">Global</string>
+    <string name="thermal_global_title">Globales Thermal-Profil</string>
+    <string name="thermal_global_tile_label">Thermal-Profil</string>
+    <string name="thermal_global_footer">Gilt für alle Apps mit Standard-Einstellung. App-spezifische Profile haben immer Vorrang.</string>
 </resources>

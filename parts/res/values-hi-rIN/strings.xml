@@ -184,4 +184,8 @@
     <string name="thermal_arvr_desc">ऑगमेंटेड और वर्चुअल रियलिटी ऐप्स के लिए ट्यून किया गया।</string>
     <string name="thermal_cool">कूल / बैटरी सेवर</string>
     <string name="thermal_cool_desc">डिवाइस को ठंडा रखने और बैटरी बचाने के लिए रूढ़िवादी थर्मल सीमाएँ।</string>
+    <string name="thermal_global_category">ग्लोबल</string>
+    <string name="thermal_global_title">ग्लोबल थर्मल प्रोफ़ाइल</string>
+    <string name="thermal_global_tile_label">थर्मल प्रोफ़ाइल</string>
+    <string name="thermal_global_footer">डिफ़ॉल्ट पर सेट सभी ऐप्स पर लागू होता है। प्रति-ऐप थर्मल प्रोफ़ाइल को हमेशा प्राथमिकता मिलती है।</string>
 </resources>

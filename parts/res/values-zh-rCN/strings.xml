@@ -184,4 +184,8 @@
     <string name="thermal_arvr_desc">针对增强现实与虚拟现实应用优化。</string>
     <string name="thermal_cool">低温 / 省电</string>
     <string name="thermal_cool_desc">保守的温控限制，保持机身凉爽并节省电量。</string>
+    <string name="thermal_global_category">全局</string>
+    <string name="thermal_global_title">全局温控配置</string>
+    <string name="thermal_global_tile_label">温控配置</string>
+    <string name="thermal_global_footer">应用于所有设为默认的应用。单个应用的独立温控配置始终优先。</string>
 </resources>

@@ -96,6 +96,27 @@
             android:theme="@style/Theme.Parts.Expressive"
             android:exported="false" />
 
+        <activity
+            android:name=".thermal.ThermalGlobalProfileActivity"
+            android:label="@string/thermal_global_title"
+            android:theme="@style/Theme.Parts.Expressive"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".thermal.ThermalTileService"
+            android:label="@string/thermal_global_tile_label"
+            android:icon="@drawable/ic_thermal_tile"
+            android:exported="true"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
         <service
             android:name=".thermal.ThermalService"
             android:permission="ThermalService" />

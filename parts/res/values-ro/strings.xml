@@ -170,4 +170,8 @@
     <string name="thermal_arvr_desc">Reglat pentru aplicații de realitate augmentată și virtuală.</string>
     <string name="thermal_cool">Rece / Economisire baterie</string>
     <string name="thermal_cool_desc">Limite termice conservatoare pentru a menține telefonul rece și a economisi bateria.</string>
+    <string name="thermal_global_category">Global</string>
+    <string name="thermal_global_title">Profil termic global</string>
+    <string name="thermal_global_tile_label">Profil termic</string>
+    <string name="thermal_global_footer">Se aplică tuturor aplicațiilor setate pe Implicit. Profilurile per aplicație au întotdeauna prioritate.</string>
 </resources>
