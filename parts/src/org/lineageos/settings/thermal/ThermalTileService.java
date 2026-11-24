@@ -20,6 +20,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
+import android.widget.Toast;
 
 import org.lineageos.settings.R;
 
@@ -43,6 +44,7 @@ public class ThermalTileService extends TileService {
     };
 
     private ThermalUtils mThermalUtils;
+    private Toast mToast;
 
     public static void requestUpdate(Context context) {
         requestListeningState(context, new ComponentName(context, ThermalTileService.class));
@@ -72,6 +74,17 @@ public class ThermalTileService extends TileService {
         int next = cycle.get((idx + 1) % cycle.size());
         mThermalUtils.setGlobalProfile(next);
         updateTile();
+        showProfileToast(next);
+    }
+
+    private void showProfileToast(int state) {
+        if (mToast != null) {
+            mToast.cancel();
+        }
+        String message = getString(R.string.thermal_global_tile_label) + ": "
+                + getString(ThermalUtils.getProfileNameRes(state));
+        mToast = Toast.makeText(this, message, Toast.LENGTH_SHORT);
+        mToast.show();
     }
 
     private List<Integer> getAvailableCycleProfiles() {
