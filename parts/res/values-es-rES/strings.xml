@@ -188,4 +188,23 @@
     <string name="thermal_global_title">Perfil térmico global</string>
     <string name="thermal_global_tile_label">Perfil térmico</string>
     <string name="thermal_global_footer">Se aplica a todas las apps en Predeterminado. Los perfiles por aplicación siempre tienen prioridad.</string>
+    <string name="powertools_zram_category">ZRAM y Memoria</string>
+    <string name="powertools_zram_enable_title">Activar optimizador de ZRAM y VM</string>
+    <string name="powertools_zram_enable_summary">Activar o desactivar ajustes de ZRAM y memoria virtual</string>
+    <string name="powertools_zram_config_category">Configurar ZRAM y VM</string>
+    <string name="powertools_zram_size_title">Tamaño de ZRAM</string>
+    <string name="powertools_zram_disabled">Desactivado</string>
+    <string name="powertools_zram_algo_title">Algoritmo de compresión</string>
+    <string name="powertools_vm_swappiness_title">Swappiness</string>
+    <string name="powertools_vm_vfs_pressure_title">Presión de caché VFS</string>
+    <string name="powertools_vm_page_cluster_title">Page Cluster</string>
+    <string name="powertools_vm_page_cluster_0">0 (1 página — recomendado)</string>
+    <string name="powertools_vm_page_cluster_1">1 (2 páginas)</string>
+    <string name="powertools_vm_page_cluster_2">2 (4 páginas)</string>
+    <string name="powertools_vm_page_cluster_3">3 (8 páginas)</string>
+    <string name="powertools_vm_dirty_profile_title">Perfil Dirty Writeback</string>
+    <string name="powertools_vm_dirty_low">Baja latencia (10 / 5)</string>
+    <string name="powertools_vm_dirty_default">Predeterminado (20 / 10)</string>
+    <string name="powertools_vm_dirty_balanced">Equilibrado (30 / 15)</string>
+    <string name="powertools_vm_dirty_throughput">Alto rendimiento (40 / 20)</string>
 </resources>

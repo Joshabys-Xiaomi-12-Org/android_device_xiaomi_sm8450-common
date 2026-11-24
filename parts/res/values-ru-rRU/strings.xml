@@ -188,4 +188,23 @@
     <string name="thermal_global_title">Глобальный термопрофиль</string>
     <string name="thermal_global_tile_label">Термопрофиль</string>
     <string name="thermal_global_footer">Применяется ко всем приложениям со значением По умолчанию. Профили для отдельных приложений всегда имеют приоритет.</string>
+    <string name="powertools_zram_category">ZRAM и память</string>
+    <string name="powertools_zram_enable_title">Включить оптимизатор ZRAM и VM</string>
+    <string name="powertools_zram_enable_summary">Переключить настройки ZRAM и виртуальной памяти</string>
+    <string name="powertools_zram_config_category">Настройка ZRAM и VM</string>
+    <string name="powertools_zram_size_title">Размер ZRAM</string>
+    <string name="powertools_zram_disabled">Отключено</string>
+    <string name="powertools_zram_algo_title">Алгоритм сжатия</string>
+    <string name="powertools_vm_swappiness_title">Swappiness</string>
+    <string name="powertools_vm_vfs_pressure_title">Давление кэша VFS</string>
+    <string name="powertools_vm_page_cluster_title">Page Cluster</string>
+    <string name="powertools_vm_page_cluster_0">0 (1 страница — рекомендуется)</string>
+    <string name="powertools_vm_page_cluster_1">1 (2 страницы)</string>
+    <string name="powertools_vm_page_cluster_2">2 (4 страницы)</string>
+    <string name="powertools_vm_page_cluster_3">3 (8 страниц)</string>
+    <string name="powertools_vm_dirty_profile_title">Профиль Dirty Writeback</string>
+    <string name="powertools_vm_dirty_low">Низкая задержка (10 / 5)</string>
+    <string name="powertools_vm_dirty_default">По умолчанию (20 / 10)</string>
+    <string name="powertools_vm_dirty_balanced">Сбалансированный (30 / 15)</string>
+    <string name="powertools_vm_dirty_throughput">Пропускная способность (40 / 20)</string>
 </resources>

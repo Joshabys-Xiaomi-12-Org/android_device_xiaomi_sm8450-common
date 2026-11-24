@@ -209,4 +209,63 @@
 
     </PreferenceCategory>
 
+    <!-- ZRAM & Memory Optimizer Section -->
+    <PreferenceCategory
+        android:key="zram_category"
+        android:title="@string/powertools_zram_category">
+
+        <SwitchPreferenceCompat
+            android:key="zram_enable"
+            android:title="@string/powertools_zram_enable_title"
+            android:summary="@string/powertools_zram_enable_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="zram_config_category"
+        android:title="@string/powertools_zram_config_category">
+
+        <ListPreference
+            android:key="zram_size"
+            android:title="@string/powertools_zram_size_title"
+            android:entries="@array/powertools_zram_size_entries"
+            android:entryValues="@array/powertools_zram_size_values"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="zram_algorithm"
+            android:title="@string/powertools_zram_algo_title"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="vm_swappiness"
+            android:title="@string/powertools_vm_swappiness_title"
+            android:entries="@array/powertools_vm_swappiness_entries"
+            android:entryValues="@array/powertools_vm_swappiness_entries"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="vm_vfs_cache_pressure"
+            android:title="@string/powertools_vm_vfs_pressure_title"
+            android:entries="@array/powertools_vm_vfs_pressure_entries"
+            android:entryValues="@array/powertools_vm_vfs_pressure_entries"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="vm_page_cluster"
+            android:title="@string/powertools_vm_page_cluster_title"
+            android:entries="@array/powertools_vm_page_cluster_entries"
+            android:entryValues="@array/powertools_vm_page_cluster_values"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="vm_dirty_profile"
+            android:title="@string/powertools_vm_dirty_profile_title"
+            android:entries="@array/powertools_vm_dirty_profile_entries"
+            android:entryValues="@array/powertools_vm_dirty_profile_values"
+            android:summary="%s" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

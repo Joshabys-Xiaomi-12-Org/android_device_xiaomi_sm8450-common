@@ -99,5 +99,21 @@ public final class PowertoolsBootHelper {
                     primeMax,
                     prefs.getString(PowertoolsSettingsFragment.KEY_CPU_PRIME_GOVERNOR, null));
         }
+
+        if (prefs.getBoolean(PowertoolsSettingsFragment.KEY_ZRAM_ENABLE, false)) {
+            String zramSize = prefs.getString(PowertoolsSettingsFragment.KEY_ZRAM_SIZE, null);
+            String zramAlgo = prefs.getString(PowertoolsSettingsFragment.KEY_ZRAM_ALGO, null);
+            if (!TextUtils.isEmpty(zramSize) || !TextUtils.isEmpty(zramAlgo)) {
+                ZramUtils.applyZram(zramSize, zramAlgo);
+            }
+            ZramUtils.setSwappiness(
+                    prefs.getString(PowertoolsSettingsFragment.KEY_VM_SWAPPINESS, null));
+            ZramUtils.setVfsCachePressure(
+                    prefs.getString(PowertoolsSettingsFragment.KEY_VM_VFS_PRESSURE, null));
+            ZramUtils.setPageCluster(
+                    prefs.getString(PowertoolsSettingsFragment.KEY_VM_PAGE_CLUSTER, null));
+            ZramUtils.setDirtyProfile(
+                    prefs.getString(PowertoolsSettingsFragment.KEY_VM_DIRTY_PROFILE, null));
+        }
     }
 }

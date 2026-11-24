@@ -188,4 +188,23 @@
     <string name="thermal_global_title">الملف الحراري العام</string>
     <string name="thermal_global_tile_label">الملف الحراري</string>
     <string name="thermal_global_footer">يُطبق على جميع التطبيقات المضبوطة على الافتراضي. تبقى ملفات كل تطبيق ذات أولوية دائماً.</string>
+    <string name="powertools_zram_category">ZRAM والذاكرة</string>
+    <string name="powertools_zram_enable_title">تفعيل محسن ZRAM و VM</string>
+    <string name="powertools_zram_enable_summary">تبديل ضبط ZRAM والذاكرة الافتراضية</string>
+    <string name="powertools_zram_config_category">تكوين ZRAM و VM</string>
+    <string name="powertools_zram_size_title">حجم ZRAM</string>
+    <string name="powertools_zram_disabled">معطل</string>
+    <string name="powertools_zram_algo_title">خوارزمية الضغط</string>
+    <string name="powertools_vm_swappiness_title">Swappiness</string>
+    <string name="powertools_vm_vfs_pressure_title">ضغط ذاكرة VFS</string>
+    <string name="powertools_vm_page_cluster_title">تجميع الصفحات (Page Cluster)</string>
+    <string name="powertools_vm_page_cluster_0">0 (صفحة واحدة — موصى به)</string>
+    <string name="powertools_vm_page_cluster_1">1 (صفحتان)</string>
+    <string name="powertools_vm_page_cluster_2">2 (4 صفحات)</string>
+    <string name="powertools_vm_page_cluster_3">3 (8 صفحات)</string>
+    <string name="powertools_vm_dirty_profile_title">ملف الكتابة المتأخرة (Dirty Writeback)</string>
+    <string name="powertools_vm_dirty_low">زمن استجابة منخفض (10 / 5)</string>
+    <string name="powertools_vm_dirty_default">افتراضي (20 / 10)</string>
+    <string name="powertools_vm_dirty_balanced">متوازن (30 / 15)</string>
+    <string name="powertools_vm_dirty_throughput">إنتاجية عالية (40 / 20)</string>
 </resources>

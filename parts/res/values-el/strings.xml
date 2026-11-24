@@ -174,4 +174,23 @@
     <string name="thermal_global_title">Καθολικό θερμικό προφίλ</string>
     <string name="thermal_global_tile_label">Θερμικό προφίλ</string>
     <string name="thermal_global_footer">Εφαρμόζεται σε όλες τις εφαρμογές με Προεπιλογή. Τα προφίλ ανά εφαρμογή έχουν πάντα προτεραιότητα.</string>
+    <string name="powertools_zram_category">ZRAM &amp; Μνήμη</string>
+    <string name="powertools_zram_enable_title">Ενεργοποίηση βελτιστοποίησης ZRAM &amp; VM</string>
+    <string name="powertools_zram_enable_summary">Εναλλαγή ρυθμίσεων ZRAM και εικονικής μνήμης</string>
+    <string name="powertools_zram_config_category">Ρύθμιση ZRAM &amp; VM</string>
+    <string name="powertools_zram_size_title">Μέγεθος ZRAM</string>
+    <string name="powertools_zram_disabled">Ανενεργό</string>
+    <string name="powertools_zram_algo_title">Αλγόριθμος συμπίεσης</string>
+    <string name="powertools_vm_swappiness_title">Swappiness</string>
+    <string name="powertools_vm_vfs_pressure_title">Πίεση cache VFS</string>
+    <string name="powertools_vm_page_cluster_title">Page Cluster</string>
+    <string name="powertools_vm_page_cluster_0">0 (1 σελίδα — συνιστάται)</string>
+    <string name="powertools_vm_page_cluster_1">1 (2 σελίδες)</string>
+    <string name="powertools_vm_page_cluster_2">2 (4 σελίδες)</string>
+    <string name="powertools_vm_page_cluster_3">3 (8 σελίδες)</string>
+    <string name="powertools_vm_dirty_profile_title">Προφίλ Dirty Writeback</string>
+    <string name="powertools_vm_dirty_low">Χαμηλή καθυστέρηση (10 / 5)</string>
+    <string name="powertools_vm_dirty_default">Προεπιλογή (20 / 10)</string>
+    <string name="powertools_vm_dirty_balanced">Ισορροπημένο (30 / 15)</string>
+    <string name="powertools_vm_dirty_throughput">Υψηλή απόδοση (40 / 20)</string>
 </resources>

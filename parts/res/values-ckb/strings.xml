@@ -163,4 +163,23 @@
     <string name="thermal_global_title">پڕۆفایلی گەرمی گشتی</string>
     <string name="thermal_global_tile_label">پڕۆفایلی گەرمی</string>
     <string name="thermal_global_footer">بۆ هەموو بەرنامەکانی سەر بنەڕەتی جێبەجێ دەکرێت. پڕۆفایلی هەر بەرنامەیەک هەمیشە لەپێشترە.</string>
+    <string name="powertools_zram_category">ZRAM و بیرگە</string>
+    <string name="powertools_zram_enable_title">چالاککردنی باشترکەری ZRAM و VM</string>
+    <string name="powertools_zram_enable_summary">گۆڕینی ڕێکخستنەکانی ZRAM و بیرگەی مەجازی</string>
+    <string name="powertools_zram_config_category">ڕێکخستنی ZRAM و VM</string>
+    <string name="powertools_zram_size_title">قەبارەی ZRAM</string>
+    <string name="powertools_zram_disabled">ناچالاک</string>
+    <string name="powertools_zram_algo_title">ئەلگۆریتمی پەستان</string>
+    <string name="powertools_vm_swappiness_title">Swappiness</string>
+    <string name="powertools_vm_vfs_pressure_title">پەستانی کاشی VFS</string>
+    <string name="powertools_vm_page_cluster_title">Page Cluster</string>
+    <string name="powertools_vm_page_cluster_0">0 (1 پەڕە — پێشنیارکراو)</string>
+    <string name="powertools_vm_page_cluster_1">1 (2 پەڕە)</string>
+    <string name="powertools_vm_page_cluster_2">2 (4 پەڕە)</string>
+    <string name="powertools_vm_page_cluster_3">3 (8 پەڕە)</string>
+    <string name="powertools_vm_dirty_profile_title">پڕۆفایلی Dirty Writeback</string>
+    <string name="powertools_vm_dirty_low">دواکەوتنی کەم (10 / 5)</string>
+    <string name="powertools_vm_dirty_default">بنەڕەتی (20 / 10)</string>
+    <string name="powertools_vm_dirty_balanced">هاوسەنگ (30 / 15)</string>
+    <string name="powertools_vm_dirty_throughput">خێرایی بەرز (40 / 20)</string>
 </resources>

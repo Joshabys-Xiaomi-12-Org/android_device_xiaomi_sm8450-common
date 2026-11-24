@@ -188,4 +188,23 @@
     <string name="thermal_global_title">Hồ sơ nhiệt toàn cục</string>
     <string name="thermal_global_tile_label">Hồ sơ nhiệt</string>
     <string name="thermal_global_footer">Áp dụng cho tất cả ứng dụng ở chế độ Mặc định. Hồ sơ nhiệt theo từng ứng dụng luôn được ưu tiên.</string>
+    <string name="powertools_zram_category">ZRAM &amp; Bộ nhớ</string>
+    <string name="powertools_zram_enable_title">Bật tối ưu hóa ZRAM &amp; VM</string>
+    <string name="powertools_zram_enable_summary">Bật hoặc tắt tinh chỉnh ZRAM và bộ nhớ ảo</string>
+    <string name="powertools_zram_config_category">Cấu hình ZRAM &amp; VM</string>
+    <string name="powertools_zram_size_title">Dung lượng ZRAM</string>
+    <string name="powertools_zram_disabled">Đã tắt</string>
+    <string name="powertools_zram_algo_title">Thuật toán nén</string>
+    <string name="powertools_vm_swappiness_title">Swappiness</string>
+    <string name="powertools_vm_vfs_pressure_title">Áp lực bộ nhớ đệm VFS</string>
+    <string name="powertools_vm_page_cluster_title">Page Cluster</string>
+    <string name="powertools_vm_page_cluster_0">0 (1 trang — khuyến nghị)</string>
+    <string name="powertools_vm_page_cluster_1">1 (2 trang)</string>
+    <string name="powertools_vm_page_cluster_2">2 (4 trang)</string>
+    <string name="powertools_vm_page_cluster_3">3 (8 trang)</string>
+    <string name="powertools_vm_dirty_profile_title">Hồ sơ Dirty Writeback</string>
+    <string name="powertools_vm_dirty_low">Độ trễ thấp (10 / 5)</string>
+    <string name="powertools_vm_dirty_default">Mặc định (20 / 10)</string>
+    <string name="powertools_vm_dirty_balanced">Cân bằng (30 / 15)</string>
+    <string name="powertools_vm_dirty_throughput">Thông lượng cao (40 / 20)</string>
 </resources>

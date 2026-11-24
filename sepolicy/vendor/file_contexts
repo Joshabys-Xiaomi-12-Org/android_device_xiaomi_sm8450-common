@@ -81,3 +81,6 @@
 # Touchscreen
 /dev/xiaomi-touch u:object_r:touchfeature_device:s0
 /vendor/bin/hw/vendor\.lineage\.touch-service\.xiaomi u:object_r:hal_lineage_touch_default_exec:s0
+
+# Powertools ZRAM
+/(vendor|system/vendor)/bin/init\.parts\.zram\.sh u:object_r:vendor_qti_init_shell_exec:s0

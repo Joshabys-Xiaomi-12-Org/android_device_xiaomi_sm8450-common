@@ -167,4 +167,23 @@
     <string name="thermal_global_title">Profili termik global</string>
     <string name="thermal_global_tile_label">Profili termik</string>
     <string name="thermal_global_footer">Zbatohet për të gjitha aplikacionet në Parazgjedhje. Profilet për aplikacion kanë gjithmonë përparësi.</string>
+    <string name="powertools_zram_category">ZRAM dhe Memoria</string>
+    <string name="powertools_zram_enable_title">Aktivizo optimizuesin ZRAM dhe VM</string>
+    <string name="powertools_zram_enable_summary">Ndërro rregullimet e ZRAM dhe memories virtuale</string>
+    <string name="powertools_zram_config_category">Konfiguro ZRAM dhe VM</string>
+    <string name="powertools_zram_size_title">Madhësia e ZRAM</string>
+    <string name="powertools_zram_disabled">Çaktivizuar</string>
+    <string name="powertools_zram_algo_title">Algoritmi i kompresimit</string>
+    <string name="powertools_vm_swappiness_title">Swappiness</string>
+    <string name="powertools_vm_vfs_pressure_title">Presioni i cache VFS</string>
+    <string name="powertools_vm_page_cluster_title">Page Cluster</string>
+    <string name="powertools_vm_page_cluster_0">0 (1 faqe — e rekomanduar)</string>
+    <string name="powertools_vm_page_cluster_1">1 (2 faqe)</string>
+    <string name="powertools_vm_page_cluster_2">2 (4 faqe)</string>
+    <string name="powertools_vm_page_cluster_3">3 (8 faqe)</string>
+    <string name="powertools_vm_dirty_profile_title">Profili Dirty Writeback</string>
+    <string name="powertools_vm_dirty_low">Vonesë e ulët (10 / 5)</string>
+    <string name="powertools_vm_dirty_default">Parazgjedhje (20 / 10)</string>
+    <string name="powertools_vm_dirty_balanced">I balancuar (30 / 15)</string>
+    <string name="powertools_vm_dirty_throughput">Shpejtësi e lartë (40 / 20)</string>
 </resources>

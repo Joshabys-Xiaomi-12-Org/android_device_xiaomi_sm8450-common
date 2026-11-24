@@ -174,4 +174,23 @@
     <string name="thermal_global_title">Globális hőprofil</string>
     <string name="thermal_global_tile_label">Hőprofil</string>
     <string name="thermal_global_footer">Minden Alapértelmezett beállítású alkalmazásra vonatkozik. Az alkalmazásonkénti profilok mindig elsőbbséget élveznek.</string>
+    <string name="powertools_zram_category">ZRAM és memória</string>
+    <string name="powertools_zram_enable_title">ZRAM és VM optimalizáló engedélyezése</string>
+    <string name="powertools_zram_enable_summary">ZRAM és virtuális memória hangolás kapcsolása</string>
+    <string name="powertools_zram_config_category">ZRAM és VM beállítása</string>
+    <string name="powertools_zram_size_title">ZRAM méret</string>
+    <string name="powertools_zram_disabled">Letiltva</string>
+    <string name="powertools_zram_algo_title">Tömörítési algoritmus</string>
+    <string name="powertools_vm_swappiness_title">Swappiness</string>
+    <string name="powertools_vm_vfs_pressure_title">VFS gyorsítótár-nyomás</string>
+    <string name="powertools_vm_page_cluster_title">Page Cluster</string>
+    <string name="powertools_vm_page_cluster_0">0 (1 oldal — ajánlott)</string>
+    <string name="powertools_vm_page_cluster_1">1 (2 oldal)</string>
+    <string name="powertools_vm_page_cluster_2">2 (4 oldal)</string>
+    <string name="powertools_vm_page_cluster_3">3 (8 oldal)</string>
+    <string name="powertools_vm_dirty_profile_title">Dirty Writeback profil</string>
+    <string name="powertools_vm_dirty_low">Alacsony késleltetés (10 / 5)</string>
+    <string name="powertools_vm_dirty_default">Alapértelmezett (20 / 10)</string>
+    <string name="powertools_vm_dirty_balanced">Kiegyensúlyozott (30 / 15)</string>
+    <string name="powertools_vm_dirty_throughput">Átvitel (40 / 20)</string>
 </resources>

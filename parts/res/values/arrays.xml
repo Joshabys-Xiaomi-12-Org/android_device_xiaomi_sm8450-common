@@ -308,4 +308,75 @@
         <item>default</item>
         <item>performance</item>
     </string-array>
+
+    <!-- ZRAM Size -->
+    <string-array name="powertools_zram_size_entries">
+        <item>@string/powertools_zram_disabled</item>
+        <item>1 GB</item>
+        <item>2 GB</item>
+        <item>3 GB</item>
+        <item>3.5 GB</item>
+        <item>4 GB</item>
+        <item>6 GB</item>
+        <item>8 GB</item>
+    </string-array>
+    <string-array name="powertools_zram_size_values" translatable="false">
+        <item>0</item>
+        <item>1024</item>
+        <item>2048</item>
+        <item>3072</item>
+        <item>3584</item>
+        <item>4096</item>
+        <item>6144</item>
+        <item>8192</item>
+    </string-array>
+
+    <!-- VM Swappiness -->
+    <string-array name="powertools_vm_swappiness_entries" translatable="false">
+        <item>10</item>
+        <item>30</item>
+        <item>60</item>
+        <item>80</item>
+        <item>100</item>
+        <item>130</item>
+        <item>160</item>
+        <item>200</item>
+    </string-array>
+
+    <!-- VM VFS Cache Pressure -->
+    <string-array name="powertools_vm_vfs_pressure_entries" translatable="false">
+        <item>20</item>
+        <item>50</item>
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+    </string-array>
+
+    <!-- VM Page Cluster -->
+    <string-array name="powertools_vm_page_cluster_entries">
+        <item>@string/powertools_vm_page_cluster_0</item>
+        <item>@string/powertools_vm_page_cluster_1</item>
+        <item>@string/powertools_vm_page_cluster_2</item>
+        <item>@string/powertools_vm_page_cluster_3</item>
+    </string-array>
+    <string-array name="powertools_vm_page_cluster_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <!-- VM Dirty Writeback Profile -->
+    <string-array name="powertools_vm_dirty_profile_entries">
+        <item>@string/powertools_vm_dirty_low</item>
+        <item>@string/powertools_vm_dirty_default</item>
+        <item>@string/powertools_vm_dirty_balanced</item>
+        <item>@string/powertools_vm_dirty_throughput</item>
+    </string-array>
+    <string-array name="powertools_vm_dirty_profile_values" translatable="false">
+        <item>low</item>
+        <item>default</item>
+        <item>balanced</item>
+        <item>throughput</item>
+    </string-array>
 </resources>

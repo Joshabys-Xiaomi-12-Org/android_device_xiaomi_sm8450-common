@@ -165,4 +165,23 @@
     <string name="thermal_global_title">உலகளாவிய வெப்ப சுயவிவரம்</string>
     <string name="thermal_global_tile_label">வெப்ப சுயவிவரம்</string>
     <string name="thermal_global_footer">இயல்புநிலையாக உள்ள அனைத்து செயலிகளுக்கும் பொருந்தும். செயலி வாரியான சுயவிவரங்களுக்கு எப்போதும் முன்னுரிமை உண்டு.</string>
+    <string name="powertools_zram_category">ZRAM &amp; நினைவகம்</string>
+    <string name="powertools_zram_enable_title">ZRAM &amp; VM மேம்படுத்தியை இயக்கு</string>
+    <string name="powertools_zram_enable_summary">ZRAM மற்றும் மெய்நிகர் நினைவக சீரமைப்பை மாற்று</string>
+    <string name="powertools_zram_config_category">ZRAM &amp; VM கட்டமைப்பு</string>
+    <string name="powertools_zram_size_title">ZRAM அளவு</string>
+    <string name="powertools_zram_disabled">முடக்கப்பட்டது</string>
+    <string name="powertools_zram_algo_title">சுருக்க அல்காரிதம்</string>
+    <string name="powertools_vm_swappiness_title">Swappiness</string>
+    <string name="powertools_vm_vfs_pressure_title">VFS கேச் அழுத்தம்</string>
+    <string name="powertools_vm_page_cluster_title">Page Cluster</string>
+    <string name="powertools_vm_page_cluster_0">0 (1 பக்கம் — பரிந்துரைக்கப்பட்டது)</string>
+    <string name="powertools_vm_page_cluster_1">1 (2 பக்கங்கள்)</string>
+    <string name="powertools_vm_page_cluster_2">2 (4 பக்கங்கள்)</string>
+    <string name="powertools_vm_page_cluster_3">3 (8 பக்கங்கள்)</string>
+    <string name="powertools_vm_dirty_profile_title">Dirty Writeback சுயவிவரம்</string>
+    <string name="powertools_vm_dirty_low">குறைந்த தாமதம் (10 / 5)</string>
+    <string name="powertools_vm_dirty_default">இயல்புநிலை (20 / 10)</string>
+    <string name="powertools_vm_dirty_balanced">சமநிலை (30 / 15)</string>
+    <string name="powertools_vm_dirty_throughput">உயர் திறன் (40 / 20)</string>
 </resources>

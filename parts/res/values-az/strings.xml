@@ -167,4 +167,23 @@
     <string name="thermal_global_title">Qlobal istilik profili</string>
     <string name="thermal_global_tile_label">İstilik profili</string>
     <string name="thermal_global_footer">Standart olaraq təyin edilmiş bütün tətbiqlərə tətbiq edilir. Tətbiqə özəl profillər həmişə üstünlük təşkil edir.</string>
+    <string name="powertools_zram_category">ZRAM və Yaddaş</string>
+    <string name="powertools_zram_enable_title">ZRAM və VM optimallaşdırıcısını aktiv et</string>
+    <string name="powertools_zram_enable_summary">ZRAM və virtual yaddaş tənzimləməsini dəyiş</string>
+    <string name="powertools_zram_config_category">ZRAM və VM tənzimləməsi</string>
+    <string name="powertools_zram_size_title">ZRAM ölçüsü</string>
+    <string name="powertools_zram_disabled">Söndürülüb</string>
+    <string name="powertools_zram_algo_title">Sıxılma alqoritmi</string>
+    <string name="powertools_vm_swappiness_title">Swappiness</string>
+    <string name="powertools_vm_vfs_pressure_title">VFS keş təzyiqi</string>
+    <string name="powertools_vm_page_cluster_title">Page Cluster</string>
+    <string name="powertools_vm_page_cluster_0">0 (1 səhifə — tövsiyə olunur)</string>
+    <string name="powertools_vm_page_cluster_1">1 (2 səhifə)</string>
+    <string name="powertools_vm_page_cluster_2">2 (4 səhifə)</string>
+    <string name="powertools_vm_page_cluster_3">3 (8 səhifə)</string>
+    <string name="powertools_vm_dirty_profile_title">Dirty Writeback profili</string>
+    <string name="powertools_vm_dirty_low">Aşağı gecikmə (10 / 5)</string>
+    <string name="powertools_vm_dirty_default">Standart (20 / 10)</string>
+    <string name="powertools_vm_dirty_balanced">Balanslı (30 / 15)</string>
+    <string name="powertools_vm_dirty_throughput">Yüksək ötürmə (40 / 20)</string>
 </resources>

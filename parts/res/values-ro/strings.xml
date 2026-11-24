@@ -174,4 +174,23 @@
     <string name="thermal_global_title">Profil termic global</string>
     <string name="thermal_global_tile_label">Profil termic</string>
     <string name="thermal_global_footer">Se aplică tuturor aplicațiilor setate pe Implicit. Profilurile per aplicație au întotdeauna prioritate.</string>
+    <string name="powertools_zram_category">ZRAM și Memorie</string>
+    <string name="powertools_zram_enable_title">Activează optimizatorul ZRAM și VM</string>
+    <string name="powertools_zram_enable_summary">Comută reglajele ZRAM și memorie virtuală</string>
+    <string name="powertools_zram_config_category">Configurare ZRAM și VM</string>
+    <string name="powertools_zram_size_title">Dimensiune ZRAM</string>
+    <string name="powertools_zram_disabled">Dezactivat</string>
+    <string name="powertools_zram_algo_title">Algoritm de compresie</string>
+    <string name="powertools_vm_swappiness_title">Swappiness</string>
+    <string name="powertools_vm_vfs_pressure_title">Presiune cache VFS</string>
+    <string name="powertools_vm_page_cluster_title">Page Cluster</string>
+    <string name="powertools_vm_page_cluster_0">0 (1 pagină — recomandat)</string>
+    <string name="powertools_vm_page_cluster_1">1 (2 pagini)</string>
+    <string name="powertools_vm_page_cluster_2">2 (4 pagini)</string>
+    <string name="powertools_vm_page_cluster_3">3 (8 pagini)</string>
+    <string name="powertools_vm_dirty_profile_title">Profil Dirty Writeback</string>
+    <string name="powertools_vm_dirty_low">Latență redusă (10 / 5)</string>
+    <string name="powertools_vm_dirty_default">Implicit (20 / 10)</string>
+    <string name="powertools_vm_dirty_balanced">Echilibrat (30 / 15)</string>
+    <string name="powertools_vm_dirty_throughput">Throughput (40 / 20)</string>
 </resources>

@@ -167,4 +167,23 @@
     <string name="thermal_global_title">Globalni toplotni profil</string>
     <string name="thermal_global_tile_label">Toplotni profil</string>
     <string name="thermal_global_footer">Velja za vse aplikacije z nastavitvijo Privzeto. Profili za posamezne aplikacije imajo vedno prednost.</string>
+    <string name="powertools_zram_category">ZRAM in pomnilnik</string>
+    <string name="powertools_zram_enable_title">Omogoči optimizator ZRAM in VM</string>
+    <string name="powertools_zram_enable_summary">Preklopi nastavitve ZRAM in navideznega pomnilnika</string>
+    <string name="powertools_zram_config_category">Nastavi ZRAM in VM</string>
+    <string name="powertools_zram_size_title">Velikost ZRAM</string>
+    <string name="powertools_zram_disabled">Onemogočeno</string>
+    <string name="powertools_zram_algo_title">Algoritem stiskanja</string>
+    <string name="powertools_vm_swappiness_title">Swappiness</string>
+    <string name="powertools_vm_vfs_pressure_title">Pritisk predpomnilnika VFS</string>
+    <string name="powertools_vm_page_cluster_title">Page Cluster</string>
+    <string name="powertools_vm_page_cluster_0">0 (1 stran — priporočeno)</string>
+    <string name="powertools_vm_page_cluster_1">1 (2 strani)</string>
+    <string name="powertools_vm_page_cluster_2">2 (4 strani)</string>
+    <string name="powertools_vm_page_cluster_3">3 (8 strani)</string>
+    <string name="powertools_vm_dirty_profile_title">Profil Dirty Writeback</string>
+    <string name="powertools_vm_dirty_low">Nizka zakasnitev (10 / 5)</string>
+    <string name="powertools_vm_dirty_default">Privzeto (20 / 10)</string>
+    <string name="powertools_vm_dirty_balanced">Uravnoteženo (30 / 15)</string>
+    <string name="powertools_vm_dirty_throughput">Prepustnost (40 / 20)</string>
 </resources>

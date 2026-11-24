@@ -174,4 +174,23 @@
     <string name="thermal_global_title">פרופיל תרמי גלובלי</string>
     <string name="thermal_global_tile_label">פרופיל תרמי</string>
     <string name="thermal_global_footer">חל על כל האפליקציות המוגדרות כברירת מחדל. פרופילים לפי אפליקציה תמיד בעדיפות גבוהה יותר.</string>
+    <string name="powertools_zram_category">ZRAM וזיכרון</string>
+    <string name="powertools_zram_enable_title">הפעל ממטב ZRAM ו-VM</string>
+    <string name="powertools_zram_enable_summary">הפעל או כבה כוונון ZRAM וזיכרון וירטואלי</string>
+    <string name="powertools_zram_config_category">הגדרת ZRAM ו-VM</string>
+    <string name="powertools_zram_size_title">גודל ZRAM</string>
+    <string name="powertools_zram_disabled">מושבת</string>
+    <string name="powertools_zram_algo_title">אלגוריתם דחיסה</string>
+    <string name="powertools_vm_swappiness_title">Swappiness</string>
+    <string name="powertools_vm_vfs_pressure_title">לחץ מטמון VFS</string>
+    <string name="powertools_vm_page_cluster_title">Page Cluster</string>
+    <string name="powertools_vm_page_cluster_0">0 (עמוד אחד — מומלץ)</string>
+    <string name="powertools_vm_page_cluster_1">1 (2 עמודים)</string>
+    <string name="powertools_vm_page_cluster_2">2 (4 עמודים)</string>
+    <string name="powertools_vm_page_cluster_3">3 (8 עמודים)</string>
+    <string name="powertools_vm_dirty_profile_title">פרופיל Dirty Writeback</string>
+    <string name="powertools_vm_dirty_low">השהיה נמוכה (10 / 5)</string>
+    <string name="powertools_vm_dirty_default">ברירת מחדל (20 / 10)</string>
+    <string name="powertools_vm_dirty_balanced">מאוזן (30 / 15)</string>
+    <string name="powertools_vm_dirty_throughput">תפוקה גבוהה (40 / 20)</string>
 </resources>

@@ -167,4 +167,23 @@
     <string name="thermal_global_title">Global termisk profil</string>
     <string name="thermal_global_tile_label">Termisk profil</string>
     <string name="thermal_global_footer">Gjeld for alle appar sette til Standard. App-spesifikke termiske profilar har alltid prioritet.</string>
+    <string name="powertools_zram_category">ZRAM og minne</string>
+    <string name="powertools_zram_enable_title">Aktiver ZRAM- og VM-optimalisering</string>
+    <string name="powertools_zram_enable_summary">Slå av/på ZRAM- og virtuelt minne-justering</string>
+    <string name="powertools_zram_config_category">Konfigurer ZRAM og VM</string>
+    <string name="powertools_zram_size_title">ZRAM-storleik</string>
+    <string name="powertools_zram_disabled">Deaktivert</string>
+    <string name="powertools_zram_algo_title">Komprimeringsalgoritme</string>
+    <string name="powertools_vm_swappiness_title">Swappiness</string>
+    <string name="powertools_vm_vfs_pressure_title">VFS-hurtigminnetrykk</string>
+    <string name="powertools_vm_page_cluster_title">Page Cluster</string>
+    <string name="powertools_vm_page_cluster_0">0 (1 side — tilrådd)</string>
+    <string name="powertools_vm_page_cluster_1">1 (2 sider)</string>
+    <string name="powertools_vm_page_cluster_2">2 (4 sider)</string>
+    <string name="powertools_vm_page_cluster_3">3 (8 sider)</string>
+    <string name="powertools_vm_dirty_profile_title">Dirty Writeback-profil</string>
+    <string name="powertools_vm_dirty_low">Låg forseinking (10 / 5)</string>
+    <string name="powertools_vm_dirty_default">Standard (20 / 10)</string>
+    <string name="powertools_vm_dirty_balanced">Balansert (30 / 15)</string>
+    <string name="powertools_vm_dirty_throughput">Gjennomstrøyming (40 / 20)</string>
 </resources>

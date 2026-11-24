@@ -188,4 +188,23 @@
     <string name="thermal_global_title">全局温控配置</string>
     <string name="thermal_global_tile_label">温控配置</string>
     <string name="thermal_global_footer">应用于所有设为默认的应用。单个应用的独立温控配置始终优先。</string>
+    <string name="powertools_zram_category">ZRAM 与内存</string>
+    <string name="powertools_zram_enable_title">启用 ZRAM 与 VM 优化</string>
+    <string name="powertools_zram_enable_summary">开关 ZRAM 及虚拟内存调优</string>
+    <string name="powertools_zram_config_category">配置 ZRAM 与 VM</string>
+    <string name="powertools_zram_size_title">ZRAM 大小</string>
+    <string name="powertools_zram_disabled">已禁用</string>
+    <string name="powertools_zram_algo_title">压缩算法</string>
+    <string name="powertools_vm_swappiness_title">Swappiness</string>
+    <string name="powertools_vm_vfs_pressure_title">VFS 缓存压力</string>
+    <string name="powertools_vm_page_cluster_title">页面聚合 (Page Cluster)</string>
+    <string name="powertools_vm_page_cluster_0">0（1 页 — 推荐）</string>
+    <string name="powertools_vm_page_cluster_1">1（2 页）</string>
+    <string name="powertools_vm_page_cluster_2">2（4 页）</string>
+    <string name="powertools_vm_page_cluster_3">3（8 页）</string>
+    <string name="powertools_vm_dirty_profile_title">脏页回写策略</string>
+    <string name="powertools_vm_dirty_low">低延迟 (10 / 5)</string>
+    <string name="powertools_vm_dirty_default">默认 (20 / 10)</string>
+    <string name="powertools_vm_dirty_balanced">均衡 (30 / 15)</string>
+    <string name="powertools_vm_dirty_throughput">高吞吐 (40 / 20)</string>
 </resources>

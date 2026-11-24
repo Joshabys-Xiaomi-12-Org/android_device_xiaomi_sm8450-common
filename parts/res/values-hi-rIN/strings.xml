@@ -188,4 +188,23 @@
     <string name="thermal_global_title">ग्लोबल थर्मल प्रोफ़ाइल</string>
     <string name="thermal_global_tile_label">थर्मल प्रोफ़ाइल</string>
     <string name="thermal_global_footer">डिफ़ॉल्ट पर सेट सभी ऐप्स पर लागू होता है। प्रति-ऐप थर्मल प्रोफ़ाइल को हमेशा प्राथमिकता मिलती है।</string>
+    <string name="powertools_zram_category">ZRAM और मेमोरी</string>
+    <string name="powertools_zram_enable_title">ZRAM और VM ऑप्टिमाइज़र सक्षम करें</string>
+    <string name="powertools_zram_enable_summary">ZRAM और वर्चुअल मेमोरी ट्यूनिंग टॉगल करें</string>
+    <string name="powertools_zram_config_category">ZRAM और VM कॉन्फ़िगर करें</string>
+    <string name="powertools_zram_size_title">ZRAM आकार</string>
+    <string name="powertools_zram_disabled">अक्षम</string>
+    <string name="powertools_zram_algo_title">कंप्रेशन एल्गोरिदम</string>
+    <string name="powertools_vm_swappiness_title">Swappiness</string>
+    <string name="powertools_vm_vfs_pressure_title">VFS कैश प्रेशर</string>
+    <string name="powertools_vm_page_cluster_title">Page Cluster</string>
+    <string name="powertools_vm_page_cluster_0">0 (1 पेज — अनुशंसित)</string>
+    <string name="powertools_vm_page_cluster_1">1 (2 पेज)</string>
+    <string name="powertools_vm_page_cluster_2">2 (4 पेज)</string>
+    <string name="powertools_vm_page_cluster_3">3 (8 पेज)</string>
+    <string name="powertools_vm_dirty_profile_title">डर्टी राइटबैक प्रोफ़ाइल</string>
+    <string name="powertools_vm_dirty_low">कम विलंबता (10 / 5)</string>
+    <string name="powertools_vm_dirty_default">डिफ़ॉल्ट (20 / 10)</string>
+    <string name="powertools_vm_dirty_balanced">संतुलित (30 / 15)</string>
+    <string name="powertools_vm_dirty_throughput">थ्रूपुट (40 / 20)</string>
 </resources>

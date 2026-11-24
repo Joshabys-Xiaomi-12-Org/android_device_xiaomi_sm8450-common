@@ -76,6 +76,15 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
     static final String KEY_CPU_PRIME_MAX_FREQ = "cpu_prime_max_frequency";
     static final String KEY_CPU_PRIME_GOVERNOR = "cpu_prime_governor";
 
+    // ZRAM & VM keys
+    static final String KEY_ZRAM_ENABLE = "zram_enable";
+    static final String KEY_ZRAM_SIZE = "zram_size";
+    static final String KEY_ZRAM_ALGO = "zram_algorithm";
+    static final String KEY_VM_SWAPPINESS = "vm_swappiness";
+    static final String KEY_VM_VFS_PRESSURE = "vm_vfs_cache_pressure";
+    static final String KEY_VM_PAGE_CLUSTER = "vm_page_cluster";
+    static final String KEY_VM_DIRTY_PROFILE = "vm_dirty_profile";
+
     private static final String PRESET_DEFAULT = "default";
     private static final String PRESET_BATTERY = "battery";
     private static final String PRESET_GAMING = "gaming";
@@ -121,6 +130,15 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
     private ListPreference mCpuPrimeMaxFreqPref;
     private ListPreference mCpuPrimeGovernorPref;
 
+    // ZRAM & VM preferences
+    private SwitchPreferenceCompat mZramEnablePref;
+    private ListPreference mZramSizePref;
+    private ListPreference mZramAlgoPref;
+    private ListPreference mVmSwappinessPref;
+    private ListPreference mVmVfsPressurePref;
+    private ListPreference mVmPageClusterPref;
+    private ListPreference mVmDirtyProfilePref;
+
     // Dynamic defaults loaded strictly from sysfs
     private String mGpuDefaultMin;
     private String mGpuDefaultMax;
@@ -134,6 +152,12 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
     private String mCpuPrimeDefaultMin;
     private String mCpuPrimeDefaultMax;
     private String mCpuPrimeDefaultGov;
+    private String mZramDefaultSize;
+    private String mZramDefaultAlgo;
+    private String mVmDefaultSwappiness;
+    private String mVmDefaultVfsPressure;
+    private String mVmDefaultPageCluster;
+    private String mVmDefaultDirtyProfile;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -213,6 +237,63 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
                 val -> mCpuPrimeDefaultMin = val,
                 val -> mCpuPrimeDefaultMax = val,
                 val -> mCpuPrimeDefaultGov = val);
+
+        // ZRAM & VM preferences
+        mZramEnablePref = findPreference(KEY_ZRAM_ENABLE);
+        mZramSizePref = findPreference(KEY_ZRAM_SIZE);
+        mZramAlgoPref = findPreference(KEY_ZRAM_ALGO);
+        mVmSwappinessPref = findPreference(KEY_VM_SWAPPINESS);
+        mVmVfsPressurePref = findPreference(KEY_VM_VFS_PRESSURE);
+        mVmPageClusterPref = findPreference(KEY_VM_PAGE_CLUSTER);
+        mVmDirtyProfilePref = findPreference(KEY_VM_DIRTY_PROFILE);
+        if (mZramEnablePref != null) {
+            mZramEnablePref.setOnPreferenceChangeListener(this);
+        }
+        setupZramPreferences();
+    }
+
+    private void setupZramPreferences() {
+        mZramDefaultSize = ZramUtils.getCurrentSizeMb();
+        if (TextUtils.isEmpty(mZramDefaultSize)) {
+            mZramDefaultSize = "3584";
+        }
+        initStaticListPref(mZramSizePref, mZramDefaultSize);
+
+        String[] algos = ZramUtils.getAvailableAlgorithms();
+        String curAlgo = ZramUtils.getCurrentAlgorithm();
+        mZramDefaultAlgo = !TextUtils.isEmpty(curAlgo) ? curAlgo
+                : (algos.length > 0 ? algos[0] : null);
+        configureListPref(mZramAlgoPref, algos, algos, mZramDefaultAlgo);
+
+        mVmDefaultSwappiness = ZramUtils.getCurrentSwappiness();
+        if (TextUtils.isEmpty(mVmDefaultSwappiness)) mVmDefaultSwappiness = "100";
+        initStaticListPref(mVmSwappinessPref, mVmDefaultSwappiness);
+
+        mVmDefaultVfsPressure = ZramUtils.getCurrentVfsCachePressure();
+        if (TextUtils.isEmpty(mVmDefaultVfsPressure)) mVmDefaultVfsPressure = "50";
+        initStaticListPref(mVmVfsPressurePref, mVmDefaultVfsPressure);
+
+        mVmDefaultPageCluster = ZramUtils.getCurrentPageCluster();
+        if (TextUtils.isEmpty(mVmDefaultPageCluster)) mVmDefaultPageCluster = "0";
+        initStaticListPref(mVmPageClusterPref, mVmDefaultPageCluster);
+
+        mVmDefaultDirtyProfile = ZramUtils.getCurrentDirtyProfile();
+        initStaticListPref(mVmDirtyProfilePref, mVmDefaultDirtyProfile);
+    }
+
+    private void initStaticListPref(ListPreference pref, String fallbackValue) {
+        if (pref == null) {
+            return;
+        }
+        pref.setOnPreferenceChangeListener(this);
+        String saved = pref.getValue();
+        if (TextUtils.isEmpty(saved) || pref.findIndexOfValue(saved) < 0) {
+            if (!TextUtils.isEmpty(fallbackValue) && pref.findIndexOfValue(fallbackValue) >= 0) {
+                pref.setValue(fallbackValue);
+            } else if (pref.getEntryValues() != null && pref.getEntryValues().length > 0) {
+                pref.setValue(pref.getEntryValues()[0].toString());
+            }
+        }
     }
 
     private interface StringConsumer {
@@ -380,6 +461,29 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
 
         boolean cpuEnabled = mCpuEnablePref != null && mCpuEnablePref.isChecked();
         setCpuPrefsEnabled(cpuEnabled);
+
+        boolean zramEnabled = mZramEnablePref != null && mZramEnablePref.isChecked();
+        setZramPrefsEnabled(zramEnabled);
+    }
+
+    private void setZramPrefsEnabled(boolean enabled) {
+        boolean zramSupported = ZramUtils.isZramSupported();
+        if (mZramSizePref != null) {
+            mZramSizePref.setEnabled(enabled && zramSupported);
+        }
+        setListPrefEnabled(mZramAlgoPref, enabled && zramSupported);
+        if (mVmSwappinessPref != null) {
+            mVmSwappinessPref.setEnabled(enabled);
+        }
+        if (mVmVfsPressurePref != null) {
+            mVmVfsPressurePref.setEnabled(enabled);
+        }
+        if (mVmPageClusterPref != null) {
+            mVmPageClusterPref.setEnabled(enabled);
+        }
+        if (mVmDirtyProfilePref != null) {
+            mVmDirtyProfilePref.setEnabled(enabled);
+        }
     }
 
     private void setGpuPrefsEnabled(boolean enabled) {
@@ -493,13 +597,57 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
         }
     }
 
+    private void restoreZramDefaults() {
+        if (ZramUtils.isZramSupported()) {
+            ZramUtils.applyZram(mZramDefaultSize, mZramDefaultAlgo);
+            if (mZramSizePref != null && !TextUtils.isEmpty(mZramDefaultSize)
+                    && mZramSizePref.findIndexOfValue(mZramDefaultSize) >= 0) {
+                mZramSizePref.setValue(mZramDefaultSize);
+            }
+            if (mZramAlgoPref != null && !TextUtils.isEmpty(mZramDefaultAlgo)
+                    && mZramAlgoPref.findIndexOfValue(mZramDefaultAlgo) >= 0) {
+                mZramAlgoPref.setValue(mZramDefaultAlgo);
+            }
+        }
+        if (!TextUtils.isEmpty(mVmDefaultSwappiness)) {
+            ZramUtils.setSwappiness(mVmDefaultSwappiness);
+            if (mVmSwappinessPref != null
+                    && mVmSwappinessPref.findIndexOfValue(mVmDefaultSwappiness) >= 0) {
+                mVmSwappinessPref.setValue(mVmDefaultSwappiness);
+            }
+        }
+        if (!TextUtils.isEmpty(mVmDefaultVfsPressure)) {
+            ZramUtils.setVfsCachePressure(mVmDefaultVfsPressure);
+            if (mVmVfsPressurePref != null
+                    && mVmVfsPressurePref.findIndexOfValue(mVmDefaultVfsPressure) >= 0) {
+                mVmVfsPressurePref.setValue(mVmDefaultVfsPressure);
+            }
+        }
+        if (!TextUtils.isEmpty(mVmDefaultPageCluster)) {
+            ZramUtils.setPageCluster(mVmDefaultPageCluster);
+            if (mVmPageClusterPref != null
+                    && mVmPageClusterPref.findIndexOfValue(mVmDefaultPageCluster) >= 0) {
+                mVmPageClusterPref.setValue(mVmDefaultPageCluster);
+            }
+        }
+        if (!TextUtils.isEmpty(mVmDefaultDirtyProfile)) {
+            ZramUtils.setDirtyProfile(mVmDefaultDirtyProfile);
+            if (mVmDirtyProfilePref != null
+                    && mVmDirtyProfilePref.findIndexOfValue(mVmDefaultDirtyProfile) >= 0) {
+                mVmDirtyProfilePref.setValue(mVmDefaultDirtyProfile);
+            }
+        }
+    }
+
     private void applyPreset(String preset) {
         switch (preset) {
             case PRESET_DEFAULT -> {
                 restoreGpuDefaults();
                 restoreCpuDefaults();
+                restoreZramDefaults();
                 if (mGpuEnablePref != null) mGpuEnablePref.setChecked(false);
                 if (mCpuEnablePref != null) mCpuEnablePref.setChecked(false);
+                if (mZramEnablePref != null) mZramEnablePref.setChecked(false);
                 updateUI();
             }
             case PRESET_BATTERY -> {
@@ -629,8 +777,10 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
         if (preference == mResetDefaultsPref) {
             restoreGpuDefaults();
             restoreCpuDefaults();
+            restoreZramDefaults();
             if (mGpuEnablePref != null) mGpuEnablePref.setChecked(false);
             if (mCpuEnablePref != null) mCpuEnablePref.setChecked(false);
+            if (mZramEnablePref != null) mZramEnablePref.setChecked(false);
             if (mPowerPresetPref != null) mPowerPresetPref.setValue(PRESET_DEFAULT);
             updateUI();
             Toast.makeText(getActivity(),
@@ -850,6 +1000,51 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
         if (preference == mCpuPrimeGovernorPref) {
             CPUUtils.setCPUPrimeFreq(mCpuPrimeMinFreqPref.getValue(),
                     mCpuPrimeMaxFreqPref.getValue(), newValue.toString());
+            markCustomPreset();
+            return true;
+        }
+
+        // ZRAM & VM changes
+        if (preference == mZramEnablePref) {
+            boolean enable = (Boolean) newValue;
+            if (!enable) {
+                restoreZramDefaults();
+            }
+            setZramPrefsEnabled(enable);
+            markCustomPreset();
+            return true;
+        }
+        if (preference == mZramSizePref) {
+            String newSize = newValue.toString();
+            String algo = mZramAlgoPref != null ? mZramAlgoPref.getValue() : mZramDefaultAlgo;
+            ZramUtils.applyZram(newSize, algo);
+            markCustomPreset();
+            return true;
+        }
+        if (preference == mZramAlgoPref) {
+            String newAlgo = newValue.toString();
+            String size = mZramSizePref != null ? mZramSizePref.getValue() : mZramDefaultSize;
+            ZramUtils.applyZram(size, newAlgo);
+            markCustomPreset();
+            return true;
+        }
+        if (preference == mVmSwappinessPref) {
+            ZramUtils.setSwappiness(newValue.toString());
+            markCustomPreset();
+            return true;
+        }
+        if (preference == mVmVfsPressurePref) {
+            ZramUtils.setVfsCachePressure(newValue.toString());
+            markCustomPreset();
+            return true;
+        }
+        if (preference == mVmPageClusterPref) {
+            ZramUtils.setPageCluster(newValue.toString());
+            markCustomPreset();
+            return true;
+        }
+        if (preference == mVmDirtyProfilePref) {
+            ZramUtils.setDirtyProfile(newValue.toString());
             markCustomPreset();
             return true;
         }

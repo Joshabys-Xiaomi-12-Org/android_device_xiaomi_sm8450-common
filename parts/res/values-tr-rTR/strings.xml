@@ -188,4 +188,23 @@
     <string name="thermal_global_title">Genel termal profil</string>
     <string name="thermal_global_tile_label">Termal Profil</string>
     <string name="thermal_global_footer">Varsayılan olarak ayarlanan tüm uygulamalara uygulanır. Uygulama başına termal profiller her zaman önceliklidir.</string>
+    <string name="powertools_zram_category">ZRAM ve Bellek</string>
+    <string name="powertools_zram_enable_title">ZRAM ve VM İyileştiriciyi Etkinleştir</string>
+    <string name="powertools_zram_enable_summary">ZRAM ve sanal bellek ayarlarını aç/kapat</string>
+    <string name="powertools_zram_config_category">ZRAM ve VM Yapılandırması</string>
+    <string name="powertools_zram_size_title">ZRAM Boyutu</string>
+    <string name="powertools_zram_disabled">Devre Dışı</string>
+    <string name="powertools_zram_algo_title">Sıkıştırma Algoritması</string>
+    <string name="powertools_vm_swappiness_title">Swappiness</string>
+    <string name="powertools_vm_vfs_pressure_title">VFS Önbellek Basıncı</string>
+    <string name="powertools_vm_page_cluster_title">Page Cluster</string>
+    <string name="powertools_vm_page_cluster_0">0 (1 sayfa — önerilen)</string>
+    <string name="powertools_vm_page_cluster_1">1 (2 sayfa)</string>
+    <string name="powertools_vm_page_cluster_2">2 (4 sayfa)</string>
+    <string name="powertools_vm_page_cluster_3">3 (8 sayfa)</string>
+    <string name="powertools_vm_dirty_profile_title">Dirty Writeback Profili</string>
+    <string name="powertools_vm_dirty_low">Düşük Gecikme (10 / 5)</string>
+    <string name="powertools_vm_dirty_default">Varsayılan (20 / 10)</string>
+    <string name="powertools_vm_dirty_balanced">Dengeli (30 / 15)</string>
+    <string name="powertools_vm_dirty_throughput">Yüksek Aktarım (40 / 20)</string>
 </resources>

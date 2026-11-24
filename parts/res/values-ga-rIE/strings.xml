@@ -163,4 +163,23 @@
     <string name="thermal_global_title">Próifíl theirmeach dhomhanda</string>
     <string name="thermal_global_tile_label">Próifíl theirmeach</string>
     <string name="thermal_global_footer">Baineann sé le gach aip atá socraithe go Réamhshocrú. Bíonn tosaíocht i gcónaí ag próifílí in aghaidh na haipe.</string>
+    <string name="powertools_zram_category">ZRAM &amp; Cuimhne</string>
+    <string name="powertools_zram_enable_title">Cumasaigh optamaitheoir ZRAM &amp; VM</string>
+    <string name="powertools_zram_enable_summary">Scoránaigh tiúnáil ZRAM agus cuimhne fhíorúil</string>
+    <string name="powertools_zram_config_category">Cumraigh ZRAM &amp; VM</string>
+    <string name="powertools_zram_size_title">Méid ZRAM</string>
+    <string name="powertools_zram_disabled">Díchumasaithe</string>
+    <string name="powertools_zram_algo_title">Algartam comhbhrúite</string>
+    <string name="powertools_vm_swappiness_title">Swappiness</string>
+    <string name="powertools_vm_vfs_pressure_title">Brú taisce VFS</string>
+    <string name="powertools_vm_page_cluster_title">Page Cluster</string>
+    <string name="powertools_vm_page_cluster_0">0 (1 leathanach — molta)</string>
+    <string name="powertools_vm_page_cluster_1">1 (2 leathanach)</string>
+    <string name="powertools_vm_page_cluster_2">2 (4 leathanach)</string>
+    <string name="powertools_vm_page_cluster_3">3 (8 leathanach)</string>
+    <string name="powertools_vm_dirty_profile_title">Próifíl Dirty Writeback</string>
+    <string name="powertools_vm_dirty_low">Aga folaigh íseal (10 / 5)</string>
+    <string name="powertools_vm_dirty_default">Réamhshocrú (20 / 10)</string>
+    <string name="powertools_vm_dirty_balanced">Cothrom (30 / 15)</string>
+    <string name="powertools_vm_dirty_throughput">Tréchur (40 / 20)</string>
 </resources>

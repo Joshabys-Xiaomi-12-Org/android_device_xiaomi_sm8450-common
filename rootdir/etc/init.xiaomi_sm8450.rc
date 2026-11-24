@@ -378,3 +378,30 @@ on property:sys.parts.thermal.action=reset
     rm /data/vendor/thermal/config/${sys.parts.thermal.file}
     restart mi_thermald
     setprop sys.parts.thermal.action idle
+
+# Powertools ZRAM & VM Tuning
+service vendor.parts-zram /vendor/bin/init.parts.zram.sh
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+on property:sys.parts.zram.action=apply
+    start vendor.parts-zram
+    setprop sys.parts.zram.action idle
+
+on property:sys.parts.vm.swappiness=*
+    write /proc/sys/vm/swappiness ${sys.parts.vm.swappiness}
+
+on property:sys.parts.vm.vfs_cache_pressure=*
+    write /proc/sys/vm/vfs_cache_pressure ${sys.parts.vm.vfs_cache_pressure}
+
+on property:sys.parts.vm.page_cluster=*
+    write /proc/sys/vm/page-cluster ${sys.parts.vm.page_cluster}
+
+on property:sys.parts.vm.dirty_ratio=*
+    write /proc/sys/vm/dirty_ratio ${sys.parts.vm.dirty_ratio}
+
+on property:sys.parts.vm.dirty_background_ratio=*
+    write /proc/sys/vm/dirty_background_ratio ${sys.parts.vm.dirty_background_ratio}

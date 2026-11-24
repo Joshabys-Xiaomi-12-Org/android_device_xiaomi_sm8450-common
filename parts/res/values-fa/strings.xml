@@ -174,4 +174,23 @@
     <string name="thermal_global_title">پروفایل دمایی سراسری</string>
     <string name="thermal_global_tile_label">پروفایل دمایی</string>
     <string name="thermal_global_footer">برای تمام برنامه‌های روی حالت پیش‌فرض اعمال می‌شود. پروفایل هر برنامه همیشه اولویت دارد.</string>
+    <string name="powertools_zram_category">ZRAM و حافظه</string>
+    <string name="powertools_zram_enable_title">فعال‌سازی بهینه‌ساز ZRAM و VM</string>
+    <string name="powertools_zram_enable_summary">تغییر وضعیت تنظیمات ZRAM و حافظه مجازی</string>
+    <string name="powertools_zram_config_category">پیکربندی ZRAM و VM</string>
+    <string name="powertools_zram_size_title">اندازه ZRAM</string>
+    <string name="powertools_zram_disabled">غیرفعال</string>
+    <string name="powertools_zram_algo_title">الگوریتم فشرده‌سازی</string>
+    <string name="powertools_vm_swappiness_title">Swappiness</string>
+    <string name="powertools_vm_vfs_pressure_title">فشار کش VFS</string>
+    <string name="powertools_vm_page_cluster_title">Page Cluster</string>
+    <string name="powertools_vm_page_cluster_0">0 (1 صفحه — پیشنهادی)</string>
+    <string name="powertools_vm_page_cluster_1">1 (2 صفحه)</string>
+    <string name="powertools_vm_page_cluster_2">2 (4 صفحه)</string>
+    <string name="powertools_vm_page_cluster_3">3 (8 صفحه)</string>
+    <string name="powertools_vm_dirty_profile_title">پروفایل Dirty Writeback</string>
+    <string name="powertools_vm_dirty_low">تأخیر کم (10 / 5)</string>
+    <string name="powertools_vm_dirty_default">پیش‌فرض (20 / 10)</string>
+    <string name="powertools_vm_dirty_balanced">متعادل (30 / 15)</string>
+    <string name="powertools_vm_dirty_throughput">توان عملیاتی بالا (40 / 20)</string>
 </resources>

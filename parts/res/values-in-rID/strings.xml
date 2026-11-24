@@ -188,4 +188,23 @@
     <string name="thermal_global_title">Profil termal global</string>
     <string name="thermal_global_tile_label">Profil Termal</string>
     <string name="thermal_global_footer">Berlaku untuk semua aplikasi yang disetel ke Bawaan. Profil termal per aplikasi selalu diprioritaskan.</string>
+    <string name="powertools_zram_category">ZRAM &amp; Memori</string>
+    <string name="powertools_zram_enable_title">Aktifkan Pengoptimal ZRAM &amp; VM</string>
+    <string name="powertools_zram_enable_summary">Alihkan penyetelan ZRAM dan memori virtual</string>
+    <string name="powertools_zram_config_category">Konfigurasi ZRAM &amp; VM</string>
+    <string name="powertools_zram_size_title">Ukuran ZRAM</string>
+    <string name="powertools_zram_disabled">Dinonaktifkan</string>
+    <string name="powertools_zram_algo_title">Algoritma Kompresi</string>
+    <string name="powertools_vm_swappiness_title">Swappiness</string>
+    <string name="powertools_vm_vfs_pressure_title">Tekanan Cache VFS</string>
+    <string name="powertools_vm_page_cluster_title">Page Cluster</string>
+    <string name="powertools_vm_page_cluster_0">0 (1 halaman — disarankan)</string>
+    <string name="powertools_vm_page_cluster_1">1 (2 halaman)</string>
+    <string name="powertools_vm_page_cluster_2">2 (4 halaman)</string>
+    <string name="powertools_vm_page_cluster_3">3 (8 halaman)</string>
+    <string name="powertools_vm_dirty_profile_title">Profil Dirty Writeback</string>
+    <string name="powertools_vm_dirty_low">Latensi Rendah (10 / 5)</string>
+    <string name="powertools_vm_dirty_default">Bawaan (20 / 10)</string>
+    <string name="powertools_vm_dirty_balanced">Seimbang (30 / 15)</string>
+    <string name="powertools_vm_dirty_throughput">Throughput (40 / 20)</string>
 </resources>

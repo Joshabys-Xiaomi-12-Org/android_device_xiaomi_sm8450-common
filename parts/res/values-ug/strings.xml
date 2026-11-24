@@ -163,4 +163,23 @@
     <string name="thermal_global_title">ئومۇمىي تېمپېراتۇرا سەپلىمىسى</string>
     <string name="thermal_global_tile_label">تېمپېراتۇرا سەپلىمىسى</string>
     <string name="thermal_global_footer">سۈكۈتتىكى قىلىپ تەڭشەلگەن بارلىق ئەپلەرگە قوللىنىلىدۇ. ئەپ بويىچە سەپلىمە ھەمىشە ئالدىنقى ئورۇندا تۇرىدۇ.</string>
+    <string name="powertools_zram_category">ZRAM ۋە ئىچكى ساقلىغۇچ</string>
+    <string name="powertools_zram_enable_title">ZRAM ۋە VM ئەلالاشتۇرغۇچنى قوزغات</string>
+    <string name="powertools_zram_enable_summary">ZRAM ۋە مەۋھۇم ساقلىغۇچ تەڭشىكىنى ئالماشتۇر</string>
+    <string name="powertools_zram_config_category">ZRAM ۋە VM تەڭشىكى</string>
+    <string name="powertools_zram_size_title">ZRAM چوڭلۇقى</string>
+    <string name="powertools_zram_disabled">تاقاق</string>
+    <string name="powertools_zram_algo_title">پىرىسلاش ئالگورىزمى</string>
+    <string name="powertools_vm_swappiness_title">Swappiness</string>
+    <string name="powertools_vm_vfs_pressure_title">VFS غەملەك بېسىمى</string>
+    <string name="powertools_vm_page_cluster_title">Page Cluster</string>
+    <string name="powertools_vm_page_cluster_0">0 (1 بەت — تەۋسىيە قىلىنىدۇ)</string>
+    <string name="powertools_vm_page_cluster_1">1 (2 بەت)</string>
+    <string name="powertools_vm_page_cluster_2">2 (4 بەت)</string>
+    <string name="powertools_vm_page_cluster_3">3 (8 بەت)</string>
+    <string name="powertools_vm_dirty_profile_title">Dirty Writeback سەپلىمىسى</string>
+    <string name="powertools_vm_dirty_low">تۆۋەن كېچىكىش (10 / 5)</string>
+    <string name="powertools_vm_dirty_default">سۈكۈتتىكى (20 / 10)</string>
+    <string name="powertools_vm_dirty_balanced">تەڭپۇڭ (30 / 15)</string>
+    <string name="powertools_vm_dirty_throughput">يۇقىرى ئۆتكۈزۈش (40 / 20)</string>
 </resources>
