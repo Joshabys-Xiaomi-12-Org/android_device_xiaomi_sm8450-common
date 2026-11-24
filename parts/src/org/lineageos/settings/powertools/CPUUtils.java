@@ -94,21 +94,66 @@ public final class CPUUtils {
         return raw != null ? raw.trim() : null;
     }
 
+    public static String getCappedMaxFrequency(int policyCpu, int percent) {
+        String[] freqs = getAvailableFrequencies(policyCpu);
+        if (freqs.length == 0) {
+            return null;
+        }
+        int idx = Math.max(0, Math.min(freqs.length - 1, (freqs.length - 1) * percent / 100));
+        return freqs[idx];
+    }
+
     public static void setCPULittleFreq(String minFreq, String maxFreq, String governor) {
-        SystemProperties.set("persist.sys.parts.cpu.little.min_frequency", minFreq);
-        SystemProperties.set("persist.sys.parts.cpu.little.max_frequency", maxFreq);
-        SystemProperties.set("persist.sys.parts.cpu.little.governor", governor);
+        if (!TextUtils.isEmpty(minFreq)) {
+            SystemProperties.set("sys.parts.cpu.little.min_frequency", minFreq);
+        }
+        if (!TextUtils.isEmpty(maxFreq)) {
+            SystemProperties.set("sys.parts.cpu.little.max_frequency", maxFreq);
+        }
+        if (!TextUtils.isEmpty(governor)) {
+            SystemProperties.set("sys.parts.cpu.little.governor", governor);
+        }
     }
 
     public static void setCPUBigFreq(String minFreq, String maxFreq, String governor) {
-        SystemProperties.set("persist.sys.parts.cpu.big.min_frequency", minFreq);
-        SystemProperties.set("persist.sys.parts.cpu.big.max_frequency", maxFreq);
-        SystemProperties.set("persist.sys.parts.cpu.big.governor", governor);
+        if (!TextUtils.isEmpty(minFreq)) {
+            SystemProperties.set("sys.parts.cpu.big.min_frequency", minFreq);
+        }
+        if (!TextUtils.isEmpty(maxFreq)) {
+            SystemProperties.set("sys.parts.cpu.big.max_frequency", maxFreq);
+        }
+        if (!TextUtils.isEmpty(governor)) {
+            SystemProperties.set("sys.parts.cpu.big.governor", governor);
+        }
     }
 
     public static void setCPUPrimeFreq(String minFreq, String maxFreq, String governor) {
-        SystemProperties.set("persist.sys.parts.cpu.prime.min_frequency", minFreq);
-        SystemProperties.set("persist.sys.parts.cpu.prime.max_frequency", maxFreq);
-        SystemProperties.set("persist.sys.parts.cpu.prime.governor", governor);
+        if (!TextUtils.isEmpty(minFreq)) {
+            SystemProperties.set("sys.parts.cpu.prime.min_frequency", minFreq);
+        }
+        if (!TextUtils.isEmpty(maxFreq)) {
+            SystemProperties.set("sys.parts.cpu.prime.max_frequency", maxFreq);
+        }
+        if (!TextUtils.isEmpty(governor)) {
+            SystemProperties.set("sys.parts.cpu.prime.governor", governor);
+        }
+    }
+
+    public static void setInputBoost(String mode) {
+        if (!TextUtils.isEmpty(mode)) {
+            SystemProperties.set("sys.parts.cpu.input_boost", mode);
+        }
+    }
+
+    public static void setWaltProfile(String profile) {
+        if (!TextUtils.isEmpty(profile)) {
+            SystemProperties.set("sys.parts.cpu.walt_profile", profile);
+        }
+    }
+
+    public static void setUclampProfile(String profile) {
+        if (!TextUtils.isEmpty(profile)) {
+            SystemProperties.set("sys.parts.cpu.uclamp", profile);
+        }
     }
 }

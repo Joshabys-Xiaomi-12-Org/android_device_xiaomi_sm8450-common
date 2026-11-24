@@ -33,8 +33,9 @@ import android.view.Display;
 import android.view.Display.HdrCapabilities;
 
 import org.lineageos.settings.auxcamera.AuxCameraUtils;
-import org.lineageos.settings.thermal.ThermalUtils;
 import org.lineageos.settings.powertools.PowerProfileTileService;
+import org.lineageos.settings.powertools.PowertoolsBootHelper;
+import org.lineageos.settings.thermal.ThermalUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
     private static final boolean DEBUG = false;
@@ -69,7 +70,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
     private void handleBootCompleted(Context context) {
         if (DEBUG) Log.i(TAG, "Handling boot completed.");
-        // Add additional boot-completed actions if needed
+        PowertoolsBootHelper.applyOnBoot(context);
     }
 
     private void startServices(Context context) {

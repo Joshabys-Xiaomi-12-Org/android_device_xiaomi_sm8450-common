@@ -36,6 +36,16 @@ public final class GPUUtils {
             "/sys/class/kgsl/kgsl-3d0/devfreq/min_freq";
     private static final String GPU_MAX_FREQ_PATH =
             "/sys/class/kgsl/kgsl-3d0/devfreq/max_freq";
+    private static final String GPU_AVAILABLE_GOVS_PATH =
+            "/sys/class/kgsl/kgsl-3d0/devfreq/available_governors";
+    private static final String GPU_GOVERNOR_PATH =
+            "/sys/class/kgsl/kgsl-3d0/devfreq/governor";
+    private static final String GPU_IDLE_TIMER_PATH =
+            "/sys/class/kgsl/kgsl-3d0/idle_timer";
+    private static final String ADRENO_IDLER_KGSL_PATH =
+            "/sys/module/msm_kgsl/parameters/adreno_idler_active";
+    private static final String ADRENO_IDLER_STANDALONE_PATH =
+            "/sys/module/adreno_idler/parameters/adreno_idler_active";
 
     public static String[] getAvailableFrequencies() {
         String raw = FileUtils.readOneLine(GPU_AVAILABLE_FREQS_PATH);
@@ -64,6 +74,20 @@ public final class GPUUtils {
         return result;
     }
 
+    public static String[] getAvailableGovernors() {
+        String raw = FileUtils.readOneLine(GPU_AVAILABLE_GOVS_PATH);
+        if (TextUtils.isEmpty(raw)) {
+            return new String[0];
+        }
+        List<String> govs = new ArrayList<>();
+        for (String token : raw.trim().split("\\s+")) {
+            if (!token.isEmpty() && !govs.contains(token)) {
+                govs.add(token);
+            }
+        }
+        return govs.toArray(new String[0]);
+    }
+
     public static String getCurrentMinFrequency() {
         String raw = FileUtils.readOneLine(GPU_MIN_FREQ_PATH);
         return raw != null ? raw.trim() : null;
@@ -74,25 +98,83 @@ public final class GPUUtils {
         return raw != null ? raw.trim() : null;
     }
 
+    public static String getCurrentGovernor() {
+        String raw = FileUtils.readOneLine(GPU_GOVERNOR_PATH);
+        return raw != null ? raw.trim() : null;
+    }
+
+    public static String getCurrentIdleTimer() {
+        String raw = FileUtils.readOneLine(GPU_IDLE_TIMER_PATH);
+        return raw != null ? raw.trim() : null;
+    }
+
+    public static boolean isAdrenoIdlerAvailable() {
+        return FileUtils.fileExists(ADRENO_IDLER_KGSL_PATH)
+                || FileUtils.fileExists(ADRENO_IDLER_STANDALONE_PATH);
+    }
+
+    public static boolean isAdrenoIdlerEnabled() {
+        String path = FileUtils.fileExists(ADRENO_IDLER_KGSL_PATH)
+                ? ADRENO_IDLER_KGSL_PATH
+                : ADRENO_IDLER_STANDALONE_PATH;
+        String raw = FileUtils.readOneLine(path);
+        if (TextUtils.isEmpty(raw)) {
+            return false;
+        }
+        String trimmed = raw.trim();
+        return "Y".equalsIgnoreCase(trimmed) || "1".equals(trimmed);
+    }
+
+    public static String getBatteryMaxFrequency() {
+        String[] freqs = getAvailableFrequencies();
+        if (freqs.length == 0) {
+            return null;
+        }
+        int idx = Math.max(0, (freqs.length - 1) * 60 / 100);
+        return freqs[idx];
+    }
+
     public static void setGPUMinFrequency(String frequencyHz) {
-        SystemProperties.set("persist.sys.parts.gpu.min_frequency", frequencyHz);
+        if (TextUtils.isEmpty(frequencyHz)) {
+            return;
+        }
         try {
             long freqLong = Long.parseLong(frequencyHz);
-            SystemProperties.set("persist.sys.parts.gpu.min_clock",
+            SystemProperties.set("sys.parts.gpu.min_clock",
                     String.valueOf(freqLong / 1000000));
         } catch (NumberFormatException e) {
             Log.w(TAG, "Invalid GPU min frequency: " + frequencyHz, e);
         }
+        SystemProperties.set("sys.parts.gpu.min_frequency", frequencyHz);
     }
 
     public static void setGPUMaxFrequency(String frequencyHz) {
-        SystemProperties.set("persist.sys.parts.gpu.max_frequency", frequencyHz);
+        if (TextUtils.isEmpty(frequencyHz)) {
+            return;
+        }
         try {
             long freqLong = Long.parseLong(frequencyHz);
-            SystemProperties.set("persist.sys.parts.gpu.max_clock",
+            SystemProperties.set("sys.parts.gpu.max_clock",
                     String.valueOf(freqLong / 1000000));
         } catch (NumberFormatException e) {
             Log.w(TAG, "Invalid GPU max frequency: " + frequencyHz, e);
+        }
+        SystemProperties.set("sys.parts.gpu.max_frequency", frequencyHz);
+    }
+
+    public static void setGPUGovernor(String governor) {
+        if (!TextUtils.isEmpty(governor)) {
+            SystemProperties.set("sys.parts.gpu.governor", governor);
+        }
+    }
+
+    public static void setAdrenoIdler(boolean enabled) {
+        SystemProperties.set("sys.parts.gpu.adreno_idler", enabled ? "Y" : "N");
+    }
+
+    public static void setGPUIdleTimer(String timerMs) {
+        if (!TextUtils.isEmpty(timerMs)) {
+            SystemProperties.set("sys.parts.gpu.idle_timer", timerMs);
         }
     }
 }

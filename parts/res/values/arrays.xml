@@ -240,4 +240,72 @@
         <item>3</item>
         <item>4</item>
     </string-array>
+
+    <!-- Powertools Presets -->
+    <string-array name="powertools_preset_entries">
+        <item>@string/powertools_preset_default</item>
+        <item>@string/powertools_preset_battery</item>
+        <item>@string/powertools_preset_gaming</item>
+        <item>@string/powertools_preset_custom</item>
+    </string-array>
+    <string-array name="powertools_preset_values" translatable="false">
+        <item>default</item>
+        <item>battery</item>
+        <item>gaming</item>
+        <item>custom</item>
+    </string-array>
+
+    <!-- GPU Idle Timer -->
+    <string-array name="powertools_gpu_idle_timer_entries" translatable="false">
+        <item>20 ms</item>
+        <item>40 ms</item>
+        <item>64 ms</item>
+        <item>80 ms</item>
+        <item>100 ms</item>
+    </string-array>
+    <string-array name="powertools_gpu_idle_timer_values" translatable="false">
+        <item>20</item>
+        <item>40</item>
+        <item>64</item>
+        <item>80</item>
+        <item>100</item>
+    </string-array>
+
+    <!-- CPU Input Boost -->
+    <string-array name="powertools_input_boost_entries">
+        <item>@string/powertools_input_boost_off</item>
+        <item>@string/powertools_input_boost_low</item>
+        <item>@string/powertools_input_boost_default</item>
+        <item>@string/powertools_input_boost_high</item>
+    </string-array>
+    <string-array name="powertools_input_boost_values" translatable="false">
+        <item>off</item>
+        <item>low</item>
+        <item>default</item>
+        <item>high</item>
+    </string-array>
+
+    <!-- WALT Governor Profile -->
+    <string-array name="powertools_walt_profile_entries">
+        <item>@string/powertools_walt_battery</item>
+        <item>@string/powertools_walt_default</item>
+        <item>@string/powertools_walt_responsive</item>
+    </string-array>
+    <string-array name="powertools_walt_profile_values" translatable="false">
+        <item>battery</item>
+        <item>default</item>
+        <item>responsive</item>
+    </string-array>
+
+    <!-- Top-App Uclamp Profile -->
+    <string-array name="powertools_uclamp_entries">
+        <item>@string/powertools_uclamp_battery</item>
+        <item>@string/powertools_uclamp_default</item>
+        <item>@string/powertools_uclamp_performance</item>
+    </string-array>
+    <string-array name="powertools_uclamp_values" translatable="false">
+        <item>battery</item>
+        <item>default</item>
+        <item>performance</item>
+    </string-array>
 </resources>

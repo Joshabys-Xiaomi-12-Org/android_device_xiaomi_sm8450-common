@@ -1,5 +1,31 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- General Section -->
+    <PreferenceCategory
+        android:key="general_category"
+        android:title="@string/powertools_general_category">
+
+        <ListPreference
+            android:key="power_preset"
+            android:title="@string/powertools_preset_title"
+            android:entries="@array/powertools_preset_entries"
+            android:entryValues="@array/powertools_preset_values"
+            android:defaultValue="default"
+            android:summary="%s" />
+
+        <SwitchPreferenceCompat
+            android:key="apply_on_boot"
+            android:title="@string/powertools_apply_on_boot_title"
+            android:summary="@string/powertools_apply_on_boot_summary"
+            android:defaultValue="false" />
+
+        <Preference
+            android:key="reset_defaults"
+            android:title="@string/powertools_reset_title"
+            android:summary="@string/powertools_reset_summary" />
+
+    </PreferenceCategory>
+
     <!-- GPU Optimizer Section -->
     <PreferenceCategory
         android:key="gpu_category"
@@ -27,6 +53,25 @@
             android:title="@string/gpu_max_frequency"
             android:summary="%s" />
 
+        <ListPreference
+            android:key="gpu_governor"
+            android:title="@string/powertools_gpu_governor"
+            android:summary="%s" />
+
+        <SwitchPreferenceCompat
+            android:key="gpu_adreno_idler"
+            android:title="@string/powertools_adreno_idler_title"
+            android:summary="@string/powertools_adreno_idler_summary"
+            android:defaultValue="true" />
+
+        <ListPreference
+            android:key="gpu_idle_timer"
+            android:title="@string/powertools_gpu_idle_timer"
+            android:entries="@array/powertools_gpu_idle_timer_entries"
+            android:entryValues="@array/powertools_gpu_idle_timer_values"
+            android:defaultValue="40"
+            android:summary="%s" />
+
     </PreferenceCategory>
 
     <!-- CPU Optimizer Section -->
@@ -39,6 +84,43 @@
             android:title="@string/powertools_cpu_enable_title"
             android:summary="@string/powertools_cpu_enable_summary"
             android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <!-- CPU Tuning -->
+    <PreferenceCategory
+        android:key="cpu_tuning_category"
+        android:title="@string/powertools_cpu_tuning_category">
+
+        <ListPreference
+            android:key="cpu_input_boost"
+            android:title="@string/powertools_input_boost_title"
+            android:entries="@array/powertools_input_boost_entries"
+            android:entryValues="@array/powertools_input_boost_values"
+            android:defaultValue="default"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="cpu_walt_profile"
+            android:title="@string/powertools_walt_profile_title"
+            android:entries="@array/powertools_walt_profile_entries"
+            android:entryValues="@array/powertools_walt_profile_values"
+            android:defaultValue="default"
+            android:summary="%s" />
+
+        <SwitchPreferenceCompat
+            android:key="cpu_limit_prime"
+            android:title="@string/powertools_limit_prime_title"
+            android:summary="@string/powertools_limit_prime_summary"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:key="cpu_uclamp_profile"
+            android:title="@string/powertools_uclamp_title"
+            android:entries="@array/powertools_uclamp_entries"
+            android:entryValues="@array/powertools_uclamp_values"
+            android:defaultValue="default"
+            android:summary="%s" />
 
     </PreferenceCategory>
 
