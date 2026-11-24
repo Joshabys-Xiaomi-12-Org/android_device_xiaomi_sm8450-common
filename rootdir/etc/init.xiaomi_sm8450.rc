@@ -153,6 +153,10 @@ on property:sys.boot_completed=1
     write /dev/cpuctl/nnapi-hal/cpu.uclamp.min 2
     write /dev/cpuctl/nnapi-hal/cpu.uclamp.latency_sensitive 0
 
+    # Allow camera HAL to boost camera-daemon CPU shares
+    chown cameraserver camera /dev/cpuctl/camera-daemon/cpu.shares
+    chmod 0664 /dev/cpuctl/camera-daemon/cpu.shares
+
     # Dynamically set IRQ affinity for KGSL and DRM
     exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.xiaomi_sm8450.sh
 
