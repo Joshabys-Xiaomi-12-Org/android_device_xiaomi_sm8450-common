@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015-2016 The CyanogenMod Project
-                   2017-2018 The LineageOS Project
+                   2017-2024 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -16,7 +16,6 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="org.lineageos.settings"
     android:versionCode="1"
     android:versionName="1.0"
@@ -28,7 +27,6 @@
     <uses-permission android:name="android.permission.ACCESS_SURFACE_FLINGER" />
     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
 
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
@@ -42,7 +40,7 @@
         android:persistent="true"
         android:defaultToDeviceProtectedStorage="true"
         android:directBootAware="true"
-        android:theme="@style/Theme.SubSettingsBase.Expressive">
+        android:theme="@style/Theme.Parts.Expressive">
 
         <receiver
             android:name=".BootCompletedReceiver"
@@ -54,11 +52,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
-
-        <provider
-            android:name="androidx.startup.InitializationProvider"
-            android:authorities="${applicationId}.androidx-startup"
-            tools:replace="android:authorities"/>
 
         <provider
             android:name=".SummaryProvider"
@@ -76,10 +69,10 @@
 
         <!-- Thermal Settings -->
         <activity
-            android:name=".thermal.ThermalComposeActivity"
+            android:name=".thermal.ThermalActivity"
             android:label="@string/thermal_title"
             android:icon="@drawable/ic_thermal_settings"
-            android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
+            android:theme="@style/Theme.Parts.Expressive"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
@@ -98,6 +91,12 @@
                 android:resource="@drawable/ic_thermal_settings" />
         </activity>
 
+        <activity
+            android:name=".thermal.ThermalProfileActivity"
+            android:label="@string/thermal_title"
+            android:theme="@style/Theme.Parts.Expressive"
+            android:exported="false" />
+
         <service
             android:name=".thermal.ThermalService"
             android:permission="ThermalService" />
@@ -106,7 +105,7 @@
         <activity
             android:name=".auxcamera.AuxCameraActivity"
             android:label="@string/aux_camera_title"
-            android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
+            android:theme="@style/Theme.Parts.Expressive"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
@@ -126,7 +125,7 @@
         <activity
             android:name=".speaker.ClearSpeakerActivity"
             android:label="@string/clear_speaker_title"
-            android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
+            android:theme="@style/Theme.Parts.Expressive"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
@@ -143,7 +142,7 @@
         <activity
             android:name=".saturation.SaturationActivity"
             android:label="@string/saturation_title"
-            android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
+            android:theme="@style/Theme.Parts.Expressive"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
@@ -160,11 +159,11 @@
         </activity>
 
         <!-- Display Saturation tile service -->
-        <service  
+        <service
             android:name=".saturation.SaturationTileService"
             android:label="@string/saturation_title"
             android:icon="@drawable/ic_saturation_tile"
-            android:exported="true"  
+            android:exported="true"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
@@ -175,7 +174,7 @@
         <activity
             android:name=".powertools.PowertoolsActivity"
             android:label="@string/Powertools_title"
-            android:theme="@style/Theme.SubSettingsBase"
+            android:theme="@style/Theme.Parts.Expressive"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />

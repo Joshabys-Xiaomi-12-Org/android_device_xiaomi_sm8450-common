@@ -22,13 +22,14 @@ import android.widget.Toast;
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 import androidx.preference.SwitchPreferenceCompat;
 
+import com.android.settingslib.widget.SettingsBasePreferenceFragment;
+
 import org.lineageos.settings.R;
 
-public class PowertoolsSettingsFragment extends PreferenceFragmentCompat
+public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
         implements Preference.OnPreferenceChangeListener,
                    SharedPreferences.OnSharedPreferenceChangeListener {
 

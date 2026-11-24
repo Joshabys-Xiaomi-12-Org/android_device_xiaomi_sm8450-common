@@ -76,13 +76,13 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         if (DEBUG) Log.i(TAG, "Starting services...");
 
         // Start Thermal Management Services
-        ThermalUtils.getInstance(context).startService();
+        ThermalUtils.startService(context);
 
         // Start Power Profile Tile Service
         context.startServiceAsUser(new Intent(context, PowerProfileTileService.class), UserHandle.CURRENT);
-    
+
         // Restore aux camera restrictions
-        AuxCameraUtils.INSTANCE.restore(context);
+        AuxCameraUtils.restore(context);
     }
 
     private void overrideHdrTypes(Context context) {

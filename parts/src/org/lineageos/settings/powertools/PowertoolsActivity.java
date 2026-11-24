@@ -18,17 +18,22 @@ package org.lineageos.settings.powertools;
 
 import android.os.Bundle;
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
-import org.lineageos.settings.R;
+import com.android.settingslib.widget.ExpressiveDesignEnabledProvider;
 
-public class PowertoolsActivity extends CollapsingToolbarBaseActivity {
+public class PowertoolsActivity extends CollapsingToolbarBaseActivity
+        implements ExpressiveDesignEnabledProvider {
+    @Override
+    public boolean isExpressiveDesignEnabled() {
+        return true;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_powertools);
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.powertools_fragment_container,
+                    .replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame,
                              new PowertoolsSettingsFragment(),
                              "powertools")
                     .commit();

@@ -32,14 +32,23 @@
     <string name="thermal_apps_title">Apps</string>
     <string name="thermal_loading">Loading...</string>
     <string name="thermal_default">Default</string>
+    <string name="thermal_default_desc">System default behavior, with no per-app thermal tuning.</string>
     <string name="thermal_benchmark">Benchmark</string>
+    <string name="thermal_benchmark_desc">Maximum performance with relaxed thermal limits. The device may heat up.</string>
     <string name="thermal_browser">Browser</string>
+    <string name="thermal_browser_desc">Balanced tuning for browsing the web and reading.</string>
     <string name="thermal_camera">Camera</string>
+    <string name="thermal_camera_desc">Tuned for taking photos and recording videos.</string>
     <string name="thermal_dialer">Dialer</string>
+    <string name="thermal_dialer_desc">Light tuning for voice calls, with low heat and power use.</string>
     <string name="thermal_gaming">Gaming</string>
+    <string name="thermal_gaming_desc">Sustained performance for games, allowing higher temperatures.</string>
     <string name="thermal_navigation">Navigation</string>
     <string name="thermal_streaming">Streaming</string>
+    <string name="thermal_streaming_desc">Balanced tuning for long video and music streaming sessions.</string>
     <string name="thermal_video">Video</string>
+    <string name="thermal_search_hint_short">Search\u2026</string>
+    <string name="thermal_profile_footer">The selected profile is applied automatically while the app is in use.</string>
     <string name="thermal_reset">Reset to defaults</string>
     <string name="thermal_reset_message">Are you sure you want to reset thermal profile for all apps?</string>
 
