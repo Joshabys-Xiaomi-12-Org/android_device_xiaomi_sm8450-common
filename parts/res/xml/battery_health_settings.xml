@@ -1,0 +1,69 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="battery_overview_category"
+        android:title="@string/battery_health_overview_category">
+
+        <Preference
+            android:key="battery_estimated_health"
+            android:title="@string/battery_health_estimated_title"
+            android:summary="@string/powertools_live_reading"
+            android:selectable="false" />
+
+        <Preference
+            android:key="battery_capacity"
+            android:title="@string/battery_health_capacity_title"
+            android:summary="@string/powertools_live_reading"
+            android:selectable="false" />
+
+        <Preference
+            android:key="battery_cycle_count"
+            android:title="@string/battery_health_cycles_title"
+            android:summary="@string/powertools_live_reading"
+            android:selectable="false" />
+
+        <Preference
+            android:key="battery_status"
+            android:title="@string/battery_health_status_title"
+            android:summary="@string/powertools_live_reading"
+            android:selectable="false" />
+
+        <Preference
+            android:key="battery_technology"
+            android:title="@string/battery_health_tech_title"
+            android:summary="@string/powertools_live_reading"
+            android:selectable="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="battery_live_category"
+        android:title="@string/battery_health_live_category">
+
+        <Preference
+            android:key="battery_current"
+            android:title="@string/battery_health_current_title"
+            android:summary="@string/powertools_live_reading"
+            android:selectable="false" />
+
+        <Preference
+            android:key="battery_power"
+            android:title="@string/battery_health_power_title"
+            android:summary="@string/powertools_live_reading"
+            android:selectable="false" />
+
+        <Preference
+            android:key="battery_voltage"
+            android:title="@string/battery_health_voltage_title"
+            android:summary="@string/powertools_live_reading"
+            android:selectable="false" />
+
+        <Preference
+            android:key="battery_temp"
+            android:title="@string/battery_health_temp_title"
+            android:summary="@string/powertools_live_reading"
+            android:selectable="false" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

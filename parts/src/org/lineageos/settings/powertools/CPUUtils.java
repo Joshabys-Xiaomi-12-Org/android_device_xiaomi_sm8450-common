@@ -94,6 +94,18 @@ public final class CPUUtils {
         return raw != null ? raw.trim() : null;
     }
 
+    public static int getCurrentFrequencyMhz(int policyCpu) {
+        String raw = FileUtils.readOneLine(policyPath(policyCpu, "scaling_cur_freq"));
+        if (TextUtils.isEmpty(raw)) {
+            return -1;
+        }
+        try {
+            return (int) (Long.parseLong(raw.trim()) / 1_000L);
+        } catch (NumberFormatException ignored) {
+            return -1;
+        }
+    }
+
     public static String getCappedMaxFrequency(int policyCpu, int percent) {
         String[] freqs = getAvailableFrequencies(policyCpu);
         if (freqs.length == 0) {

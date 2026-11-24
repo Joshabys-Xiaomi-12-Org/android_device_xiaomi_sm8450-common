@@ -16,10 +16,17 @@
 
 package org.lineageos.settings.powertools;
 
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.os.BatteryManager;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.text.TextUtils;
 import android.widget.Toast;
+
+import java.util.Locale;
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -34,6 +41,11 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
         implements Preference.OnPreferenceChangeListener,
                    Preference.OnPreferenceClickListener,
                    SharedPreferences.OnSharedPreferenceChangeListener {
+
+    // Live monitor keys
+    private static final String KEY_LIVE_CPU_CLOCKS = "live_cpu_clocks";
+    private static final String KEY_LIVE_GPU_TEMP = "live_gpu_temp";
+    private static final long LIVE_UPDATE_INTERVAL_MS = 1500L;
 
     // General keys
     static final String KEY_POWER_PRESET = "power_preset";
@@ -68,6 +80,18 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
     private static final String PRESET_BATTERY = "battery";
     private static final String PRESET_GAMING = "gaming";
     private static final String PRESET_CUSTOM = "custom";
+
+    // Live monitor
+    private Preference mLiveCpuClocksPref;
+    private Preference mLiveGpuTempPref;
+    private final Handler mLiveHandler = new Handler(Looper.getMainLooper());
+    private final Runnable mLiveUpdater = new Runnable() {
+        @Override
+        public void run() {
+            updateLiveMonitor();
+            mLiveHandler.postDelayed(this, LIVE_UPDATE_INTERVAL_MS);
+        }
+    };
 
     // General preferences
     private ListPreference mPowerPresetPref;
@@ -114,6 +138,10 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.powertools_settings, rootKey);
+
+        // Live monitor preferences
+        mLiveCpuClocksPref = findPreference(KEY_LIVE_CPU_CLOCKS);
+        mLiveGpuTempPref = findPreference(KEY_LIVE_GPU_TEMP);
 
         // General preferences
         mPowerPresetPref = findPreference(KEY_POWER_PRESET);
@@ -302,13 +330,48 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
         PreferenceManager.getDefaultSharedPreferences(requireContext())
                 .registerOnSharedPreferenceChangeListener(this);
         updateUI();
+        mLiveHandler.removeCallbacks(mLiveUpdater);
+        mLiveHandler.post(mLiveUpdater);
     }
 
     @Override
     public void onPause() {
         super.onPause();
+        mLiveHandler.removeCallbacks(mLiveUpdater);
         PreferenceManager.getDefaultSharedPreferences(requireContext())
                 .unregisterOnSharedPreferenceChangeListener(this);
+    }
+
+    private void updateLiveMonitor() {
+        if (!isAdded() || getContext() == null) {
+            return;
+        }
+        if (mLiveCpuClocksPref != null) {
+            int little = CPUUtils.getCurrentFrequencyMhz(CPUUtils.POLICY_LITTLE);
+            int big = CPUUtils.getCurrentFrequencyMhz(CPUUtils.POLICY_BIG);
+            int prime = CPUUtils.getCurrentFrequencyMhz(CPUUtils.POLICY_PRIME);
+            String lStr = little > 0 ? little + " MHz" : "--";
+            String bStr = big > 0 ? big + " MHz" : "--";
+            String pStr = prime > 0 ? prime + " MHz" : "--";
+            mLiveCpuClocksPref.setSummary(
+                    "Little: " + lStr + "  •  Big: " + bStr + "  •  Prime: " + pStr);
+        }
+        if (mLiveGpuTempPref != null) {
+            int gpuMhz = GPUUtils.getCurrentClockMhz();
+            String gpuStr = gpuMhz > 0 ? gpuMhz + " MHz" : "--";
+            String tempStr = "--";
+            Intent battery = requireContext().registerReceiver(
+                    null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+            if (battery != null) {
+                int tempTenths = battery.getIntExtra(BatteryManager.EXTRA_TEMPERATURE, -1);
+                if (tempTenths > 0) {
+                    tempStr = String.format(Locale.getDefault(), "%.1f °C", tempTenths / 10.0f);
+                }
+            }
+            mLiveGpuTempPref.setSummary(
+                    "GPU: " + gpuStr + "  •  " + getString(R.string.battery_health_temp_title)
+                            + ": " + tempStr);
+        }
     }
 
     private void updateUI() {

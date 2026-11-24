@@ -1,5 +1,24 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- Live Monitor Section -->
+    <PreferenceCategory
+        android:key="live_monitor_category"
+        android:title="@string/powertools_live_monitor_category">
+
+        <Preference
+            android:key="live_cpu_clocks"
+            android:title="@string/powertools_live_cpu_title"
+            android:summary="@string/powertools_live_reading"
+            android:selectable="false" />
+
+        <Preference
+            android:key="live_gpu_temp"
+            android:title="@string/powertools_live_gpu_temp_title"
+            android:summary="@string/powertools_live_reading"
+            android:selectable="false" />
+
+    </PreferenceCategory>
+
     <!-- General Section -->
     <PreferenceCategory
         android:key="general_category"

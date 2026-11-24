@@ -42,6 +42,10 @@ public final class GPUUtils {
             "/sys/class/kgsl/kgsl-3d0/devfreq/governor";
     private static final String GPU_IDLE_TIMER_PATH =
             "/sys/class/kgsl/kgsl-3d0/idle_timer";
+    private static final String GPU_CUR_CLK_PATH =
+            "/sys/class/kgsl/kgsl-3d0/gpuclk";
+    private static final String GPU_CUR_CLK_MHZ_PATH =
+            "/sys/class/kgsl/kgsl-3d0/clock_mhz";
     private static final String ADRENO_IDLER_KGSL_PATH =
             "/sys/module/msm_kgsl/parameters/adreno_idler_active";
     private static final String ADRENO_IDLER_STANDALONE_PATH =
@@ -106,6 +110,26 @@ public final class GPUUtils {
     public static String getCurrentIdleTimer() {
         String raw = FileUtils.readOneLine(GPU_IDLE_TIMER_PATH);
         return raw != null ? raw.trim() : null;
+    }
+
+    public static int getCurrentClockMhz() {
+        String rawMhz = FileUtils.readOneLine(GPU_CUR_CLK_MHZ_PATH);
+        if (!TextUtils.isEmpty(rawMhz)) {
+            try {
+                return Integer.parseInt(rawMhz.trim());
+            } catch (NumberFormatException ignored) {
+                // Fall through to Hz node.
+            }
+        }
+        String rawHz = FileUtils.readOneLine(GPU_CUR_CLK_PATH);
+        if (!TextUtils.isEmpty(rawHz)) {
+            try {
+                return (int) (Long.parseLong(rawHz.trim()) / 1_000_000L);
+            } catch (NumberFormatException ignored) {
+                return -1;
+            }
+        }
+        return -1;
     }
 
     public static boolean isAdrenoIdlerAvailable() {

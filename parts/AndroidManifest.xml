@@ -189,6 +189,47 @@
                 android:resource="@string/Powertools_summary" />
         </activity>
 
+        <!-- Battery Health & Stats Activity -->
+        <activity
+            android:name=".battery.BatteryHealthActivity"
+            android:label="@string/battery_health_title"
+            android:theme="@style/Theme.Parts.Expressive"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.battery" />
+            <meta-data
+                android:name="com.android.settings.order"
+                android:value="102" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/battery_health_summary" />
+        </activity>
+
+        <!-- Per-App Refresh Rate Activity & Service -->
+        <activity
+            android:name=".refreshrate.RefreshActivity"
+            android:label="@string/refresh_rate_title"
+            android:theme="@style/Theme.Parts.Expressive"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.display" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/refresh_rate_summary" />
+        </activity>
+
+        <service
+            android:name=".refreshrate.RefreshService"
+            android:exported="false" />
+
         <!-- Powertools Quick Settings Tile Service -->
         <service
             android:name=".powertools.PowerProfileTileService"

@@ -148,4 +148,39 @@
     <string name="aux_camera_enable">Enable restrictions</string>
     <string name="aux_camera_empty">No apps found</string>
     <string name="aux_camera_limit_reached">Too many apps selected, turn another one off first</string>
+
+    <!-- Powertools Live Monitor -->
+    <string name="powertools_live_monitor_category">Live Monitor</string>
+    <string name="powertools_live_cpu_title">CPU Clocks</string>
+    <string name="powertools_live_gpu_temp_title">GPU &amp; Temperature</string>
+    <string name="powertools_live_reading">Reading…</string>
+
+    <!-- Battery Health & Stats -->
+    <string name="battery_health_title">Battery Health &amp; Stats</string>
+    <string name="battery_health_summary">View battery health, charge cycles, and live power statistics</string>
+    <string name="battery_health_overview_category">Health Overview</string>
+    <string name="battery_health_estimated_title">Estimated Battery Health</string>
+    <string name="battery_health_capacity_title">Capacity (Current / Design)</string>
+    <string name="battery_health_cycles_title">Charge Cycles</string>
+    <string name="battery_health_status_title">Status</string>
+    <string name="battery_health_tech_title">Technology</string>
+    <string name="battery_health_live_category">Live Measurements</string>
+    <string name="battery_health_current_title">Current</string>
+    <string name="battery_health_power_title">Power</string>
+    <string name="battery_health_voltage_title">Voltage</string>
+    <string name="battery_health_temp_title">Temperature</string>
+    <string name="battery_health_status_charging">Charging</string>
+    <string name="battery_health_status_discharging">Discharging</string>
+    <string name="battery_health_status_full">Full</string>
+    <string name="battery_health_status_not_charging">Not charging</string>
+    <string name="battery_health_unavailable">Unavailable</string>
+
+    <!-- Per-App Refresh Rate -->
+    <string name="refresh_rate_title">Per-App Refresh Rate</string>
+    <string name="refresh_rate_summary">Set a custom screen refresh rate for individual apps</string>
+    <string name="refresh_rate_control_category">General</string>
+    <string name="refresh_rate_enable_title">Enable per-app refresh rate</string>
+    <string name="refresh_rate_enable_summary">Automatically switch refresh rate per app</string>
+    <string name="refresh_rate_apps_category">Apps</string>
+    <string name="refresh_rate_default">Default</string>
 </resources>

@@ -1,0 +1,19 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="refresh_rate_control_category"
+        android:title="@string/refresh_rate_control_category">
+
+        <SwitchPreferenceCompat
+            android:key="per_app_refresh_enabled"
+            android:title="@string/refresh_rate_enable_title"
+            android:summary="@string/refresh_rate_enable_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="refresh_rate_apps_category"
+        android:title="@string/refresh_rate_apps_category" />
+
+</PreferenceScreen>

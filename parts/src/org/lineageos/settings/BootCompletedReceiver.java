@@ -35,6 +35,7 @@ import android.view.Display.HdrCapabilities;
 import org.lineageos.settings.auxcamera.AuxCameraUtils;
 import org.lineageos.settings.powertools.PowerProfileTileService;
 import org.lineageos.settings.powertools.PowertoolsBootHelper;
+import org.lineageos.settings.refreshrate.RefreshUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
@@ -78,6 +79,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         // Start Thermal Management Services
         ThermalUtils.startService(context);
+
+        // Start Per-App Refresh Rate Service
+        RefreshUtils.startService(context);
 
         // Start Power Profile Tile Service
         context.startServiceAsUser(new Intent(context, PowerProfileTileService.class), UserHandle.CURRENT);
