@@ -148,4 +148,19 @@
     <string name="thermal_help_clock_body">• CPU (cpu0, cpu4, cpu7): frequencies in kHz (e.g. 1766400 = 1766 MHz, 2227200 = 2227 MHz). Always use valid frequencies supported by the cluster.\n• GPU (gpu): frequency or level matching the original format of that file.\n• Battery (battery): charging current limit levels (higher level = lower charging current).</string>
     <string name="thermal_help_safety_title">Safety Tips</string>
     <string name="thermal_help_safety_body">• Raise temperature thresholds gradually (2–3 °C at a time) and monitor battery temperature.\n• Never disable thermal protection completely — excessive heat can degrade the battery or cause thermal shutdown.\n• If anything behaves unexpectedly, tap Reset on the file (or Reset all overrides) to return immediately to stock.</string>
+    <string name="thermal_navigation_desc">GPS naviqasiyası və enerji yığarkən temperaturu nəzarətdə saxlayır.</string>
+    <string name="thermal_heavy_gaming">Ağır oyunlar</string>
+    <string name="thermal_heavy_gaming_desc">Tələbkar 3D oyunlar üçün daha yüksək sabit performans.</string>
+    <string name="thermal_extreme_gaming">Ekstremal oyunlar</string>
+    <string name="thermal_extreme_gaming_desc">Genshin Impact kimi çox ağır oyunlar üçün xüsusi profil.</string>
+    <string name="thermal_video_call">Video zəng</string>
+    <string name="thermal_video_call_desc">Kamera və şəbəkə ilə video zənglər üçün balanslı temperatur.</string>
+    <string name="thermal_video_playback">Video oynatma</string>
+    <string name="thermal_video_playback_desc">Video və filmlər üçün enerjiyə qənaət edən profil.</string>
+    <string name="thermal_4k_recording">4K çəkiliş</string>
+    <string name="thermal_4k_recording_desc">Yüksək keyfiyyətli 4K/8K çəkiliş üçün optimallaşdırılmış istilik hədləri.</string>
+    <string name="thermal_arvr">AR / VR</string>
+    <string name="thermal_arvr_desc">Artırılmış və virtual reallıq tətbiqləri üçün tənzimlənib.</string>
+    <string name="thermal_cool">Sərin / Batareya qənaəti</string>
+    <string name="thermal_cool_desc">Cihazı sərin saxlamaq və batareyaya qənaət etmək üçün mühafizəkar profil.</string>
 </resources>

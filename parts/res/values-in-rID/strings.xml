@@ -169,4 +169,19 @@
     <string name="thermal_help_clock_body">• CPU (cpu0, cpu4, cpu7): frequencies in kHz (e.g. 1766400 = 1766 MHz, 2227200 = 2227 MHz). Always use valid frequencies supported by the cluster.\n• GPU (gpu): frequency or level matching the original format of that file.\n• Battery (battery): charging current limit levels (higher level = lower charging current).</string>
     <string name="thermal_help_safety_title">Safety Tips</string>
     <string name="thermal_help_safety_body">• Raise temperature thresholds gradually (2–3 °C at a time) and monitor battery temperature.\n• Never disable thermal protection completely — excessive heat can degrade the battery or cause thermal shutdown.\n• If anything behaves unexpectedly, tap Reset on the file (or Reset all overrides) to return immediately to stock.</string>
+    <string name="thermal_navigation_desc">Menjaga suhu tetap terkendali saat navigasi GPS dan pengisian daya.</string>
+    <string name="thermal_heavy_gaming">Gaming Berat</string>
+    <string name="thermal_heavy_gaming_desc">Performa berkelanjutan lebih tinggi untuk game 3D berat.</string>
+    <string name="thermal_extreme_gaming">Gaming Ekstrem</string>
+    <string name="thermal_extreme_gaming_desc">Profil khusus untuk game sangat berat seperti Genshin Impact.</string>
+    <string name="thermal_video_call">Panggilan Video</string>
+    <string name="thermal_video_call_desc">Kontrol suhu seimbang untuk panggilan video dengan kamera dan jaringan.</string>
+    <string name="thermal_video_playback">Pemutaran Video</string>
+    <string name="thermal_video_playback_desc">Profil hemat daya untuk memutar video dan film lokal.</string>
+    <string name="thermal_4k_recording">Perekaman 4K</string>
+    <string name="thermal_4k_recording_desc">Batas termal dioptimalkan untuk perekaman resolusi tinggi 4K/8K.</string>
+    <string name="thermal_arvr">AR / VR</string>
+    <string name="thermal_arvr_desc">Dioptimalkan untuk aplikasi augmented dan virtual reality.</string>
+    <string name="thermal_cool">Sejuk / Hemat Baterai</string>
+    <string name="thermal_cool_desc">Batas termal konservatif agar perangkat tetap sejuk dan hemat baterai.</string>
 </resources>

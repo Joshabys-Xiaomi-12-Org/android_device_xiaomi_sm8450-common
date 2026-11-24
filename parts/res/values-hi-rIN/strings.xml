@@ -169,4 +169,19 @@
     <string name="thermal_help_clock_body">• CPU (cpu0, cpu4, cpu7): frequencies in kHz (e.g. 1766400 = 1766 MHz, 2227200 = 2227 MHz). Always use valid frequencies supported by the cluster.\n• GPU (gpu): frequency or level matching the original format of that file.\n• Battery (battery): charging current limit levels (higher level = lower charging current).</string>
     <string name="thermal_help_safety_title">Safety Tips</string>
     <string name="thermal_help_safety_body">• Raise temperature thresholds gradually (2–3 °C at a time) and monitor battery temperature.\n• Never disable thermal protection completely — excessive heat can degrade the battery or cause thermal shutdown.\n• If anything behaves unexpectedly, tap Reset on the file (or Reset all overrides) to return immediately to stock.</string>
+    <string name="thermal_navigation_desc">GPS नेविगेशन और चार्जिंग के दौरान तापमान को नियंत्रित रखता है।</string>
+    <string name="thermal_heavy_gaming">हेवी गेमिंग</string>
+    <string name="thermal_heavy_gaming_desc">मांग वाले 3D गेम्स के लिए उच्च निरंतर प्रदर्शन।</string>
+    <string name="thermal_extreme_gaming">एक्सट्रीम गेमिंग</string>
+    <string name="thermal_extreme_gaming_desc">Genshin Impact जैसे अत्यंत भारी गेम्स के लिए समर्पित प्रोफ़ाइल।</string>
+    <string name="thermal_video_call">वीडियो कॉल</string>
+    <string name="thermal_video_call_desc">कैमरा और नेटवर्क का उपयोग करने वाले वीडियो कॉल के लिए संतुलित थर्मल।</string>
+    <string name="thermal_video_playback">वीडियो प्लेबैक</string>
+    <string name="thermal_video_playback_desc">स्थानीय वीडियो और मूवी प्लेबैक के लिए ऊर्जा-कुशल प्रोफ़ाइल।</string>
+    <string name="thermal_4k_recording">4K रिकॉर्डिंग</string>
+    <string name="thermal_4k_recording_desc">उच्च-रिज़ॉल्यूशन 4K/8K रिकॉर्डिंग के लिए अनुकूलित थर्मल सीमाएँ।</string>
+    <string name="thermal_arvr">AR / VR</string>
+    <string name="thermal_arvr_desc">ऑगमेंटेड और वर्चुअल रियलिटी ऐप्स के लिए ट्यून किया गया।</string>
+    <string name="thermal_cool">कूल / बैटरी सेवर</string>
+    <string name="thermal_cool_desc">डिवाइस को ठंडा रखने और बैटरी बचाने के लिए रूढ़िवादी थर्मल सीमाएँ।</string>
 </resources>

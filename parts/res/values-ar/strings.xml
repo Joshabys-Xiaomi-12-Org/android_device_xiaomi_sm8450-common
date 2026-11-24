@@ -169,4 +169,19 @@
     <string name="thermal_help_clock_body">• CPU (cpu0, cpu4, cpu7): frequencies in kHz (e.g. 1766400 = 1766 MHz, 2227200 = 2227 MHz). Always use valid frequencies supported by the cluster.\n• GPU (gpu): frequency or level matching the original format of that file.\n• Battery (battery): charging current limit levels (higher level = lower charging current).</string>
     <string name="thermal_help_safety_title">Safety Tips</string>
     <string name="thermal_help_safety_body">• Raise temperature thresholds gradually (2–3 °C at a time) and monitor battery temperature.\n• Never disable thermal protection completely — excessive heat can degrade the battery or cause thermal shutdown.\n• If anything behaves unexpectedly, tap Reset on the file (or Reset all overrides) to return immediately to stock.</string>
+    <string name="thermal_navigation_desc">يحافظ على استقرار الحرارة أثناء الملاحة عبر GPS والشحن.</string>
+    <string name="thermal_heavy_gaming">ألعاب ثقيلة</string>
+    <string name="thermal_heavy_gaming_desc">أداء مستدام أعلى للألعاب ثلاثية الأبعاد المتطلبة.</string>
+    <string name="thermal_extreme_gaming">ألعاب فائقة</string>
+    <string name="thermal_extreme_gaming_desc">ملف مخصص للألعاب الثقيلة جداً مثل Genshin Impact.</string>
+    <string name="thermal_video_call">مكالمة فيديو</string>
+    <string name="thermal_video_call_desc">حرارة متوازنة لمكالمات الفيديو باستخدام الكاميرا والشبكة.</string>
+    <string name="thermal_video_playback">تشغيل الفيديو</string>
+    <string name="thermal_video_playback_desc">ملف موفر للطاقة لتشغيل الفيديوهات والأفلام.</string>
+    <string name="thermal_4k_recording">تسجيل 4K</string>
+    <string name="thermal_4k_recording_desc">حدود حرارية محسنة لتسجيل الفيديو بدقة 4K/8K.</string>
+    <string name="thermal_arvr">الواقع المعزز والافتراضي</string>
+    <string name="thermal_arvr_desc">مضبوط لتطبيقات الواقع المعزز والافتراضي.</string>
+    <string name="thermal_cool">بارد / توفير البطارية</string>
+    <string name="thermal_cool_desc">حدود حرارية محافظة للحفاظ على برودة الجهاز وتوفير البطارية.</string>
 </resources>

@@ -169,4 +169,19 @@
     <string name="thermal_help_clock_body">• CPU (cpu0, cpu4, cpu7): frecuencias en kHz (ej. 1766400 = 1766 MHz, 2227200 = 2227 MHz). Usa siempre frecuencias válidas del clúster.\n• GPU (gpu): frecuencia o nivel siguiendo el formato original del archivo.\n• Batería (battery): niveles de límite de corriente de carga (nivel más alto = menos corriente).</string>
     <string name="thermal_help_safety_title">Consejos de seguridad</string>
     <string name="thermal_help_safety_body">• Sube los umbrales de temperatura poco a poco (2–3 °C cada vez) y vigila la temperatura de la batería.\n• Nunca desactives la protección térmica por completo: el calor excesivo degrada la batería o provoca apagado térmico.\n• Si notas algún problema, pulsa Restablecer en el archivo (o Restablecer todas las modificaciones) para volver al original al instante.</string>
+    <string name="thermal_navigation_desc">Mantiene controlada la temperatura durante la navegación GPS y la carga.</string>
+    <string name="thermal_heavy_gaming">Juegos exigentes</string>
+    <string name="thermal_heavy_gaming_desc">Mayor rendimiento sostenido para juegos 3D exigentes.</string>
+    <string name="thermal_extreme_gaming">Juegos extremos</string>
+    <string name="thermal_extreme_gaming_desc">Perfil dedicado para juegos muy exigentes como Genshin Impact.</string>
+    <string name="thermal_video_call">Videollamada</string>
+    <string name="thermal_video_call_desc">Control térmico equilibrado para videollamadas con cámara y red.</string>
+    <string name="thermal_video_playback">Reproducción de vídeo</string>
+    <string name="thermal_video_playback_desc">Perfil eficiente para reproducir vídeos y películas locales.</string>
+    <string name="thermal_4k_recording">Grabación 4K</string>
+    <string name="thermal_4k_recording_desc">Límites térmicos optimizados para grabación en 4K/8K.</string>
+    <string name="thermal_arvr">AR / VR</string>
+    <string name="thermal_arvr_desc">Ajustado para aplicaciones de realidad aumentada y virtual.</string>
+    <string name="thermal_cool">Frío / Ahorro de batería</string>
+    <string name="thermal_cool_desc">Límites térmicos conservadores para mantener el dispositivo fresco y ahorrar batería.</string>
 </resources>

@@ -169,4 +169,19 @@
     <string name="thermal_help_clock_body">• CPU (cpu0, cpu4, cpu7): frequencies in kHz (e.g. 1766400 = 1766 MHz, 2227200 = 2227 MHz). Always use valid frequencies supported by the cluster.\n• GPU (gpu): frequency or level matching the original format of that file.\n• Battery (battery): charging current limit levels (higher level = lower charging current).</string>
     <string name="thermal_help_safety_title">Safety Tips</string>
     <string name="thermal_help_safety_body">• Raise temperature thresholds gradually (2–3 °C at a time) and monitor battery temperature.\n• Never disable thermal protection completely — excessive heat can degrade the battery or cause thermal shutdown.\n• If anything behaves unexpectedly, tap Reset on the file (or Reset all overrides) to return immediately to stock.</string>
+    <string name="thermal_navigation_desc">在 GPS 导航和边充边用时保持温度稳定。</string>
+    <string name="thermal_heavy_gaming">重度游戏</string>
+    <string name="thermal_heavy_gaming_desc">为大型 3D 游戏提供更高的持续性能。</string>
+    <string name="thermal_extreme_gaming">极致游戏</string>
+    <string name="thermal_extreme_gaming_desc">专为《原神》等超重度游戏优化的温控配置。</string>
+    <string name="thermal_video_call">视频通话</string>
+    <string name="thermal_video_call_desc">兼顾摄像头与网络负载的视频通话温控平衡。</string>
+    <string name="thermal_video_playback">视频播放</string>
+    <string name="thermal_video_playback_desc">适合本地视频和电影播放的省电配置。</string>
+    <string name="thermal_4k_recording">4K 录像</string>
+    <string name="thermal_4k_recording_desc">针对 4K/8K 高清录像优化的温控阈值。</string>
+    <string name="thermal_arvr">AR / VR</string>
+    <string name="thermal_arvr_desc">针对增强现实与虚拟现实应用优化。</string>
+    <string name="thermal_cool">低温 / 省电</string>
+    <string name="thermal_cool_desc">保守的温控限制，保持机身凉爽并节省电量。</string>
 </resources>

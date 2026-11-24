@@ -146,4 +146,19 @@
     <string name="thermal_help_clock_body">• CPU (cpu0, cpu4, cpu7): frequencies in kHz (e.g. 1766400 = 1766 MHz, 2227200 = 2227 MHz). Always use valid frequencies supported by the cluster.\n• GPU (gpu): frequency or level matching the original format of that file.\n• Battery (battery): charging current limit levels (higher level = lower charging current).</string>
     <string name="thermal_help_safety_title">Safety Tips</string>
     <string name="thermal_help_safety_body">• Raise temperature thresholds gradually (2–3 °C at a time) and monitor battery temperature.\n• Never disable thermal protection completely — excessive heat can degrade the battery or cause thermal shutdown.\n• If anything behaves unexpectedly, tap Reset on the file (or Reset all overrides) to return immediately to stock.</string>
+    <string name="thermal_navigation_desc">GPS வழிசெலுத்தல் மற்றும் சார்ஜிங் போது வெப்பத்தை கட்டுக்குள் வைத்திருக்கும்.</string>
+    <string name="thermal_heavy_gaming">கனரக கேமிங்</string>
+    <string name="thermal_heavy_gaming_desc">கடினமான 3D விளையாட்டுகளுக்கு அதிக நிலையான செயல்திறன்.</string>
+    <string name="thermal_extreme_gaming">அதிகபட்ச கேமிங்</string>
+    <string name="thermal_extreme_gaming_desc">Genshin Impact போன்ற மிகக் கனமான விளையாட்டுகளுக்கான சிறப்பு சுயவிவரம்.</string>
+    <string name="thermal_video_call">வீடியோ அழைப்பு</string>
+    <string name="thermal_video_call_desc">கேமரா மற்றும் நெட்வொர்க் பயன்படுத்தும் வீடியோ அழைப்புகளுக்கு சமநிலையான வெப்பம்.</string>
+    <string name="thermal_video_playback">வீடியோ இயக்கம்</string>
+    <string name="thermal_video_playback_desc">வீடியோ மற்றும் திரைப்படங்களுக்கான மின் சேமிப்பு சுயவிவரம்.</string>
+    <string name="thermal_4k_recording">4K பதிவு</string>
+    <string name="thermal_4k_recording_desc">உயர் தெளிவு 4K/8K பதிவுக்கு உகந்த வெப்ப வரம்புகள்.</string>
+    <string name="thermal_arvr">AR / VR</string>
+    <string name="thermal_arvr_desc">AR மற்றும் VR செயலிகளுக்காக அமைக்கப்பட்டது.</string>
+    <string name="thermal_cool">குளிர்ச்சி / பேட்டரி சேமிப்பு</string>
+    <string name="thermal_cool_desc">சாதனத்தை குளிர்ச்சியாக வைத்திருக்கவும் பேட்டரி சேமிக்கவும் கட்டுப்படுத்தப்பட்ட வெப்ப வரம்புகள்.</string>
 </resources>

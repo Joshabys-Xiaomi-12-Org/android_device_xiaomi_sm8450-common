@@ -148,4 +148,19 @@
     <string name="thermal_help_clock_body">• CPU (cpu0, cpu4, cpu7): frequencies in kHz (e.g. 1766400 = 1766 MHz, 2227200 = 2227 MHz). Always use valid frequencies supported by the cluster.\n• GPU (gpu): frequency or level matching the original format of that file.\n• Battery (battery): charging current limit levels (higher level = lower charging current).</string>
     <string name="thermal_help_safety_title">Safety Tips</string>
     <string name="thermal_help_safety_body">• Raise temperature thresholds gradually (2–3 °C at a time) and monitor battery temperature.\n• Never disable thermal protection completely — excessive heat can degrade the battery or cause thermal shutdown.\n• If anything behaves unexpectedly, tap Reset on the file (or Reset all overrides) to return immediately to stock.</string>
+    <string name="thermal_navigation_desc">Held temperaturen under kontroll ved GPS-navigasjon og lading.</string>
+    <string name="thermal_heavy_gaming">Tung speling</string>
+    <string name="thermal_heavy_gaming_desc">Høgare varig yting for krevjande 3D-spel.</string>
+    <string name="thermal_extreme_gaming">Ekstrem speling</string>
+    <string name="thermal_extreme_gaming_desc">Eige profil for svært krevjande spel som Genshin Impact.</string>
+    <string name="thermal_video_call">Videosamtale</string>
+    <string name="thermal_video_call_desc">Balansert temperaturstyring for videosamtalar med kamera og nettverk.</string>
+    <string name="thermal_video_playback">Videoavspeling</string>
+    <string name="thermal_video_playback_desc">Straumsparande profil for lokal video- og filmavspeling.</string>
+    <string name="thermal_4k_recording">4K-opptak</string>
+    <string name="thermal_4k_recording_desc">Optimaliserte temperaturgrenser for 4K/8K-opptak.</string>
+    <string name="thermal_arvr">AR / VR</string>
+    <string name="thermal_arvr_desc">Tilpassa appar for utvida og virtuell røyndom.</string>
+    <string name="thermal_cool">Kjølig / Batterisparing</string>
+    <string name="thermal_cool_desc">Konservative temperaturgrenser for kjølig eining og lågare straumbruk.</string>
 </resources>

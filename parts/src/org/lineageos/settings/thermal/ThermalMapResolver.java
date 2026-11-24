@@ -36,7 +36,7 @@ import java.util.regex.Pattern;
 /**
  * Dynamically resolves Xiaomi mi_thermald sconfig profile codes by decrypting
  * and parsing /vendor/etc/thermal-map.conf (or thermal-*-map.conf), so profile
- * codes adapt automatically across different Xiaomi devices.
+ * codes and available profiles adapt automatically across Xiaomi devices.
  */
 public final class ThermalMapResolver {
 
@@ -59,6 +59,16 @@ public final class ThermalMapResolver {
     private final String mPerformanceCode;
     private final String mBatterySaverCode;
 
+    // Optional profiles auto-detected from thermal-map.conf (null if unsupported)
+    private final String mHeavyGamingCode;
+    private final String mExtremeGamingCode;
+    private final String mNavigationCode;
+    private final String mVideoCallCode;
+    private final String mVideoPlaybackCode;
+    private final String m4kRecordingCode;
+    private final String mArVrCode;
+    private final String mCoolCode;
+
     private ThermalMapResolver() {
         mMapEntries = loadThermalMap();
 
@@ -68,9 +78,18 @@ public final class ThermalMapResolver {
         mCameraCode = resolveCode("12", new String[]{"camera"}, false);
         mDialerCode = resolveCode("8", new String[]{"phone", "incall", "dialer"}, false);
         mGamingCode = resolveCode("13", new String[]{"tgame", "mgame", "game"}, false);
-        mStreamingCode = resolveCode("14", new String[]{"youtube", "video", "stream"}, false);
+        mStreamingCode = resolveCode("14", new String[]{"youtube", "stream"}, false);
         mPerformanceCode = resolveCode("20", new String[]{"mgame", "nolimits", "per-normal"}, false);
         mBatterySaverCode = resolveCode("3", new String[]{"huanji", "powersave", "lowpower"}, false);
+
+        mHeavyGamingCode = resolveOptional(new String[]{"mgame"}, false);
+        mExtremeGamingCode = resolveOptional(new String[]{"yuanshen"}, false);
+        mNavigationCode = resolveOptional(new String[]{"navigation"}, false);
+        mVideoCallCode = resolveOptional(new String[]{"videochat"}, true);
+        mVideoPlaybackCode = resolveOptional(new String[]{"-video.conf"}, false);
+        m4kRecordingCode = resolveOptional(new String[]{"4k", "8k"}, false);
+        mArVrCode = resolveOptional(new String[]{"arvr"}, false);
+        mCoolCode = resolveOptional(new String[]{"huanji", "powersave", "lowpower"}, false);
 
         Log.i(TAG, "Resolved thermal sconfig codes (" + mMapEntries.size() + " map entries): "
                 + "default=" + mDefaultCode
@@ -80,8 +99,14 @@ public final class ThermalMapResolver {
                 + " dialer=" + mDialerCode
                 + " gaming=" + mGamingCode
                 + " streaming=" + mStreamingCode
-                + " performance=" + mPerformanceCode
-                + " batterySaver=" + mBatterySaverCode);
+                + " heavyGaming=" + mHeavyGamingCode
+                + " extremeGaming=" + mExtremeGamingCode
+                + " navigation=" + mNavigationCode
+                + " videoCall=" + mVideoCallCode
+                + " videoPlayback=" + mVideoPlaybackCode
+                + " 4k=" + m4kRecordingCode
+                + " arvr=" + mArVrCode
+                + " cool=" + mCoolCode);
     }
 
     public static ThermalMapResolver getInstance() {
@@ -99,58 +124,85 @@ public final class ThermalMapResolver {
         return mDefaultCode;
     }
 
-    public String getBenchmarkCode() {
-        return mBenchmarkCode;
-    }
-
-    public String getBrowserCode() {
-        return mBrowserCode;
-    }
-
-    public String getCameraCode() {
-        return mCameraCode;
-    }
-
-    public String getDialerCode() {
-        return mDialerCode;
+    public String getPerformanceCode() {
+        return mPerformanceCode;
     }
 
     public String getGamingCode() {
         return mGamingCode;
     }
 
-    public String getStreamingCode() {
-        return mStreamingCode;
-    }
-
-    public String getPerformanceCode() {
-        return mPerformanceCode;
-    }
-
     public String getBatterySaverCode() {
         return mBatterySaverCode;
     }
 
-    private String resolveCode(String fallback, String[] keywords, boolean allowExtended) {
+    public String getCodeForState(int state) {
+        return switch (state) {
+            case ThermalUtils.STATE_BENCHMARK -> mBenchmarkCode;
+            case ThermalUtils.STATE_BROWSER -> mBrowserCode;
+            case ThermalUtils.STATE_CAMERA -> mCameraCode;
+            case ThermalUtils.STATE_DIALER -> mDialerCode;
+            case ThermalUtils.STATE_GAMING -> mGamingCode;
+            case ThermalUtils.STATE_STREAMING -> mStreamingCode;
+            case ThermalUtils.STATE_HEAVY_GAMING ->
+                    mHeavyGamingCode != null ? mHeavyGamingCode : mGamingCode;
+            case ThermalUtils.STATE_EXTREME_GAMING ->
+                    mExtremeGamingCode != null ? mExtremeGamingCode : mGamingCode;
+            case ThermalUtils.STATE_NAVIGATION ->
+                    mNavigationCode != null ? mNavigationCode : mDefaultCode;
+            case ThermalUtils.STATE_VIDEO_CALL ->
+                    mVideoCallCode != null ? mVideoCallCode : mDefaultCode;
+            case ThermalUtils.STATE_VIDEO_PLAYBACK ->
+                    mVideoPlaybackCode != null ? mVideoPlaybackCode : mStreamingCode;
+            case ThermalUtils.STATE_4K_RECORDING ->
+                    m4kRecordingCode != null ? m4kRecordingCode : mCameraCode;
+            case ThermalUtils.STATE_ARVR ->
+                    mArVrCode != null ? mArVrCode : mGamingCode;
+            case ThermalUtils.STATE_COOL ->
+                    mCoolCode != null ? mCoolCode : mDefaultCode;
+            default -> mDefaultCode;
+        };
+    }
+
+    public boolean isProfileAvailable(int state) {
+        return switch (state) {
+            case ThermalUtils.STATE_DEFAULT,
+                 ThermalUtils.STATE_BENCHMARK,
+                 ThermalUtils.STATE_BROWSER,
+                 ThermalUtils.STATE_CAMERA,
+                 ThermalUtils.STATE_DIALER,
+                 ThermalUtils.STATE_GAMING,
+                 ThermalUtils.STATE_STREAMING -> true;
+            case ThermalUtils.STATE_HEAVY_GAMING ->
+                    mHeavyGamingCode != null && !mHeavyGamingCode.equals(mGamingCode);
+            case ThermalUtils.STATE_EXTREME_GAMING -> mExtremeGamingCode != null;
+            case ThermalUtils.STATE_NAVIGATION -> mNavigationCode != null;
+            case ThermalUtils.STATE_VIDEO_CALL -> mVideoCallCode != null;
+            case ThermalUtils.STATE_VIDEO_PLAYBACK -> mVideoPlaybackCode != null;
+            case ThermalUtils.STATE_4K_RECORDING -> m4kRecordingCode != null;
+            case ThermalUtils.STATE_ARVR -> mArVrCode != null;
+            case ThermalUtils.STATE_COOL -> mCoolCode != null;
+            default -> false;
+        };
+    }
+
+    private String resolveCode(String fallback, String[] keywords, boolean allowVideoChat) {
+        String match = resolveOptional(keywords, allowVideoChat);
+        return match != null ? match : fallback;
+    }
+
+    private String resolveOptional(String[] keywords, boolean allowVideoChat) {
         if (mMapEntries.isEmpty()) {
-            return fallback;
+            return null;
         }
-        // First pass: base thermal codes (< 30, standard mi_thermald scene range)
-        String match = findMatch(keywords, 30);
+        String match = findMatch(keywords, 30, allowVideoChat);
         if (match != null) {
             return match;
         }
-        // Second pass: extended codes if requested or not found in base range
-        if (allowExtended || match == null) {
-            match = findMatch(keywords, Integer.MAX_VALUE);
-            if (match != null) {
-                return match;
-            }
-        }
-        return fallback;
+        return findMatch(keywords, Integer.MAX_VALUE, allowVideoChat);
     }
 
-    private String findMatch(String[] keywords, int maxCodeExclusive) {
+    private String findMatch(String[] keywords, int maxCodeExclusive, boolean allowVideoChat) {
         for (String kw : keywords) {
             for (Map.Entry<Integer, String> entry : mMapEntries.entrySet()) {
                 int code = entry.getKey();
@@ -158,7 +210,10 @@ public final class ThermalMapResolver {
                     continue;
                 }
                 String conf = entry.getValue().toLowerCase(Locale.ROOT);
-                if (conf.contains("unfold") || conf.contains("iec") || conf.contains("videochat")) {
+                if (conf.contains("unfold") || conf.contains("iec")) {
+                    continue;
+                }
+                if (!allowVideoChat && conf.contains("videochat")) {
                     continue;
                 }
                 if (conf.contains(kw)) {

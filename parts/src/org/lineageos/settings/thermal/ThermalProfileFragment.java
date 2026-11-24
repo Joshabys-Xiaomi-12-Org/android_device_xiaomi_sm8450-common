@@ -63,6 +63,9 @@ public class ThermalProfileFragment extends SettingsBasePreferenceFragment {
 
         for (int i = 0; i < ThermalUtils.PROFILE_COUNT; i++) {
             final int state = i;
+            if (!ThermalUtils.isProfileAvailable(state) && state != mCurrentState) {
+                continue;
+            }
             final SelectorWithWidgetPreference pref =
                     new SelectorWithWidgetPreference(getContext());
             pref.setTitle(ThermalUtils.getProfileNameRes(state));
@@ -112,7 +115,9 @@ public class ThermalProfileFragment extends SettingsBasePreferenceFragment {
             mThermalUtils.writePackage(mPackageName, state);
         }
         for (int i = 0; i < mOptions.length; i++) {
-            mOptions[i].setChecked(i == mCurrentState);
+            if (mOptions[i] != null) {
+                mOptions[i].setChecked(i == mCurrentState);
+            }
         }
     }
 }
