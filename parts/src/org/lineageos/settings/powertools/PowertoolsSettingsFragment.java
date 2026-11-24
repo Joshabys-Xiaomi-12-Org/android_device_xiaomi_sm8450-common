@@ -467,11 +467,10 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
     }
 
     private void setZramPrefsEnabled(boolean enabled) {
-        boolean zramSupported = ZramUtils.isZramSupported();
         if (mZramSizePref != null) {
-            mZramSizePref.setEnabled(enabled && zramSupported);
+            mZramSizePref.setEnabled(enabled);
         }
-        setListPrefEnabled(mZramAlgoPref, enabled && zramSupported);
+        setListPrefEnabled(mZramAlgoPref, enabled);
         if (mVmSwappinessPref != null) {
             mVmSwappinessPref.setEnabled(enabled);
         }
@@ -598,16 +597,14 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
     }
 
     private void restoreZramDefaults() {
-        if (ZramUtils.isZramSupported()) {
-            ZramUtils.applyZram(mZramDefaultSize, mZramDefaultAlgo);
-            if (mZramSizePref != null && !TextUtils.isEmpty(mZramDefaultSize)
-                    && mZramSizePref.findIndexOfValue(mZramDefaultSize) >= 0) {
-                mZramSizePref.setValue(mZramDefaultSize);
-            }
-            if (mZramAlgoPref != null && !TextUtils.isEmpty(mZramDefaultAlgo)
-                    && mZramAlgoPref.findIndexOfValue(mZramDefaultAlgo) >= 0) {
-                mZramAlgoPref.setValue(mZramDefaultAlgo);
-            }
+        ZramUtils.applyZram(mZramDefaultSize, mZramDefaultAlgo);
+        if (mZramSizePref != null && !TextUtils.isEmpty(mZramDefaultSize)
+                && mZramSizePref.findIndexOfValue(mZramDefaultSize) >= 0) {
+            mZramSizePref.setValue(mZramDefaultSize);
+        }
+        if (mZramAlgoPref != null && !TextUtils.isEmpty(mZramDefaultAlgo)
+                && mZramAlgoPref.findIndexOfValue(mZramDefaultAlgo) >= 0) {
+            mZramAlgoPref.setValue(mZramDefaultAlgo);
         }
         if (!TextUtils.isEmpty(mVmDefaultSwappiness)) {
             ZramUtils.setSwappiness(mVmDefaultSwappiness);

@@ -5,6 +5,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+export PATH=/vendor/bin:/system/bin:$PATH
+
 size_mb=$(getprop sys.parts.zram.size_mb)
 algo=$(getprop sys.parts.zram.algorithm)
 

@@ -36,16 +36,21 @@ public final class ZramUtils {
     private static final String VM_PAGE_CLUSTER_PATH = "/proc/sys/vm/page-cluster";
     private static final String VM_DIRTY_RATIO_PATH = "/proc/sys/vm/dirty_ratio";
 
+    private static final String[] FALLBACK_ALGORITHMS = {
+            "lzo-rle", "lzo", "lz4", "lz4hc", "zstd", "deflate"
+    };
+
     private ZramUtils() {}
 
     public static boolean isZramSupported() {
-        return FileUtils.fileExists(ZRAM_DISKSIZE_PATH);
+        return FileUtils.fileExists(ZRAM_DISKSIZE_PATH)
+                || FileUtils.fileExists(ZRAM_COMP_ALGO_PATH);
     }
 
     public static String[] getAvailableAlgorithms() {
         String raw = FileUtils.readOneLine(ZRAM_COMP_ALGO_PATH);
         if (TextUtils.isEmpty(raw)) {
-            return new String[0];
+            return FALLBACK_ALGORITHMS;
         }
         List<String> algos = new ArrayList<>();
         for (String token : raw.trim().split("\\s+")) {
@@ -54,7 +59,7 @@ public final class ZramUtils {
                 algos.add(clean);
             }
         }
-        return algos.toArray(new String[0]);
+        return algos.isEmpty() ? FALLBACK_ALGORITHMS : algos.toArray(new String[0]);
     }
 
     public static String getCurrentAlgorithm() {
