@@ -31,23 +31,23 @@ public final class ThermalUtils {
     private static final String THERMAL_CONTROL = "thermal_control";
     private static final String KEY_APP_STATE_PREFIX = "thermal_app_state_";
 
-    protected static final int STATE_DEFAULT = 0;
-    protected static final int STATE_BENCHMARK = 1;
-    protected static final int STATE_BROWSER = 2;
-    protected static final int STATE_CAMERA = 3;
-    protected static final int STATE_DIALER = 4;
-    protected static final int STATE_GAMING = 5;
-    protected static final int STATE_STREAMING = 6;
-    protected static final int STATE_HEAVY_GAMING = 7;
-    protected static final int STATE_EXTREME_GAMING = 8;
-    protected static final int STATE_NAVIGATION = 9;
-    protected static final int STATE_VIDEO_CALL = 10;
-    protected static final int STATE_VIDEO_PLAYBACK = 11;
-    protected static final int STATE_4K_RECORDING = 12;
-    protected static final int STATE_ARVR = 13;
-    protected static final int STATE_COOL = 14;
+    public static final int STATE_DEFAULT = 0;
+    public static final int STATE_BENCHMARK = 1;
+    public static final int STATE_BROWSER = 2;
+    public static final int STATE_CAMERA = 3;
+    public static final int STATE_DIALER = 4;
+    public static final int STATE_GAMING = 5;
+    public static final int STATE_STREAMING = 6;
+    public static final int STATE_HEAVY_GAMING = 7;
+    public static final int STATE_EXTREME_GAMING = 8;
+    public static final int STATE_NAVIGATION = 9;
+    public static final int STATE_VIDEO_CALL = 10;
+    public static final int STATE_VIDEO_PLAYBACK = 11;
+    public static final int STATE_4K_RECORDING = 12;
+    public static final int STATE_ARVR = 13;
+    public static final int STATE_COOL = 14;
 
-    protected static final int PROFILE_COUNT = 15;
+    public static final int PROFILE_COUNT = 15;
 
     private static final int[] PROFILE_NAME_RES = {
             R.string.thermal_default,
@@ -85,15 +85,15 @@ public final class ThermalUtils {
             R.string.thermal_cool_desc
     };
 
-    protected static int getProfileNameRes(int state) {
+    public static int getProfileNameRes(int state) {
         return PROFILE_NAME_RES[state >= 0 && state < PROFILE_COUNT ? state : STATE_DEFAULT];
     }
 
-    protected static int getProfileDescRes(int state) {
+    public static int getProfileDescRes(int state) {
         return PROFILE_DESC_RES[state >= 0 && state < PROFILE_COUNT ? state : STATE_DEFAULT];
     }
 
-    protected static boolean isProfileAvailable(int state) {
+    public static boolean isProfileAvailable(int state) {
         return ThermalMapResolver.getInstance().isProfileAvailable(state);
     }
 

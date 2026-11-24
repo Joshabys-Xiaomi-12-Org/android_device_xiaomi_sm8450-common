@@ -136,6 +136,19 @@ public final class ThermalMapResolver {
         return mBatterySaverCode;
     }
 
+    public String getConfigFileForState(int state) {
+        String codeStr = getCodeForState(state);
+        if (codeStr == null) {
+            return null;
+        }
+        try {
+            int code = Integer.parseInt(codeStr);
+            return mMapEntries.get(code);
+        } catch (NumberFormatException ignored) {
+            return null;
+        }
+    }
+
     public String getCodeForState(int state) {
         return switch (state) {
             case ThermalUtils.STATE_BENCHMARK -> mBenchmarkCode;

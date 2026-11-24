@@ -36,6 +36,7 @@ public class ThermalFileEditorActivity extends CollapsingToolbarBaseActivity
 
     private static final String TAG = "ThermalFileEditor";
     public static final String EXTRA_FILE_NAME = "thermal_file_name";
+    public static final String EXTRA_PROFILE_TITLE = "thermal_profile_title";
 
     private String mFileName;
     private boolean mWasEncrypted = true;
@@ -59,7 +60,8 @@ public class ThermalFileEditorActivity extends CollapsingToolbarBaseActivity
             finish();
             return;
         }
-        setTitle(mFileName);
+        String profileTitle = getIntent().getStringExtra(EXTRA_PROFILE_TITLE);
+        setTitle(!TextUtils.isEmpty(profileTitle) ? profileTitle : mFileName);
 
         mStatusView = findViewById(R.id.thermal_editor_status);
         mEditorText = findViewById(R.id.thermal_editor_text);
@@ -96,7 +98,7 @@ public class ThermalFileEditorActivity extends CollapsingToolbarBaseActivity
         String format = getString(mWasEncrypted
                 ? R.string.thermal_editor_format_encrypted
                 : R.string.thermal_editor_format_plain);
-        mStatusView.setText(source + "  •  " + format);
+        mStatusView.setText(mFileName + "  •  " + source + "  •  " + format);
         mResetButton.setEnabled(modified);
     }
 
