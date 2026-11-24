@@ -252,33 +252,70 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
         setupZramPreferences();
     }
 
+    // Persisted stock ZRAM/VM defaults (captured once before user modifications)
+    private static final String KEY_STOCK_ZRAM_SIZE = "stock_zram_size";
+    private static final String KEY_STOCK_ZRAM_ALGO = "stock_zram_algo";
+    private static final String KEY_STOCK_VM_SWAPPINESS = "stock_vm_swappiness";
+    private static final String KEY_STOCK_VM_VFS_PRESSURE = "stock_vm_vfs_pressure";
+    private static final String KEY_STOCK_VM_PAGE_CLUSTER = "stock_vm_page_cluster";
+    private static final String KEY_STOCK_VM_DIRTY_PROFILE = "stock_vm_dirty_profile";
+
     private void setupZramPreferences() {
-        mZramDefaultSize = ZramUtils.getCurrentSizeMb();
-        if (TextUtils.isEmpty(mZramDefaultSize)) {
-            mZramDefaultSize = "3584";
-        }
-        initStaticListPref(mZramSizePref, mZramDefaultSize);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
+        boolean zramCurrentlyEnabled = prefs.getBoolean(KEY_ZRAM_ENABLE, false);
 
         String[] algos = ZramUtils.getAvailableAlgorithms();
+        String curSize = ZramUtils.getCurrentSizeMb();
         String curAlgo = ZramUtils.getCurrentAlgorithm();
-        mZramDefaultAlgo = !TextUtils.isEmpty(curAlgo) ? curAlgo
-                : (algos.length > 0 ? algos[0] : null);
-        configureListPref(mZramAlgoPref, algos, algos, mZramDefaultAlgo);
+        String curSwappiness = ZramUtils.getCurrentSwappiness();
+        String curVfs = ZramUtils.getCurrentVfsCachePressure();
+        String curCluster = ZramUtils.getCurrentPageCluster();
+        String curDirty = ZramUtils.getCurrentDirtyProfile();
 
-        mVmDefaultSwappiness = ZramUtils.getCurrentSwappiness();
-        if (TextUtils.isEmpty(mVmDefaultSwappiness)) mVmDefaultSwappiness = "100";
-        initStaticListPref(mVmSwappinessPref, mVmDefaultSwappiness);
+        // Capture true stock values once when ZRAM optimizer is not active
+        if (!prefs.contains(KEY_STOCK_ZRAM_SIZE)) {
+            String stockSize = (!zramCurrentlyEnabled && !TextUtils.isEmpty(curSize))
+                    ? curSize : "3584";
+            String stockAlgo = (!zramCurrentlyEnabled && !TextUtils.isEmpty(curAlgo))
+                    ? curAlgo : (algos.length > 0 ? algos[0] : "lzo-rle");
+            String stockSwap = (!zramCurrentlyEnabled && !TextUtils.isEmpty(curSwappiness))
+                    ? curSwappiness : "100";
+            String stockVfs = (!zramCurrentlyEnabled && !TextUtils.isEmpty(curVfs))
+                    ? curVfs : "50";
+            String stockCluster = (!zramCurrentlyEnabled && !TextUtils.isEmpty(curCluster))
+                    ? curCluster : "0";
+            String stockDirty = (!zramCurrentlyEnabled && !TextUtils.isEmpty(curDirty))
+                    ? curDirty : "default";
 
-        mVmDefaultVfsPressure = ZramUtils.getCurrentVfsCachePressure();
-        if (TextUtils.isEmpty(mVmDefaultVfsPressure)) mVmDefaultVfsPressure = "50";
-        initStaticListPref(mVmVfsPressurePref, mVmDefaultVfsPressure);
+            prefs.edit()
+                    .putString(KEY_STOCK_ZRAM_SIZE, stockSize)
+                    .putString(KEY_STOCK_ZRAM_ALGO, stockAlgo)
+                    .putString(KEY_STOCK_VM_SWAPPINESS, stockSwap)
+                    .putString(KEY_STOCK_VM_VFS_PRESSURE, stockVfs)
+                    .putString(KEY_STOCK_VM_PAGE_CLUSTER, stockCluster)
+                    .putString(KEY_STOCK_VM_DIRTY_PROFILE, stockDirty)
+                    .apply();
+        }
 
-        mVmDefaultPageCluster = ZramUtils.getCurrentPageCluster();
-        if (TextUtils.isEmpty(mVmDefaultPageCluster)) mVmDefaultPageCluster = "0";
-        initStaticListPref(mVmPageClusterPref, mVmDefaultPageCluster);
+        mZramDefaultSize = prefs.getString(KEY_STOCK_ZRAM_SIZE, "3584");
+        mZramDefaultAlgo = prefs.getString(KEY_STOCK_ZRAM_ALGO,
+                algos.length > 0 ? algos[0] : "lzo-rle");
+        mVmDefaultSwappiness = prefs.getString(KEY_STOCK_VM_SWAPPINESS, "100");
+        mVmDefaultVfsPressure = prefs.getString(KEY_STOCK_VM_VFS_PRESSURE, "50");
+        mVmDefaultPageCluster = prefs.getString(KEY_STOCK_VM_PAGE_CLUSTER, "0");
+        mVmDefaultDirtyProfile = prefs.getString(KEY_STOCK_VM_DIRTY_PROFILE, "default");
 
-        mVmDefaultDirtyProfile = ZramUtils.getCurrentDirtyProfile();
-        initStaticListPref(mVmDirtyProfilePref, mVmDefaultDirtyProfile);
+        initStaticListPref(mZramSizePref, !TextUtils.isEmpty(curSize) ? curSize : mZramDefaultSize);
+        configureListPref(mZramAlgoPref, algos, algos,
+                !TextUtils.isEmpty(curAlgo) ? curAlgo : mZramDefaultAlgo);
+        initStaticListPref(mVmSwappinessPref,
+                !TextUtils.isEmpty(curSwappiness) ? curSwappiness : mVmDefaultSwappiness);
+        initStaticListPref(mVmVfsPressurePref,
+                !TextUtils.isEmpty(curVfs) ? curVfs : mVmDefaultVfsPressure);
+        initStaticListPref(mVmPageClusterPref,
+                !TextUtils.isEmpty(curCluster) ? curCluster : mVmDefaultPageCluster);
+        initStaticListPref(mVmDirtyProfilePref,
+                !TextUtils.isEmpty(curDirty) ? curDirty : mVmDefaultDirtyProfile);
     }
 
     private void initStaticListPref(ListPreference pref, String fallbackValue) {
