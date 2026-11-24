@@ -169,7 +169,6 @@ debug.sf.late.sf.duration.144=9722222
 debug.sf.late.sf.duration.60=15666666
 debug.sf.late.sf.duration.90=16111111
 debug.sf.late.sf.duration=15666666
-debug.sf.predict_hwc_composition_strategy=0
 debug.sf.set_idle_timer_ms=1000
 debug.sf.treat_170m_as_sRGB=1
 debug.sf.use_phase_offsets_as_durations=1
