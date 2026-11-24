@@ -41,7 +41,7 @@
     <string name="thermal_apps_title">アプリ</string>
     <string name="saturation_reset">デフォルトに戻す</string>
     <string name="Powertools_title">Powertools</string>
-    <string name="Powertools_summary">パフォーマンスと効率を最適化するために電源プロファイル、CPU/GPU周波数、ガバナーを設定</string>
+    <string name="Powertools_summary">パワープリセット、CPU/GPU周波数、ガバナー、ZRAM/メモリ設定をカスタマイズ</string>
     <string name="powertools_gpu_category">GPU</string>
     <string name="powertools_gpu_enable_title">GPUオプティマイザーを有効化</string>
     <string name="powertools_gpu_enable_summary">GPU最適化の切り替え</string>

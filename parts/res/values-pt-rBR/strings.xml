@@ -41,7 +41,7 @@
     <string name="thermal_apps_title">Aplicativos</string>
     <string name="saturation_reset">Redefinir para o padrão</string>
     <string name="Powertools_title">Powertools</string>
-    <string name="Powertools_summary">Personalize perfis de energia, frequências de CPU/GPU e governadores para melhor desempenho e eficiência</string>
+    <string name="Powertools_summary">Personalize predefinições de energia, frequências de CPU/GPU, governadores e ajustes de ZRAM/memória</string>
     <string name="powerprofile_tile_label">Perfil de energia</string>
     <string name="powerprofile_mode_balance">Equilibrado</string>
     <string name="powerprofile_mode_performance">Desempenho</string>

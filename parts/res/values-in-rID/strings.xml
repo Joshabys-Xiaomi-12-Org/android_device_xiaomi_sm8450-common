@@ -41,7 +41,7 @@
     <string name="thermal_apps_title">Aplikasi</string>
     <string name="saturation_reset">Atur ulang ke bawaan</string>
     <string name="Powertools_title">Powertools</string>
-    <string name="Powertools_summary">Sesuaikan profil daya, frekuensi CPU/GPU, dan governor untuk performa dan efisiensi optimal</string>
+    <string name="Powertools_summary">Sesuaikan preset daya, frekuensi CPU/GPU, governor, serta penyetelan ZRAM dan memori</string>
     <string name="powertools_gpu_category">GPU</string>
     <string name="powertools_gpu_enable_title">Aktifkan Pengoptimal GPU</string>
     <string name="powertools_gpu_enable_summary">Alihkan pengoptimalan GPU</string>

@@ -186,4 +186,5 @@
     <string name="powertools_vm_dirty_default">Parazgjedhje (20 / 10)</string>
     <string name="powertools_vm_dirty_balanced">I balancuar (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">Shpejtësi e lartë (40 / 20)</string>
+    <string name="Powertools_summary">Personalizo paracaktimet e energjisë, frekuencat CPU/GPU, guvernatorët dhe rregullimet e ZRAM/memories</string>
 </resources>

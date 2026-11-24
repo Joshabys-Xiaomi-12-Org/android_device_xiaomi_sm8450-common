@@ -40,7 +40,7 @@
     <string name="thermal_profile_footer">Profilul selectat este aplicat automat în timp ce aplicația este utilizată.</string>
     <string name="thermal_apps_title">Aplicații</string>
     <string name="saturation_reset">Resetează la valorile implicite</string>
-    <string name="Powertools_summary">Personalizați profilurile de alimentare, frecvențele CPU/GPU și guvernatorii</string>
+    <string name="Powertools_summary">Personalizează presetările de energie, frecvențele CPU/GPU, guvernatorii și reglajele ZRAM/memorie</string>
     <string name="powertools_gpu_enable_title">Activați optimizatorul GPU</string>
     <string name="powertools_gpu_enable_summary">Comutați optimizările GPU</string>
     <string name="powertools_gpu_freq_category">Configurare GPU</string>

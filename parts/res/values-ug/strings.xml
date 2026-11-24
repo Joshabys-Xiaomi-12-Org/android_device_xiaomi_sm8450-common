@@ -182,4 +182,5 @@
     <string name="powertools_vm_dirty_default">سۈكۈتتىكى (20 / 10)</string>
     <string name="powertools_vm_dirty_balanced">تەڭپۇڭ (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">يۇقىرى ئۆتكۈزۈش (40 / 20)</string>
+    <string name="Powertools_summary">توك تەڭشىكى، CPU/GPU چاستوتىسى، باشقۇرغۇچ ۋە ZRAM/ئىچكى ساقلىغۇچ تەڭشەكلىرىنى خاسلاشتۇرۇڭ</string>
 </resources>

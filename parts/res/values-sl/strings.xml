@@ -186,4 +186,5 @@
     <string name="powertools_vm_dirty_default">Privzeto (20 / 10)</string>
     <string name="powertools_vm_dirty_balanced">Uravnoteženo (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">Prepustnost (40 / 20)</string>
+    <string name="Powertools_summary">Prilagodite prednastavitve moči, frekvence CPU/GPU, upravljalnike ter nastavitve ZRAM in pomnilnika</string>
 </resources>

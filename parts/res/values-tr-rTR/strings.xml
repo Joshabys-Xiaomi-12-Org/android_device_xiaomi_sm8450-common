@@ -41,7 +41,7 @@
     <string name="thermal_apps_title">Uygulamalar</string>
     <string name="saturation_reset">Varsayılana sıfırla</string>
     <string name="Powertools_title">Powertools</string>
-    <string name="Powertools_summary">Performans ve verimlilik için güç profillerini, CPU/GPU frekanslarını ve yöneticileri özelleştirin</string>
+    <string name="Powertools_summary">Güç ön ayarlarını, CPU/GPU frekanslarını, yöneticileri ve ZRAM/bellek ayarlarını özelleştirin</string>
     <string name="powertools_gpu_category">GPU</string>
     <string name="powertools_gpu_enable_title">GPU İyileştiriciyi Etkinleştir</string>
     <string name="powertools_gpu_enable_summary">GPU iyileştirmelerini aç/kapat</string>

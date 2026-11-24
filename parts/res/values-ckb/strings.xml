@@ -182,4 +182,5 @@
     <string name="powertools_vm_dirty_default">بنەڕەتی (20 / 10)</string>
     <string name="powertools_vm_dirty_balanced">هاوسەنگ (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">خێرایی بەرز (40 / 20)</string>
+    <string name="Powertools_summary">ڕێکخستنی پڕۆفایلەکانی وزە، فرێکوێنسی CPU/GPU، کۆنترۆڵکەرەکان و ZRAM/بیرگە بۆ کارایی باشتر</string>
 </resources>

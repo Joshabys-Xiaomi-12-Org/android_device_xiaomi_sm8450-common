@@ -41,7 +41,7 @@
     <string name="thermal_apps_title">Ứng dụng</string>
     <string name="saturation_reset">Đặt lại mặc định</string>
     <string name="Powertools_title">Powertools</string>
-    <string name="Powertools_summary">Tùy chỉnh cấu hình nguồn, tần số CPU/GPU và trình điều khiển để tối ưu hiệu năng và pin</string>
+    <string name="Powertools_summary">Tùy chỉnh cấu hình năng lượng, tần số CPU/GPU, bộ điều tốc và tinh chỉnh ZRAM/bộ nhớ</string>
     <string name="powertools_gpu_category">GPU</string>
     <string name="powertools_gpu_enable_title">Bật trình tối ưu GPU</string>
     <string name="powertools_gpu_enable_summary">Bật/tắt tối ưu hóa GPU</string>

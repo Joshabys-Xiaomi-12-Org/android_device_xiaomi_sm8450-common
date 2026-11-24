@@ -41,7 +41,7 @@
     <string name="thermal_apps_title">ऐप्स</string>
     <string name="saturation_reset">डिफ़ॉल्ट पर रीसेट करें</string>
     <string name="Powertools_title">Powertools</string>
-    <string name="Powertools_summary">बेहतर प्रदर्शन और दक्षता के लिए पावर प्रोफ़ाइल, CPU/GPU फ़्रीक्वेंसी और गवर्नर कस्टमाइज़ करें</string>
+    <string name="Powertools_summary">बेहतर प्रदर्शन और दक्षता के लिए पावर प्रीसेट, CPU/GPU आवृत्तियाँ, गवर्नर और ZRAM/मेमोरी ट्यूनिंग अनुकूलित करें</string>
     <string name="powertools_gpu_category">GPU</string>
     <string name="powertools_gpu_enable_title">GPU ऑप्टिमाइज़र सक्षम करें</string>
     <string name="powertools_gpu_enable_summary">GPU ऑप्टिमाइज़ेशन टॉगल करें</string>

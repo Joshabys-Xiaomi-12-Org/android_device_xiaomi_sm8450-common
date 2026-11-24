@@ -41,7 +41,7 @@
     <string name="thermal_apps_title">Aplikacje</string>
     <string name="saturation_reset">Przywróć domyślne</string>
     <string name="Powertools_title">Powertools</string>
-    <string name="Powertools_summary">Dostosuj profile zasilania, częstotliwości CPU/GPU i zarządcy dla wydajności i oszczędności energii</string>
+    <string name="Powertools_summary">Dostosuj profile zasilania, częstotliwości CPU/GPU, zarządców oraz ustawienia ZRAM i pamięci</string>
     <string name="powertools_gpu_category">GPU</string>
     <string name="powertools_gpu_enable_title">Włącz optymalizator GPU</string>
     <string name="powertools_gpu_enable_summary">Przełącz optymalizacje GPU</string>

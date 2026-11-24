@@ -41,7 +41,7 @@
     <string name="thermal_apps_title">앱</string>
     <string name="saturation_reset">기본값으로 재설정</string>
     <string name="Powertools_title">Powertools</string>
-    <string name="Powertools_summary">성능과 효율을 최적화하도록 전원 프로필, CPU/GPU 주파수 및 거버너 설정</string>
+    <string name="Powertools_summary">성능과 효율을 위해 전원 프리셋, CPU/GPU 주파수, 거버너 및 ZRAM/메모리 설정 사용자 지정</string>
     <string name="powertools_gpu_category">GPU</string>
     <string name="powertools_gpu_enable_title">GPU 최적화 사용</string>
     <string name="powertools_gpu_enable_summary">GPU 최적화 전환</string>

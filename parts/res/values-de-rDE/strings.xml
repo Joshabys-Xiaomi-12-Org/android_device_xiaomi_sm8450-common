@@ -41,7 +41,7 @@
     <string name="thermal_apps_title">Apps</string>
     <string name="saturation_reset">Auf Standard zurücksetzen</string>
     <string name="Powertools_title">Powertools</string>
-    <string name="Powertools_summary">Energieprofile, CPU/GPU-Frequenzen und Governor für optimale Leistung und Effizienz anpassen</string>
+    <string name="Powertools_summary">Leistungsvoreinstellungen, CPU/GPU-Frequenzen, Governor sowie ZRAM- und Speicher-Tuning anpassen</string>
     <string name="powertools_gpu_category">GPU</string>
     <string name="powertools_gpu_enable_title">GPU-Optimierer aktivieren</string>
     <string name="powertools_gpu_enable_summary">GPU-Optimierungen umschalten</string>

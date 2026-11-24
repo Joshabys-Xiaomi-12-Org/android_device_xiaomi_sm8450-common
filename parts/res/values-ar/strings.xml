@@ -41,7 +41,7 @@
     <string name="thermal_apps_title">التطبيقات</string>
     <string name="saturation_reset">إعادة الضبط للافتراضي</string>
     <string name="Powertools_title">Powertools</string>
-    <string name="Powertools_summary">تخصيص أوضاع الطاقة وترددات المعالج والرسوميات لتحسين الأداء والكفاءة</string>
+    <string name="Powertools_summary">تخصيص إعدادات الطاقة وترددات المعالج والرسوميات والمنظمات وضبط ZRAM والذاكرة للأداء والكفاءة</string>
     <string name="powertools_gpu_category">معالج الرسوميات</string>
     <string name="powertools_gpu_enable_title">تفعيل محسن الرسوميات</string>
     <string name="powertools_gpu_enable_summary">تبديل تحسينات معالج الرسوميات</string>

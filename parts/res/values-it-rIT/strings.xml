@@ -41,7 +41,7 @@
     <string name="thermal_apps_title">App</string>
     <string name="saturation_reset">Ripristina predefiniti</string>
     <string name="Powertools_title">Powertools</string>
-    <string name="Powertools_summary">Personalizza profili energetici, frequenze CPU/GPU e governor per prestazioni ed efficienza ottimali</string>
+    <string name="Powertools_summary">Personalizza preimpostazioni energetiche, frequenze CPU/GPU, governor e regolazioni ZRAM/memoria</string>
     <string name="powertools_gpu_category">GPU</string>
     <string name="powertools_gpu_enable_title">Attiva ottimizzatore GPU</string>
     <string name="powertools_gpu_enable_summary">Attiva/disattiva ottimizzazioni GPU</string>

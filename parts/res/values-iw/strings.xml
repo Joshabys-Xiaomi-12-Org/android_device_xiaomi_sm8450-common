@@ -40,7 +40,7 @@
     <string name="thermal_profile_footer">הפרופיל שנבחר מוחל באופן אוטומטי בזמן שהאפליקציה בשימוש.</string>
     <string name="thermal_apps_title">אפליקציות</string>
     <string name="saturation_reset">איפוס לברירת מחדל</string>
-    <string name="Powertools_summary">התאמה אישית של פרופילי צריכת חשמל, תדרי CPU/GPU ומנהלי תדרים</string>
+    <string name="Powertools_summary">התאם אישית פרופילי חשמל, תדרי CPU/GPU, מושלים וכוונון ZRAM וזיכרון</string>
     <string name="powertools_gpu_enable_title">הפעל מיטוב GPU</string>
     <string name="powertools_gpu_enable_summary">הפעל או כבה מיטוב GPU</string>
     <string name="powertools_gpu_freq_category">הגדרת GPU</string>

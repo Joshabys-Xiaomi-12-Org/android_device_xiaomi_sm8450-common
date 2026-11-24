@@ -41,7 +41,7 @@
     <string name="thermal_apps_title">应用</string>
     <string name="saturation_reset">恢复默认</string>
     <string name="Powertools_title">Powertools</string>
-    <string name="Powertools_summary">自定义电源模式、CPU/GPU 频率和调速器以优化性能与能效</string>
+    <string name="Powertools_summary">自定义性能预设、CPU/GPU 频率、调速器以及 ZRAM 与内存调优</string>
     <string name="powertools_gpu_category">GPU</string>
     <string name="powertools_gpu_enable_title">启用 GPU 优化器</string>
     <string name="powertools_gpu_enable_summary">开关 GPU 优化</string>

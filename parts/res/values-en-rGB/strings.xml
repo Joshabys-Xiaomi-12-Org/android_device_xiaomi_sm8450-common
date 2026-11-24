@@ -29,7 +29,7 @@
     <string name="custom_seekbar_default_value">by default</string>
     <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
     <string name="custom_seekbar_default_value_is_set">Default value is set</string>
-    <string name="Powertools_summary">Customise power profiles, CPU/GPU frequencies, and governor settings for optimised performance and efficiency</string>
+    <string name="Powertools_summary">Customize power presets, CPU/GPU frequencies, governors, and ZRAM/memory tuning for performance and efficiency</string>
     <string name="powertools_gpu_enable_title">Enable GPU Optimiser</string>
     <string name="powertools_gpu_enable_summary">Toggle GPU optimisations</string>
     <string name="powertools_cpu_enable_title">Enable CPU Optimiser</string>

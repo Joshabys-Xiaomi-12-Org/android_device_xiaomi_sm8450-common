@@ -40,7 +40,7 @@
     <string name="thermal_profile_footer">A kiválasztott profil automatikusan érvénybe lép, amíg az alkalmazás használatban van.</string>
     <string name="thermal_apps_title">Alkalmazások</string>
     <string name="saturation_reset">Alapértelmezés visszaállítása</string>
-    <string name="Powertools_summary">Energiaprofilok, CPU/GPU frekvenciák és kormányzók testreszabása</string>
+    <string name="Powertools_summary">Teljesítményprofilok, CPU/GPU frekvenciák, vezérlők és ZRAM/memória beállítások testreszabása</string>
     <string name="powertools_gpu_enable_title">GPU optimalizáló engedélyezése</string>
     <string name="powertools_gpu_enable_summary">GPU optimalizálások kapcsolása</string>
     <string name="powertools_gpu_freq_category">GPU beállítása</string>

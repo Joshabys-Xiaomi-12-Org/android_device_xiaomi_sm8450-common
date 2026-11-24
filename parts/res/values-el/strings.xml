@@ -40,7 +40,7 @@
     <string name="thermal_profile_footer">Το επιλεγμένο προφίλ εφαρμόζεται αυτόματα όσο η εφαρμογή χρησιμοποιείται.</string>
     <string name="thermal_apps_title">Εφαρμογές</string>
     <string name="saturation_reset">Επαναφορά προεπιλογών</string>
-    <string name="Powertools_summary">Προσαρμόστε προφίλ ενέργειας, συχνότητες CPU/GPU και ρυθμιστές</string>
+    <string name="Powertools_summary">Προσαρμόστε προεπιλογές ισχύος, συχνότητες CPU/GPU, διαχειριστές και ρυθμίσεις ZRAM/μνήμης</string>
     <string name="powertools_gpu_enable_title">Ενεργοποίηση βελτιστοποίησης GPU</string>
     <string name="powertools_gpu_enable_summary">Εναλλαγή βελτιστοποιήσεων GPU</string>
     <string name="powertools_gpu_freq_category">Ρύθμιση GPU</string>

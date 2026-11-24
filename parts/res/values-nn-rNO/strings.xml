@@ -186,4 +186,5 @@
     <string name="powertools_vm_dirty_default">Standard (20 / 10)</string>
     <string name="powertools_vm_dirty_balanced">Balansert (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">Gjennomstrøyming (40 / 20)</string>
+    <string name="Powertools_summary">Tilpass straumprofilar, CPU/GPU-frekvensar, styringar samt ZRAM- og minnejustering</string>
 </resources>

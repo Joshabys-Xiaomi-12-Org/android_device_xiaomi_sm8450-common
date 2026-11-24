@@ -186,4 +186,5 @@
     <string name="powertools_vm_dirty_default">Standart (20 / 10)</string>
     <string name="powertools_vm_dirty_balanced">Balanslı (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">Yüksək ötürmə (40 / 20)</string>
+    <string name="Powertools_summary">Performans və səmərəlilik üçün güc profillərini, CPU/GPU tezliklərini, idarəediciləri və ZRAM/yaddaş ayarlarını fərdiləşdirin</string>
 </resources>
