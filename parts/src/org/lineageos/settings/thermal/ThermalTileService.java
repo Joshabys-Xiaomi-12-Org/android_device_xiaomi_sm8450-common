@@ -29,19 +29,10 @@ import java.util.List;
 
 /**
  * Quick Settings Tile for switching the global Xiaomi thermal profile.
- * Tap cycles through key available profiles; long-press opens the full
- * profile picker menu (ThermalGlobalProfileActivity).
+ * Tap cycles through all available profiles in the same order as the profile
+ * picker menu; long-press opens ThermalGlobalProfileActivity.
  */
 public class ThermalTileService extends TileService {
-
-    private static final int[] QUICK_CYCLE_ORDER = {
-            ThermalUtils.STATE_DEFAULT,
-            ThermalUtils.STATE_COOL,
-            ThermalUtils.STATE_GAMING,
-            ThermalUtils.STATE_HEAVY_GAMING,
-            ThermalUtils.STATE_EXTREME_GAMING,
-            ThermalUtils.STATE_BENCHMARK
-    };
 
     private ThermalUtils mThermalUtils;
     private Toast mToast;
@@ -89,7 +80,7 @@ public class ThermalTileService extends TileService {
 
     private List<Integer> getAvailableCycleProfiles() {
         List<Integer> list = new ArrayList<>();
-        for (int state : QUICK_CYCLE_ORDER) {
+        for (int state = 0; state < ThermalUtils.PROFILE_COUNT; state++) {
             if (ThermalUtils.isProfileAvailable(state)) {
                 list.add(state);
             }
