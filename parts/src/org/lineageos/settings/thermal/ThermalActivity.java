@@ -71,8 +71,11 @@ public class ThermalActivity extends CollapsingToolbarAppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getFragmentManager().beginTransaction().replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame,
-                new ThermalSettingsFragment(), TAG_THERMAL).commit();
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction().replace(
+                    com.android.settingslib.collapsingtoolbar.R.id.content_frame,
+                    new ThermalSettingsFragment(), TAG_THERMAL).commit();
+        }
 
         getOnBackPressedDispatcher().addCallback(this, mSearchBackCallback);
 
@@ -333,7 +336,7 @@ public class ThermalActivity extends CollapsingToolbarAppCompatActivity
     }
 
     private ThermalSettingsFragment getThermalFragment() {
-        return (ThermalSettingsFragment) getFragmentManager().findFragmentByTag(TAG_THERMAL);
+        return (ThermalSettingsFragment) getSupportFragmentManager().findFragmentByTag(TAG_THERMAL);
     }
 
     private static androidx.appcompat.widget.Toolbar findToolbar(View view) {
