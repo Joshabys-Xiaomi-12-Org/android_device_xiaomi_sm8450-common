@@ -68,14 +68,6 @@ public final class ThermalUtils {
         return PROFILE_DESC_RES[state >= 0 && state < PROFILE_COUNT ? state : STATE_DEFAULT];
     }
 
-    private static final String THERMAL_STATE_DEFAULT = "0";
-    private static final String THERMAL_STATE_BENCHMARK = "10";
-    private static final String THERMAL_STATE_BROWSER = "11";
-    private static final String THERMAL_STATE_CAMERA = "12";
-    private static final String THERMAL_STATE_DIALER = "8";
-    private static final String THERMAL_STATE_GAMING = "13";
-    private static final String THERMAL_STATE_STREAMING = "14";
-
     private static final String THERMAL_BENCHMARK = "thermal.benchmark=";
     private static final String THERMAL_BROWSER = "thermal.browser=";
     private static final String THERMAL_CAMERA = "thermal.camera=";
@@ -85,10 +77,12 @@ public final class ThermalUtils {
 
     private static final String THERMAL_SCONFIG = "/sys/class/thermal/thermal_message/sconfig";
 
-    private SharedPreferences mSharedPrefs;
+    private final SharedPreferences mSharedPrefs;
+    private final ThermalMapResolver mMapResolver;
 
     protected ThermalUtils(Context context) {
         mSharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
+        mMapResolver = ThermalMapResolver.getInstance();
     }
 
     public static void startService(Context context) {
@@ -166,29 +160,29 @@ public final class ThermalUtils {
     }
 
     protected void setDefaultThermalProfile() {
-        FileUtils.writeLine(THERMAL_SCONFIG, THERMAL_STATE_DEFAULT);
+        FileUtils.writeLine(THERMAL_SCONFIG, mMapResolver.getDefaultCode());
     }
 
     protected void setThermalProfile(String packageName) {
         String value = getValue();
-        String modes[];
-        String state = THERMAL_STATE_DEFAULT;
+        String[] modes;
+        String state = mMapResolver.getDefaultCode();
 
         if (value != null) {
             modes = value.split(":");
 
             if (modes[0].contains(packageName + ",")) {
-                state = THERMAL_STATE_BENCHMARK;
+                state = mMapResolver.getBenchmarkCode();
             } else if (modes[1].contains(packageName + ",")) {
-                state = THERMAL_STATE_BROWSER;
+                state = mMapResolver.getBrowserCode();
             } else if (modes[2].contains(packageName + ",")) {
-                state = THERMAL_STATE_CAMERA;
+                state = mMapResolver.getCameraCode();
             } else if (modes[3].contains(packageName + ",")) {
-                state = THERMAL_STATE_DIALER;
+                state = mMapResolver.getDialerCode();
             } else if (modes[4].contains(packageName + ",")) {
-                state = THERMAL_STATE_GAMING;
+                state = mMapResolver.getGamingCode();
             } else if (modes[5].contains(packageName + ",")) {
-                state = THERMAL_STATE_STREAMING;
+                state = mMapResolver.getStreamingCode();
             }
         }
         FileUtils.writeLine(THERMAL_SCONFIG, state);

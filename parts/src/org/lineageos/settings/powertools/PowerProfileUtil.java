@@ -37,6 +37,7 @@ import android.util.Log;
 import androidx.preference.PreferenceManager;
 
 import org.lineageos.settings.R;
+import org.lineageos.settings.thermal.ThermalMapResolver;
 import org.lineageos.settings.utils.FileUtils;
 
 import java.util.Arrays;
@@ -58,10 +59,10 @@ public class PowerProfileUtil {
     public static final int MODE_BATTERY_SAVER = 3;
     public static final int MODE_UNKNOWN = 4;
 
-    private static final int POWERPROFILE_BALANCE = 0;
-    private static final int POWERPROFILE_GAMING = 13;
-    private static final int POWERPROFILE_PERFORMANCE = 20;
-    private static final int POWERPROFILE_BATTERY_SAVER = 3;
+    private final int mPowerProfileBalance;
+    private final int mPowerProfileGaming;
+    private final int mPowerProfilePerformance;
+    private final int mPowerProfileBatterySaver;
 
     private Context mContext;
     private SharedPreferences mSharedPrefs;
@@ -72,6 +73,12 @@ public class PowerProfileUtil {
     private String[] mModes;
 
     public PowerProfileUtil(Context context) {
+        ThermalMapResolver mapResolver = ThermalMapResolver.getInstance();
+        mPowerProfileBalance = Integer.parseInt(mapResolver.getDefaultCode());
+        mPowerProfileGaming = Integer.parseInt(mapResolver.getGamingCode());
+        mPowerProfilePerformance = Integer.parseInt(mapResolver.getPerformanceCode());
+        mPowerProfileBatterySaver = Integer.parseInt(mapResolver.getBatterySaverCode());
+
         mContext = context;
         mSharedPrefs = PreferenceManager.getDefaultSharedPreferences(mContext);
         mNotificationManager = (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
@@ -101,17 +108,16 @@ public class PowerProfileUtil {
         }
         try {
             int value = Integer.parseInt(line.trim());
-            switch (value) {
-                case POWERPROFILE_BALANCE:
-                    return MODE_BALANCE;
-                case POWERPROFILE_GAMING:
-                    return MODE_GAMING;
-                case POWERPROFILE_PERFORMANCE:
-                    return MODE_PERFORMANCE;
-                case POWERPROFILE_BATTERY_SAVER:
-                    return MODE_BATTERY_SAVER;
-                default:
-                    return MODE_UNKNOWN;
+            if (value == mPowerProfileBalance) {
+                return MODE_BALANCE;
+            } else if (value == mPowerProfileGaming) {
+                return MODE_GAMING;
+            } else if (value == mPowerProfilePerformance) {
+                return MODE_PERFORMANCE;
+            } else if (value == mPowerProfileBatterySaver) {
+                return MODE_BATTERY_SAVER;
+            } else {
+                return MODE_UNKNOWN;
             }
         } catch (NumberFormatException e) {
             Log.e(TAG, "Error parsing thermal mode value: ", e);
@@ -123,27 +129,27 @@ public class PowerProfileUtil {
         mCurrentMode = mode;
         int thermalValue;
         switch (mode) {
-            case MODE_BALANCE:
-                thermalValue = POWERPROFILE_BALANCE;
+            case MODE_BALANCE -> {
+                thermalValue = mPowerProfileBalance;
                 setPerformanceModeActive(1);
-                break;
-            case MODE_GAMING:
-                thermalValue = POWERPROFILE_GAMING;
+            }
+            case MODE_GAMING -> {
+                thermalValue = mPowerProfileGaming;
                 setPerformanceModeActive(3);
                 optimizeGameLaunch();
-                break;
-            case MODE_PERFORMANCE:
-                thermalValue = POWERPROFILE_PERFORMANCE;
+            }
+            case MODE_PERFORMANCE -> {
+                thermalValue = mPowerProfilePerformance;
                 setPerformanceModeActive(2);
-                break;
-            case MODE_BATTERY_SAVER:
-                thermalValue = POWERPROFILE_BATTERY_SAVER;
+            }
+            case MODE_BATTERY_SAVER -> {
+                thermalValue = mPowerProfileBatterySaver;
                 setPerformanceModeActive(0);
-                break;
-            default:
-                thermalValue = POWERPROFILE_BALANCE;
+            }
+            default -> {
+                thermalValue = mPowerProfileBalance;
                 setPerformanceModeActive(1);
-                break;
+            }
         }
 
         boolean success = FileUtils.writeLine(THERMAL_SCONFIG, String.valueOf(thermalValue));
