@@ -131,9 +131,29 @@ public final class ThermalUtils {
                 UserHandle.CURRENT);
     }
 
+    public boolean hasManualStateForPackage(String packageName) {
+        if (packageName == null) {
+            return false;
+        }
+        return mSharedPrefs.contains(KEY_APP_STATE_PREFIX + packageName)
+                || getLegacyStateForPackage(packageName) != STATE_DEFAULT;
+    }
+
+    public int getDisplayStateForPackage(String packageName) {
+        if (hasManualStateForPackage(packageName)) {
+            return getStateForPackage(packageName);
+        }
+        if (isAutoProfilesEnabled()) {
+            return mAutoClassifier.classify(packageName);
+        }
+        return STATE_DEFAULT;
+    }
+
     protected void writePackage(String packageName, int mode) {
         SharedPreferences.Editor editor = mSharedPrefs.edit();
-        if (mode <= STATE_DEFAULT || mode >= PROFILE_COUNT) {
+        if (mode < STATE_DEFAULT || mode >= PROFILE_COUNT) {
+            editor.remove(KEY_APP_STATE_PREFIX + packageName);
+        } else if (mode == STATE_DEFAULT && !isAutoProfilesEnabled()) {
             editor.remove(KEY_APP_STATE_PREFIX + packageName);
         } else {
             editor.putInt(KEY_APP_STATE_PREFIX + packageName, mode);
@@ -193,11 +213,10 @@ public final class ThermalUtils {
     }
 
     protected void setThermalProfile(String packageName) {
-        int appState = getStateForPackage(packageName);
         int effectiveState;
-        if (appState != STATE_DEFAULT) {
-            // Manual per-app profile always takes highest priority.
-            effectiveState = appState;
+        if (hasManualStateForPackage(packageName)) {
+            int manualState = getStateForPackage(packageName);
+            effectiveState = manualState != STATE_DEFAULT ? manualState : getGlobalProfile();
         } else if (isAutoProfilesEnabled()) {
             int autoState = mAutoClassifier.classify(packageName);
             effectiveState = autoState != STATE_DEFAULT ? autoState : getGlobalProfile();

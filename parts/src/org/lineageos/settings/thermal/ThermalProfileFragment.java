@@ -52,7 +52,7 @@ public class ThermalProfileFragment extends SettingsBasePreferenceFragment {
         mPackageName = args != null ? args.getString(EXTRA_PACKAGE_NAME) : null;
         mAppLabel = args != null ? args.getString(EXTRA_APP_LABEL) : null;
         mThermalUtils = new ThermalUtils(getContext());
-        mCurrentState = mThermalUtils.getStateForPackage(mPackageName);
+        mCurrentState = mThermalUtils.getDisplayStateForPackage(mPackageName);
 
         final PreferenceScreen screen =
                 getPreferenceManager().createPreferenceScreen(getContext());

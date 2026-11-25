@@ -215,7 +215,7 @@ public class ThermalSettingsFragment extends SettingsBasePreferenceFragment {
             pref.setKey(entry.packageName);
             pref.setTitle(entry.label);
             pref.setIcon(entry.icon);
-            if (entry.state != ThermalUtils.STATE_DEFAULT) {
+            if (mThermalUtils.hasManualStateForPackage(entry.packageName)) {
                 pref.setSummary(ThermalUtils.getProfileNameRes(entry.state));
             } else if (autoEnabled) {
                 int autoState = mThermalUtils.getAutoStateForPackage(entry.packageName);
