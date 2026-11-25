@@ -139,16 +139,16 @@ on property:sys.boot_completed=1
 
     # Setup dex2oat thread count and cpuset
     setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,6
-    setprop dalvik.vm.dex2oat-threads 4
+    setprop dalvik.vm.dex2oat-threads 6
 
     setprop dalvik.vm.image-dex2oat-cpu-set 0,1,2,3,4,5,6
-    setprop dalvik.vm.image-dex2oat-threads 4
+    setprop dalvik.vm.image-dex2oat-threads 6
 
     # Configure uclamp
     write /proc/sys/kernel/sched_util_clamp_min_rt_default 128
 
-    write /dev/cpuctl/top-app/cpu.uclamp.min 0
-    write /dev/cpuctl/background/cpu.uclamp.max 40
+    write /dev/cpuctl/top-app/cpu.uclamp.min 15
+    write /dev/cpuctl/background/cpu.uclamp.max 80
     write /dev/cpuctl/system-background/cpu.uclamp.max 40
     write /dev/cpuctl/nnapi-hal/cpu.uclamp.min 2
     write /dev/cpuctl/nnapi-hal/cpu.uclamp.latency_sensitive 0
@@ -165,7 +165,7 @@ on property:sys.boot_completed=1
 
 on property:persist.sys.device_provisioned=1 && property:sys.boot_completed=1
     # Cap dex2oat cpu utilization
-    write /dev/cpuctl/dex2oat/cpu.uclamp.max 50
+    write /dev/cpuctl/dex2oat/cpu.uclamp.max 60
 
 on property:vendor.post_boot.parsed=1
     # Set restricted cpuset to the same CPUs as system-background
