@@ -31,6 +31,7 @@ public final class ThermalUtils {
     private static final String THERMAL_CONTROL = "thermal_control";
     private static final String KEY_APP_STATE_PREFIX = "thermal_app_state_";
     private static final String KEY_GLOBAL_PROFILE = "thermal_global_profile";
+    public static final String KEY_AUTO_PROFILES = "thermal_auto_profiles";
 
     public static final int STATE_DEFAULT = 0;
     public static final int STATE_BENCHMARK = 1;
@@ -102,10 +103,27 @@ public final class ThermalUtils {
 
     private final SharedPreferences mSharedPrefs;
     private final ThermalMapResolver mMapResolver;
+    private final ThermalAutoClassifier mAutoClassifier;
 
-    protected ThermalUtils(Context context) {
+    public ThermalUtils(Context context) {
         mSharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
         mMapResolver = ThermalMapResolver.getInstance();
+        mAutoClassifier = new ThermalAutoClassifier(context);
+    }
+
+    public boolean isAutoProfilesEnabled() {
+        return mSharedPrefs.getBoolean(KEY_AUTO_PROFILES, false);
+    }
+
+    public void setAutoProfilesEnabled(boolean enabled) {
+        mSharedPrefs.edit().putBoolean(KEY_AUTO_PROFILES, enabled).apply();
+        if (!enabled) {
+            mAutoClassifier.clearCache();
+        }
+    }
+
+    public int getAutoStateForPackage(String packageName) {
+        return mAutoClassifier.classify(packageName);
     }
 
     public static void startService(Context context) {
@@ -176,8 +194,16 @@ public final class ThermalUtils {
 
     protected void setThermalProfile(String packageName) {
         int appState = getStateForPackage(packageName);
-        // Per-app profile takes priority; apps set to Default follow the global profile.
-        int effectiveState = appState != STATE_DEFAULT ? appState : getGlobalProfile();
+        int effectiveState;
+        if (appState != STATE_DEFAULT) {
+            // Manual per-app profile always takes highest priority.
+            effectiveState = appState;
+        } else if (isAutoProfilesEnabled()) {
+            int autoState = mAutoClassifier.classify(packageName);
+            effectiveState = autoState != STATE_DEFAULT ? autoState : getGlobalProfile();
+        } else {
+            effectiveState = getGlobalProfile();
+        }
         FileUtils.writeLine(THERMAL_SCONFIG, mMapResolver.getCodeForState(effectiveState));
     }
 }

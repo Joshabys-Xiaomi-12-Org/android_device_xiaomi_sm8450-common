@@ -207,4 +207,7 @@
     <string name="powertools_vm_dirty_default">Bawaan (20 / 10)</string>
     <string name="powertools_vm_dirty_balanced">Seimbang (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">Throughput (40 / 20)</string>
+    <string name="powertools_auto_thermal_title">Profil termal otomatis</string>
+    <string name="powertools_auto_thermal_summary">Atur profil termal secara otomatis berdasarkan jenis aplikasi (game, kamera, browser, dll.)</string>
+    <string name="thermal_auto_profile_label">Otomatis: %1$s</string>
 </resources>

@@ -207,4 +207,7 @@
     <string name="powertools_vm_dirty_default">Mặc định (20 / 10)</string>
     <string name="powertools_vm_dirty_balanced">Cân bằng (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">Thông lượng cao (40 / 20)</string>
+    <string name="powertools_auto_thermal_title">Hồ sơ nhiệt tự động</string>
+    <string name="powertools_auto_thermal_summary">Tự động đặt hồ sơ nhiệt theo loại ứng dụng (trò chơi, máy ảnh, trình duyệt, v.v.)</string>
+    <string name="thermal_auto_profile_label">Tự động: %1$s</string>
 </resources>

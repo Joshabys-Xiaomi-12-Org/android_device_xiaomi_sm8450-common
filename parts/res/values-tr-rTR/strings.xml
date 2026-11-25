@@ -207,4 +207,7 @@
     <string name="powertools_vm_dirty_default">Varsayılan (20 / 10)</string>
     <string name="powertools_vm_dirty_balanced">Dengeli (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">Yüksek Aktarım (40 / 20)</string>
+    <string name="powertools_auto_thermal_title">Otomatik termal profiller</string>
+    <string name="powertools_auto_thermal_summary">Uygulama türüne göre (oyun, kamera, tarayıcı vb.) termal profili otomatik ayarla</string>
+    <string name="thermal_auto_profile_label">Oto: %1$s</string>
 </resources>

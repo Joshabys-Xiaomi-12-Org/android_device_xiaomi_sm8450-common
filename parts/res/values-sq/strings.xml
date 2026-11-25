@@ -187,4 +187,7 @@
     <string name="powertools_vm_dirty_balanced">I balancuar (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">Shpejtësi e lartë (40 / 20)</string>
     <string name="Powertools_summary">Personalizo paracaktimet e energjisë, frekuencat CPU/GPU, guvernatorët dhe rregullimet e ZRAM/memories</string>
+    <string name="powertools_auto_thermal_title">Profile termike automatike</string>
+    <string name="powertools_auto_thermal_summary">Cakto automatikisht profilin termik sipas llojit të aplikacionit (lojëra, kamerë, shfletues etj.)</string>
+    <string name="thermal_auto_profile_label">Auto: %1$s</string>
 </resources>

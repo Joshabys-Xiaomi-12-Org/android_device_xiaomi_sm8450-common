@@ -193,4 +193,7 @@
     <string name="powertools_vm_dirty_default">Implicit (20 / 10)</string>
     <string name="powertools_vm_dirty_balanced">Echilibrat (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">Throughput (40 / 20)</string>
+    <string name="powertools_auto_thermal_title">Profiluri termice automate</string>
+    <string name="powertools_auto_thermal_summary">Setează automat profilul termic în funcție de tipul aplicației (jocuri, cameră, browser etc.)</string>
+    <string name="thermal_auto_profile_label">Auto: %1$s</string>
 </resources>

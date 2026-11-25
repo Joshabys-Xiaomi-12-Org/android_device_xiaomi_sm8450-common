@@ -183,4 +183,7 @@
     <string name="powertools_vm_dirty_balanced">هاوسەنگ (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">خێرایی بەرز (40 / 20)</string>
     <string name="Powertools_summary">ڕێکخستنی پڕۆفایلەکانی وزە، فرێکوێنسی CPU/GPU، کۆنترۆڵکەرەکان و ZRAM/بیرگە بۆ کارایی باشتر</string>
+    <string name="powertools_auto_thermal_title">پڕۆفایلی گەرمی خۆکار</string>
+    <string name="powertools_auto_thermal_summary">دیاریکردنی خۆکارانەی پڕۆفایلی گەرمی بەپێی جۆری بەرنامە (یاری، کامێرا، وێبگەڕ و هتد)</string>
+    <string name="thermal_auto_profile_label">خۆکار: %1$s</string>
 </resources>

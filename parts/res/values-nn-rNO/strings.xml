@@ -187,4 +187,7 @@
     <string name="powertools_vm_dirty_balanced">Balansert (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">Gjennomstrøyming (40 / 20)</string>
     <string name="Powertools_summary">Tilpass straumprofilar, CPU/GPU-frekvensar, styringar samt ZRAM- og minnejustering</string>
+    <string name="powertools_auto_thermal_title">Automatiske termiske profilar</string>
+    <string name="powertools_auto_thermal_summary">Vel termisk profil automatisk etter apptypa (spel, kamera, nettlesar osv.)</string>
+    <string name="thermal_auto_profile_label">Auto: %1$s</string>
 </resources>

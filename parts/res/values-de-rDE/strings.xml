@@ -207,4 +207,7 @@
     <string name="powertools_vm_dirty_default">Standard (20 / 10)</string>
     <string name="powertools_vm_dirty_balanced">Ausgewogen (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">Durchsatz (40 / 20)</string>
+    <string name="powertools_auto_thermal_title">Automatische Thermal-Profile</string>
+    <string name="powertools_auto_thermal_summary">Thermal-Profil automatisch nach App-Typ zuweisen (Spiele, Kamera, Browser usw.)</string>
+    <string name="thermal_auto_profile_label">Auto: %1$s</string>
 </resources>

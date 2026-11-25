@@ -183,4 +183,7 @@
     <string name="powertools_vm_dirty_balanced">Cothrom (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">Tréchur (40 / 20)</string>
     <string name="Powertools_summary">Saincheap réamhshocruithe cumhachta, minicíochtaí CPU/GPU, rialtóirí agus tiúnáil ZRAM/cuimhne</string>
+    <string name="powertools_auto_thermal_title">Próifílí teirmeacha uathoibríocha</string>
+    <string name="powertools_auto_thermal_summary">Socraigh próifíl theirmeach go huathoibríoch de réir cineál aipe (cluichí, ceamara, brabhsálaí, srl.)</string>
+    <string name="thermal_auto_profile_label">Uathoibríoch: %1$s</string>
 </resources>

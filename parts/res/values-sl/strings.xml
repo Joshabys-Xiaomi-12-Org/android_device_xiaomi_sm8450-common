@@ -187,4 +187,7 @@
     <string name="powertools_vm_dirty_balanced">Uravnoteženo (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">Prepustnost (40 / 20)</string>
     <string name="Powertools_summary">Prilagodite prednastavitve moči, frekvence CPU/GPU, upravljalnike ter nastavitve ZRAM in pomnilnika</string>
+    <string name="powertools_auto_thermal_title">Samodejni toplotni profili</string>
+    <string name="powertools_auto_thermal_summary">Samodejno nastavi toplotni profil glede na vrsto aplikacije (igre, kamera, brskalnik itd.)</string>
+    <string name="thermal_auto_profile_label">Samod.: %1$s</string>
 </resources>

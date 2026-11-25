@@ -183,4 +183,7 @@
     <string name="powertools_vm_dirty_balanced">تەڭپۇڭ (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">يۇقىرى ئۆتكۈزۈش (40 / 20)</string>
     <string name="Powertools_summary">توك تەڭشىكى، CPU/GPU چاستوتىسى، باشقۇرغۇچ ۋە ZRAM/ئىچكى ساقلىغۇچ تەڭشەكلىرىنى خاسلاشتۇرۇڭ</string>
+    <string name="powertools_auto_thermal_title">ئاپتوماتىك تېمپېراتۇرا سەپلىمىسى</string>
+    <string name="powertools_auto_thermal_summary">ئەپ تۈرىگە ئاساسەن (ئويۇن، كامېرا، تور كۆرگۈچ قاتارلىقلار) تېمپېراتۇرا سەپلىمىسىنى ئاپتوماتىك بەلگىلەش</string>
+    <string name="thermal_auto_profile_label">ئاپتوماتىك: %1$s</string>
 </resources>

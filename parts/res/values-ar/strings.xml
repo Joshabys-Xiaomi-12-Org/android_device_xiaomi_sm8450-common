@@ -207,4 +207,7 @@
     <string name="powertools_vm_dirty_default">افتراضي (20 / 10)</string>
     <string name="powertools_vm_dirty_balanced">متوازن (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">إنتاجية عالية (40 / 20)</string>
+    <string name="powertools_auto_thermal_title">ملفات حرارية تلقائية</string>
+    <string name="powertools_auto_thermal_summary">تعيين الملف الحراري تلقائياً حسب نوع التطبيق (ألعاب، كاميرا، متصفح، إلخ)</string>
+    <string name="thermal_auto_profile_label">تلقائي: %1$s</string>
 </resources>

@@ -207,4 +207,7 @@
     <string name="powertools_vm_dirty_default">기본값 (20 / 10)</string>
     <string name="powertools_vm_dirty_balanced">균형 (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">처리량 (40 / 20)</string>
+    <string name="powertools_auto_thermal_title">자동 서멀 프로필</string>
+    <string name="powertools_auto_thermal_summary">앱 유형(게임, 카메라, 브라우저 등)에 따라 서멀 프로필 자동 설정</string>
+    <string name="thermal_auto_profile_label">자동: %1$s</string>
 </resources>

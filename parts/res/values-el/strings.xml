@@ -193,4 +193,7 @@
     <string name="powertools_vm_dirty_default">Προεπιλογή (20 / 10)</string>
     <string name="powertools_vm_dirty_balanced">Ισορροπημένο (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">Υψηλή απόδοση (40 / 20)</string>
+    <string name="powertools_auto_thermal_title">Αυτόματα θερμικά προφίλ</string>
+    <string name="powertools_auto_thermal_summary">Αυτόματη επιλογή θερμικού προφίλ ανά τύπο εφαρμογής (παιχνίδια, κάμερα, πρόγραμμα περιήγησης κ.λπ.)</string>
+    <string name="thermal_auto_profile_label">Αυτόματο: %1$s</string>
 </resources>

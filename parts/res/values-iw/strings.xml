@@ -193,4 +193,7 @@
     <string name="powertools_vm_dirty_default">ברירת מחדל (20 / 10)</string>
     <string name="powertools_vm_dirty_balanced">מאוזן (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">תפוקה גבוהה (40 / 20)</string>
+    <string name="powertools_auto_thermal_title">פרופילים תרמיים אוטומטיים</string>
+    <string name="powertools_auto_thermal_summary">הגדר פרופיל תרמי אוטומטית לפי סוג האפליקציה (משחקים, מצלמה, דפדפן וכו\')</string>
+    <string name="thermal_auto_profile_label">אוטומטי: %1$s</string>
 </resources>

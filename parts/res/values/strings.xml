@@ -118,6 +118,9 @@
     <string name="powertools_preset_custom">Custom</string>
     <string name="powertools_apply_on_boot_title">Apply on boot</string>
     <string name="powertools_apply_on_boot_summary">Restore settings after reboot</string>
+    <string name="powertools_auto_thermal_title">Auto thermal profiles</string>
+    <string name="powertools_auto_thermal_summary">Automatically set thermal profile by app type (games, camera, browser, etc.)</string>
+    <string name="thermal_auto_profile_label">Auto: %1$s</string>
     <string name="powertools_reset_title">Reset to defaults</string>
     <string name="powertools_reset_summary">Restore stock CPU &amp; GPU values</string>
     <string name="powertools_reset_done">Default CPU and GPU settings restored</string>

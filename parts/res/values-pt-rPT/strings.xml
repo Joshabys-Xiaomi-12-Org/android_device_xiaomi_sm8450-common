@@ -207,4 +207,7 @@
     <string name="powertools_vm_dirty_default">Predefinido (20 / 10)</string>
     <string name="powertools_vm_dirty_balanced">Equilibrado (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">Débito elevado (40 / 20)</string>
+    <string name="powertools_auto_thermal_title">Perfis térmicos automáticos</string>
+    <string name="powertools_auto_thermal_summary">Definir automaticamente o perfil térmico por tipo de aplicação (jogos, câmara, navegador, etc.)</string>
+    <string name="thermal_auto_profile_label">Auto: %1$s</string>
 </resources>

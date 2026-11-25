@@ -185,6 +185,7 @@ public class ThermalSettingsFragment extends SettingsBasePreferenceFragment {
         mAppsCategory.removeAll();
         Context prefContext = getPreferenceManager().getContext();
         String lowerQuery = mSearchQuery.toLowerCase(Locale.getDefault());
+        boolean autoEnabled = mThermalUtils.isAutoProfilesEnabled();
 
         for (AppEntry entry : mAllEntries) {
             if (!TextUtils.isEmpty(lowerQuery)
@@ -196,7 +197,19 @@ public class ThermalSettingsFragment extends SettingsBasePreferenceFragment {
             pref.setKey(entry.packageName);
             pref.setTitle(entry.label);
             pref.setIcon(entry.icon);
-            pref.setSummary(ThermalUtils.getProfileNameRes(entry.state));
+            if (entry.state != ThermalUtils.STATE_DEFAULT) {
+                pref.setSummary(ThermalUtils.getProfileNameRes(entry.state));
+            } else if (autoEnabled) {
+                int autoState = mThermalUtils.getAutoStateForPackage(entry.packageName);
+                if (autoState != ThermalUtils.STATE_DEFAULT) {
+                    pref.setSummary(getString(R.string.thermal_auto_profile_label,
+                            getString(ThermalUtils.getProfileNameRes(autoState))));
+                } else {
+                    pref.setSummary(ThermalUtils.getProfileNameRes(ThermalUtils.STATE_DEFAULT));
+                }
+            } else {
+                pref.setSummary(ThermalUtils.getProfileNameRes(ThermalUtils.STATE_DEFAULT));
+            }
             pref.setPersistent(false);
             pref.setOnPreferenceClickListener(p -> {
                 Intent intent = new Intent(requireContext(), ThermalProfileActivity.class);

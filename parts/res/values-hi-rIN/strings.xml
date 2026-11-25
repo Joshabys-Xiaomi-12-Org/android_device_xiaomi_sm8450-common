@@ -207,4 +207,7 @@
     <string name="powertools_vm_dirty_default">डिफ़ॉल्ट (20 / 10)</string>
     <string name="powertools_vm_dirty_balanced">संतुलित (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">थ्रूपुट (40 / 20)</string>
+    <string name="powertools_auto_thermal_title">ऑटो थर्मल प्रोफ़ाइल</string>
+    <string name="powertools_auto_thermal_summary">ऐप के प्रकार (गेम्स, कैमरा, ब्राउज़र आदि) के अनुसार स्वचालित रूप से थर्मल प्रोफ़ाइल सेट करें</string>
+    <string name="thermal_auto_profile_label">ऑटो: %1$s</string>
 </resources>

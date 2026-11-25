@@ -207,4 +207,7 @@
     <string name="powertools_vm_dirty_default">デフォルト (20 / 10)</string>
     <string name="powertools_vm_dirty_balanced">バランス (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">スループット (40 / 20)</string>
+    <string name="powertools_auto_thermal_title">自動サーマルプロファイル</string>
+    <string name="powertools_auto_thermal_summary">アプリの種類（ゲーム、カメラ、ブラウザなど）に応じてサーマルプロファイルを自動設定</string>
+    <string name="thermal_auto_profile_label">自動: %1$s</string>
 </resources>

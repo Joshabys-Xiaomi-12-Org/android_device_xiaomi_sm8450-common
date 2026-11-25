@@ -187,4 +187,7 @@
     <string name="powertools_vm_dirty_balanced">Balanslı (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">Yüksək ötürmə (40 / 20)</string>
     <string name="Powertools_summary">Performans və səmərəlilik üçün güc profillərini, CPU/GPU tezliklərini, idarəediciləri və ZRAM/yaddaş ayarlarını fərdiləşdirin</string>
+    <string name="powertools_auto_thermal_title">Avtomatik istilik profilləri</string>
+    <string name="powertools_auto_thermal_summary">Tətbiq növünə görə (oyunlar, kamera, brauzer və s.) istilik profilini avtomatik təyin et</string>
+    <string name="thermal_auto_profile_label">Avto: %1$s</string>
 </resources>

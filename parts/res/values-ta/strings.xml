@@ -185,4 +185,7 @@
     <string name="powertools_vm_dirty_balanced">சமநிலை (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">உயர் திறன் (40 / 20)</string>
     <string name="Powertools_summary">செயல்திறனுக்காக பவர் முன்னமைவுகள், CPU/GPU அதிர்வெண்கள், கட்டுப்படுத்திகள் மற்றும் ZRAM/நினைவக அமைப்புகளை தனிப்பயனாக்குங்கள்</string>
+    <string name="powertools_auto_thermal_title">தானியங்கி வெப்ப சுயவிவரங்கள்</string>
+    <string name="powertools_auto_thermal_summary">செயலி வகையின் அடிப்படையில் (விளையாட்டுகள், கேமரா, உலாவி போன்றவை) வெப்ப சுயவிவரத்தை தானாக அமைக்கவும்</string>
+    <string name="thermal_auto_profile_label">தானியங்கி: %1$s</string>
 </resources>

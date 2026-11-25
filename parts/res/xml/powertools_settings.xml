@@ -38,6 +38,12 @@
             android:summary="@string/powertools_apply_on_boot_summary"
             android:defaultValue="false" />
 
+        <SwitchPreferenceCompat
+            android:key="thermal_auto_profiles"
+            android:title="@string/powertools_auto_thermal_title"
+            android:summary="@string/powertools_auto_thermal_summary"
+            android:defaultValue="false" />
+
         <Preference
             android:key="reset_defaults"
             android:title="@string/powertools_reset_title"

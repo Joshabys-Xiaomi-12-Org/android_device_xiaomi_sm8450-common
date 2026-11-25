@@ -193,4 +193,7 @@
     <string name="powertools_vm_dirty_default">پیش‌فرض (20 / 10)</string>
     <string name="powertools_vm_dirty_balanced">متعادل (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">توان عملیاتی بالا (40 / 20)</string>
+    <string name="powertools_auto_thermal_title">پروفایل‌های دمایی خودکار</string>
+    <string name="powertools_auto_thermal_summary">تنظیم خودکار پروفایل دمایی بر اساس نوع برنامه (بازی، دوربین، مرورگر و غیره)</string>
+    <string name="thermal_auto_profile_label">خودکار: %1$s</string>
 </resources>

@@ -207,4 +207,7 @@
     <string name="powertools_vm_dirty_default">默认 (20 / 10)</string>
     <string name="powertools_vm_dirty_balanced">均衡 (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">高吞吐 (40 / 20)</string>
+    <string name="powertools_auto_thermal_title">自动温控配置</string>
+    <string name="powertools_auto_thermal_summary">根据应用类型（游戏、相机、浏览器等）自动匹配温控配置</string>
+    <string name="thermal_auto_profile_label">自动：%1$s</string>
 </resources>
