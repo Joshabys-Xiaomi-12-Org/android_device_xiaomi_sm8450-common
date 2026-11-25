@@ -29,6 +29,7 @@ import android.text.TextUtils;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settingslib.widget.SettingsBasePreferenceFragment;
 
@@ -48,6 +49,7 @@ public class ThermalSettingsFragment extends SettingsBasePreferenceFragment {
 
     private ThermalUtils mThermalUtils;
     private Preference mGlobalProfilePref;
+    private SwitchPreferenceCompat mAutoThermalPref;
     private PreferenceCategory mAppsCategory;
 
     private final List<AppEntry> mAllEntries = new ArrayList<>();
@@ -93,6 +95,19 @@ public class ThermalSettingsFragment extends SettingsBasePreferenceFragment {
         });
         globalCategory.addPreference(mGlobalProfilePref);
 
+        mAutoThermalPref = new SwitchPreferenceCompat(context);
+        mAutoThermalPref.setKey(ThermalUtils.KEY_AUTO_PROFILES);
+        mAutoThermalPref.setTitle(R.string.powertools_auto_thermal_title);
+        mAutoThermalPref.setSummary(R.string.powertools_auto_thermal_summary);
+        mAutoThermalPref.setChecked(mThermalUtils.isAutoProfilesEnabled());
+        mAutoThermalPref.setPersistent(false);
+        mAutoThermalPref.setOnPreferenceChangeListener((p, newValue) -> {
+            mThermalUtils.setAutoProfilesEnabled((Boolean) newValue);
+            renderFilteredApps();
+            return true;
+        });
+        globalCategory.addPreference(mAutoThermalPref);
+
         mAppsCategory = new PreferenceCategory(context);
         mAppsCategory.setTitle(R.string.thermal_apps_title);
         screen.addPreference(mAppsCategory);
@@ -107,6 +122,9 @@ public class ThermalSettingsFragment extends SettingsBasePreferenceFragment {
         if (mGlobalProfilePref != null && mThermalUtils != null) {
             mGlobalProfilePref.setSummary(
                     ThermalUtils.getProfileNameRes(mThermalUtils.getGlobalProfile()));
+        }
+        if (mAutoThermalPref != null && mThermalUtils != null) {
+            mAutoThermalPref.setChecked(mThermalUtils.isAutoProfilesEnabled());
         }
         if (!mAllEntries.isEmpty()) {
             refreshEntryStates();
