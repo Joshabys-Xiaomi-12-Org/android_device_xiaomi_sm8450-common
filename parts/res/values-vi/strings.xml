@@ -40,8 +40,8 @@
     <string name="thermal_profile_footer">Hồ sơ đã chọn được áp dụng tự động khi ứng dụng đang được sử dụng.</string>
     <string name="thermal_apps_title">Ứng dụng</string>
     <string name="saturation_reset">Đặt lại mặc định</string>
-    <string name="Powertools_title">Powertools</string>
-    <string name="Powertools_summary">Tùy chỉnh cấu hình năng lượng, tần số CPU/GPU, bộ điều tốc và tinh chỉnh ZRAM/bộ nhớ</string>
+    <string name="Powertools_title">Tinh chỉnh hiệu năng</string>
+    <string name="Powertools_summary">Tùy chỉnh CPU, GPU, ZRAM, I/O và mạng để tối ưu hiệu năng và tiết kiệm pin</string>
     <string name="powertools_gpu_category">GPU</string>
     <string name="powertools_gpu_enable_title">Bật trình tối ưu GPU</string>
     <string name="powertools_gpu_enable_summary">Bật/tắt tối ưu hóa GPU</string>
@@ -213,4 +213,16 @@
     <string name="thermal_disable_title">Tắt kiểm soát nhiệt (mi_thermald)</string>
     <string name="thermal_disable_summary">Dừng hoàn toàn mi_thermald cho đến lần khởi động lại tiếp theo</string>
     <string name="thermal_disable_warning">Dừng mi_thermald sẽ tắt giới hạn nhiệt của Xiaomi, bao gồm cả giới hạn pin và sạc nhanh. Khi tắt, các hồ sơ nhiệt toàn cục, tự động, theo ứng dụng, ô Cài đặt nhanh và Trình chỉnh sửa nhiệt sẽ không khả dụng. Thiết bị có thể quá nhiệt. Tự động bật lại sau khi khởi động lại. Tiếp tục?</string>
+    <string name="powertools_tab_general">Chung</string>
+    <string name="powertools_tab_cpu">CPU</string>
+    <string name="powertools_tab_gpu">GPU</string>
+    <string name="powertools_tab_zram">ZRAM</string>
+    <string name="powertools_tab_ionet">I/O &amp; Mạng</string>
+    <string name="powertools_ionet_category">I/O &amp; Mạng</string>
+    <string name="powertools_ionet_enable_title">Bật tối ưu hóa I/O &amp; Mạng</string>
+    <string name="powertools_ionet_enable_summary">Bật hoặc tắt tinh chỉnh lưu trữ I/O và mạng TCP</string>
+    <string name="powertools_ionet_config_category">Cấu hình I/O &amp; Mạng</string>
+    <string name="powertools_io_scheduler_title">Bộ lập lịch I/O lưu trữ</string>
+    <string name="powertools_io_read_ahead_title">Đọc trước (Read-Ahead)</string>
+    <string name="powertools_net_tcp_title">Kiểm soát tắc nghẽn TCP</string>
 </resources>

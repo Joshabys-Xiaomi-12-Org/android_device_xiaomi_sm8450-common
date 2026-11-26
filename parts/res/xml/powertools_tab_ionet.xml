@@ -1,0 +1,39 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- I/O & Network Optimizer Section -->
+    <PreferenceCategory
+        android:key="ionet_category"
+        android:title="@string/powertools_ionet_category">
+
+        <SwitchPreferenceCompat
+            android:key="io_net_enable"
+            android:title="@string/powertools_ionet_enable_title"
+            android:summary="@string/powertools_ionet_enable_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="ionet_config_category"
+        android:title="@string/powertools_ionet_config_category">
+
+        <ListPreference
+            android:key="io_scheduler"
+            android:title="@string/powertools_io_scheduler_title"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="io_read_ahead"
+            android:title="@string/powertools_io_read_ahead_title"
+            android:entries="@array/powertools_io_read_ahead_entries"
+            android:entryValues="@array/powertools_io_read_ahead_values"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="net_tcp_congestion"
+            android:title="@string/powertools_net_tcp_title"
+            android:summary="%s" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

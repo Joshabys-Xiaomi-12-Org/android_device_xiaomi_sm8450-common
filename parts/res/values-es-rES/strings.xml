@@ -40,8 +40,8 @@
     <string name="thermal_profile_footer">El perfil seleccionado se aplica automáticamente mientras la aplicación está en uso.</string>
     <string name="thermal_apps_title">Aplicaciones</string>
     <string name="saturation_reset">Restablecer predeterminado</string>
-    <string name="Powertools_title">Powertools</string>
-    <string name="Powertools_summary">Personaliza preajustes de energía, frecuencias de CPU/GPU, gobernadores y ajustes de ZRAM/memoria</string>
+    <string name="Powertools_title">Ajuste de rendimiento</string>
+    <string name="Powertools_summary">Personaliza los ajustes de CPU, GPU, ZRAM, I/O y red para rendimiento y eficiencia</string>
     <string name="powertools_gpu_category">GPU</string>
     <string name="powertools_gpu_enable_title">Activar optimizador de GPU</string>
     <string name="powertools_gpu_enable_summary">Alternar optimizaciones de GPU</string>
@@ -213,4 +213,16 @@
     <string name="thermal_disable_title">Desactivar control térmico (mi_thermald)</string>
     <string name="thermal_disable_summary">Detiene mi_thermald por completo hasta el próximo reinicio</string>
     <string name="thermal_disable_warning">Detener mi_thermald desactiva la limitación térmica de Xiaomi, incluidos los límites de batería y carga rápida. Mientras esté desactivado, no estarán disponibles los perfiles térmicos globales, automáticos ni por app, el ajuste rápido ni el Editor Térmico. El dispositivo puede sobrecalentarse. Se restaura automáticamente al reiniciar. ¿Continuar?</string>
+    <string name="powertools_tab_general">General</string>
+    <string name="powertools_tab_cpu">CPU</string>
+    <string name="powertools_tab_gpu">GPU</string>
+    <string name="powertools_tab_zram">ZRAM</string>
+    <string name="powertools_tab_ionet">I/O y Red</string>
+    <string name="powertools_ionet_category">I/O y Red</string>
+    <string name="powertools_ionet_enable_title">Activar optimizador de I/O y red</string>
+    <string name="powertools_ionet_enable_summary">Activar o desactivar ajustes de almacenamiento I/O y red TCP</string>
+    <string name="powertools_ionet_config_category">Configurar I/O y Red</string>
+    <string name="powertools_io_scheduler_title">Planificador de I/O</string>
+    <string name="powertools_io_read_ahead_title">Lectura anticipada (Read-Ahead)</string>
+    <string name="powertools_net_tcp_title">Control de congestión TCP</string>
 </resources>

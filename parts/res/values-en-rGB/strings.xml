@@ -29,7 +29,7 @@
     <string name="custom_seekbar_default_value">by default</string>
     <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
     <string name="custom_seekbar_default_value_is_set">Default value is set</string>
-    <string name="Powertools_summary">Customize power presets, CPU/GPU frequencies, governors, and ZRAM/memory tuning for performance and efficiency</string>
+    <string name="Powertools_summary">Customize CPU, GPU, ZRAM, I/O, and network tuning for performance and efficiency</string>
     <string name="powertools_gpu_enable_title">Enable GPU Optimiser</string>
     <string name="powertools_gpu_enable_summary">Toggle GPU optimisations</string>
     <string name="powertools_cpu_enable_title">Enable CPU Optimiser</string>
@@ -175,4 +175,17 @@
     <string name="thermal_disable_title">Disable thermal control (mi_thermald)</string>
     <string name="thermal_disable_summary">Stops mi_thermald completely until next reboot</string>
     <string name="thermal_disable_warning">Stopping mi_thermald disables Xiaomi\'s thermal throttling, including battery and fast-charging temperature limits. While disabled, global, automatic, and per-app thermal profiles, the Quick Settings tile, and the Thermal Editor will be unavailable. The device may overheat, especially while charging or gaming. Thermal control is automatically restored after a reboot. Continue?</string>
+    <string name="Powertools_title">Performance Tuning</string>
+    <string name="powertools_tab_general">General</string>
+    <string name="powertools_tab_cpu">CPU</string>
+    <string name="powertools_tab_gpu">GPU</string>
+    <string name="powertools_tab_zram">ZRAM</string>
+    <string name="powertools_tab_ionet">I/O &amp; Net</string>
+    <string name="powertools_ionet_category">I/O &amp; Network</string>
+    <string name="powertools_ionet_enable_title">Enable I/O &amp; Network Optimizer</string>
+    <string name="powertools_ionet_enable_summary">Toggle storage I/O and TCP network tuning</string>
+    <string name="powertools_ionet_config_category">Configure I/O &amp; Network</string>
+    <string name="powertools_io_scheduler_title">Storage I/O Scheduler</string>
+    <string name="powertools_io_read_ahead_title">Storage Read-Ahead</string>
+    <string name="powertools_net_tcp_title">TCP Congestion Control</string>
 </resources>

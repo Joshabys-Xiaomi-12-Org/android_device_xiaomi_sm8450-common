@@ -186,11 +186,24 @@
     <string name="powertools_vm_dirty_default">Parazgjedhje (20 / 10)</string>
     <string name="powertools_vm_dirty_balanced">I balancuar (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">Shpejtësi e lartë (40 / 20)</string>
-    <string name="Powertools_summary">Personalizo paracaktimet e energjisë, frekuencat CPU/GPU, guvernatorët dhe rregullimet e ZRAM/memories</string>
+    <string name="Powertools_summary">Personalizo rregullimet e CPU, GPU, ZRAM, I/O dhe rrjetit</string>
     <string name="powertools_auto_thermal_title">Profile termike automatike</string>
     <string name="powertools_auto_thermal_summary">Cakto automatikisht profilin termik sipas llojit të aplikacionit (lojëra, kamerë, shfletues etj.)</string>
     <string name="thermal_auto_profile_label">Auto: %1$s</string>
     <string name="thermal_disable_title">Çaktivizo kontrollin termik (mi_thermald)</string>
     <string name="thermal_disable_summary">Ndalon plotësisht mi_thermald deri në rinisjen tjetër</string>
     <string name="thermal_disable_warning">Ndalimi i mi_thermald çaktivizon kufizimin termik të Xiaomi, përfshirë kufijtë e baterisë dhe karikimit të shpejtë. Ndërsa është i çaktivizuar, profilet globale, automatike dhe për aplikacion, butoni i cilësimeve të shpejta dhe Editori Termik nuk do të jenë të disponueshëm. Pajisja mund të mbinxehet. Rikthehet automatikisht pas rinisjes. Të vazhdohet?</string>
+    <string name="Powertools_title">Rregullimi i performancës</string>
+    <string name="powertools_tab_general">Të përgjithshme</string>
+    <string name="powertools_tab_cpu">CPU</string>
+    <string name="powertools_tab_gpu">GPU</string>
+    <string name="powertools_tab_zram">ZRAM</string>
+    <string name="powertools_tab_ionet">I/O &amp; Rrjeti</string>
+    <string name="powertools_ionet_category">I/O dhe Rrjeti</string>
+    <string name="powertools_ionet_enable_title">Aktivizo optimizuesin e I/O dhe rrjetit</string>
+    <string name="powertools_ionet_enable_summary">Ndërro rregullimet e ruajtjes I/O dhe rrjetit TCP</string>
+    <string name="powertools_ionet_config_category">Konfiguro I/O dhe Rrjetin</string>
+    <string name="powertools_io_scheduler_title">Planifikuesi I/O i ruajtjes</string>
+    <string name="powertools_io_read_ahead_title">Leximi paraprak (Read-Ahead)</string>
+    <string name="powertools_net_tcp_title">Kontrolli i mbingarkesës TCP</string>
 </resources>

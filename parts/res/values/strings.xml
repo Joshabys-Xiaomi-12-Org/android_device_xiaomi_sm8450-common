@@ -110,9 +110,21 @@
     <string name="gaming_mode_notification">Game Boost Mode is now activated for optimal gaming performance.</string>
     <string name="power_profile_footer_summary">Note: Higher frequencies (e.g., GPU over 900MHz and prime core higher clock) are available only in Game Boost mode.</string>
 
-    <!-- Powertools Main Title -->
-    <string name="Powertools_title">Powertools</string>
-    <string name="Powertools_summary">Customize power presets, CPU/GPU frequencies, governors, and ZRAM/memory tuning for performance and efficiency</string>
+    <!-- Performance Tuning (Powertools) -->
+    <string name="Powertools_title">Performance Tuning</string>
+    <string name="Powertools_summary">Customize CPU, GPU, ZRAM, I/O, and network tuning for performance and efficiency</string>
+    <string name="powertools_tab_general">General</string>
+    <string name="powertools_tab_cpu">CPU</string>
+    <string name="powertools_tab_gpu">GPU</string>
+    <string name="powertools_tab_zram">ZRAM</string>
+    <string name="powertools_tab_ionet">I/O &amp; Net</string>
+    <string name="powertools_ionet_category">I/O &amp; Network</string>
+    <string name="powertools_ionet_enable_title">Enable I/O &amp; Network Optimizer</string>
+    <string name="powertools_ionet_enable_summary">Toggle storage I/O and TCP network tuning</string>
+    <string name="powertools_ionet_config_category">Configure I/O &amp; Network</string>
+    <string name="powertools_io_scheduler_title">Storage I/O Scheduler</string>
+    <string name="powertools_io_read_ahead_title">Storage Read-Ahead</string>
+    <string name="powertools_net_tcp_title">TCP Congestion Control</string>
     <string name="powertools_general_category">General</string>
     <string name="powertools_preset_title">Power Preset</string>
     <string name="powertools_preset_default">Default</string>

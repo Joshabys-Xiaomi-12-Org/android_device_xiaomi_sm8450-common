@@ -182,11 +182,24 @@
     <string name="powertools_vm_dirty_default">Réamhshocrú (20 / 10)</string>
     <string name="powertools_vm_dirty_balanced">Cothrom (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">Tréchur (40 / 20)</string>
-    <string name="Powertools_summary">Saincheap réamhshocruithe cumhachta, minicíochtaí CPU/GPU, rialtóirí agus tiúnáil ZRAM/cuimhne</string>
+    <string name="Powertools_summary">Saincheap tiúnáil CPU, GPU, ZRAM, I/O agus líonra</string>
     <string name="powertools_auto_thermal_title">Próifílí teirmeacha uathoibríocha</string>
     <string name="powertools_auto_thermal_summary">Socraigh próifíl theirmeach go huathoibríoch de réir cineál aipe (cluichí, ceamara, brabhsálaí, srl.)</string>
     <string name="thermal_auto_profile_label">Uathoibríoch: %1$s</string>
     <string name="thermal_disable_title">Díchumasaigh rialú teirmeach (mi_thermald)</string>
     <string name="thermal_disable_summary">Stopann sé mi_thermald go hiomlán go dtí an chéad atosú eile</string>
     <string name="thermal_disable_warning">Díchumasaíonn stopadh mi_thermald srianadh teirmeach Xiaomi, lena n-áirítear teorainneacha ceallraí agus luchtaithe tapa. Fad atá sé díchumasaithe, ní bheidh próifílí domhanda, uathoibríocha, in aghaidh na haipe, an tíl mearshocruithe ná an tEagarthóir Teirmeach ar fáil. D\'fhéadfadh an gléas róthéamh. Athchóirítear tar éis atosaithe. Lean ar aghaidh?</string>
+    <string name="Powertools_title">Tiúnáil Feidhmíochta</string>
+    <string name="powertools_tab_general">Ginearálta</string>
+    <string name="powertools_tab_cpu">CPU</string>
+    <string name="powertools_tab_gpu">GPU</string>
+    <string name="powertools_tab_zram">ZRAM</string>
+    <string name="powertools_tab_ionet">I/O &amp; Líonra</string>
+    <string name="powertools_ionet_category">I/O &amp; Líonra</string>
+    <string name="powertools_ionet_enable_title">Cumasaigh optamaitheoir I/O &amp; líonra</string>
+    <string name="powertools_ionet_enable_summary">Scoránaigh tiúnáil stórála I/O agus líonra TCP</string>
+    <string name="powertools_ionet_config_category">Cumraigh I/O &amp; Líonra</string>
+    <string name="powertools_io_scheduler_title">Sceidealóir I/O stórála</string>
+    <string name="powertools_io_read_ahead_title">Réamhléamh stórála (Read-Ahead)</string>
+    <string name="powertools_net_tcp_title">Rialú plódaithe TCP</string>
 </resources>

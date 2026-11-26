@@ -1,0 +1,51 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- GPU Optimizer Section -->
+    <PreferenceCategory
+        android:key="gpu_category"
+        android:title="@string/powertools_gpu_category">
+
+        <SwitchPreferenceCompat
+            android:key="gpu_enable"
+            android:title="@string/powertools_gpu_enable_title"
+            android:summary="@string/powertools_gpu_enable_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="gpu_freq_category"
+        android:title="@string/powertools_gpu_freq_category">
+
+        <ListPreference
+            android:key="gpu_min_frequency"
+            android:title="@string/gpu_min_frequency"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="gpu_max_frequency"
+            android:title="@string/gpu_max_frequency"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="gpu_governor"
+            android:title="@string/powertools_gpu_governor"
+            android:summary="%s" />
+
+        <SwitchPreferenceCompat
+            android:key="gpu_adreno_idler"
+            android:title="@string/powertools_adreno_idler_title"
+            android:summary="@string/powertools_adreno_idler_summary"
+            android:defaultValue="true" />
+
+        <ListPreference
+            android:key="gpu_idle_timer"
+            android:title="@string/powertools_gpu_idle_timer"
+            android:entries="@array/powertools_gpu_idle_timer_entries"
+            android:entryValues="@array/powertools_gpu_idle_timer_values"
+            android:defaultValue="40"
+            android:summary="%s" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

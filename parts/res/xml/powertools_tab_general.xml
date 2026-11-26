@@ -1,0 +1,48 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Live Monitor Section -->
+    <PreferenceCategory
+        android:key="live_monitor_category"
+        android:title="@string/powertools_live_monitor_category">
+
+        <Preference
+            android:key="live_cpu_clocks"
+            android:title="@string/powertools_live_cpu_title"
+            android:summary="@string/powertools_live_reading"
+            android:selectable="false" />
+
+        <Preference
+            android:key="live_gpu_temp"
+            android:title="@string/powertools_live_gpu_temp_title"
+            android:summary="@string/powertools_live_reading"
+            android:selectable="false" />
+
+    </PreferenceCategory>
+
+    <!-- General Section -->
+    <PreferenceCategory
+        android:key="general_category"
+        android:title="@string/powertools_general_category">
+
+        <ListPreference
+            android:key="power_preset"
+            android:title="@string/powertools_preset_title"
+            android:entries="@array/powertools_preset_entries"
+            android:entryValues="@array/powertools_preset_values"
+            android:defaultValue="default"
+            android:summary="%s" />
+
+        <SwitchPreferenceCompat
+            android:key="apply_on_boot"
+            android:title="@string/powertools_apply_on_boot_title"
+            android:summary="@string/powertools_apply_on_boot_summary"
+            android:defaultValue="false" />
+
+        <Preference
+            android:key="reset_defaults"
+            android:title="@string/powertools_reset_title"
+            android:summary="@string/powertools_reset_summary" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

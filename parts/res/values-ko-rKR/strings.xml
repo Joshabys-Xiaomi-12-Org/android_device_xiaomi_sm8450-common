@@ -40,8 +40,8 @@
     <string name="thermal_profile_footer">선택한 프로필은 앱을 사용하는 동안 자동으로 적용됩니다.</string>
     <string name="thermal_apps_title">앱</string>
     <string name="saturation_reset">기본값으로 재설정</string>
-    <string name="Powertools_title">Powertools</string>
-    <string name="Powertools_summary">성능과 효율을 위해 전원 프리셋, CPU/GPU 주파수, 거버너 및 ZRAM/메모리 설정 사용자 지정</string>
+    <string name="Powertools_title">성능 튜닝</string>
+    <string name="Powertools_summary">성능과 효율을 위해 CPU, GPU, ZRAM, I/O 및 네트워크 설정 사용자 지정</string>
     <string name="powertools_gpu_category">GPU</string>
     <string name="powertools_gpu_enable_title">GPU 최적화 사용</string>
     <string name="powertools_gpu_enable_summary">GPU 최적화 전환</string>
@@ -213,4 +213,16 @@
     <string name="thermal_disable_title">서멀 제어 비활성화 (mi_thermald)</string>
     <string name="thermal_disable_summary">다음 재부팅까지 mi_thermald를 완전히 중지합니다</string>
     <string name="thermal_disable_warning">mi_thermald를 중지하면 배터리 및 고속 충전 온도 제한을 포함한 Xiaomi 서멀 스로틀링이 비활성화됩니다. 비활성화 중에는 전역·자동·앱별 서멀 프로필, 빠른 설정 타일 및 서멀 편집기를 사용할 수 없습니다. 기기가 과열될 수 있으며 재부팅 시 자동 복원됩니다. 계속하시겠습니까?</string>
+    <string name="powertools_tab_general">일반</string>
+    <string name="powertools_tab_cpu">CPU</string>
+    <string name="powertools_tab_gpu">GPU</string>
+    <string name="powertools_tab_zram">ZRAM</string>
+    <string name="powertools_tab_ionet">I/O 및 네트워크</string>
+    <string name="powertools_ionet_category">I/O 및 네트워크</string>
+    <string name="powertools_ionet_enable_title">I/O 및 네트워크 최적화 활성화</string>
+    <string name="powertools_ionet_enable_summary">저장소 I/O 및 TCP 네트워크 튜닝 전환</string>
+    <string name="powertools_ionet_config_category">I/O 및 네트워크 구성</string>
+    <string name="powertools_io_scheduler_title">저장소 I/O 스케줄러</string>
+    <string name="powertools_io_read_ahead_title">저장소 미리 읽기 (Read-Ahead)</string>
+    <string name="powertools_net_tcp_title">TCP 혼잡 제어</string>
 </resources>

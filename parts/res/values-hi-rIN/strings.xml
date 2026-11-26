@@ -40,8 +40,8 @@
     <string name="thermal_profile_footer">चुनी गई प्रोफ़ाइल ऐप के उपयोग के दौरान स्वचालित रूप से लागू होती है।</string>
     <string name="thermal_apps_title">ऐप्स</string>
     <string name="saturation_reset">डिफ़ॉल्ट पर रीसेट करें</string>
-    <string name="Powertools_title">Powertools</string>
-    <string name="Powertools_summary">बेहतर प्रदर्शन और दक्षता के लिए पावर प्रीसेट, CPU/GPU आवृत्तियाँ, गवर्नर और ZRAM/मेमोरी ट्यूनिंग अनुकूलित करें</string>
+    <string name="Powertools_title">प्रदर्शन ट्यूनिंग</string>
+    <string name="Powertools_summary">बेहतर प्रदर्शन और दक्षता के लिए CPU, GPU, ZRAM, I/O और नेटवर्क ट्यूनिंग अनुकूलित करें</string>
     <string name="powertools_gpu_category">GPU</string>
     <string name="powertools_gpu_enable_title">GPU ऑप्टिमाइज़र सक्षम करें</string>
     <string name="powertools_gpu_enable_summary">GPU ऑप्टिमाइज़ेशन टॉगल करें</string>
@@ -213,4 +213,16 @@
     <string name="thermal_disable_title">थर्मल नियंत्रण अक्षम करें (mi_thermald)</string>
     <string name="thermal_disable_summary">अगले रीबूट तक mi_thermald को पूरी तरह रोकता है</string>
     <string name="thermal_disable_warning">mi_thermald को रोकने से बैटरी और फास्ट-चार्जिंग तापमान सीमाओं सहित Xiaomi की थर्मल थ्रॉटलिंग बंद हो जाती है। अक्षम रहने पर ग्लोबल, ऑटो, प्रति-ऐप थर्मल प्रोफ़ाइल, क्विक सेटिंग्स टाइल और थर्मल एडिटर उपलब्ध नहीं होंगे। डिवाइस अधिक गर्म हो सकता है। रीबूट के बाद यह स्वतः बहाल हो जाता है। जारी रखें?</string>
+    <string name="powertools_tab_general">सामान्य</string>
+    <string name="powertools_tab_cpu">CPU</string>
+    <string name="powertools_tab_gpu">GPU</string>
+    <string name="powertools_tab_zram">ZRAM</string>
+    <string name="powertools_tab_ionet">I/O और नेट</string>
+    <string name="powertools_ionet_category">I/O और नेटवर्क</string>
+    <string name="powertools_ionet_enable_title">I/O और नेटवर्क ऑप्टिमाइज़र सक्षम करें</string>
+    <string name="powertools_ionet_enable_summary">स्टोरेज I/O और TCP नेटवर्क ट्यूनिंग टॉगल करें</string>
+    <string name="powertools_ionet_config_category">I/O और नेटवर्क कॉन्फ़िगर करें</string>
+    <string name="powertools_io_scheduler_title">स्टोरेज I/O शेड्यूलर</string>
+    <string name="powertools_io_read_ahead_title">स्टोरेज रीड-अहेड</string>
+    <string name="powertools_net_tcp_title">TCP कंजेशन नियंत्रण</string>
 </resources>

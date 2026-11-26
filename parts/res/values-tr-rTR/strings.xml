@@ -40,8 +40,8 @@
     <string name="thermal_profile_footer">Seçilen profil, uygulama kullanılırken otomatik olarak uygulanır.</string>
     <string name="thermal_apps_title">Uygulamalar</string>
     <string name="saturation_reset">Varsayılana sıfırla</string>
-    <string name="Powertools_title">Powertools</string>
-    <string name="Powertools_summary">Güç ön ayarlarını, CPU/GPU frekanslarını, yöneticileri ve ZRAM/bellek ayarlarını özelleştirin</string>
+    <string name="Powertools_title">Performans İnce Ayarı</string>
+    <string name="Powertools_summary">Performans ve verimlilik için CPU, GPU, ZRAM, I/O ve ağ ayarlarını özelleştirin</string>
     <string name="powertools_gpu_category">GPU</string>
     <string name="powertools_gpu_enable_title">GPU İyileştiriciyi Etkinleştir</string>
     <string name="powertools_gpu_enable_summary">GPU iyileştirmelerini aç/kapat</string>
@@ -213,4 +213,16 @@
     <string name="thermal_disable_title">Termal kontrolü devre dışı bırak (mi_thermald)</string>
     <string name="thermal_disable_summary">Bir sonraki yeniden başlatmaya kadar mi_thermald hizmetini tamamen durdurur</string>
     <string name="thermal_disable_warning">mi_thermald hizmetini durdurmak pil ve hızlı şarj sıcaklık sınırları dahil Xiaomi termal kısıtlamasını devre dışı bırakır. Devre dışıyken genel, otomatik ve uygulama başına profiller, Hızlı Ayarlar kutucuğu ve Termal Düzenleyici kullanılamaz. Cihaz aşırı ısınabilir. Yeniden başlatma sonrası otomatik geri yüklenir. Devam edilsin mi?</string>
+    <string name="powertools_tab_general">Genel</string>
+    <string name="powertools_tab_cpu">CPU</string>
+    <string name="powertools_tab_gpu">GPU</string>
+    <string name="powertools_tab_zram">ZRAM</string>
+    <string name="powertools_tab_ionet">I/O ve Ağ</string>
+    <string name="powertools_ionet_category">I/O ve Ağ</string>
+    <string name="powertools_ionet_enable_title">I/O ve Ağ İyileştiriciyi Etkinleştir</string>
+    <string name="powertools_ionet_enable_summary">Depolama I/O ve TCP ağ ayarlarını aç/kapat</string>
+    <string name="powertools_ionet_config_category">I/O ve Ağ Yapılandırması</string>
+    <string name="powertools_io_scheduler_title">Depolama I/O Zamanlayıcı</string>
+    <string name="powertools_io_read_ahead_title">Ön Okuma (Read-Ahead)</string>
+    <string name="powertools_net_tcp_title">TCP Tıkanıklık Kontrolü</string>
 </resources>

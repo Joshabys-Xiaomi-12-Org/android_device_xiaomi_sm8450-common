@@ -40,8 +40,8 @@
     <string name="thermal_profile_footer">O perfil selecionado é aplicado automaticamente enquanto a aplicação está em uso.</string>
     <string name="thermal_apps_title">Aplicações</string>
     <string name="saturation_reset">Repor predefinição</string>
-    <string name="Powertools_title">Powertools</string>
-    <string name="Powertools_summary">Personalize predefinições de energia, frequências de CPU/GPU, governadores e afinações de ZRAM/memória</string>
+    <string name="Powertools_title">Afinação de desempenho</string>
+    <string name="Powertools_summary">Personalize afinações de CPU, GPU, ZRAM, I/O e rede para desempenho e eficiência</string>
     <string name="powertools_gpu_category">GPU</string>
     <string name="powertools_gpu_enable_title">Ativar otimizador da GPU</string>
     <string name="powertools_gpu_enable_summary">Alternar otimizações da GPU</string>
@@ -213,4 +213,16 @@
     <string name="thermal_disable_title">Desativar controlo térmico (mi_thermald)</string>
     <string name="thermal_disable_summary">Para o mi_thermald completamente até ao próximo reinício</string>
     <string name="thermal_disable_warning">Parar o mi_thermald desativa a limitação térmica da Xiaomi, incluindo os limites de temperatura da bateria e do carregamento rápido. Enquanto estiver desativado, os perfis térmicos global, automático e por aplicação, o mosaico das Definições Rápidas e o Editor Térmico ficarão indisponíveis. O dispositivo pode sobreaquecer. É reposto automaticamente ao reiniciar. Continuar?</string>
+    <string name="powertools_tab_general">Geral</string>
+    <string name="powertools_tab_cpu">CPU</string>
+    <string name="powertools_tab_gpu">GPU</string>
+    <string name="powertools_tab_zram">ZRAM</string>
+    <string name="powertools_tab_ionet">I/O e Rede</string>
+    <string name="powertools_ionet_category">I/O e Rede</string>
+    <string name="powertools_ionet_enable_title">Ativar otimizador de I/O e rede</string>
+    <string name="powertools_ionet_enable_summary">Alternar afinações de armazenamento I/O e rede TCP</string>
+    <string name="powertools_ionet_config_category">Configurar I/O e Rede</string>
+    <string name="powertools_io_scheduler_title">Escalonador de I/O</string>
+    <string name="powertools_io_read_ahead_title">Leitura antecipada (Read-Ahead)</string>
+    <string name="powertools_net_tcp_title">Controlo de congestionamento TCP</string>
 </resources>

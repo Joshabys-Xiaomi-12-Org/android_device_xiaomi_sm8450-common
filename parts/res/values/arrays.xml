@@ -379,4 +379,20 @@
         <item>balanced</item>
         <item>throughput</item>
     </string-array>
+
+    <!-- Storage I/O Read-Ahead -->
+    <string-array name="powertools_io_read_ahead_entries" translatable="false">
+        <item>128 KB</item>
+        <item>256 KB</item>
+        <item>512 KB</item>
+        <item>1024 KB</item>
+        <item>2048 KB</item>
+    </string-array>
+    <string-array name="powertools_io_read_ahead_values" translatable="false">
+        <item>128</item>
+        <item>256</item>
+        <item>512</item>
+        <item>1024</item>
+        <item>2048</item>
+    </string-array>
 </resources>

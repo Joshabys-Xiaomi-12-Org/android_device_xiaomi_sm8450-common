@@ -184,11 +184,24 @@
     <string name="powertools_vm_dirty_default">இயல்புநிலை (20 / 10)</string>
     <string name="powertools_vm_dirty_balanced">சமநிலை (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">உயர் திறன் (40 / 20)</string>
-    <string name="Powertools_summary">செயல்திறனுக்காக பவர் முன்னமைவுகள், CPU/GPU அதிர்வெண்கள், கட்டுப்படுத்திகள் மற்றும் ZRAM/நினைவக அமைப்புகளை தனிப்பயனாக்குங்கள்</string>
+    <string name="Powertools_summary">CPU, GPU, ZRAM, I/O மற்றும் நெட்வொர்க் அமைப்புகளை தனிப்பயனாக்குங்கள்</string>
     <string name="powertools_auto_thermal_title">தானியங்கி வெப்ப சுயவிவரங்கள்</string>
     <string name="powertools_auto_thermal_summary">செயலி வகையின் அடிப்படையில் (விளையாட்டுகள், கேமரா, உலாவி போன்றவை) வெப்ப சுயவிவரத்தை தானாக அமைக்கவும்</string>
     <string name="thermal_auto_profile_label">தானியங்கி: %1$s</string>
     <string name="thermal_disable_title">வெப்ப கட்டுப்பாட்டை முடக்கு (mi_thermald)</string>
     <string name="thermal_disable_summary">அடுத்த மறுதுவக்கம் வரை mi_thermald ஐ முழுமையாக நிறுத்தும்</string>
     <string name="thermal_disable_warning">mi_thermald ஐ நிறுத்துவது பேட்டரி மற்றும் வேகமான சார்ஜிங் வெப்ப வரம்புகள் உட்பட Xiaomi வெப்ப கட்டுப்பாட்டை முடக்கும். முடக்கப்பட்டிருக்கும் போது உலகளாவிய, தானியங்கி, செயலி வாரியான சுயவிவரங்கள், விரைவு அமைப்பு டைல் மற்றும் வெப்ப திருத்தி கிடைக்காது. சாதனம் அதிக வெப்பமடையக்கூடும். மறுதுவக்கத்திற்குப் பிறகு தானாக மீட்டமைக்கப்படும். தொடரவா?</string>
+    <string name="Powertools_title">செயல்திறன் சீரமைப்பு</string>
+    <string name="powertools_tab_general">பொது</string>
+    <string name="powertools_tab_cpu">CPU</string>
+    <string name="powertools_tab_gpu">GPU</string>
+    <string name="powertools_tab_zram">ZRAM</string>
+    <string name="powertools_tab_ionet">I/O &amp; நெட்</string>
+    <string name="powertools_ionet_category">I/O &amp; நெட்வொர்க்</string>
+    <string name="powertools_ionet_enable_title">I/O &amp; நெட்வொர்க் மேம்படுத்தியை இயக்கு</string>
+    <string name="powertools_ionet_enable_summary">சேமிப்பு I/O மற்றும் TCP நெட்வொர்க் சீரமைப்பை மாற்று</string>
+    <string name="powertools_ionet_config_category">I/O &amp; நெட்வொர்க் கட்டமைப்பு</string>
+    <string name="powertools_io_scheduler_title">சேமிப்பு I/O அட்டவணையாளர்</string>
+    <string name="powertools_io_read_ahead_title">சேமிப்பு Read-Ahead</string>
+    <string name="powertools_net_tcp_title">TCP நெரிசல் கட்டுப்பாடு</string>
 </resources>

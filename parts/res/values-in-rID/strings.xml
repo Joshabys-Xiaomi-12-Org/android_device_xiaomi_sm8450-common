@@ -40,8 +40,8 @@
     <string name="thermal_profile_footer">Profil yang dipilih diterapkan secara otomatis saat aplikasi digunakan.</string>
     <string name="thermal_apps_title">Aplikasi</string>
     <string name="saturation_reset">Atur ulang ke bawaan</string>
-    <string name="Powertools_title">Powertools</string>
-    <string name="Powertools_summary">Sesuaikan preset daya, frekuensi CPU/GPU, governor, serta penyetelan ZRAM dan memori</string>
+    <string name="Powertools_title">Penyetelan Performa</string>
+    <string name="Powertools_summary">Sesuaikan penyetelan CPU, GPU, ZRAM, I/O, dan jaringan untuk performa dan efisiensi</string>
     <string name="powertools_gpu_category">GPU</string>
     <string name="powertools_gpu_enable_title">Aktifkan Pengoptimal GPU</string>
     <string name="powertools_gpu_enable_summary">Alihkan pengoptimalan GPU</string>
@@ -213,4 +213,16 @@
     <string name="thermal_disable_title">Nonaktifkan kontrol termal (mi_thermald)</string>
     <string name="thermal_disable_summary">Menghentikan mi_thermald sepenuhnya hingga mulai ulang berikutnya</string>
     <string name="thermal_disable_warning">Menghentikan mi_thermald menonaktifkan pembatasan termal Xiaomi, termasuk batas suhu baterai dan pengisian cepat. Saat dinonaktifkan, profil termal global, otomatis, per aplikasi, ubin Pengaturan Cepat, dan Editor Termal tidak akan tersedia. Perangkat dapat terlalu panas. Otomatis aktif kembali setelah mulai ulang. Lanjutkan?</string>
+    <string name="powertools_tab_general">Umum</string>
+    <string name="powertools_tab_cpu">CPU</string>
+    <string name="powertools_tab_gpu">GPU</string>
+    <string name="powertools_tab_zram">ZRAM</string>
+    <string name="powertools_tab_ionet">I/O &amp; Jaringan</string>
+    <string name="powertools_ionet_category">I/O &amp; Jaringan</string>
+    <string name="powertools_ionet_enable_title">Aktifkan Pengoptimal I/O &amp; Jaringan</string>
+    <string name="powertools_ionet_enable_summary">Alihkan penyetelan I/O penyimpanan dan jaringan TCP</string>
+    <string name="powertools_ionet_config_category">Konfigurasi I/O &amp; Jaringan</string>
+    <string name="powertools_io_scheduler_title">Penjadwal I/O Penyimpanan</string>
+    <string name="powertools_io_read_ahead_title">Read-Ahead Penyimpanan</string>
+    <string name="powertools_net_tcp_title">Kontrol Kemacetan TCP</string>
 </resources>

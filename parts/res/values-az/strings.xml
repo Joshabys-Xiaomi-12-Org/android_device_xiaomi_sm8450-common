@@ -186,11 +186,24 @@
     <string name="powertools_vm_dirty_default">Standart (20 / 10)</string>
     <string name="powertools_vm_dirty_balanced">Balanslı (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">Yüksək ötürmə (40 / 20)</string>
-    <string name="Powertools_summary">Performans və səmərəlilik üçün güc profillərini, CPU/GPU tezliklərini, idarəediciləri və ZRAM/yaddaş ayarlarını fərdiləşdirin</string>
+    <string name="Powertools_summary">Performans və səmərəlilik üçün CPU, GPU, ZRAM, I/O və şəbəkə ayarlarını fərdiləşdirin</string>
     <string name="powertools_auto_thermal_title">Avtomatik istilik profilləri</string>
     <string name="powertools_auto_thermal_summary">Tətbiq növünə görə (oyunlar, kamera, brauzer və s.) istilik profilini avtomatik təyin et</string>
     <string name="thermal_auto_profile_label">Avto: %1$s</string>
     <string name="thermal_disable_title">İstilik nəzarətini söndür (mi_thermald)</string>
     <string name="thermal_disable_summary">Növbəti yenidən başlatmaya qədər mi_thermald xidmətini tam dayandırır</string>
     <string name="thermal_disable_warning">mi_thermald dayandırıldıqda batareya və sürətli doldurma istilik limitləri daxil olmaqla Xiaomi-nin istilik məhdudiyyəti söndürülür. Söndürüldüyü müddətdə qlobal, avtomatik və tətbiqə özəl profillər, sürətli ayarlar plitəsi və istilik redaktoru əlçatan olmayacaq. Cihaz həddindən artıq qıza bilər. Yenidən başlatdıqdan sonra avtomatik bərpa olunur. Davam edilsin?</string>
+    <string name="Powertools_title">Performans tənzimləməsi</string>
+    <string name="powertools_tab_general">Ümumi</string>
+    <string name="powertools_tab_cpu">CPU</string>
+    <string name="powertools_tab_gpu">GPU</string>
+    <string name="powertools_tab_zram">ZRAM</string>
+    <string name="powertools_tab_ionet">I/O &amp; Şəbəkə</string>
+    <string name="powertools_ionet_category">I/O və Şəbəkə</string>
+    <string name="powertools_ionet_enable_title">I/O və Şəbəkə optimallaşdırıcısını aktiv et</string>
+    <string name="powertools_ionet_enable_summary">Yaddaş I/O və TCP şəbəkə tənzimləməsini dəyiş</string>
+    <string name="powertools_ionet_config_category">I/O və Şəbəkə tənzimləməsi</string>
+    <string name="powertools_io_scheduler_title">Yaddaş I/O planlayıcısı</string>
+    <string name="powertools_io_read_ahead_title">Öncədən oxuma (Read-Ahead)</string>
+    <string name="powertools_net_tcp_title">TCP tıxac nəzarəti</string>
 </resources>

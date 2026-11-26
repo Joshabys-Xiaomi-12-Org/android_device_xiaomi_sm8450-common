@@ -40,8 +40,8 @@
     <string name="thermal_profile_footer">Das ausgewählte Profil wird automatisch angewendet, während die App verwendet wird.</string>
     <string name="thermal_apps_title">Apps</string>
     <string name="saturation_reset">Auf Standard zurücksetzen</string>
-    <string name="Powertools_title">Powertools</string>
-    <string name="Powertools_summary">Leistungsvoreinstellungen, CPU/GPU-Frequenzen, Governor sowie ZRAM- und Speicher-Tuning anpassen</string>
+    <string name="Powertools_title">Leistungsoptimierung</string>
+    <string name="Powertools_summary">CPU-, GPU-, ZRAM-, I/O- und Netzwerk-Tuning für Leistung und Effizienz anpassen</string>
     <string name="powertools_gpu_category">GPU</string>
     <string name="powertools_gpu_enable_title">GPU-Optimierer aktivieren</string>
     <string name="powertools_gpu_enable_summary">GPU-Optimierungen umschalten</string>
@@ -213,4 +213,16 @@
     <string name="thermal_disable_title">Wärmesteuerung deaktivieren (mi_thermald)</string>
     <string name="thermal_disable_summary">Stoppt mi_thermald vollständig bis zum nächsten Neustart</string>
     <string name="thermal_disable_warning">Das Stoppen von mi_thermald deaktiviert Xiaomis thermische Drosselung einschließlich Akku- und Schnelllade-Temperaturgrenzen. Solange es deaktiviert ist, sind globale, automatische und App-Profile, die Schnelleinstellungen-Kachel sowie der Thermal-Editor nicht verfügbar. Das Gerät kann überhitzen. Nach einem Neustart wird es automatisch wieder aktiviert. Fortfahren?</string>
+    <string name="powertools_tab_general">Allgemein</string>
+    <string name="powertools_tab_cpu">CPU</string>
+    <string name="powertools_tab_gpu">GPU</string>
+    <string name="powertools_tab_zram">ZRAM</string>
+    <string name="powertools_tab_ionet">I/O &amp; Netz</string>
+    <string name="powertools_ionet_category">I/O &amp; Netzwerk</string>
+    <string name="powertools_ionet_enable_title">I/O- &amp; Netzwerk-Optimierer aktivieren</string>
+    <string name="powertools_ionet_enable_summary">Speicher-I/O- und TCP-Netzwerk-Tuning umschalten</string>
+    <string name="powertools_ionet_config_category">I/O &amp; Netzwerk konfigurieren</string>
+    <string name="powertools_io_scheduler_title">Speicher-I/O-Scheduler</string>
+    <string name="powertools_io_read_ahead_title">Speicher-Read-Ahead</string>
+    <string name="powertools_net_tcp_title">TCP-Überlastungskontrolle</string>
 </resources>

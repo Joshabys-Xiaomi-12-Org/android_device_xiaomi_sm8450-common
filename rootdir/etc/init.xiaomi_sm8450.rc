@@ -416,3 +416,21 @@ on property:sys.parts.vm.dirty_ratio=*
 
 on property:sys.parts.vm.dirty_background_ratio=*
     write /proc/sys/vm/dirty_background_ratio ${sys.parts.vm.dirty_background_ratio}
+
+# Powertools I/O & Network Tuning
+on property:sys.parts.io.scheduler=*
+    write /sys/block/sda/queue/scheduler ${sys.parts.io.scheduler}
+    write /sys/block/sdb/queue/scheduler ${sys.parts.io.scheduler}
+    write /sys/block/sdc/queue/scheduler ${sys.parts.io.scheduler}
+    write /sys/block/sde/queue/scheduler ${sys.parts.io.scheduler}
+    write /sys/block/sdf/queue/scheduler ${sys.parts.io.scheduler}
+
+on property:sys.parts.io.read_ahead_kb=*
+    write /sys/block/sda/queue/read_ahead_kb ${sys.parts.io.read_ahead_kb}
+    write /sys/block/sdb/queue/read_ahead_kb ${sys.parts.io.read_ahead_kb}
+    write /sys/block/sdc/queue/read_ahead_kb ${sys.parts.io.read_ahead_kb}
+    write /sys/block/sde/queue/read_ahead_kb ${sys.parts.io.read_ahead_kb}
+    write /sys/block/sdf/queue/read_ahead_kb ${sys.parts.io.read_ahead_kb}
+
+on property:sys.parts.net.tcp_congestion=*
+    write /proc/sys/net/ipv4/tcp_congestion_control ${sys.parts.net.tcp_congestion}

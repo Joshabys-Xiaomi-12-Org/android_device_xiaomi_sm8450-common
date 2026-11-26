@@ -115,5 +115,14 @@ public final class PowertoolsBootHelper {
             ZramUtils.setDirtyProfile(
                     prefs.getString(PowertoolsSettingsFragment.KEY_VM_DIRTY_PROFILE, null));
         }
+
+        if (prefs.getBoolean(PowertoolsSettingsFragment.KEY_IO_NET_ENABLE, false)) {
+            IoNetUtils.setIoScheduler(
+                    prefs.getString(PowertoolsSettingsFragment.KEY_IO_SCHEDULER, null));
+            IoNetUtils.setReadAheadKb(
+                    prefs.getString(PowertoolsSettingsFragment.KEY_IO_READ_AHEAD, null));
+            IoNetUtils.setTcpCongestion(
+                    prefs.getString(PowertoolsSettingsFragment.KEY_NET_TCP_CONGESTION, null));
+        }
     }
 }

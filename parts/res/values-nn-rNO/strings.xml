@@ -186,11 +186,24 @@
     <string name="powertools_vm_dirty_default">Standard (20 / 10)</string>
     <string name="powertools_vm_dirty_balanced">Balansert (30 / 15)</string>
     <string name="powertools_vm_dirty_throughput">Gjennomstrøyming (40 / 20)</string>
-    <string name="Powertools_summary">Tilpass straumprofilar, CPU/GPU-frekvensar, styringar samt ZRAM- og minnejustering</string>
+    <string name="Powertools_summary">Tilpass CPU, GPU, ZRAM, I/O og nettverksjustering for yting og effektivitet</string>
     <string name="powertools_auto_thermal_title">Automatiske termiske profilar</string>
     <string name="powertools_auto_thermal_summary">Vel termisk profil automatisk etter apptypa (spel, kamera, nettlesar osv.)</string>
     <string name="thermal_auto_profile_label">Auto: %1$s</string>
     <string name="thermal_disable_title">Deaktiver termisk kontroll (mi_thermald)</string>
     <string name="thermal_disable_summary">Stoppar mi_thermald heilt fram til neste omstart</string>
     <string name="thermal_disable_warning">Å stoppe mi_thermald deaktiverer Xiaomi si termiske avgrensing, inkludert grenser for batteri og hurtiglading. Medan det er deaktivert, vil globale, automatiske og app-spesifikke profilar, hurtiginnstilling-flisa og Thermal-editoren vere utilgjengelege. Eininga kan bli overoppheta. Blir automatisk gjenoppretta ved omstart. Halde fram?</string>
+    <string name="Powertools_title">Ytingsjustering</string>
+    <string name="powertools_tab_general">Generelt</string>
+    <string name="powertools_tab_cpu">CPU</string>
+    <string name="powertools_tab_gpu">GPU</string>
+    <string name="powertools_tab_zram">ZRAM</string>
+    <string name="powertools_tab_ionet">I/O &amp; Nett</string>
+    <string name="powertools_ionet_category">I/O og nettverk</string>
+    <string name="powertools_ionet_enable_title">Aktiver I/O- og nettverksoptimalisering</string>
+    <string name="powertools_ionet_enable_summary">Slå av/på lagrings-I/O og TCP-nettverksjustering</string>
+    <string name="powertools_ionet_config_category">Konfigurer I/O og nettverk</string>
+    <string name="powertools_io_scheduler_title">Lagrings-I/O-planleggjar</string>
+    <string name="powertools_io_read_ahead_title">Førehandslesing (Read-Ahead)</string>
+    <string name="powertools_net_tcp_title">TCP-trafikkontroll</string>
 </resources>

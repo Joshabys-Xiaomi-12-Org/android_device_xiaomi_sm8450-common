@@ -1,0 +1,119 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- CPU Optimizer Section -->
+    <PreferenceCategory
+        android:key="cpu_category"
+        android:title="@string/powertools_cpu_category">
+
+        <SwitchPreferenceCompat
+            android:key="cpu_enable"
+            android:title="@string/powertools_cpu_enable_title"
+            android:summary="@string/powertools_cpu_enable_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <!-- CPU Tuning -->
+    <PreferenceCategory
+        android:key="cpu_tuning_category"
+        android:title="@string/powertools_cpu_tuning_category">
+
+        <ListPreference
+            android:key="cpu_input_boost"
+            android:title="@string/powertools_input_boost_title"
+            android:entries="@array/powertools_input_boost_entries"
+            android:entryValues="@array/powertools_input_boost_values"
+            android:defaultValue="default"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="cpu_walt_profile"
+            android:title="@string/powertools_walt_profile_title"
+            android:entries="@array/powertools_walt_profile_entries"
+            android:entryValues="@array/powertools_walt_profile_values"
+            android:defaultValue="default"
+            android:summary="%s" />
+
+        <SwitchPreferenceCompat
+            android:key="cpu_limit_prime"
+            android:title="@string/powertools_limit_prime_title"
+            android:summary="@string/powertools_limit_prime_summary"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:key="cpu_uclamp_profile"
+            android:title="@string/powertools_uclamp_title"
+            android:entries="@array/powertools_uclamp_entries"
+            android:entryValues="@array/powertools_uclamp_values"
+            android:defaultValue="default"
+            android:summary="%s" />
+
+    </PreferenceCategory>
+
+    <!-- CPU Little Cluster -->
+    <PreferenceCategory
+        android:key="cpu_little_category"
+        android:title="@string/powertools_cpu_little_category">
+
+        <ListPreference
+            android:key="cpu_little_min_frequency"
+            android:title="@string/powertools_cpu_min_freq"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="cpu_little_max_frequency"
+            android:title="@string/powertools_cpu_max_freq"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="cpu_little_governor"
+            android:title="@string/powertools_cpu_governor"
+            android:summary="%s" />
+
+    </PreferenceCategory>
+
+    <!-- CPU Big Cluster -->
+    <PreferenceCategory
+        android:key="cpu_big_category"
+        android:title="@string/powertools_cpu_big_category">
+
+        <ListPreference
+            android:key="cpu_big_min_frequency"
+            android:title="@string/powertools_cpu_min_freq"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="cpu_big_max_frequency"
+            android:title="@string/powertools_cpu_max_freq"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="cpu_big_governor"
+            android:title="@string/powertools_cpu_governor"
+            android:summary="%s" />
+
+    </PreferenceCategory>
+
+    <!-- CPU Prime Cluster -->
+    <PreferenceCategory
+        android:key="cpu_prime_category"
+        android:title="@string/powertools_cpu_prime_category">
+
+        <ListPreference
+            android:key="cpu_prime_min_frequency"
+            android:title="@string/powertools_cpu_min_freq"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="cpu_prime_max_frequency"
+            android:title="@string/powertools_cpu_max_freq"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="cpu_prime_governor"
+            android:title="@string/powertools_cpu_governor"
+            android:summary="%s" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
