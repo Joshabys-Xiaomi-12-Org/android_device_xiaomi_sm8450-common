@@ -41,6 +41,8 @@
     <string name="thermal_apps_title">אפליקציות</string>
     <string name="saturation_reset">איפוס לברירת מחדל</string>
     <string name="Powertools_summary">התאם אישית כוונון CPU, GPU, ZRAM, I/O ורשת לביצועים ויעילות</string>
+    <string name="powertools_modules_category">מודולי כוונון</string>
+    <string name="powertools_status_enabled">מופעל</string>
     <string name="powertools_gpu_enable_title">הפעל מיטוב GPU</string>
     <string name="powertools_gpu_enable_summary">הפעל או כבה מיטוב GPU</string>
     <string name="powertools_gpu_freq_category">הגדרת GPU</string>
@@ -199,11 +201,7 @@
     <string name="thermal_disable_title">השבת בקרה תרמית (mi_thermald)</string>
     <string name="thermal_disable_summary">עוצר לחלוטין את mi_thermald עד להפעלה מחדש הבאה</string>
     <string name="thermal_disable_warning">עצירת mi_thermald משביתה את ההגבלה התרמית של שיאומי, כולל מגבלות לסוללה ולטעינה מהירה. בזמן ההשבתה לא יהיו זמינים פרופילים גלובליים, אוטומטיים ולכל אפליקציה, אריח ההגדרות המהירות ועורך התרמיות. המכשיר עלול להתחמם יתר על המידה. הבקרה חוזרת אוטומטית בהפעלה מחדש. להמשיך?</string>
-    <string name="Powertools_title">כוונון ביצועים</string>
-    <string name="powertools_tab_general">כללי</string>
-    <string name="powertools_tab_cpu">CPU</string>
-    <string name="powertools_tab_gpu">GPU</string>
-    <string name="powertools_tab_zram">ZRAM</string>
+    <string name="Powertools_title">PowerTools</string>
     <string name="powertools_tab_ionet">I/O ורשת</string>
     <string name="powertools_ionet_category">I/O ורשת</string>
     <string name="powertools_ionet_enable_title">הפעל ממטב I/O ורשת</string>
@@ -212,8 +210,6 @@
     <string name="powertools_io_scheduler_title">מתזמן I/O לאחסון</string>
     <string name="powertools_io_read_ahead_title">קריאה מראש (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">בקרת עומס TCP</string>
-    <string name="powertools_tab_io">I/O</string>
-    <string name="powertools_tab_net">רשת</string>
     <string name="powertools_io_category">אחסון I/O</string>
     <string name="powertools_io_enable_title">הפעל ממטב I/O</string>
     <string name="powertools_io_enable_summary">הפעל או כבה כוונון אחסון I/O</string>

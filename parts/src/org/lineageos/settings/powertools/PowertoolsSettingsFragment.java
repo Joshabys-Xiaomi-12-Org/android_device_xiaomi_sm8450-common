@@ -25,16 +25,12 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.text.TextUtils;
-import android.view.View;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceManager;
 import androidx.preference.SwitchPreferenceCompat;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.settingslib.widget.SettingsBasePreferenceFragment;
 
@@ -65,6 +61,13 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
     static final String KEY_POWER_PRESET = "power_preset";
     static final String KEY_APPLY_ON_BOOT = "apply_on_boot";
     static final String KEY_RESET_DEFAULTS = "reset_defaults";
+
+    // Hub navigation keys
+    private static final String KEY_NAV_CPU = "nav_cpu";
+    private static final String KEY_NAV_GPU = "nav_gpu";
+    private static final String KEY_NAV_ZRAM = "nav_zram";
+    private static final String KEY_NAV_IO = "nav_io";
+    private static final String KEY_NAV_NET = "nav_net";
 
     // GPU keys
     static final String KEY_GPU_ENABLE = "gpu_enable";
@@ -139,6 +142,11 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
     // General preferences
     private ListPreference mPowerPresetPref;
     private Preference mResetDefaultsPref;
+    private Preference mNavCpuPref;
+    private Preference mNavGpuPref;
+    private Preference mNavZramPref;
+    private Preference mNavIoPref;
+    private Preference mNavNetPref;
 
     // GPU preferences
     private SwitchPreferenceCompat mGpuEnablePref;
@@ -363,6 +371,17 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
         if (mResetDefaultsPref != null) {
             mResetDefaultsPref.setOnPreferenceClickListener(this);
         }
+
+        mNavCpuPref = findPreference(KEY_NAV_CPU);
+        mNavGpuPref = findPreference(KEY_NAV_GPU);
+        mNavZramPref = findPreference(KEY_NAV_ZRAM);
+        mNavIoPref = findPreference(KEY_NAV_IO);
+        mNavNetPref = findPreference(KEY_NAV_NET);
+        if (mNavCpuPref != null) mNavCpuPref.setOnPreferenceClickListener(this);
+        if (mNavGpuPref != null) mNavGpuPref.setOnPreferenceClickListener(this);
+        if (mNavZramPref != null) mNavZramPref.setOnPreferenceClickListener(this);
+        if (mNavIoPref != null) mNavIoPref.setOnPreferenceClickListener(this);
+        if (mNavNetPref != null) mNavNetPref.setOnPreferenceClickListener(this);
     }
 
     private void setupGpuTab() {
@@ -588,19 +607,6 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        RecyclerView list = getListView();
-        if (list != null) {
-            list.setClipToPadding(true);
-            list.setClipChildren(true);
-            int topPad = Math.round(4 * getResources().getDisplayMetrics().density);
-            list.setPadding(list.getPaddingLeft(), topPad,
-                    list.getPaddingRight(), list.getPaddingBottom());
-        }
-    }
-
-    @Override
     public void onResume() {
         super.onResume();
         PreferenceManager.getDefaultSharedPreferences(requireContext())
@@ -675,6 +681,123 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
         if (mNetEnablePref != null) {
             setNetPrefsEnabled(mNetEnablePref.isChecked());
         }
+        if (mCurrentTab == TAB_GENERAL) {
+            updateModuleSummaries();
+        }
+    }
+
+    private void updateModuleSummaries() {
+        if (!isAdded() || getContext() == null) {
+            return;
+        }
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
+        String enabledStr = getString(R.string.powertools_status_enabled);
+        String disabledStr = getString(R.string.powertools_zram_disabled);
+
+        if (mNavCpuPref != null) {
+            boolean on = prefs.getBoolean(KEY_CPU_ENABLE, false);
+            String gov = prefs.getString(KEY_CPU_LITTLE_GOVERNOR, mCpuLittleDefaultGov);
+            StringBuilder sb = new StringBuilder(on ? enabledStr : disabledStr);
+            if (!TextUtils.isEmpty(gov)) {
+                sb.append(" • ").append(gov);
+            }
+            if (on && prefs.getBoolean(KEY_CPU_LIMIT_PRIME, false)) {
+                sb.append(" • ").append(getString(R.string.powertools_limit_prime_title));
+            }
+            mNavCpuPref.setSummary(sb.toString());
+        }
+
+        if (mNavGpuPref != null) {
+            boolean on = prefs.getBoolean(KEY_GPU_ENABLE, false);
+            String minStr = prefs.getString(KEY_GPU_MIN_FREQ, mGpuDefaultMin);
+            String maxStr = prefs.getString(KEY_GPU_MAX_FREQ, mGpuDefaultMax);
+            StringBuilder sb = new StringBuilder(on ? enabledStr : disabledStr);
+            long minHz = parseLongSafe(minStr, -1);
+            long maxHz = parseLongSafe(maxStr, -1);
+            if (minHz > 0 && maxHz > 0) {
+                sb.append(" • ").append(minHz / 1_000_000).append("–")
+                        .append(maxHz / 1_000_000).append(" MHz");
+            }
+            if (on && GPUUtils.isAdrenoIdlerAvailable()
+                    && prefs.getBoolean(KEY_GPU_ADRENO_IDLER, false)) {
+                sb.append(" • ").append(getString(R.string.powertools_adreno_idler_title));
+            }
+            mNavGpuPref.setSummary(sb.toString());
+        }
+
+        if (mNavZramPref != null) {
+            boolean on = prefs.getBoolean(KEY_ZRAM_ENABLE, false);
+            String sizeMb = prefs.getString(KEY_ZRAM_SIZE, mZramDefaultSize);
+            String algo = prefs.getString(KEY_ZRAM_ALGO, mZramDefaultAlgo);
+            String swap = prefs.getString(KEY_VM_SWAPPINESS, mVmDefaultSwappiness);
+            StringBuilder sb = new StringBuilder(on ? enabledStr : disabledStr);
+            if (!TextUtils.isEmpty(sizeMb)) {
+                sb.append(" • ").append(formatZramSizeMb(sizeMb));
+            }
+            if (!TextUtils.isEmpty(algo)) {
+                sb.append(" • ").append(algo);
+            }
+            if (!TextUtils.isEmpty(swap)) {
+                sb.append(" • Swap ").append(swap);
+            }
+            mNavZramPref.setSummary(sb.toString());
+        }
+
+        if (mNavIoPref != null) {
+            boolean on = prefs.getBoolean(KEY_IO_ENABLE, false);
+            String sched = prefs.getString(KEY_IO_SCHEDULER, mIoDefaultScheduler);
+            String ra = prefs.getString(KEY_IO_READ_AHEAD, mIoDefaultReadAhead);
+            StringBuilder sb = new StringBuilder(on ? enabledStr : disabledStr);
+            if (!TextUtils.isEmpty(sched)) {
+                sb.append(" • ").append(sched);
+            }
+            if (!TextUtils.isEmpty(ra)) {
+                sb.append(" • ").append(ra).append(" KB");
+            }
+            mNavIoPref.setSummary(sb.toString());
+        }
+
+        if (mNavNetPref != null) {
+            boolean on = prefs.getBoolean(KEY_NET_ENABLE, false);
+            String tcp = prefs.getString(KEY_NET_TCP_CONGESTION, mNetDefaultTcp);
+            StringBuilder sb = new StringBuilder(on ? enabledStr : disabledStr);
+            if (!TextUtils.isEmpty(tcp)) {
+                sb.append(" • TCP ").append(tcp);
+            }
+            mNavNetPref.setSummary(sb.toString());
+        }
+    }
+
+    private String formatZramSizeMb(String mbStr) {
+        long mb = parseLongSafe(mbStr, -1);
+        if (mb <= 0) {
+            return "0 MB";
+        }
+        if (mb % 1024 == 0) {
+            return (mb / 1024) + " GB";
+        }
+        if (mb >= 1024) {
+            return String.format(Locale.getDefault(), "%.1f GB", mb / 1024.0);
+        }
+        return mb + " MB";
+    }
+
+    private static long parseLongSafe(String value, long fallback) {
+        if (TextUtils.isEmpty(value)) {
+            return fallback;
+        }
+        try {
+            return Long.parseLong(value.trim());
+        } catch (NumberFormatException e) {
+            return fallback;
+        }
+    }
+
+    private void openSection(int section, int titleRes) {
+        Intent intent = new Intent(requireContext(), PowertoolsSectionActivity.class);
+        intent.putExtra(PowertoolsSectionActivity.EXTRA_SECTION, section);
+        intent.putExtra(PowertoolsSectionActivity.EXTRA_TITLE_RES, titleRes);
+        startActivity(intent);
     }
 
     private void setGpuPrefsEnabled(boolean enabled) {
@@ -1043,6 +1166,26 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
 
     @Override
     public boolean onPreferenceClick(Preference preference) {
+        if (preference == mNavCpuPref) {
+            openSection(TAB_CPU, R.string.powertools_cpu_category);
+            return true;
+        }
+        if (preference == mNavGpuPref) {
+            openSection(TAB_GPU, R.string.powertools_gpu_category);
+            return true;
+        }
+        if (preference == mNavZramPref) {
+            openSection(TAB_ZRAM, R.string.powertools_zram_category);
+            return true;
+        }
+        if (preference == mNavIoPref) {
+            openSection(TAB_IO, R.string.powertools_io_category);
+            return true;
+        }
+        if (preference == mNavNetPref) {
+            openSection(TAB_NET, R.string.powertools_net_category);
+            return true;
+        }
         if (preference == mResetDefaultsPref) {
             restoreGpuDefaults();
             restoreCpuDefaults();

@@ -41,6 +41,8 @@
     <string name="thermal_apps_title">برنامه‌ها</string>
     <string name="saturation_reset">بازنشانی به پیش‌فرض</string>
     <string name="Powertools_summary">سفارشی‌سازی تنظیمات CPU، GPU، ZRAM، I/O و شبکه برای عملکرد و بهره‌وری</string>
+    <string name="powertools_modules_category">ماژول‌های تنظیم</string>
+    <string name="powertools_status_enabled">فعال</string>
     <string name="powertools_gpu_enable_title">فعال‌سازی بهینه‌ساز GPU</string>
     <string name="powertools_gpu_enable_summary">تغییر وضعیت بهینه‌سازی‌های GPU</string>
     <string name="powertools_gpu_freq_category">پیکربندی GPU</string>
@@ -199,11 +201,7 @@
     <string name="thermal_disable_title">غیرفعال کردن کنترل دما (mi_thermald)</string>
     <string name="thermal_disable_summary">سرویس mi_thermald را تا راه‌اندازی مجدد بعدی کاملاً متوقف می‌کند</string>
     <string name="thermal_disable_warning">توقف mi_thermald محدودیت دمایی شیائومی از جمله محدودیت دمای باتری و شارژ سریع را غیرفعال می‌کند. در زمان غیرفعال بودن، پروفایل‌های سراسری، خودکار، هر برنامه، کاشی تنظیمات سریع و ویرایشگر حرارتی در دسترس نخواهند بود. دستگاه ممکن است بیش از حد داغ شود. پس از راه‌اندازی مجدد خودکار فعال می‌شود. ادامه می‌دهید؟</string>
-    <string name="Powertools_title">تنظیم عملکرد</string>
-    <string name="powertools_tab_general">عمومی</string>
-    <string name="powertools_tab_cpu">CPU</string>
-    <string name="powertools_tab_gpu">GPU</string>
-    <string name="powertools_tab_zram">ZRAM</string>
+    <string name="Powertools_title">PowerTools</string>
     <string name="powertools_tab_ionet">I/O و شبکه</string>
     <string name="powertools_ionet_category">I/O و شبکه</string>
     <string name="powertools_ionet_enable_title">فعال‌سازی بهینه‌ساز I/O و شبکه</string>
@@ -212,8 +210,6 @@
     <string name="powertools_io_scheduler_title">زمان‌بند I/O ذخیره‌سازی</string>
     <string name="powertools_io_read_ahead_title">پیش‌خوانی ذخیره‌سازی (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">کنترل ازدحام TCP</string>
-    <string name="powertools_tab_io">I/O</string>
-    <string name="powertools_tab_net">شبکه</string>
     <string name="powertools_io_category">ذخیره‌سازی I/O</string>
     <string name="powertools_io_enable_title">فعال‌سازی بهینه‌ساز I/O</string>
     <string name="powertools_io_enable_summary">تغییر وضعیت تنظیمات ذخیره‌سازی I/O</string>

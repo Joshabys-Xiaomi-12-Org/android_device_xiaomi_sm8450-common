@@ -40,8 +40,10 @@
     <string name="thermal_profile_footer">所选配置会在应用使用期间自动应用。</string>
     <string name="thermal_apps_title">应用</string>
     <string name="saturation_reset">恢复默认</string>
-    <string name="Powertools_title">性能调优</string>
+    <string name="Powertools_title">PowerTools</string>
     <string name="Powertools_summary">自定义 CPU、GPU、ZRAM、I/O 与网络参数以优化性能与能效</string>
+    <string name="powertools_modules_category">调优模块</string>
+    <string name="powertools_status_enabled">已启用</string>
     <string name="powertools_gpu_category">GPU</string>
     <string name="powertools_gpu_enable_title">启用 GPU 优化器</string>
     <string name="powertools_gpu_enable_summary">开关 GPU 优化</string>
@@ -213,10 +215,6 @@
     <string name="thermal_disable_title">禁用温控服务 (mi_thermald)</string>
     <string name="thermal_disable_summary">完全停止 mi_thermald 直至下次重启</string>
     <string name="thermal_disable_warning">停止 mi_thermald 将禁用小米温控限制（包括电池与快充温度限制）。禁用期间，全局、自动和单应用温控配置、快捷设置磁贴以及小米温控编辑器都将不可用。设备在充电或游戏时可能会严重发热，重启后将自动恢复。是否继续？</string>
-    <string name="powertools_tab_general">常规</string>
-    <string name="powertools_tab_cpu">CPU</string>
-    <string name="powertools_tab_gpu">GPU</string>
-    <string name="powertools_tab_zram">ZRAM</string>
     <string name="powertools_tab_ionet">I/O 与网络</string>
     <string name="powertools_ionet_category">I/O 与网络</string>
     <string name="powertools_ionet_enable_title">启用 I/O 与网络优化</string>
@@ -225,8 +223,6 @@
     <string name="powertools_io_scheduler_title">存储 I/O 调度器</string>
     <string name="powertools_io_read_ahead_title">存储预读 (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">TCP 拥塞控制</string>
-    <string name="powertools_tab_io">I/O</string>
-    <string name="powertools_tab_net">网络</string>
     <string name="powertools_io_category">存储 I/O</string>
     <string name="powertools_io_enable_title">启用 I/O 优化</string>
     <string name="powertools_io_enable_summary">开关存储 I/O 调优</string>

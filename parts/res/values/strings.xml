@@ -111,14 +111,10 @@
     <string name="power_profile_footer_summary">Note: Higher frequencies (e.g., GPU over 900MHz and prime core higher clock) are available only in Game Boost mode.</string>
 
     <!-- Performance Tuning (Powertools) -->
-    <string name="Powertools_title">Performance Tuning</string>
+    <string name="Powertools_title">PowerTools</string>
     <string name="Powertools_summary">Customize CPU, GPU, ZRAM, I/O, and network tuning for performance and efficiency</string>
-    <string name="powertools_tab_general">General</string>
-    <string name="powertools_tab_cpu">CPU</string>
-    <string name="powertools_tab_gpu">GPU</string>
-    <string name="powertools_tab_zram">ZRAM</string>
-    <string name="powertools_tab_io">I/O</string>
-    <string name="powertools_tab_net">Network</string>
+    <string name="powertools_modules_category">Tuning Modules</string>
+    <string name="powertools_status_enabled">Enabled</string>
     <string name="powertools_io_category">Storage I/O</string>
     <string name="powertools_io_enable_title">Enable I/O Optimizer</string>
     <string name="powertools_io_enable_summary">Toggle storage I/O tuning</string>

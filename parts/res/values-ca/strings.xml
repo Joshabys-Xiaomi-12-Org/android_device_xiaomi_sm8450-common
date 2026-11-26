@@ -41,6 +41,8 @@
     <string name="thermal_apps_title">Aplicacions</string>
     <string name="saturation_reset">Restableix als valors predeterminats</string>
     <string name="Powertools_summary">Personalitza els ajustos de CPU, GPU, ZRAM, I/O i xarxa</string>
+    <string name="powertools_modules_category">Mòduls d\'ajust</string>
+    <string name="powertools_status_enabled">Activat</string>
     <string name="powertools_gpu_enable_title">Activa l\'optimitzador de GPU</string>
     <string name="powertools_gpu_enable_summary">Commuta les optimitzacions de GPU</string>
     <string name="powertools_gpu_freq_category">Configura la GPU</string>
@@ -199,11 +201,7 @@
     <string name="thermal_disable_title">Desactiva el control tèrmic (mi_thermald)</string>
     <string name="thermal_disable_summary">Atura mi_thermald completament fins al proper reinici</string>
     <string name="thermal_disable_warning">Aturar mi_thermald desactiva la limitació tèrmica de Xiaomi, inclosos els límits de bateria i càrrega ràpida. Mentre estigui desactivat, no estaran disponibles els perfils tèrmics globals, automàtics i per aplicació, el botó d\'ajustos ràpids ni l\'Editor Tèrmic. El dispositiu es pot sobreescalfar. Es restaura automàticament en reiniciar. Voleu continuar?</string>
-    <string name="Powertools_title">Ajust de rendiment</string>
-    <string name="powertools_tab_general">General</string>
-    <string name="powertools_tab_cpu">CPU</string>
-    <string name="powertools_tab_gpu">GPU</string>
-    <string name="powertools_tab_zram">ZRAM</string>
+    <string name="Powertools_title">PowerTools</string>
     <string name="powertools_tab_ionet">I/O i Xarxa</string>
     <string name="powertools_ionet_category">I/O i Xarxa</string>
     <string name="powertools_ionet_enable_title">Activa l\'optimitzador d\'I/O i xarxa</string>
@@ -212,8 +210,6 @@
     <string name="powertools_io_scheduler_title">Planificador I/O d\'emmagatzematge</string>
     <string name="powertools_io_read_ahead_title">Lectura anticipada (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">Control de congestió TCP</string>
-    <string name="powertools_tab_io">I/O</string>
-    <string name="powertools_tab_net">Xarxa</string>
     <string name="powertools_io_category">Emmagatzematge I/O</string>
     <string name="powertools_io_enable_title">Activa l\'optimitzador d\'I/O</string>
     <string name="powertools_io_enable_summary">Activa o desactiva l\'ajust d\'I/O</string>

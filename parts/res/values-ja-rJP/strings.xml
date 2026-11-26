@@ -40,8 +40,10 @@
     <string name="thermal_profile_footer">選択したプロファイルは、アプリの使用中に自動的に適用されます。</string>
     <string name="thermal_apps_title">アプリ</string>
     <string name="saturation_reset">デフォルトに戻す</string>
-    <string name="Powertools_title">パフォーマンスチューニング</string>
+    <string name="Powertools_title">PowerTools</string>
     <string name="Powertools_summary">CPU・GPU・ZRAM・I/O・ネットワーク設定をカスタマイズ</string>
+    <string name="powertools_modules_category">チューニングモジュール</string>
+    <string name="powertools_status_enabled">有効</string>
     <string name="powertools_gpu_category">GPU</string>
     <string name="powertools_gpu_enable_title">GPUオプティマイザーを有効化</string>
     <string name="powertools_gpu_enable_summary">GPU最適化の切り替え</string>
@@ -213,10 +215,6 @@
     <string name="thermal_disable_title">サーマル制御を無効化 (mi_thermald)</string>
     <string name="thermal_disable_summary">次の再起動まで mi_thermald を完全に停止します</string>
     <string name="thermal_disable_warning">mi_thermald を停止すると、バッテリーや急速充電の温度制限を含む Xiaomi のサーマルスロットリングが無効になります。無効中はグローバル・自動・アプリ別プロファイル、クイック設定タイル、サーマルエディタも利用できなくなります。過熱の恐れがあります。再起動で自動的に元に戻ります。続行しますか？</string>
-    <string name="powertools_tab_general">一般</string>
-    <string name="powertools_tab_cpu">CPU</string>
-    <string name="powertools_tab_gpu">GPU</string>
-    <string name="powertools_tab_zram">ZRAM</string>
     <string name="powertools_tab_ionet">I/O・通信</string>
     <string name="powertools_ionet_category">I/O とネットワーク</string>
     <string name="powertools_ionet_enable_title">I/O・ネットワーク最適化を有効化</string>
@@ -225,8 +223,6 @@
     <string name="powertools_io_scheduler_title">ストレージ I/O スケジューラ</string>
     <string name="powertools_io_read_ahead_title">ストレージ先読み (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">TCP 輻輳制御</string>
-    <string name="powertools_tab_io">I/O</string>
-    <string name="powertools_tab_net">ネットワーク</string>
     <string name="powertools_io_category">ストレージ I/O</string>
     <string name="powertools_io_enable_title">I/O 最適化を有効化</string>
     <string name="powertools_io_enable_summary">ストレージ I/O 調整を切り替え</string>

@@ -40,8 +40,10 @@
     <string name="thermal_profile_footer">O perfil selecionado é aplicado automaticamente enquanto o app está em uso.</string>
     <string name="thermal_apps_title">Aplicativos</string>
     <string name="saturation_reset">Redefinir para o padrão</string>
-    <string name="Powertools_title">Ajustes de desempenho</string>
+    <string name="Powertools_title">PowerTools</string>
     <string name="Powertools_summary">Personalize ajustes de CPU, GPU, ZRAM, I/O e rede para desempenho e eficiência</string>
+    <string name="powertools_modules_category">Módulos de ajuste</string>
+    <string name="powertools_status_enabled">Ativado</string>
     <string name="powerprofile_tile_label">Perfil de energia</string>
     <string name="powerprofile_mode_balance">Equilibrado</string>
     <string name="powerprofile_mode_performance">Desempenho</string>
@@ -214,10 +216,6 @@
     <string name="thermal_disable_title">Desativar controle térmico (mi_thermald)</string>
     <string name="thermal_disable_summary">Para o mi_thermald completamente até a próxima reinicialização</string>
     <string name="thermal_disable_warning">Parar o mi_thermald desativa o throttling térmico da Xiaomi, incluindo os limites de temperatura da bateria e do carregamento rápido. Enquanto estiver desativado, os perfis térmicos global, automático e por app, o tile das Configurações Rápidas e o Editor Térmico ficarão indisponíveis. O aparelho pode superaquecer, especialmente carregando ou jogando. O controle volta automaticamente ao reiniciar. Continuar?</string>
-    <string name="powertools_tab_general">Geral</string>
-    <string name="powertools_tab_cpu">CPU</string>
-    <string name="powertools_tab_gpu">GPU</string>
-    <string name="powertools_tab_zram">ZRAM</string>
     <string name="powertools_tab_ionet">I/O e Rede</string>
     <string name="powertools_ionet_category">I/O e Rede</string>
     <string name="powertools_ionet_enable_title">Ativar otimizador de I/O e rede</string>
@@ -226,8 +224,6 @@
     <string name="powertools_io_scheduler_title">Escalonador de I/O</string>
     <string name="powertools_io_read_ahead_title">Leitura antecipada (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">Controle de congestionamento TCP</string>
-    <string name="powertools_tab_io">I/O</string>
-    <string name="powertools_tab_net">Rede</string>
     <string name="powertools_io_category">Armazenamento I/O</string>
     <string name="powertools_io_enable_title">Ativar otimizador de I/O</string>
     <string name="powertools_io_enable_summary">Alternar ajustes de armazenamento I/O</string>

@@ -41,6 +41,8 @@
     <string name="thermal_apps_title">Aplicații</string>
     <string name="saturation_reset">Resetează la valorile implicite</string>
     <string name="Powertools_summary">Personalizează reglajele CPU, GPU, ZRAM, I/O și rețea pentru performanță și eficiență</string>
+    <string name="powertools_modules_category">Module de reglare</string>
+    <string name="powertools_status_enabled">Activat</string>
     <string name="powertools_gpu_enable_title">Activați optimizatorul GPU</string>
     <string name="powertools_gpu_enable_summary">Comutați optimizările GPU</string>
     <string name="powertools_gpu_freq_category">Configurare GPU</string>
@@ -199,11 +201,7 @@
     <string name="thermal_disable_title">Dezactivează controlul termic (mi_thermald)</string>
     <string name="thermal_disable_summary">Oprește complet mi_thermald până la următoarea repornire</string>
     <string name="thermal_disable_warning">Oprirea mi_thermald dezactivează limitarea termică Xiaomi, inclusiv limitele de temperatură ale bateriei și încărcării rapide. Cât timp este dezactivat, profilurile globale, automate și per aplicație, dala Setări rapide și Editorul termic nu vor fi disponibile. Dispozitivul se poate supraîncălzi. Revine automat după repornire. Continui?</string>
-    <string name="Powertools_title">Reglaj performanță</string>
-    <string name="powertools_tab_general">General</string>
-    <string name="powertools_tab_cpu">CPU</string>
-    <string name="powertools_tab_gpu">GPU</string>
-    <string name="powertools_tab_zram">ZRAM</string>
+    <string name="Powertools_title">PowerTools</string>
     <string name="powertools_tab_ionet">I/O și Rețea</string>
     <string name="powertools_ionet_category">I/O și Rețea</string>
     <string name="powertools_ionet_enable_title">Activează optimizatorul I/O și rețea</string>
@@ -212,8 +210,6 @@
     <string name="powertools_io_scheduler_title">Planificator I/O stocare</string>
     <string name="powertools_io_read_ahead_title">Citire anticipată (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">Control congestie TCP</string>
-    <string name="powertools_tab_io">I/O</string>
-    <string name="powertools_tab_net">Rețea</string>
     <string name="powertools_io_category">Stocare I/O</string>
     <string name="powertools_io_enable_title">Activează optimizatorul I/O</string>
     <string name="powertools_io_enable_summary">Comută reglajele de stocare I/O</string>

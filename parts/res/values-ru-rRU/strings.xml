@@ -40,8 +40,10 @@
     <string name="thermal_profile_footer">Выбранный профиль применяется автоматически, пока приложение используется.</string>
     <string name="thermal_apps_title">Приложения</string>
     <string name="saturation_reset">Сбросить по умолчанию</string>
-    <string name="Powertools_title">Настройка производительности</string>
+    <string name="Powertools_title">PowerTools</string>
     <string name="Powertools_summary">Настройте CPU, GPU, ZRAM, I/O и сеть для производительности и экономии</string>
+    <string name="powertools_modules_category">Модули настройки</string>
+    <string name="powertools_status_enabled">Включено</string>
     <string name="powertools_gpu_category">GPU</string>
     <string name="powertools_gpu_enable_title">Включить оптимизатор GPU</string>
     <string name="powertools_gpu_enable_summary">Переключить оптимизации GPU</string>
@@ -213,10 +215,6 @@
     <string name="thermal_disable_title">Отключить термоконтроль (mi_thermald)</string>
     <string name="thermal_disable_summary">Полностью останавливает mi_thermald до следующей перезагрузки</string>
     <string name="thermal_disable_warning">Остановка mi_thermald отключает термоограничения Xiaomi, включая лимиты температуры батареи и быстрой зарядки. Пока служба остановлена, глобальный, автоматический и поприложенческие профили, плитка быстрых настроек и Редактор термалов будут недоступны. Устройство может перегреваться. После перезагрузки всё вернётся автоматически. Продолжить?</string>
-    <string name="powertools_tab_general">Общие</string>
-    <string name="powertools_tab_cpu">CPU</string>
-    <string name="powertools_tab_gpu">GPU</string>
-    <string name="powertools_tab_zram">ZRAM</string>
     <string name="powertools_tab_ionet">I/O и сеть</string>
     <string name="powertools_ionet_category">I/O и сеть</string>
     <string name="powertools_ionet_enable_title">Включить оптимизатор I/O и сети</string>
@@ -225,8 +223,6 @@
     <string name="powertools_io_scheduler_title">Планировщик I/O</string>
     <string name="powertools_io_read_ahead_title">Упреждающее чтение (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">Управление перегрузкой TCP</string>
-    <string name="powertools_tab_io">I/O</string>
-    <string name="powertools_tab_net">Сеть</string>
     <string name="powertools_io_category">Хранилище I/O</string>
     <string name="powertools_io_enable_title">Включить оптимизатор I/O</string>
     <string name="powertools_io_enable_summary">Переключить настройки хранилища I/O</string>

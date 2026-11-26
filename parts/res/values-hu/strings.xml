@@ -41,6 +41,8 @@
     <string name="thermal_apps_title">Alkalmazások</string>
     <string name="saturation_reset">Alapértelmezés visszaállítása</string>
     <string name="Powertools_summary">CPU, GPU, ZRAM, I/O és hálózati beállítások testreszabása</string>
+    <string name="powertools_modules_category">Hangolási modulok</string>
+    <string name="powertools_status_enabled">Engedélyezve</string>
     <string name="powertools_gpu_enable_title">GPU optimalizáló engedélyezése</string>
     <string name="powertools_gpu_enable_summary">GPU optimalizálások kapcsolása</string>
     <string name="powertools_gpu_freq_category">GPU beállítása</string>
@@ -199,11 +201,7 @@
     <string name="thermal_disable_title">Hőszabályozás letiltása (mi_thermald)</string>
     <string name="thermal_disable_summary">Teljesen leállítja a mi_thermald szolgáltatást a következő újraindításig</string>
     <string name="thermal_disable_warning">A mi_thermald leállítása kikapcsolja a Xiaomi hőkorlátozását, beleértve az akkumulátor és a gyorstöltés határait. Letiltás alatt a globális, automatikus és alkalmazásonkénti profilok, a gyorsbeállítások csempe és a hőprofil-szerkesztő nem érhető el. A készülék túlmelegedhet. Újraindítás után automatikusan visszaáll. Folytatja?</string>
-    <string name="Powertools_title">Teljesítményhangolás</string>
-    <string name="powertools_tab_general">Általános</string>
-    <string name="powertools_tab_cpu">CPU</string>
-    <string name="powertools_tab_gpu">GPU</string>
-    <string name="powertools_tab_zram">ZRAM</string>
+    <string name="Powertools_title">PowerTools</string>
     <string name="powertools_tab_ionet">I/O &amp; Hálózat</string>
     <string name="powertools_ionet_category">I/O és hálózat</string>
     <string name="powertools_ionet_enable_title">I/O és hálózat optimalizáló engedélyezése</string>
@@ -212,8 +210,6 @@
     <string name="powertools_io_scheduler_title">Tárhely I/O ütemező</string>
     <string name="powertools_io_read_ahead_title">Előolvasás (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">TCP torlódásvezérlés</string>
-    <string name="powertools_tab_io">I/O</string>
-    <string name="powertools_tab_net">Hálózat</string>
     <string name="powertools_io_category">Tárhely I/O</string>
     <string name="powertools_io_enable_title">I/O optimalizáló engedélyezése</string>
     <string name="powertools_io_enable_summary">Tárhely I/O hangolás kapcsolása</string>

@@ -40,8 +40,10 @@
     <string name="thermal_profile_footer">يتم تطبيق الملف المحدد تلقائيًا أثناء استخدام التطبيق.</string>
     <string name="thermal_apps_title">التطبيقات</string>
     <string name="saturation_reset">إعادة الضبط للافتراضي</string>
-    <string name="Powertools_title">ضبط الأداء</string>
+    <string name="Powertools_title">PowerTools</string>
     <string name="Powertools_summary">تخصيص ضبط المعالج والرسوميات وZRAM والتخزين والشبكة للأداء والكفاءة</string>
+    <string name="powertools_modules_category">وحدات الضبط</string>
+    <string name="powertools_status_enabled">مُفعّل</string>
     <string name="powertools_gpu_category">معالج الرسوميات</string>
     <string name="powertools_gpu_enable_title">تفعيل محسن الرسوميات</string>
     <string name="powertools_gpu_enable_summary">تبديل تحسينات معالج الرسوميات</string>
@@ -213,10 +215,6 @@
     <string name="thermal_disable_title">تعطيل التحكم الحراري (mi_thermald)</string>
     <string name="thermal_disable_summary">يوقف mi_thermald بالكامل حتى إعادة التشغيل التالية</string>
     <string name="thermal_disable_warning">إيقاف mi_thermald يعطل التقييد الحراري لشاومي، بما في ذلك حدود حرارة البطارية والشحن السريع. أثناء التعطيل، ستصبح الملفات الحرارية العامة والتلقائية ولكل تطبيق وبلاطة الإعدادات السريعة ومحرر الحراريات غير متاحة. قد يسخن الجهاز بشكل مفرط، ويعود التحكم تلقائياً بعد إعادة التشغيل. هل تريد المتابعة؟</string>
-    <string name="powertools_tab_general">عام</string>
-    <string name="powertools_tab_cpu">CPU</string>
-    <string name="powertools_tab_gpu">GPU</string>
-    <string name="powertools_tab_zram">ZRAM</string>
     <string name="powertools_tab_ionet">I/O والشبكة</string>
     <string name="powertools_ionet_category">التخزين والشبكة</string>
     <string name="powertools_ionet_enable_title">تفعيل محسن التخزين والشبكة</string>
@@ -225,8 +223,6 @@
     <string name="powertools_io_scheduler_title">مجدول تخزين I/O</string>
     <string name="powertools_io_read_ahead_title">القراءة المسبقة للتخزين</string>
     <string name="powertools_net_tcp_title">التحكم في ازدحام TCP</string>
-    <string name="powertools_tab_io">I/O</string>
-    <string name="powertools_tab_net">الشبكة</string>
     <string name="powertools_io_category">تخزين I/O</string>
     <string name="powertools_io_enable_title">تفعيل محسن I/O</string>
     <string name="powertools_io_enable_summary">تبديل ضبط تخزين I/O</string>

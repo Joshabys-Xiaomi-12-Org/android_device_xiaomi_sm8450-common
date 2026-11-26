@@ -40,8 +40,10 @@
     <string name="thermal_profile_footer">Il profilo selezionato viene applicato automaticamente mentre l\'app è in uso.</string>
     <string name="thermal_apps_title">App</string>
     <string name="saturation_reset">Ripristina predefiniti</string>
-    <string name="Powertools_title">Ottimizzazione prestazioni</string>
+    <string name="Powertools_title">PowerTools</string>
     <string name="Powertools_summary">Personalizza regolazioni di CPU, GPU, ZRAM, I/O e rete</string>
+    <string name="powertools_modules_category">Moduli di regolazione</string>
+    <string name="powertools_status_enabled">Attivato</string>
     <string name="powertools_gpu_category">GPU</string>
     <string name="powertools_gpu_enable_title">Attiva ottimizzatore GPU</string>
     <string name="powertools_gpu_enable_summary">Attiva/disattiva ottimizzazioni GPU</string>
@@ -213,10 +215,6 @@
     <string name="thermal_disable_title">Disattiva controllo termico (mi_thermald)</string>
     <string name="thermal_disable_summary">Arresta completamente mi_thermald fino al prossimo riavvio</string>
     <string name="thermal_disable_warning">L\'arresto di mi_thermald disattiva la limitazione termica di Xiaomi, inclusi i limiti di batteria e ricarica rapida. Finché è disattivato, i profili termici globali, automatici e per app, il riquadro Impostazioni rapide e l\'Editor Termico non saranno disponibili. Il dispositivo potrebbe surriscaldarsi. Si ripristina automaticamente al riavvio. Continuare?</string>
-    <string name="powertools_tab_general">Generale</string>
-    <string name="powertools_tab_cpu">CPU</string>
-    <string name="powertools_tab_gpu">GPU</string>
-    <string name="powertools_tab_zram">ZRAM</string>
     <string name="powertools_tab_ionet">I/O e Rete</string>
     <string name="powertools_ionet_category">I/O e Rete</string>
     <string name="powertools_ionet_enable_title">Attiva ottimizzatore I/O e rete</string>
@@ -225,8 +223,6 @@
     <string name="powertools_io_scheduler_title">Scheduler I/O archiviazione</string>
     <string name="powertools_io_read_ahead_title">Read-Ahead archiviazione</string>
     <string name="powertools_net_tcp_title">Controllo congestione TCP</string>
-    <string name="powertools_tab_io">I/O</string>
-    <string name="powertools_tab_net">Rete</string>
     <string name="powertools_io_category">Archiviazione I/O</string>
     <string name="powertools_io_enable_title">Attiva ottimizzatore I/O</string>
     <string name="powertools_io_enable_summary">Attiva o disattiva regolazione I/O archiviazione</string>

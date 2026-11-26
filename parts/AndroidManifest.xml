@@ -210,6 +210,12 @@
                 android:resource="@string/Powertools_summary" />
         </activity>
 
+        <activity
+            android:name=".powertools.PowertoolsSectionActivity"
+            android:label="@string/Powertools_title"
+            android:theme="@style/Theme.Parts.Expressive"
+            android:exported="false" />
+
         <!-- Battery Health & Stats Activity -->
         <activity
             android:name=".battery.BatteryHealthActivity"

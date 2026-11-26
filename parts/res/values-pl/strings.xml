@@ -40,8 +40,10 @@
     <string name="thermal_profile_footer">Wybrany profil jest stosowany automatycznie, gdy aplikacja jest w użyciu.</string>
     <string name="thermal_apps_title">Aplikacje</string>
     <string name="saturation_reset">Przywróć domyślne</string>
-    <string name="Powertools_title">Strojenie wydajności</string>
+    <string name="Powertools_title">PowerTools</string>
     <string name="Powertools_summary">Dostosuj ustawienia CPU, GPU, ZRAM, I/O i sieci dla wydajności i oszczędności</string>
+    <string name="powertools_modules_category">Moduły strojenia</string>
+    <string name="powertools_status_enabled">Włączono</string>
     <string name="powertools_gpu_category">GPU</string>
     <string name="powertools_gpu_enable_title">Włącz optymalizator GPU</string>
     <string name="powertools_gpu_enable_summary">Przełącz optymalizacje GPU</string>
@@ -213,10 +215,6 @@
     <string name="thermal_disable_title">Wyłącz kontrolę termiczną (mi_thermald)</string>
     <string name="thermal_disable_summary">Całkowicie zatrzymuje mi_thermald do następnego uruchomienia</string>
     <string name="thermal_disable_warning">Zatrzymanie mi_thermald wyłącza ograniczanie termiczne Xiaomi, w tym limity temperatury baterii i szybkiego ładowania. Gdy jest wyłączone, profile globalne, automatyczne i dla aplikacji, kafelek Szybkich ustawień oraz Edytor termiczny będą niedostępne. Urządzenie może się przegrzewać. Przywracane automatycznie po restarcie. Kontynuować?</string>
-    <string name="powertools_tab_general">Ogólne</string>
-    <string name="powertools_tab_cpu">CPU</string>
-    <string name="powertools_tab_gpu">GPU</string>
-    <string name="powertools_tab_zram">ZRAM</string>
     <string name="powertools_tab_ionet">I/O i Sieć</string>
     <string name="powertools_ionet_category">I/O i Sieć</string>
     <string name="powertools_ionet_enable_title">Włącz optymalizator I/O i sieci</string>
@@ -225,8 +223,6 @@
     <string name="powertools_io_scheduler_title">Planista I/O pamięci</string>
     <string name="powertools_io_read_ahead_title">Wyprzedzenie odczytu (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">Kontrola przeciążenia TCP</string>
-    <string name="powertools_tab_io">I/O</string>
-    <string name="powertools_tab_net">Sieć</string>
     <string name="powertools_io_category">Pamięć I/O</string>
     <string name="powertools_io_enable_title">Włącz optymalizator I/O</string>
     <string name="powertools_io_enable_summary">Przełącz strojenie pamięci I/O</string>

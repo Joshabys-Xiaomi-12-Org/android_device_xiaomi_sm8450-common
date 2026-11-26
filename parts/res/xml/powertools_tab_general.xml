@@ -45,6 +45,38 @@
 
     </PreferenceCategory>
 
+    <!-- Tuning Modules Hub -->
+    <PreferenceCategory
+        android:key="modules_category"
+        android:title="@string/powertools_modules_category">
+
+        <Preference
+            android:key="nav_cpu"
+            android:title="@string/powertools_cpu_category"
+            android:icon="@drawable/ic_powertools_cpu" />
+
+        <Preference
+            android:key="nav_gpu"
+            android:title="@string/powertools_gpu_category"
+            android:icon="@drawable/ic_powertools_gpu" />
+
+        <Preference
+            android:key="nav_zram"
+            android:title="@string/powertools_zram_category"
+            android:icon="@drawable/ic_powertools_zram" />
+
+        <Preference
+            android:key="nav_io"
+            android:title="@string/powertools_io_category"
+            android:icon="@drawable/ic_powertools_io" />
+
+        <Preference
+            android:key="nav_net"
+            android:title="@string/powertools_net_category"
+            android:icon="@drawable/ic_powertools_net" />
+
+    </PreferenceCategory>
+
     <com.android.settingslib.widget.FooterPreference
         android:key="help_general"
         android:title="@string/powertools_help_general"

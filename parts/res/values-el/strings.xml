@@ -41,6 +41,8 @@
     <string name="thermal_apps_title">Εφαρμογές</string>
     <string name="saturation_reset">Επαναφορά προεπιλογών</string>
     <string name="Powertools_summary">Προσαρμόστε ρυθμίσεις CPU, GPU, ZRAM, I/O και δικτύου για απόδοση και αποδοτικότητα</string>
+    <string name="powertools_modules_category">Μονάδες ρύθμισης</string>
+    <string name="powertools_status_enabled">Ενεργοποιημένο</string>
     <string name="powertools_gpu_enable_title">Ενεργοποίηση βελτιστοποίησης GPU</string>
     <string name="powertools_gpu_enable_summary">Εναλλαγή βελτιστοποιήσεων GPU</string>
     <string name="powertools_gpu_freq_category">Ρύθμιση GPU</string>
@@ -199,11 +201,7 @@
     <string name="thermal_disable_title">Απενεργοποίηση θερμικού ελέγχου (mi_thermald)</string>
     <string name="thermal_disable_summary">Σταματά πλήρως το mi_thermald μέχρι την επόμενη επανεκκίνηση</string>
     <string name="thermal_disable_warning">Η διακοπή του mi_thermald απενεργοποιεί τον θερμικό περιορισμό της Xiaomi, συμπεριλαμβανομένων των ορίων μπαταρίας και γρήγορης φόρτισης. Όσο είναι απενεργοποιημένο, τα καθολικά, αυτόματα και ανά εφαρμογή προφίλ, το πλακίδιο γρήγορων ρυθμίσεων και ο Επεξεργαστής Θερμικών δεν θα είναι διαθέσιμα. Η συσκευή μπορεί να υπερθερμανθεί. Επανέρχεται αυτόματα με επανεκκίνηση. Συνέχεια;</string>
-    <string name="Powertools_title">Ρύθμιση απόδοσης</string>
-    <string name="powertools_tab_general">Γενικά</string>
-    <string name="powertools_tab_cpu">CPU</string>
-    <string name="powertools_tab_gpu">GPU</string>
-    <string name="powertools_tab_zram">ZRAM</string>
+    <string name="Powertools_title">PowerTools</string>
     <string name="powertools_tab_ionet">I/O &amp; Δίκτυο</string>
     <string name="powertools_ionet_category">I/O &amp; Δίκτυο</string>
     <string name="powertools_ionet_enable_title">Ενεργοποίηση βελτιστοποίησης I/O &amp; δικτύου</string>
@@ -212,8 +210,6 @@
     <string name="powertools_io_scheduler_title">Χρονοπρογραμματιστής I/O</string>
     <string name="powertools_io_read_ahead_title">Προανάγνωση αποθήκευσης (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">Έλεγχος συμφόρησης TCP</string>
-    <string name="powertools_tab_io">I/O</string>
-    <string name="powertools_tab_net">Δίκτυο</string>
     <string name="powertools_io_category">Αποθήκευση I/O</string>
     <string name="powertools_io_enable_title">Ενεργοποίηση βελτιστοποίησης I/O</string>
     <string name="powertools_io_enable_summary">Εναλλαγή ρυθμίσεων αποθήκευσης I/O</string>
