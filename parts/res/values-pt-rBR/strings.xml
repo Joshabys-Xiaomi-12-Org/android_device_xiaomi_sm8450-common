@@ -213,5 +213,5 @@
     <string name="thermal_auto_profile_label">Auto: %1$s</string>
     <string name="thermal_disable_title">Desativar controle térmico (mi_thermald)</string>
     <string name="thermal_disable_summary">Para o mi_thermald completamente até a próxima reinicialização</string>
-    <string name="thermal_disable_warning">Parar o mi_thermald desativa o throttling térmico da Xiaomi, incluindo os limites de temperatura da bateria e do carregamento rápido. O aparelho pode superaquecer, especialmente carregando ou jogando. O controle volta automaticamente ao reiniciar. Continuar?</string>
+    <string name="thermal_disable_warning">Parar o mi_thermald desativa o throttling térmico da Xiaomi, incluindo os limites de temperatura da bateria e do carregamento rápido. Enquanto estiver desativado, os perfis térmicos global, automático e por app, o tile das Configurações Rápidas e o Editor Térmico ficarão indisponíveis. O aparelho pode superaquecer, especialmente carregando ou jogando. O controle volta automaticamente ao reiniciar. Continuar?</string>
 </resources>

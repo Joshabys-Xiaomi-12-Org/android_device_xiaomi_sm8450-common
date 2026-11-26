@@ -188,5 +188,5 @@
     <string name="thermal_auto_profile_label">Uathoibríoch: %1$s</string>
     <string name="thermal_disable_title">Díchumasaigh rialú teirmeach (mi_thermald)</string>
     <string name="thermal_disable_summary">Stopann sé mi_thermald go hiomlán go dtí an chéad atosú eile</string>
-    <string name="thermal_disable_warning">Díchumasaíonn stopadh mi_thermald srianadh teirmeach Xiaomi, lena n-áirítear teorainneacha ceallraí agus luchtaithe tapa. D\'fhéadfadh an gléas róthéamh. Athchóirítear go huathoibríoch tar éis atosaithe. Lean ar aghaidh?</string>
+    <string name="thermal_disable_warning">Díchumasaíonn stopadh mi_thermald srianadh teirmeach Xiaomi, lena n-áirítear teorainneacha ceallraí agus luchtaithe tapa. Fad atá sé díchumasaithe, ní bheidh próifílí domhanda, uathoibríocha, in aghaidh na haipe, an tíl mearshocruithe ná an tEagarthóir Teirmeach ar fáil. D\'fhéadfadh an gléas róthéamh. Athchóirítear tar éis atosaithe. Lean ar aghaidh?</string>
 </resources>

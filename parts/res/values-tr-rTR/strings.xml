@@ -212,5 +212,5 @@
     <string name="thermal_auto_profile_label">Oto: %1$s</string>
     <string name="thermal_disable_title">Termal kontrolü devre dışı bırak (mi_thermald)</string>
     <string name="thermal_disable_summary">Bir sonraki yeniden başlatmaya kadar mi_thermald hizmetini tamamen durdurur</string>
-    <string name="thermal_disable_warning">mi_thermald hizmetini durdurmak pil ve hızlı şarj sıcaklık sınırları dahil Xiaomi termal kısıtlamasını devre dışı bırakır. Cihaz özellikle şarj olurken veya oyun oynarken aşırı ısınabilir. Yeniden başlatma sonrası otomatik olarak geri yüklenir. Devam edilsin mi?</string>
+    <string name="thermal_disable_warning">mi_thermald hizmetini durdurmak pil ve hızlı şarj sıcaklık sınırları dahil Xiaomi termal kısıtlamasını devre dışı bırakır. Devre dışıyken genel, otomatik ve uygulama başına profiller, Hızlı Ayarlar kutucuğu ve Termal Düzenleyici kullanılamaz. Cihaz aşırı ısınabilir. Yeniden başlatma sonrası otomatik geri yüklenir. Devam edilsin mi?</string>
 </resources>

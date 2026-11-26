@@ -198,5 +198,5 @@
     <string name="thermal_auto_profile_label">Auto: %1$s</string>
     <string name="thermal_disable_title">Desactiva el control tèrmic (mi_thermald)</string>
     <string name="thermal_disable_summary">Atura mi_thermald completament fins al proper reinici</string>
-    <string name="thermal_disable_warning">Aturar mi_thermald desactiva la limitació tèrmica de Xiaomi, inclosos els límits de bateria i càrrega ràpida. El dispositiu es pot sobreescalfar, especialment carregant o jugant. Es restaura automàticament en reiniciar. Voleu continuar?</string>
+    <string name="thermal_disable_warning">Aturar mi_thermald desactiva la limitació tèrmica de Xiaomi, inclosos els límits de bateria i càrrega ràpida. Mentre estigui desactivat, no estaran disponibles els perfils tèrmics globals, automàtics i per aplicació, el botó d\'ajustos ràpids ni l\'Editor Tèrmic. El dispositiu es pot sobreescalfar. Es restaura automàticament en reiniciar. Voleu continuar?</string>
 </resources>

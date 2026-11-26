@@ -83,6 +83,11 @@ public class ThermalEditorFragment extends SettingsBasePreferenceFragment
         Context context = requireContext();
         Context prefContext = getPreferenceManager().getContext();
         ThermalMapResolver resolver = ThermalMapResolver.getInstance();
+        boolean thermalDisabled = ThermalUtils.isThermalDisabled();
+
+        if (mResetAllPref != null) {
+            mResetAllPref.setEnabled(!thermalDisabled);
+        }
 
         Set<String> seenFiles = new HashSet<>();
         int added = 0;
@@ -136,6 +141,7 @@ public class ThermalEditorFragment extends SettingsBasePreferenceFragment
         pref.setKey(fileName);
         pref.setTitle(displayTitle);
         pref.setSummary(fileName + "  •  " + status);
+        pref.setEnabled(!ThermalUtils.isThermalDisabled());
         pref.setOnPreferenceClickListener(this);
         mFilesCategory.addPreference(pref);
     }

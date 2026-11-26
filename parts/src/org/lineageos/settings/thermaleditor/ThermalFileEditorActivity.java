@@ -30,6 +30,7 @@ import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 import com.android.settingslib.widget.ExpressiveDesignEnabledProvider;
 
 import org.lineageos.settings.R;
+import org.lineageos.settings.thermal.ThermalUtils;
 
 public class ThermalFileEditorActivity extends CollapsingToolbarBaseActivity
         implements ExpressiveDesignEnabledProvider {
@@ -74,6 +75,12 @@ public class ThermalFileEditorActivity extends CollapsingToolbarBaseActivity
 
         mResetButton.setOnClickListener(v -> confirmReset());
         saveButton.setOnClickListener(v -> saveAndApply());
+
+        if (ThermalUtils.isThermalDisabled()) {
+            mEditorText.setEnabled(false);
+            saveButton.setEnabled(false);
+            mResetButton.setEnabled(false);
+        }
 
         loadFile();
     }

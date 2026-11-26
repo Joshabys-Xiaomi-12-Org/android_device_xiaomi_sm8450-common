@@ -192,5 +192,5 @@
     <string name="thermal_auto_profile_label">Auto: %1$s</string>
     <string name="thermal_disable_title">Çaktivizo kontrollin termik (mi_thermald)</string>
     <string name="thermal_disable_summary">Ndalon plotësisht mi_thermald deri në rinisjen tjetër</string>
-    <string name="thermal_disable_warning">Ndalimi i mi_thermald çaktivizon kufizimin termik të Xiaomi, përfshirë kufijtë e temperaturës së baterisë dhe karikimit të shpejtë. Pajisja mund të mbinxehet. Kontrolli rikthehet automatikisht pas rinisjes. Të vazhdohet?</string>
+    <string name="thermal_disable_warning">Ndalimi i mi_thermald çaktivizon kufizimin termik të Xiaomi, përfshirë kufijtë e baterisë dhe karikimit të shpejtë. Ndërsa është i çaktivizuar, profilet globale, automatike dhe për aplikacion, butoni i cilësimeve të shpejta dhe Editori Termik nuk do të jenë të disponueshëm. Pajisja mund të mbinxehet. Rikthehet automatikisht pas rinisjes. Të vazhdohet?</string>
 </resources>
