@@ -36,7 +36,6 @@ import androidx.preference.SwitchPreferenceCompat;
 import com.android.settingslib.widget.SettingsBasePreferenceFragment;
 
 import org.lineageos.settings.R;
-import org.lineageos.settings.thermal.ThermalUtils;
 
 public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
         implements Preference.OnPreferenceChangeListener,
@@ -105,9 +104,7 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
 
     // General preferences
     private ListPreference mPowerPresetPref;
-    private SwitchPreferenceCompat mAutoThermalPref;
     private Preference mResetDefaultsPref;
-    private ThermalUtils mThermalUtils;
 
     // GPU preferences
     private SwitchPreferenceCompat mGpuEnablePref;
@@ -171,15 +168,9 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
         mLiveGpuTempPref = findPreference(KEY_LIVE_GPU_TEMP);
 
         // General preferences
-        mThermalUtils = new ThermalUtils(requireContext());
         mPowerPresetPref = findPreference(KEY_POWER_PRESET);
         if (mPowerPresetPref != null) {
             mPowerPresetPref.setOnPreferenceChangeListener(this);
-        }
-        mAutoThermalPref = findPreference(ThermalUtils.KEY_AUTO_PROFILES);
-        if (mAutoThermalPref != null) {
-            mAutoThermalPref.setChecked(mThermalUtils.isAutoProfilesEnabled());
-            mAutoThermalPref.setOnPreferenceChangeListener(this);
         }
         mResetDefaultsPref = findPreference(KEY_RESET_DEFAULTS);
         if (mResetDefaultsPref != null) {
@@ -837,11 +828,6 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mPowerPresetPref) {
             applyPreset(newValue.toString());
-            return true;
-        }
-
-        if (preference == mAutoThermalPref) {
-            mThermalUtils.setAutoProfilesEnabled((Boolean) newValue);
             return true;
         }
 
