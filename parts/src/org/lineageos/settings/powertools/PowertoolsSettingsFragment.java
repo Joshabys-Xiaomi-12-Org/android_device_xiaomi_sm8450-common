@@ -25,12 +25,16 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.text.TextUtils;
+import android.view.View;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceManager;
 import androidx.preference.SwitchPreferenceCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.settingslib.widget.SettingsBasePreferenceFragment;
 
@@ -579,6 +583,19 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
             } else {
                 pref.setValue(values[0]);
             }
+        }
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        RecyclerView list = getListView();
+        if (list != null) {
+            list.setClipToPadding(true);
+            list.setClipChildren(true);
+            int topPad = Math.round(4 * getResources().getDisplayMetrics().density);
+            list.setPadding(list.getPaddingLeft(), topPad,
+                    list.getPaddingRight(), list.getPaddingBottom());
         }
     }
 

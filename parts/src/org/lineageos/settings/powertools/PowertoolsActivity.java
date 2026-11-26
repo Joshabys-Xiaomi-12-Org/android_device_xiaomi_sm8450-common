@@ -22,15 +22,17 @@ import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.util.TypedValue;
-import android.view.GestureDetector;
 import android.view.Gravity;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 import com.android.settingslib.widget.ExpressiveDesignEnabledProvider;
@@ -53,10 +55,9 @@ public class PowertoolsActivity extends CollapsingToolbarBaseActivity
 
     private HorizontalScrollView mTabsScroll;
     private LinearLayout mTabsBar;
+    private ViewPager2 mViewPager;
     private final TextView[] mTabViews = new TextView[TAB_TITLE_RES.length];
     private int mSelectedTab = PowertoolsSettingsFragment.TAB_GENERAL;
-    private GestureDetector mSwipeDetector;
-    private boolean mTouchStartedInTabBar;
 
     @Override
     public boolean isExpressiveDesignEnabled() {
@@ -70,6 +71,7 @@ public class PowertoolsActivity extends CollapsingToolbarBaseActivity
 
         mTabsScroll = findViewById(R.id.powertools_tabs_scroll);
         mTabsBar = findViewById(R.id.powertools_tabs_bar);
+        mViewPager = findViewById(R.id.powertools_view_pager);
 
         if (savedInstanceState != null) {
             mSelectedTab = savedInstanceState.getInt(
@@ -77,57 +79,9 @@ public class PowertoolsActivity extends CollapsingToolbarBaseActivity
         }
 
         buildTabBar();
-        setupSwipeGesture();
-        selectTab(mSelectedTab, savedInstanceState == null);
-    }
-
-    private void setupSwipeGesture() {
-        final float minDistance = dp(64);
-        final float minVelocity = dp(200);
-        mSwipeDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() {
-            @Override
-            public boolean onFling(MotionEvent e1, MotionEvent e2,
-                    float velocityX, float velocityY) {
-                if (e1 == null || e2 == null || mTouchStartedInTabBar) {
-                    return false;
-                }
-                float dx = e2.getX() - e1.getX();
-                float dy = e2.getY() - e1.getY();
-                if (Math.abs(dx) > Math.abs(dy) * 1.5f
-                        && Math.abs(dx) > minDistance
-                        && Math.abs(velocityX) > minVelocity) {
-                    if (dx < 0 && mSelectedTab < TAB_TITLE_RES.length - 1) {
-                        selectTab(mSelectedTab + 1, true);
-                        return true;
-                    } else if (dx > 0 && mSelectedTab > 0) {
-                        selectTab(mSelectedTab - 1, true);
-                        return true;
-                    }
-                }
-                return false;
-            }
-        });
-    }
-
-    @Override
-    public boolean dispatchTouchEvent(MotionEvent ev) {
-        if (ev.getActionMasked() == MotionEvent.ACTION_DOWN) {
-            mTouchStartedInTabBar = isPointInsideView(ev.getRawX(), ev.getRawY(), mTabsScroll);
-        }
-        if (mSwipeDetector != null && !mTouchStartedInTabBar) {
-            mSwipeDetector.onTouchEvent(ev);
-        }
-        return super.dispatchTouchEvent(ev);
-    }
-
-    private static boolean isPointInsideView(float rawX, float rawY, View view) {
-        if (view == null) {
-            return false;
-        }
-        int[] loc = new int[2];
-        view.getLocationOnScreen(loc);
-        return rawX >= loc[0] && rawX <= loc[0] + view.getWidth()
-                && rawY >= loc[1] && rawY <= loc[1] + view.getHeight();
+        setupViewPager();
+        updateTabVisuals(mSelectedTab);
+        mViewPager.setCurrentItem(mSelectedTab, false);
     }
 
     @Override
@@ -162,13 +116,41 @@ public class PowertoolsActivity extends CollapsingToolbarBaseActivity
             tv.setLayoutParams(lp);
             tv.setMinWidth(dp(68));
 
-            tv.setOnClickListener(v -> selectTab(tabIndex, true));
+            tv.setOnClickListener(v -> {
+                if (mViewPager != null) {
+                    mViewPager.setCurrentItem(tabIndex, true);
+                }
+            });
             mTabsBar.addView(tv);
             mTabViews[i] = tv;
         }
     }
 
-    private void selectTab(int tabIndex, boolean replaceFragment) {
+    private void setupViewPager() {
+        mViewPager.setAdapter(new FragmentStateAdapter(this) {
+            @NonNull
+            @Override
+            public Fragment createFragment(int position) {
+                return PowertoolsSettingsFragment.newInstance(position);
+            }
+
+            @Override
+            public int getItemCount() {
+                return TAB_TITLE_RES.length;
+            }
+        });
+        mViewPager.setOffscreenPageLimit(1);
+        mViewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                mSelectedTab = position;
+                updateTabVisuals(position);
+            }
+        });
+    }
+
+    private void updateTabVisuals(int tabIndex) {
         if (tabIndex < 0 || tabIndex >= TAB_TITLE_RES.length) {
             tabIndex = PowertoolsSettingsFragment.TAB_GENERAL;
         }
@@ -207,15 +189,6 @@ public class PowertoolsActivity extends CollapsingToolbarBaseActivity
                         - (mTabsScroll.getWidth() - activeView.getWidth()) / 2;
                 mTabsScroll.smoothScrollTo(Math.max(0, scrollX), 0);
             });
-        }
-
-        if (replaceFragment) {
-            getSupportFragmentManager().beginTransaction()
-                    .setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
-                    .replace(R.id.powertools_tab_content,
-                            PowertoolsSettingsFragment.newInstance(mSelectedTab),
-                            "powertools_tab_" + mSelectedTab)
-                    .commit();
         }
     }
 

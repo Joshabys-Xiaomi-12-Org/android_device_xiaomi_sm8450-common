@@ -23,6 +23,7 @@ android_app {
 
     static_libs: [
         "androidx.core_core",
+        "androidx.viewpager2_viewpager2",
         "org.lineageos.settings.resources",
         "SettingsLib",
     ],

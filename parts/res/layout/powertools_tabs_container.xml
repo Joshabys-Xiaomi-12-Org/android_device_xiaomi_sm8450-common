@@ -2,18 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:clipChildren="true"
+    android:clipToPadding="true">
 
     <HorizontalScrollView
         android:id="@+id/powertools_tabs_scroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="?android:attr/colorBackground"
+        android:elevation="2dp"
         android:scrollbars="none"
         android:fillViewport="true"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:paddingTop="8dp"
-        android:paddingBottom="8dp"
+        android:paddingBottom="12dp"
         android:clipToPadding="false">
 
         <LinearLayout
@@ -26,10 +30,12 @@
 
     </HorizontalScrollView>
 
-    <FrameLayout
-        android:id="@+id/powertools_tab_content"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/powertools_view_pager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:clipChildren="true"
+        android:clipToPadding="true" />
 
 </LinearLayout>
