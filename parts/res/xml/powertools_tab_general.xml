@@ -45,4 +45,9 @@
 
     </PreferenceCategory>
 
+    <com.android.settingslib.widget.FooterPreference
+        android:key="help_general"
+        android:title="@string/powertools_help_general"
+        android:selectable="false" />
+
 </PreferenceScreen>

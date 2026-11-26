@@ -31,4 +31,9 @@
 
     </PreferenceCategory>
 
+    <com.android.settingslib.widget.FooterPreference
+        android:key="help_io"
+        android:title="@string/powertools_help_io"
+        android:selectable="false" />
+
 </PreferenceScreen>

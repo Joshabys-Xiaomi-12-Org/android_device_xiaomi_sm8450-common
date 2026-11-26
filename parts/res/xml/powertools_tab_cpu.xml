@@ -116,4 +116,9 @@
 
     </PreferenceCategory>
 
+    <com.android.settingslib.widget.FooterPreference
+        android:key="help_cpu"
+        android:title="@string/powertools_help_cpu"
+        android:selectable="false" />
+
 </PreferenceScreen>

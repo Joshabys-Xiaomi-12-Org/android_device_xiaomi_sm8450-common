@@ -48,4 +48,9 @@
 
     </PreferenceCategory>
 
+    <com.android.settingslib.widget.FooterPreference
+        android:key="help_gpu"
+        android:title="@string/powertools_help_gpu"
+        android:selectable="false" />
+
 </PreferenceScreen>

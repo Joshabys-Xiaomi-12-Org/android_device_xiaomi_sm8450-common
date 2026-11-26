@@ -235,4 +235,10 @@
     <string name="powertools_net_enable_title">启用网络优化</string>
     <string name="powertools_net_enable_summary">开关 TCP 网络调优</string>
     <string name="powertools_net_config_category">配置网络</string>
+    <string name="powertools_help_general">性能预设可在原厂（默认）、省电与高性能（游戏）之间快速切换。请在确认设置稳定后再开启“开机自动应用”。随时可通过“恢复默认设置”还原原厂参数。</string>
+    <string name="powertools_help_cpu">输入加速会在触摸屏幕时短暂拉高频率（越高越跟手但更耗电）。WALT 配置文件控制升降频响应速度。限制超大核会约束 Cortex-X2 以降低发热。前台应用 Uclamp 为当前应用预留 CPU 算力。</string>
+    <string name="powertools_help_gpu">降低 GPU 最高频率可减少发热和耗电；提高最低频率可减少掉帧但增加功耗。msm-adreno-tz 是均衡的默认调速器。Adreno Idler 在空闲时更快降频省电。较低的空闲计时器更省电，80–100 ms 在游戏中更稳定。</string>
+    <string name="powertools_help_zram">ZRAM 通过压缩非活跃内存来保留更多后台应用（0 为禁用）。lz4 和 lzo-rle 速度最快、CPU 占用最低；zstd 压缩率更高但更耗 CPU。较高的 Swappiness 会更早换入 ZRAM。较低的 VFS 缓存压力会更久保留文件缓存。ZRAM 推荐 Page Cluster 设为 0。</string>
+    <string name="powertools_help_io">存储 I/O 调度器决定闪存读写顺序：mq-deadline 和 none 在 UFS 闪存上延迟最低，kyber 兼顾延迟，bfq 更利于多任务流畅度。存储预读 (read_ahead_kb) 控制预读大小：128–256 KB 对随机读取和应用启动更利落，512–2048 KB 更适合大文件顺序读取和视频播放。</string>
+    <string name="powertools_help_net">TCP 拥塞控制决定网络数据包在带宽变化和丢包时的调节策略。bbr 通常能降低延迟并提升移动或不稳定网络下的吞吐量；cubic 是 Linux 均衡默认值；reno 较为保守。</string>
 </resources>

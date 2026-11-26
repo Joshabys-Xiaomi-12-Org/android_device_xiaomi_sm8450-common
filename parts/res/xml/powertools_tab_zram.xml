@@ -59,4 +59,9 @@
 
     </PreferenceCategory>
 
+    <com.android.settingslib.widget.FooterPreference
+        android:key="help_zram"
+        android:title="@string/powertools_help_zram"
+        android:selectable="false" />
+
 </PreferenceScreen>
