@@ -238,6 +238,7 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
             case TAB_NET -> setupNetTab();
             default -> setupGeneralTab();
         }
+        updateUI();
     }
 
     private void loadDynamicDefaults() {
