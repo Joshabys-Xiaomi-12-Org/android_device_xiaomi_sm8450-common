@@ -204,4 +204,14 @@
     <string name="powertools_io_scheduler_title">சேமிப்பு I/O அட்டவணையாளர்</string>
     <string name="powertools_io_read_ahead_title">சேமிப்பு Read-Ahead</string>
     <string name="powertools_net_tcp_title">TCP நெரிசல் கட்டுப்பாடு</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">நெட்வொர்க்</string>
+    <string name="powertools_io_category">சேமிப்பு I/O</string>
+    <string name="powertools_io_enable_title">I/O மேம்படுத்தியை இயக்கு</string>
+    <string name="powertools_io_enable_summary">சேமிப்பு I/O சீரமைப்பை மாற்று</string>
+    <string name="powertools_io_config_category">I/O கட்டமைப்பு</string>
+    <string name="powertools_net_category">நெட்வொர்க்</string>
+    <string name="powertools_net_enable_title">நெட்வொர்க் மேம்படுத்தியை இயக்கு</string>
+    <string name="powertools_net_enable_summary">TCP நெட்வொர்க் சீரமைப்பை மாற்று</string>
+    <string name="powertools_net_config_category">நெட்வொர்க் கட்டமைப்பு</string>
 </resources>

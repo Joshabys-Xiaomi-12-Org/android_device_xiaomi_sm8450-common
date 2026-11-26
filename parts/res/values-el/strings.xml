@@ -212,4 +212,14 @@
     <string name="powertools_io_scheduler_title">Χρονοπρογραμματιστής I/O</string>
     <string name="powertools_io_read_ahead_title">Προανάγνωση αποθήκευσης (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">Έλεγχος συμφόρησης TCP</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">Δίκτυο</string>
+    <string name="powertools_io_category">Αποθήκευση I/O</string>
+    <string name="powertools_io_enable_title">Ενεργοποίηση βελτιστοποίησης I/O</string>
+    <string name="powertools_io_enable_summary">Εναλλαγή ρυθμίσεων αποθήκευσης I/O</string>
+    <string name="powertools_io_config_category">Ρύθμιση I/O</string>
+    <string name="powertools_net_category">Δίκτυο</string>
+    <string name="powertools_net_enable_title">Ενεργοποίηση βελτιστοποίησης δικτύου</string>
+    <string name="powertools_net_enable_summary">Εναλλαγή ρυθμίσεων δικτύου TCP</string>
+    <string name="powertools_net_config_category">Ρύθμιση δικτύου</string>
 </resources>

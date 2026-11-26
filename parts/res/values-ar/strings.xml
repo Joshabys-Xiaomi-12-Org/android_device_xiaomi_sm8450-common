@@ -225,4 +225,14 @@
     <string name="powertools_io_scheduler_title">مجدول تخزين I/O</string>
     <string name="powertools_io_read_ahead_title">القراءة المسبقة للتخزين</string>
     <string name="powertools_net_tcp_title">التحكم في ازدحام TCP</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">الشبكة</string>
+    <string name="powertools_io_category">تخزين I/O</string>
+    <string name="powertools_io_enable_title">تفعيل محسن I/O</string>
+    <string name="powertools_io_enable_summary">تبديل ضبط تخزين I/O</string>
+    <string name="powertools_io_config_category">تكوين I/O</string>
+    <string name="powertools_net_category">الشبكة</string>
+    <string name="powertools_net_enable_title">تفعيل محسن الشبكة</string>
+    <string name="powertools_net_enable_summary">تبديل ضبط شبكة TCP</string>
+    <string name="powertools_net_config_category">تكوين الشبكة</string>
 </resources>

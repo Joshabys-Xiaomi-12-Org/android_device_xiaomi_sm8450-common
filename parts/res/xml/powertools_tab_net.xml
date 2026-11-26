@@ -1,0 +1,27 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Network Optimizer Section -->
+    <PreferenceCategory
+        android:key="net_category"
+        android:title="@string/powertools_net_category">
+
+        <SwitchPreferenceCompat
+            android:key="net_enable"
+            android:title="@string/powertools_net_enable_title"
+            android:summary="@string/powertools_net_enable_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="net_config_category"
+        android:title="@string/powertools_net_config_category">
+
+        <ListPreference
+            android:key="net_tcp_congestion"
+            android:title="@string/powertools_net_tcp_title"
+            android:summary="%s" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

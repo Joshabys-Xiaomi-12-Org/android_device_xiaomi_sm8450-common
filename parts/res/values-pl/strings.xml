@@ -225,4 +225,14 @@
     <string name="powertools_io_scheduler_title">Planista I/O pamięci</string>
     <string name="powertools_io_read_ahead_title">Wyprzedzenie odczytu (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">Kontrola przeciążenia TCP</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">Sieć</string>
+    <string name="powertools_io_category">Pamięć I/O</string>
+    <string name="powertools_io_enable_title">Włącz optymalizator I/O</string>
+    <string name="powertools_io_enable_summary">Przełącz strojenie pamięci I/O</string>
+    <string name="powertools_io_config_category">Konfiguruj I/O</string>
+    <string name="powertools_net_category">Sieć</string>
+    <string name="powertools_net_enable_title">Włącz optymalizator sieci</string>
+    <string name="powertools_net_enable_summary">Przełącz strojenie sieci TCP</string>
+    <string name="powertools_net_config_category">Konfiguruj sieć</string>
 </resources>

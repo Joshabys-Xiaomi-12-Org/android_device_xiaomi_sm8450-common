@@ -206,4 +206,14 @@
     <string name="powertools_io_scheduler_title">Lagrings-I/O-planleggjar</string>
     <string name="powertools_io_read_ahead_title">Førehandslesing (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">TCP-trafikkontroll</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">Nettverk</string>
+    <string name="powertools_io_category">Lagrings-I/O</string>
+    <string name="powertools_io_enable_title">Aktiver I/O-optimalisering</string>
+    <string name="powertools_io_enable_summary">Slå av/på lagrings-I/O-justering</string>
+    <string name="powertools_io_config_category">Konfigurer I/O</string>
+    <string name="powertools_net_category">Nettverk</string>
+    <string name="powertools_net_enable_title">Aktiver nettverksoptimalisering</string>
+    <string name="powertools_net_enable_summary">Slå av/på TCP-nettverksjustering</string>
+    <string name="powertools_net_config_category">Konfigurer nettverk</string>
 </resources>

@@ -206,4 +206,14 @@
     <string name="powertools_io_scheduler_title">Yaddaş I/O planlayıcısı</string>
     <string name="powertools_io_read_ahead_title">Öncədən oxuma (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">TCP tıxac nəzarəti</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">Şəbəkə</string>
+    <string name="powertools_io_category">Yaddaş I/O</string>
+    <string name="powertools_io_enable_title">I/O optimallaşdırıcısını aktiv et</string>
+    <string name="powertools_io_enable_summary">Yaddaş I/O tənzimləməsini dəyiş</string>
+    <string name="powertools_io_config_category">I/O tənzimləməsi</string>
+    <string name="powertools_net_category">Şəbəkə</string>
+    <string name="powertools_net_enable_title">Şəbəkə optimallaşdırıcısını aktiv et</string>
+    <string name="powertools_net_enable_summary">TCP şəbəkə tənzimləməsini dəyiş</string>
+    <string name="powertools_net_config_category">Şəbəkə tənzimləməsi</string>
 </resources>

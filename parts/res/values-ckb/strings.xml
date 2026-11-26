@@ -202,4 +202,14 @@
     <string name="powertools_io_scheduler_title">پلاندانەری I/O</string>
     <string name="powertools_io_read_ahead_title">پێشخوێندنەوەی بیرگە (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">کۆنترۆڵی قەرەباڵغی TCP</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">تۆڕ</string>
+    <string name="powertools_io_category">بیرگەی I/O</string>
+    <string name="powertools_io_enable_title">چالاککردنی باشترکەری I/O</string>
+    <string name="powertools_io_enable_summary">گۆڕینی ڕێکخستنی بیرگەی I/O</string>
+    <string name="powertools_io_config_category">ڕێکخستنی I/O</string>
+    <string name="powertools_net_category">تۆڕ</string>
+    <string name="powertools_net_enable_title">چالاککردنی باشترکەری تۆڕ</string>
+    <string name="powertools_net_enable_summary">گۆڕینی ڕێکخستنی تۆڕی TCP</string>
+    <string name="powertools_net_config_category">ڕێکخستنی تۆڕ</string>
 </resources>

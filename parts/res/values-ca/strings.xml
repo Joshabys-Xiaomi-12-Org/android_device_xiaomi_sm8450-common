@@ -212,4 +212,14 @@
     <string name="powertools_io_scheduler_title">Planificador I/O d\'emmagatzematge</string>
     <string name="powertools_io_read_ahead_title">Lectura anticipada (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">Control de congestió TCP</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">Xarxa</string>
+    <string name="powertools_io_category">Emmagatzematge I/O</string>
+    <string name="powertools_io_enable_title">Activa l\'optimitzador d\'I/O</string>
+    <string name="powertools_io_enable_summary">Activa o desactiva l\'ajust d\'I/O</string>
+    <string name="powertools_io_config_category">Configura I/O</string>
+    <string name="powertools_net_category">Xarxa</string>
+    <string name="powertools_net_enable_title">Activa l\'optimitzador de xarxa</string>
+    <string name="powertools_net_enable_summary">Activa o desactiva l\'ajust de xarxa TCP</string>
+    <string name="powertools_net_config_category">Configura la xarxa</string>
 </resources>

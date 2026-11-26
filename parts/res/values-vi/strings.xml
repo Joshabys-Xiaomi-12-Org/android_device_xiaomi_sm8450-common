@@ -225,4 +225,14 @@
     <string name="powertools_io_scheduler_title">Bộ lập lịch I/O lưu trữ</string>
     <string name="powertools_io_read_ahead_title">Đọc trước (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">Kiểm soát tắc nghẽn TCP</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">Mạng</string>
+    <string name="powertools_io_category">Lưu trữ I/O</string>
+    <string name="powertools_io_enable_title">Bật tối ưu hóa I/O</string>
+    <string name="powertools_io_enable_summary">Bật hoặc tắt tinh chỉnh lưu trữ I/O</string>
+    <string name="powertools_io_config_category">Cấu hình I/O</string>
+    <string name="powertools_net_category">Mạng</string>
+    <string name="powertools_net_enable_title">Bật tối ưu hóa mạng</string>
+    <string name="powertools_net_enable_summary">Bật hoặc tắt tinh chỉnh mạng TCP</string>
+    <string name="powertools_net_config_category">Cấu hình mạng</string>
 </resources>

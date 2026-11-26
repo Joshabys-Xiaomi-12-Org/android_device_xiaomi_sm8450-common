@@ -45,7 +45,8 @@ public class PowertoolsActivity extends CollapsingToolbarBaseActivity
             R.string.powertools_tab_cpu,
             R.string.powertools_tab_gpu,
             R.string.powertools_tab_zram,
-            R.string.powertools_tab_ionet,
+            R.string.powertools_tab_io,
+            R.string.powertools_tab_net,
     };
 
     private HorizontalScrollView mTabsScroll;
@@ -101,10 +102,11 @@ public class PowertoolsActivity extends CollapsingToolbarBaseActivity
             tv.setPadding(hPad, 0, hPad, 0);
 
             LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                    0, LinearLayout.LayoutParams.MATCH_PARENT, 1.0f);
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
+                    LinearLayout.LayoutParams.MATCH_PARENT);
             lp.setMargins(dp(2), 0, dp(2), 0);
             tv.setLayoutParams(lp);
-            tv.setMinWidth(dp(64));
+            tv.setMinWidth(dp(68));
 
             tv.setOnClickListener(v -> selectTab(tabIndex, true));
             mTabsBar.addView(tv);

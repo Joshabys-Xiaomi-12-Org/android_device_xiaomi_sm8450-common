@@ -225,4 +225,14 @@
     <string name="powertools_io_scheduler_title">Планировщик I/O</string>
     <string name="powertools_io_read_ahead_title">Упреждающее чтение (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">Управление перегрузкой TCP</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">Сеть</string>
+    <string name="powertools_io_category">Хранилище I/O</string>
+    <string name="powertools_io_enable_title">Включить оптимизатор I/O</string>
+    <string name="powertools_io_enable_summary">Переключить настройки хранилища I/O</string>
+    <string name="powertools_io_config_category">Настройка I/O</string>
+    <string name="powertools_net_category">Сеть</string>
+    <string name="powertools_net_enable_title">Включить оптимизатор сети</string>
+    <string name="powertools_net_enable_summary">Переключить настройки сети TCP</string>
+    <string name="powertools_net_config_category">Настройка сети</string>
 </resources>

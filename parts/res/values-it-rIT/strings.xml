@@ -225,4 +225,14 @@
     <string name="powertools_io_scheduler_title">Scheduler I/O archiviazione</string>
     <string name="powertools_io_read_ahead_title">Read-Ahead archiviazione</string>
     <string name="powertools_net_tcp_title">Controllo congestione TCP</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">Rete</string>
+    <string name="powertools_io_category">Archiviazione I/O</string>
+    <string name="powertools_io_enable_title">Attiva ottimizzatore I/O</string>
+    <string name="powertools_io_enable_summary">Attiva o disattiva regolazione I/O archiviazione</string>
+    <string name="powertools_io_config_category">Configura I/O</string>
+    <string name="powertools_net_category">Rete</string>
+    <string name="powertools_net_enable_title">Attiva ottimizzatore rete</string>
+    <string name="powertools_net_enable_summary">Attiva o disattiva regolazione rete TCP</string>
+    <string name="powertools_net_config_category">Configura rete</string>
 </resources>

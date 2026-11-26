@@ -225,4 +225,14 @@
     <string name="powertools_io_scheduler_title">Speicher-I/O-Scheduler</string>
     <string name="powertools_io_read_ahead_title">Speicher-Read-Ahead</string>
     <string name="powertools_net_tcp_title">TCP-Überlastungskontrolle</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">Netzwerk</string>
+    <string name="powertools_io_category">Speicher-I/O</string>
+    <string name="powertools_io_enable_title">I/O-Optimierer aktivieren</string>
+    <string name="powertools_io_enable_summary">Speicher-I/O-Tuning umschalten</string>
+    <string name="powertools_io_config_category">I/O konfigurieren</string>
+    <string name="powertools_net_category">Netzwerk</string>
+    <string name="powertools_net_enable_title">Netzwerk-Optimierer aktivieren</string>
+    <string name="powertools_net_enable_summary">TCP-Netzwerk-Tuning umschalten</string>
+    <string name="powertools_net_config_category">Netzwerk konfigurieren</string>
 </resources>

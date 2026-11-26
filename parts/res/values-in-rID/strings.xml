@@ -225,4 +225,14 @@
     <string name="powertools_io_scheduler_title">Penjadwal I/O Penyimpanan</string>
     <string name="powertools_io_read_ahead_title">Read-Ahead Penyimpanan</string>
     <string name="powertools_net_tcp_title">Kontrol Kemacetan TCP</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">Jaringan</string>
+    <string name="powertools_io_category">Penyimpanan I/O</string>
+    <string name="powertools_io_enable_title">Aktifkan Pengoptimal I/O</string>
+    <string name="powertools_io_enable_summary">Alihkan penyetelan I/O penyimpanan</string>
+    <string name="powertools_io_config_category">Konfigurasi I/O</string>
+    <string name="powertools_net_category">Jaringan</string>
+    <string name="powertools_net_enable_title">Aktifkan Pengoptimal Jaringan</string>
+    <string name="powertools_net_enable_summary">Alihkan penyetelan jaringan TCP</string>
+    <string name="powertools_net_config_category">Konfigurasi Jaringan</string>
 </resources>

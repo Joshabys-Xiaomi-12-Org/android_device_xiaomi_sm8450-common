@@ -225,4 +225,14 @@
     <string name="powertools_io_scheduler_title">स्टोरेज I/O शेड्यूलर</string>
     <string name="powertools_io_read_ahead_title">स्टोरेज रीड-अहेड</string>
     <string name="powertools_net_tcp_title">TCP कंजेशन नियंत्रण</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">नेटवर्क</string>
+    <string name="powertools_io_category">स्टोरेज I/O</string>
+    <string name="powertools_io_enable_title">I/O ऑप्टिमाइज़र सक्षम करें</string>
+    <string name="powertools_io_enable_summary">स्टोरेज I/O ट्यूनिंग टॉगल करें</string>
+    <string name="powertools_io_config_category">I/O कॉन्फ़िगर करें</string>
+    <string name="powertools_net_category">नेटवर्क</string>
+    <string name="powertools_net_enable_title">नेटवर्क ऑप्टिमाइज़र सक्षम करें</string>
+    <string name="powertools_net_enable_summary">TCP नेटवर्क ट्यूनिंग टॉगल करें</string>
+    <string name="powertools_net_config_category">नेटवर्क कॉन्फ़िगर करें</string>
 </resources>

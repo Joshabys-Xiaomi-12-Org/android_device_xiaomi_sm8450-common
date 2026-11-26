@@ -212,4 +212,14 @@
     <string name="powertools_io_scheduler_title">מתזמן I/O לאחסון</string>
     <string name="powertools_io_read_ahead_title">קריאה מראש (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">בקרת עומס TCP</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">רשת</string>
+    <string name="powertools_io_category">אחסון I/O</string>
+    <string name="powertools_io_enable_title">הפעל ממטב I/O</string>
+    <string name="powertools_io_enable_summary">הפעל או כבה כוונון אחסון I/O</string>
+    <string name="powertools_io_config_category">הגדרת I/O</string>
+    <string name="powertools_net_category">רשת</string>
+    <string name="powertools_net_enable_title">הפעל ממטב רשת</string>
+    <string name="powertools_net_enable_summary">הפעל או כבה כוונון רשת TCP</string>
+    <string name="powertools_net_config_category">הגדרת רשת</string>
 </resources>

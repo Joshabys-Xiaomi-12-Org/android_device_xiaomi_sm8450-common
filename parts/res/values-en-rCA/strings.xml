@@ -188,4 +188,14 @@
     <string name="powertools_io_scheduler_title">Storage I/O Scheduler</string>
     <string name="powertools_io_read_ahead_title">Storage Read-Ahead</string>
     <string name="powertools_net_tcp_title">TCP Congestion Control</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">Network</string>
+    <string name="powertools_io_category">Storage I/O</string>
+    <string name="powertools_io_enable_title">Enable I/O Optimizer</string>
+    <string name="powertools_io_enable_summary">Toggle storage I/O tuning</string>
+    <string name="powertools_io_config_category">Configure I/O</string>
+    <string name="powertools_net_category">Network</string>
+    <string name="powertools_net_enable_title">Enable Network Optimizer</string>
+    <string name="powertools_net_enable_summary">Toggle TCP network tuning</string>
+    <string name="powertools_net_config_category">Configure Network</string>
 </resources>

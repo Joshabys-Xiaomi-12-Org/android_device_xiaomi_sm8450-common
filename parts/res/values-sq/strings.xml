@@ -206,4 +206,14 @@
     <string name="powertools_io_scheduler_title">Planifikuesi I/O i ruajtjes</string>
     <string name="powertools_io_read_ahead_title">Leximi paraprak (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">Kontrolli i mbingarkesës TCP</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">Rrjeti</string>
+    <string name="powertools_io_category">Ruajtja I/O</string>
+    <string name="powertools_io_enable_title">Aktivizo optimizuesin I/O</string>
+    <string name="powertools_io_enable_summary">Ndërro rregullimet e ruajtjes I/O</string>
+    <string name="powertools_io_config_category">Konfiguro I/O</string>
+    <string name="powertools_net_category">Rrjeti</string>
+    <string name="powertools_net_enable_title">Aktivizo optimizuesin e rrjetit</string>
+    <string name="powertools_net_enable_summary">Ndërro rregullimet e rrjetit TCP</string>
+    <string name="powertools_net_config_category">Konfiguro rrjetin</string>
 </resources>

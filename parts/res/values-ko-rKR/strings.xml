@@ -225,4 +225,14 @@
     <string name="powertools_io_scheduler_title">저장소 I/O 스케줄러</string>
     <string name="powertools_io_read_ahead_title">저장소 미리 읽기 (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">TCP 혼잡 제어</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">네트워크</string>
+    <string name="powertools_io_category">저장소 I/O</string>
+    <string name="powertools_io_enable_title">I/O 최적화 활성화</string>
+    <string name="powertools_io_enable_summary">저장소 I/O 튜닝 전환</string>
+    <string name="powertools_io_config_category">I/O 구성</string>
+    <string name="powertools_net_category">네트워크</string>
+    <string name="powertools_net_enable_title">네트워크 최적화 활성화</string>
+    <string name="powertools_net_enable_summary">TCP 네트워크 튜닝 전환</string>
+    <string name="powertools_net_config_category">네트워크 구성</string>
 </resources>

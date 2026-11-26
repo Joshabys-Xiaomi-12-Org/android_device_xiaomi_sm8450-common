@@ -225,4 +225,14 @@
     <string name="powertools_io_scheduler_title">Depolama I/O Zamanlayıcı</string>
     <string name="powertools_io_read_ahead_title">Ön Okuma (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">TCP Tıkanıklık Kontrolü</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">Ağ</string>
+    <string name="powertools_io_category">Depolama I/O</string>
+    <string name="powertools_io_enable_title">I/O İyileştiriciyi Etkinleştir</string>
+    <string name="powertools_io_enable_summary">Depolama I/O ayarlarını aç/kapat</string>
+    <string name="powertools_io_config_category">I/O Yapılandırması</string>
+    <string name="powertools_net_category">Ağ</string>
+    <string name="powertools_net_enable_title">Ağ İyileştiriciyi Etkinleştir</string>
+    <string name="powertools_net_enable_summary">TCP ağ ayarlarını aç/kapat</string>
+    <string name="powertools_net_config_category">Ağ Yapılandırması</string>
 </resources>

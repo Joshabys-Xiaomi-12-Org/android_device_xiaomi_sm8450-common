@@ -206,4 +206,14 @@
     <string name="powertools_io_scheduler_title">Razporejevalnik I/O</string>
     <string name="powertools_io_read_ahead_title">Predbranje shrambe (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">Nadzor zastojev TCP</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">Omrežje</string>
+    <string name="powertools_io_category">Shramba I/O</string>
+    <string name="powertools_io_enable_title">Omogoči optimizator I/O</string>
+    <string name="powertools_io_enable_summary">Preklopi uglaševanje shrambe I/O</string>
+    <string name="powertools_io_config_category">Nastavi I/O</string>
+    <string name="powertools_net_category">Omrežje</string>
+    <string name="powertools_net_enable_title">Omogoči optimizator omrežja</string>
+    <string name="powertools_net_enable_summary">Preklopi uglaševanje omrežja TCP</string>
+    <string name="powertools_net_config_category">Nastavi omrežje</string>
 </resources>

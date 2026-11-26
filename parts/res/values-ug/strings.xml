@@ -202,4 +202,14 @@
     <string name="powertools_io_scheduler_title">ساقلاش I/O پىلانلىغۇچ</string>
     <string name="powertools_io_read_ahead_title">ئالدىن ئوقۇش (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">TCP قىستاڭچىلىق كونتروللۇقى</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">تور</string>
+    <string name="powertools_io_category">ساقلاش I/O</string>
+    <string name="powertools_io_enable_title">I/O ئەلالاشتۇرغۇچنى قوزغات</string>
+    <string name="powertools_io_enable_summary">ساقلاش I/O تەڭشىكىنى ئالماشتۇر</string>
+    <string name="powertools_io_config_category">I/O تەڭشىكى</string>
+    <string name="powertools_net_category">تور</string>
+    <string name="powertools_net_enable_title">تور ئەلالاشتۇرغۇچنى قوزغات</string>
+    <string name="powertools_net_enable_summary">TCP تور تەڭشىكىنى ئالماشتۇر</string>
+    <string name="powertools_net_config_category">تور تەڭشىكى</string>
 </resources>

@@ -47,7 +47,8 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
     public static final int TAB_CPU = 1;
     public static final int TAB_GPU = 2;
     public static final int TAB_ZRAM = 3;
-    public static final int TAB_IO_NET = 4;
+    public static final int TAB_IO = 4;
+    public static final int TAB_NET = 5;
 
     private static final String ARG_TAB = "arg_tab";
 
@@ -95,9 +96,10 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
     static final String KEY_VM_DIRTY_PROFILE = "vm_dirty_profile";
 
     // I/O & Network keys
-    static final String KEY_IO_NET_ENABLE = "io_net_enable";
+    static final String KEY_IO_ENABLE = "io_enable";
     static final String KEY_IO_SCHEDULER = "io_scheduler";
     static final String KEY_IO_READ_AHEAD = "io_read_ahead";
+    static final String KEY_NET_ENABLE = "net_enable";
     static final String KEY_NET_TCP_CONGESTION = "net_tcp_congestion";
 
     // Persisted stock ZRAM/VM/IO/Net defaults
@@ -168,9 +170,10 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
     private ListPreference mVmDirtyProfilePref;
 
     // I/O & Network preferences
-    private SwitchPreferenceCompat mIoNetEnablePref;
+    private SwitchPreferenceCompat mIoEnablePref;
     private ListPreference mIoSchedulerPref;
     private ListPreference mIoReadAheadPref;
+    private SwitchPreferenceCompat mNetEnablePref;
     private ListPreference mNetTcpPref;
 
     // Dynamic defaults loaded from sysfs/prefs
@@ -213,7 +216,8 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
             case TAB_CPU -> R.xml.powertools_tab_cpu;
             case TAB_GPU -> R.xml.powertools_tab_gpu;
             case TAB_ZRAM -> R.xml.powertools_tab_zram;
-            case TAB_IO_NET -> R.xml.powertools_tab_ionet;
+            case TAB_IO -> R.xml.powertools_tab_io;
+            case TAB_NET -> R.xml.powertools_tab_net;
             default -> R.xml.powertools_tab_general;
         };
         setPreferencesFromResource(xmlRes, rootKey);
@@ -226,7 +230,8 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
             case TAB_CPU -> setupCpuTab();
             case TAB_GPU -> setupGpuTab();
             case TAB_ZRAM -> setupZramTab();
-            case TAB_IO_NET -> setupIoNetTab();
+            case TAB_IO -> setupIoTab();
+            case TAB_NET -> setupNetTab();
             default -> setupGeneralTab();
         }
     }
@@ -313,7 +318,8 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
     }
 
     private void captureIoNetStockDefaults(SharedPreferences prefs) {
-        boolean ioActive = prefs.getBoolean(KEY_IO_NET_ENABLE, false);
+        boolean ioActive = prefs.getBoolean(KEY_IO_ENABLE, false);
+        boolean netActive = prefs.getBoolean(KEY_NET_ENABLE, false);
         String[] scheds = IoNetUtils.getAvailableSchedulers();
         String[] tcps = IoNetUtils.getAvailableTcpAlgorithms();
         String curSched = IoNetUtils.getCurrentScheduler();
@@ -328,7 +334,7 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
                     .putString(KEY_STOCK_IO_READ_AHEAD,
                             (!ioActive && !TextUtils.isEmpty(curRa)) ? curRa : "512")
                     .putString(KEY_STOCK_NET_TCP,
-                            (!ioActive && !TextUtils.isEmpty(curTcp)) ? curTcp
+                            (!netActive && !TextUtils.isEmpty(curTcp)) ? curTcp
                                     : (tcps.length > 0 ? tcps[0] : "cubic"))
                     .apply();
         }
@@ -483,14 +489,13 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
                 !TextUtils.isEmpty(curDirty) ? curDirty : mVmDefaultDirtyProfile);
     }
 
-    private void setupIoNetTab() {
-        mIoNetEnablePref = findPreference(KEY_IO_NET_ENABLE);
+    private void setupIoTab() {
+        mIoEnablePref = findPreference(KEY_IO_ENABLE);
         mIoSchedulerPref = findPreference(KEY_IO_SCHEDULER);
         mIoReadAheadPref = findPreference(KEY_IO_READ_AHEAD);
-        mNetTcpPref = findPreference(KEY_NET_TCP_CONGESTION);
 
-        if (mIoNetEnablePref != null) {
-            mIoNetEnablePref.setOnPreferenceChangeListener(this);
+        if (mIoEnablePref != null) {
+            mIoEnablePref.setOnPreferenceChangeListener(this);
         }
 
         String[] scheds = IoNetUtils.getAvailableSchedulers();
@@ -501,6 +506,15 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
         String curRa = IoNetUtils.getCurrentReadAheadKb();
         initStaticListPref(mIoReadAheadPref,
                 !TextUtils.isEmpty(curRa) ? curRa : mIoDefaultReadAhead);
+    }
+
+    private void setupNetTab() {
+        mNetEnablePref = findPreference(KEY_NET_ENABLE);
+        mNetTcpPref = findPreference(KEY_NET_TCP_CONGESTION);
+
+        if (mNetEnablePref != null) {
+            mNetEnablePref.setOnPreferenceChangeListener(this);
+        }
 
         String[] tcps = IoNetUtils.getAvailableTcpAlgorithms();
         String curTcp = IoNetUtils.getCurrentTcpAlgorithm();
@@ -637,8 +651,11 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
         if (mZramEnablePref != null) {
             setZramPrefsEnabled(mZramEnablePref.isChecked());
         }
-        if (mIoNetEnablePref != null) {
-            setIoNetPrefsEnabled(mIoNetEnablePref.isChecked());
+        if (mIoEnablePref != null) {
+            setIoPrefsEnabled(mIoEnablePref.isChecked());
+        }
+        if (mNetEnablePref != null) {
+            setNetPrefsEnabled(mNetEnablePref.isChecked());
         }
     }
 
@@ -681,9 +698,12 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
         if (mVmDirtyProfilePref != null) mVmDirtyProfilePref.setEnabled(enabled);
     }
 
-    private void setIoNetPrefsEnabled(boolean enabled) {
+    private void setIoPrefsEnabled(boolean enabled) {
         setListPrefEnabled(mIoSchedulerPref, enabled);
         if (mIoReadAheadPref != null) mIoReadAheadPref.setEnabled(enabled);
+    }
+
+    private void setNetPrefsEnabled(boolean enabled) {
         setListPrefEnabled(mNetTcpPref, enabled);
     }
 
@@ -839,7 +859,7 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
         ed.apply();
     }
 
-    private void restoreIoNetDefaults() {
+    private void restoreIoDefaults() {
         SharedPreferences.Editor ed =
                 PreferenceManager.getDefaultSharedPreferences(requireContext()).edit();
         if (!TextUtils.isEmpty(mIoDefaultScheduler)) {
@@ -858,6 +878,12 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
                 mIoReadAheadPref.setValue(mIoDefaultReadAhead);
             }
         }
+        ed.apply();
+    }
+
+    private void restoreNetDefaults() {
+        SharedPreferences.Editor ed =
+                PreferenceManager.getDefaultSharedPreferences(requireContext()).edit();
         if (!TextUtils.isEmpty(mNetDefaultTcp)) {
             IoNetUtils.setTcpCongestion(mNetDefaultTcp);
             ed.putString(KEY_NET_TCP_CONGESTION, mNetDefaultTcp);
@@ -876,11 +902,13 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
                 restoreGpuDefaults();
                 restoreCpuDefaults();
                 restoreZramDefaults();
-                restoreIoNetDefaults();
+                restoreIoDefaults();
+                restoreNetDefaults();
                 ed.putBoolean(KEY_GPU_ENABLE, false)
                         .putBoolean(KEY_CPU_ENABLE, false)
                         .putBoolean(KEY_ZRAM_ENABLE, false)
-                        .putBoolean(KEY_IO_NET_ENABLE, false)
+                        .putBoolean(KEY_IO_ENABLE, false)
+                        .putBoolean(KEY_NET_ENABLE, false)
                         .apply();
                 updateUI();
             }
@@ -1001,12 +1029,14 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
             restoreGpuDefaults();
             restoreCpuDefaults();
             restoreZramDefaults();
-            restoreIoNetDefaults();
+            restoreIoDefaults();
+            restoreNetDefaults();
             PreferenceManager.getDefaultSharedPreferences(requireContext()).edit()
                     .putBoolean(KEY_GPU_ENABLE, false)
                     .putBoolean(KEY_CPU_ENABLE, false)
                     .putBoolean(KEY_ZRAM_ENABLE, false)
-                    .putBoolean(KEY_IO_NET_ENABLE, false)
+                    .putBoolean(KEY_IO_ENABLE, false)
+                    .putBoolean(KEY_NET_ENABLE, false)
                     .putString(KEY_POWER_PRESET, PRESET_DEFAULT)
                     .apply();
             if (mPowerPresetPref != null) mPowerPresetPref.setValue(PRESET_DEFAULT);
@@ -1248,11 +1278,11 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
             return true;
         }
 
-        // I/O & Network
-        if (preference == mIoNetEnablePref) {
+        // I/O
+        if (preference == mIoEnablePref) {
             boolean enable = (Boolean) newValue;
-            if (!enable) restoreIoNetDefaults();
-            setIoNetPrefsEnabled(enable);
+            if (!enable) restoreIoDefaults();
+            setIoPrefsEnabled(enable);
             markCustomPreset();
             return true;
         }
@@ -1263,6 +1293,15 @@ public class PowertoolsSettingsFragment extends SettingsBasePreferenceFragment
         }
         if (preference == mIoReadAheadPref) {
             IoNetUtils.setReadAheadKb(newValue.toString());
+            markCustomPreset();
+            return true;
+        }
+
+        // Network
+        if (preference == mNetEnablePref) {
+            boolean enable = (Boolean) newValue;
+            if (!enable) restoreNetDefaults();
+            setNetPrefsEnabled(enable);
             markCustomPreset();
             return true;
         }

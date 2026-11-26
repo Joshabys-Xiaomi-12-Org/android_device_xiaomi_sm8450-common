@@ -212,4 +212,14 @@
     <string name="powertools_io_scheduler_title">Tárhely I/O ütemező</string>
     <string name="powertools_io_read_ahead_title">Előolvasás (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">TCP torlódásvezérlés</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">Hálózat</string>
+    <string name="powertools_io_category">Tárhely I/O</string>
+    <string name="powertools_io_enable_title">I/O optimalizáló engedélyezése</string>
+    <string name="powertools_io_enable_summary">Tárhely I/O hangolás kapcsolása</string>
+    <string name="powertools_io_config_category">I/O beállítása</string>
+    <string name="powertools_net_category">Hálózat</string>
+    <string name="powertools_net_enable_title">Hálózat optimalizáló engedélyezése</string>
+    <string name="powertools_net_enable_summary">TCP hálózati hangolás kapcsolása</string>
+    <string name="powertools_net_config_category">Hálózat beállítása</string>
 </resources>

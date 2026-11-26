@@ -212,4 +212,14 @@
     <string name="powertools_io_scheduler_title">Planificator I/O stocare</string>
     <string name="powertools_io_read_ahead_title">Citire anticipată (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">Control congestie TCP</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">Rețea</string>
+    <string name="powertools_io_category">Stocare I/O</string>
+    <string name="powertools_io_enable_title">Activează optimizatorul I/O</string>
+    <string name="powertools_io_enable_summary">Comută reglajele de stocare I/O</string>
+    <string name="powertools_io_config_category">Configurare I/O</string>
+    <string name="powertools_net_category">Rețea</string>
+    <string name="powertools_net_enable_title">Activează optimizatorul de rețea</string>
+    <string name="powertools_net_enable_summary">Comută reglajele de rețea TCP</string>
+    <string name="powertools_net_config_category">Configurare rețea</string>
 </resources>

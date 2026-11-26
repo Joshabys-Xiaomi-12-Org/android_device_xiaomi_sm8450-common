@@ -225,4 +225,14 @@
     <string name="powertools_io_scheduler_title">存储 I/O 调度器</string>
     <string name="powertools_io_read_ahead_title">存储预读 (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">TCP 拥塞控制</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">网络</string>
+    <string name="powertools_io_category">存储 I/O</string>
+    <string name="powertools_io_enable_title">启用 I/O 优化</string>
+    <string name="powertools_io_enable_summary">开关存储 I/O 调优</string>
+    <string name="powertools_io_config_category">配置 I/O</string>
+    <string name="powertools_net_category">网络</string>
+    <string name="powertools_net_enable_title">启用网络优化</string>
+    <string name="powertools_net_enable_summary">开关 TCP 网络调优</string>
+    <string name="powertools_net_config_category">配置网络</string>
 </resources>

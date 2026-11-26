@@ -212,4 +212,14 @@
     <string name="powertools_io_scheduler_title">زمان‌بند I/O ذخیره‌سازی</string>
     <string name="powertools_io_read_ahead_title">پیش‌خوانی ذخیره‌سازی (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">کنترل ازدحام TCP</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">شبکه</string>
+    <string name="powertools_io_category">ذخیره‌سازی I/O</string>
+    <string name="powertools_io_enable_title">فعال‌سازی بهینه‌ساز I/O</string>
+    <string name="powertools_io_enable_summary">تغییر وضعیت تنظیمات ذخیره‌سازی I/O</string>
+    <string name="powertools_io_config_category">پیکربندی I/O</string>
+    <string name="powertools_net_category">شبکه</string>
+    <string name="powertools_net_enable_title">فعال‌سازی بهینه‌ساز شبکه</string>
+    <string name="powertools_net_enable_summary">تغییر وضعیت تنظیمات شبکه TCP</string>
+    <string name="powertools_net_config_category">پیکربندی شبکه</string>
 </resources>

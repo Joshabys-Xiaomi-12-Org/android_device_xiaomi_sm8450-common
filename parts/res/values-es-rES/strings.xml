@@ -225,4 +225,14 @@
     <string name="powertools_io_scheduler_title">Planificador de I/O</string>
     <string name="powertools_io_read_ahead_title">Lectura anticipada (Read-Ahead)</string>
     <string name="powertools_net_tcp_title">Control de congestión TCP</string>
+    <string name="powertools_tab_io">I/O</string>
+    <string name="powertools_tab_net">Red</string>
+    <string name="powertools_io_category">Almacenamiento I/O</string>
+    <string name="powertools_io_enable_title">Activar optimizador de I/O</string>
+    <string name="powertools_io_enable_summary">Activar o desactivar ajustes de almacenamiento I/O</string>
+    <string name="powertools_io_config_category">Configurar I/O</string>
+    <string name="powertools_net_category">Red</string>
+    <string name="powertools_net_enable_title">Activar optimizador de red</string>
+    <string name="powertools_net_enable_summary">Activar o desactivar ajustes de red TCP</string>
+    <string name="powertools_net_config_category">Configurar red</string>
 </resources>
