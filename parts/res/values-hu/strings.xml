@@ -196,4 +196,7 @@
     <string name="powertools_auto_thermal_title">Automatikus hőprofilok</string>
     <string name="powertools_auto_thermal_summary">Hőprofil automatikus beállítása alkalmazástípus szerint (játékok, kamera, böngésző stb.)</string>
     <string name="thermal_auto_profile_label">Auto: %1$s</string>
+    <string name="thermal_disable_title">Hőszabályozás letiltása (mi_thermald)</string>
+    <string name="thermal_disable_summary">Teljesen leállítja a mi_thermald szolgáltatást a következő újraindításig</string>
+    <string name="thermal_disable_warning">A mi_thermald leállítása kikapcsolja a Xiaomi hőkorlátozását, beleértve az akkumulátor és a gyorstöltés hőmérsékleti határait is. A készülék túlmelegedhet, különösen töltés vagy játék közben. Újraindítás után automatikusan visszaáll. Folytatja?</string>
 </resources>

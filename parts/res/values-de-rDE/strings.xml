@@ -210,4 +210,7 @@
     <string name="powertools_auto_thermal_title">Automatische Thermal-Profile</string>
     <string name="powertools_auto_thermal_summary">Thermal-Profil automatisch nach App-Typ zuweisen (Spiele, Kamera, Browser usw.)</string>
     <string name="thermal_auto_profile_label">Auto: %1$s</string>
+    <string name="thermal_disable_title">Wärmesteuerung deaktivieren (mi_thermald)</string>
+    <string name="thermal_disable_summary">Stoppt mi_thermald vollständig bis zum nächsten Neustart</string>
+    <string name="thermal_disable_warning">Das Stoppen von mi_thermald deaktiviert Xiaomis thermische Drosselung einschließlich Akku- und Schnelllade-Temperaturgrenzen. Das Gerät kann besonders beim Laden oder Spielen überhitzen. Nach einem Neustart wird die Steuerung automatisch wieder aktiviert. Fortfahren?</string>
 </resources>

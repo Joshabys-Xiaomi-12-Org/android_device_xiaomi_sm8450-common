@@ -210,4 +210,7 @@
     <string name="powertools_auto_thermal_title">ملفات حرارية تلقائية</string>
     <string name="powertools_auto_thermal_summary">تعيين الملف الحراري تلقائياً حسب نوع التطبيق (ألعاب، كاميرا، متصفح، إلخ)</string>
     <string name="thermal_auto_profile_label">تلقائي: %1$s</string>
+    <string name="thermal_disable_title">تعطيل التحكم الحراري (mi_thermald)</string>
+    <string name="thermal_disable_summary">يوقف mi_thermald بالكامل حتى إعادة التشغيل التالية</string>
+    <string name="thermal_disable_warning">إيقاف mi_thermald يعطل التقييد الحراري لشاومي، بما في ذلك حدود حرارة البطارية والشحن السريع. قد يسخن الجهاز بشكل مفرط خاصة أثناء الشحن أو اللعب. يعود التحكم الحراري تلقائياً بعد إعادة التشغيل. هل تريد المتابعة؟</string>
 </resources>

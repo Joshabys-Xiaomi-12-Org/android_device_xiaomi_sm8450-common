@@ -196,4 +196,7 @@
     <string name="powertools_auto_thermal_title">Αυτόματα θερμικά προφίλ</string>
     <string name="powertools_auto_thermal_summary">Αυτόματη επιλογή θερμικού προφίλ ανά τύπο εφαρμογής (παιχνίδια, κάμερα, πρόγραμμα περιήγησης κ.λπ.)</string>
     <string name="thermal_auto_profile_label">Αυτόματο: %1$s</string>
+    <string name="thermal_disable_title">Απενεργοποίηση θερμικού ελέγχου (mi_thermald)</string>
+    <string name="thermal_disable_summary">Σταματά πλήρως το mi_thermald μέχρι την επόμενη επανεκκίνηση</string>
+    <string name="thermal_disable_warning">Η διακοπή του mi_thermald απενεργοποιεί τον θερμικό περιορισμό της Xiaomi, συμπεριλαμβανομένων των ορίων μπαταρίας και γρήγορης φόρτισης. Η συσκευή μπορεί να υπερθερμανθεί. Επανέρχεται αυτόματα μετά από επανεκκίνηση. Συνέχεια;</string>
 </resources>

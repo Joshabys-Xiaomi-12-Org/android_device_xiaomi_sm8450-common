@@ -210,4 +210,7 @@
     <string name="powertools_auto_thermal_title">Profil termal otomatis</string>
     <string name="powertools_auto_thermal_summary">Atur profil termal secara otomatis berdasarkan jenis aplikasi (game, kamera, browser, dll.)</string>
     <string name="thermal_auto_profile_label">Otomatis: %1$s</string>
+    <string name="thermal_disable_title">Nonaktifkan kontrol termal (mi_thermald)</string>
+    <string name="thermal_disable_summary">Menghentikan mi_thermald sepenuhnya hingga mulai ulang berikutnya</string>
+    <string name="thermal_disable_warning">Menghentikan mi_thermald menonaktifkan pembatasan termal Xiaomi, termasuk batas suhu baterai dan pengisian cepat. Perangkat dapat menjadi terlalu panas, terutama saat mengisi daya atau bermain game. Kontrol termal otomatis aktif kembali setelah mulai ulang. Lanjutkan?</string>
 </resources>

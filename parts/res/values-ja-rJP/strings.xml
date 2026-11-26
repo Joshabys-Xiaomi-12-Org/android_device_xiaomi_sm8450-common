@@ -210,4 +210,7 @@
     <string name="powertools_auto_thermal_title">自動サーマルプロファイル</string>
     <string name="powertools_auto_thermal_summary">アプリの種類（ゲーム、カメラ、ブラウザなど）に応じてサーマルプロファイルを自動設定</string>
     <string name="thermal_auto_profile_label">自動: %1$s</string>
+    <string name="thermal_disable_title">サーマル制御を無効化 (mi_thermald)</string>
+    <string name="thermal_disable_summary">次の再起動まで mi_thermald を完全に停止します</string>
+    <string name="thermal_disable_warning">mi_thermald を停止すると、バッテリーや急速充電の温度制限を含む Xiaomi のサーマルスロットリングが無効になります。充電中やゲーム中に過熱する恐れがあります。再起動すると自動的に元に戻ります。続行しますか？</string>
 </resources>

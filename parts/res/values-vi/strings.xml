@@ -210,4 +210,7 @@
     <string name="powertools_auto_thermal_title">Hồ sơ nhiệt tự động</string>
     <string name="powertools_auto_thermal_summary">Tự động đặt hồ sơ nhiệt theo loại ứng dụng (trò chơi, máy ảnh, trình duyệt, v.v.)</string>
     <string name="thermal_auto_profile_label">Tự động: %1$s</string>
+    <string name="thermal_disable_title">Tắt kiểm soát nhiệt (mi_thermald)</string>
+    <string name="thermal_disable_summary">Dừng hoàn toàn mi_thermald cho đến lần khởi động lại tiếp theo</string>
+    <string name="thermal_disable_warning">Dừng mi_thermald sẽ tắt giới hạn nhiệt của Xiaomi, bao gồm cả giới hạn nhiệt độ pin và sạc nhanh. Thiết bị có thể quá nhiệt, đặc biệt khi vừa sạc vừa chơi game. Kiểm soát nhiệt tự động bật lại sau khi khởi động lại. Tiếp tục?</string>
 </resources>

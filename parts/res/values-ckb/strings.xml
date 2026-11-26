@@ -186,4 +186,7 @@
     <string name="powertools_auto_thermal_title">پڕۆفایلی گەرمی خۆکار</string>
     <string name="powertools_auto_thermal_summary">دیاریکردنی خۆکارانەی پڕۆفایلی گەرمی بەپێی جۆری بەرنامە (یاری، کامێرا، وێبگەڕ و هتد)</string>
     <string name="thermal_auto_profile_label">خۆکار: %1$s</string>
+    <string name="thermal_disable_title">ناچالاککردنی کۆنترۆڵی گەرمی (mi_thermald)</string>
+    <string name="thermal_disable_summary">mi_thermald بەتەواوی دەوەستێنێت تا داگیرساندنەوەی داهاتوو</string>
+    <string name="thermal_disable_warning">وەستاندنی mi_thermald سنووردارکردنی گەرمی شاومی ناچالاک دەکات، لەوانەش سنووری گەرمی پاتری و بارگاویکردنی خێرا. لەوانەیە ئامێرەکە زۆر گەرم بێت. دوای داگیرساندنەوە بە خۆکاری دەگەڕێتەوە. بەردەوام بیت؟</string>
 </resources>

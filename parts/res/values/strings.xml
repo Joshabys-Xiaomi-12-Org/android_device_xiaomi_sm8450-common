@@ -68,6 +68,9 @@
     <string name="thermal_global_title">Global thermal profile</string>
     <string name="thermal_global_tile_label">Thermal Profile</string>
     <string name="thermal_global_footer">Applies to all apps set to Default. Per-app thermal profiles always take priority.</string>
+    <string name="thermal_disable_title">Disable thermal control (mi_thermald)</string>
+    <string name="thermal_disable_summary">Stops mi_thermald completely until next reboot</string>
+    <string name="thermal_disable_warning">Stopping mi_thermald disables Xiaomi\'s thermal throttling, including battery and fast-charging temperature limits. The device may overheat, especially while charging or gaming. Thermal control is automatically restored after a reboot. Continue?</string>
     <string name="thermal_reset">Reset to defaults</string>
     <string name="thermal_reset_message">Are you sure you want to reset thermal profile for all apps?</string>
 

@@ -172,4 +172,7 @@
     <string name="powertools_auto_thermal_title">Auto thermal profiles</string>
     <string name="powertools_auto_thermal_summary">Automatically set thermal profile by app type (games, camera, browser, etc.)</string>
     <string name="thermal_auto_profile_label">Auto: %1$s</string>
+    <string name="thermal_disable_title">Disable thermal control (mi_thermald)</string>
+    <string name="thermal_disable_summary">Stops mi_thermald completely until next reboot</string>
+    <string name="thermal_disable_warning">Stopping mi_thermald disables Xiaomi\'s thermal throttling, including battery and fast-charging temperature limits. The device may overheat, especially while charging or gaming. Thermal control is automatically restored after a reboot. Continue?</string>
 </resources>

@@ -210,4 +210,7 @@
     <string name="powertools_auto_thermal_title">Автоматические термопрофили</string>
     <string name="powertools_auto_thermal_summary">Автоматически выбирать термопрофиль по типу приложения (игры, камера, браузер и т. д.)</string>
     <string name="thermal_auto_profile_label">Авто: %1$s</string>
+    <string name="thermal_disable_title">Отключить термоконтроль (mi_thermald)</string>
+    <string name="thermal_disable_summary">Полностью останавливает mi_thermald до следующей перезагрузки</string>
+    <string name="thermal_disable_warning">Остановка mi_thermald отключает термоограничения Xiaomi, включая лимиты температуры батареи и быстрой зарядки. Устройство может сильно нагреваться, особенно при зарядке или в играх. После перезагрузки термоконтроль включится автоматически. Продолжить?</string>
 </resources>

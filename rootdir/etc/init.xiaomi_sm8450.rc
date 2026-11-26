@@ -383,6 +383,13 @@ on property:sys.parts.thermal.action=reset
     restart mi_thermald
     setprop sys.parts.thermal.action idle
 
+# Disable/Enable mi_thermald (non-persistent; automatically restored on reboot)
+on property:sys.parts.thermal.disabled=1
+    stop mi_thermald
+
+on property:sys.parts.thermal.disabled=0
+    start mi_thermald
+
 # Powertools ZRAM & VM Tuning
 service vendor.parts-zram /vendor/bin/init.parts.zram.sh
     class main

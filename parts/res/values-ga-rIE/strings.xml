@@ -186,4 +186,7 @@
     <string name="powertools_auto_thermal_title">Próifílí teirmeacha uathoibríocha</string>
     <string name="powertools_auto_thermal_summary">Socraigh próifíl theirmeach go huathoibríoch de réir cineál aipe (cluichí, ceamara, brabhsálaí, srl.)</string>
     <string name="thermal_auto_profile_label">Uathoibríoch: %1$s</string>
+    <string name="thermal_disable_title">Díchumasaigh rialú teirmeach (mi_thermald)</string>
+    <string name="thermal_disable_summary">Stopann sé mi_thermald go hiomlán go dtí an chéad atosú eile</string>
+    <string name="thermal_disable_warning">Díchumasaíonn stopadh mi_thermald srianadh teirmeach Xiaomi, lena n-áirítear teorainneacha ceallraí agus luchtaithe tapa. D\'fhéadfadh an gléas róthéamh. Athchóirítear go huathoibríoch tar éis atosaithe. Lean ar aghaidh?</string>
 </resources>

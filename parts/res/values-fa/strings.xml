@@ -196,4 +196,7 @@
     <string name="powertools_auto_thermal_title">پروفایل‌های دمایی خودکار</string>
     <string name="powertools_auto_thermal_summary">تنظیم خودکار پروفایل دمایی بر اساس نوع برنامه (بازی، دوربین، مرورگر و غیره)</string>
     <string name="thermal_auto_profile_label">خودکار: %1$s</string>
+    <string name="thermal_disable_title">غیرفعال کردن کنترل دما (mi_thermald)</string>
+    <string name="thermal_disable_summary">سرویس mi_thermald را تا راه‌اندازی مجدد بعدی کاملاً متوقف می‌کند</string>
+    <string name="thermal_disable_warning">توقف mi_thermald محدودیت دمایی شیائومی از جمله محدودیت دمای باتری و شارژ سریع را غیرفعال می‌کند. دستگاه به‌ویژه هنگام شارژ یا بازی ممکن است بیش از حد داغ شود. پس از راه‌اندازی مجدد به‌طور خودکار فعال می‌شود. ادامه می‌دهید؟</string>
 </resources>

@@ -188,4 +188,7 @@
     <string name="powertools_auto_thermal_title">தானியங்கி வெப்ப சுயவிவரங்கள்</string>
     <string name="powertools_auto_thermal_summary">செயலி வகையின் அடிப்படையில் (விளையாட்டுகள், கேமரா, உலாவி போன்றவை) வெப்ப சுயவிவரத்தை தானாக அமைக்கவும்</string>
     <string name="thermal_auto_profile_label">தானியங்கி: %1$s</string>
+    <string name="thermal_disable_title">வெப்ப கட்டுப்பாட்டை முடக்கு (mi_thermald)</string>
+    <string name="thermal_disable_summary">அடுத்த மறுதுவக்கம் வரை mi_thermald ஐ முழுமையாக நிறுத்தும்</string>
+    <string name="thermal_disable_warning">mi_thermald ஐ நிறுத்துவது பேட்டரி மற்றும் வேகமான சார்ஜிங் வெப்ப வரம்புகள் உட்பட Xiaomi வெப்ப கட்டுப்பாட்டை முடக்கும். சாதனம் அதிக வெப்பமடையக்கூடும். மறுதுவக்கத்திற்குப் பிறகு தானாக மீட்டமைக்கப்படும். தொடரவா?</string>
 </resources>

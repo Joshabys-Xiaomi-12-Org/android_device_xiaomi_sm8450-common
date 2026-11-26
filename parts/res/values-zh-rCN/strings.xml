@@ -210,4 +210,7 @@
     <string name="powertools_auto_thermal_title">自动温控配置</string>
     <string name="powertools_auto_thermal_summary">根据应用类型（游戏、相机、浏览器等）自动匹配温控配置</string>
     <string name="thermal_auto_profile_label">自动：%1$s</string>
+    <string name="thermal_disable_title">禁用温控服务 (mi_thermald)</string>
+    <string name="thermal_disable_summary">完全停止 mi_thermald 直至下次重启</string>
+    <string name="thermal_disable_warning">停止 mi_thermald 将禁用小米温控限制（包括电池与快充温度限制）。设备在充电或游戏时可能会严重发热。重启后将自动恢复温控服务。是否继续？</string>
 </resources>

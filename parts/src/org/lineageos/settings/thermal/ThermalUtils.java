@@ -19,6 +19,7 @@ package org.lineageos.settings.thermal;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.SystemProperties;
 import android.os.UserHandle;
 
 import androidx.preference.PreferenceManager;
@@ -32,6 +33,7 @@ public final class ThermalUtils {
     private static final String KEY_APP_STATE_PREFIX = "thermal_app_state_";
     private static final String KEY_GLOBAL_PROFILE = "thermal_global_profile";
     public static final String KEY_AUTO_PROFILES = "thermal_auto_profiles";
+    private static final String PROP_THERMAL_DISABLED = "sys.parts.thermal.disabled";
 
     public static final int STATE_DEFAULT = 0;
     public static final int STATE_BENCHMARK = 1;
@@ -208,11 +210,28 @@ public final class ThermalUtils {
         FileUtils.writeLine(THERMAL_SCONFIG, mMapResolver.getCodeForState(valid));
     }
 
+    public static boolean isThermalDisabled() {
+        return "1".equals(SystemProperties.get(PROP_THERMAL_DISABLED, "0"));
+    }
+
+    public void setThermalDisabled(boolean disabled) {
+        SystemProperties.set(PROP_THERMAL_DISABLED, disabled ? "1" : "0");
+        if (!disabled) {
+            FileUtils.writeLine(THERMAL_SCONFIG, mMapResolver.getCodeForState(getGlobalProfile()));
+        }
+    }
+
     protected void setDefaultThermalProfile() {
+        if (isThermalDisabled()) {
+            return;
+        }
         FileUtils.writeLine(THERMAL_SCONFIG, mMapResolver.getDefaultCode());
     }
 
     protected void setThermalProfile(String packageName) {
+        if (isThermalDisabled()) {
+            return;
+        }
         int effectiveState;
         if (hasManualStateForPackage(packageName)) {
             int manualState = getStateForPackage(packageName);

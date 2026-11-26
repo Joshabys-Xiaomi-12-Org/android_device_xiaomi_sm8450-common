@@ -186,4 +186,7 @@
     <string name="powertools_auto_thermal_title">ئاپتوماتىك تېمپېراتۇرا سەپلىمىسى</string>
     <string name="powertools_auto_thermal_summary">ئەپ تۈرىگە ئاساسەن (ئويۇن، كامېرا، تور كۆرگۈچ قاتارلىقلار) تېمپېراتۇرا سەپلىمىسىنى ئاپتوماتىك بەلگىلەش</string>
     <string name="thermal_auto_profile_label">ئاپتوماتىك: %1$s</string>
+    <string name="thermal_disable_title">تېمپېراتۇرا كونتروللۇقىنى ئۆچۈر (mi_thermald)</string>
+    <string name="thermal_disable_summary">كېيىنكى قايتا قوزغىتىشقىچە mi_thermald نى پۈتۈنلەي توختىتىدۇ</string>
+    <string name="thermal_disable_warning">mi_thermald نى توختىتىش باتارېيە ۋە تېز توك قاچىلاش تېمپېراتۇرا چەكلىمىسىنى ئۆز ئىچىگە ئالغان Xiaomi تېمپېراتۇرا چەكلىمىسىنى ئۆچۈرىدۇ. ئۈسكۈنە قىزىپ كېتىشى مۇمكىن. قايتا قوزغاتقاندا ئاپتوماتىك ئەسلىگە كېلىدۇ. داۋاملاشتۇرامسىز؟</string>
 </resources>

@@ -190,4 +190,7 @@
     <string name="powertools_auto_thermal_title">Avtomatik istilik profilləri</string>
     <string name="powertools_auto_thermal_summary">Tətbiq növünə görə (oyunlar, kamera, brauzer və s.) istilik profilini avtomatik təyin et</string>
     <string name="thermal_auto_profile_label">Avto: %1$s</string>
+    <string name="thermal_disable_title">İstilik nəzarətini söndür (mi_thermald)</string>
+    <string name="thermal_disable_summary">Növbəti yenidən başlatmaya qədər mi_thermald xidmətini tam dayandırır</string>
+    <string name="thermal_disable_warning">mi_thermald dayandırıldıqda batareya və sürətli doldurma istilik limitləri daxil olmaqla Xiaomi-nin istilik məhdudiyyəti söndürülür. Cihaz xüsusilə oyun və ya doldurma zamanı həddindən artıq qıza bilər. Yenidən başlatdıqdan sonra avtomatik bərpa olunur. Davam edilsin?</string>
 </resources>

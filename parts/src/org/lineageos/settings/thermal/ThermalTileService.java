@@ -56,6 +56,10 @@ public class ThermalTileService extends TileService {
     @Override
     public void onClick() {
         super.onClick();
+        if (ThermalUtils.isThermalDisabled()) {
+            updateTile();
+            return;
+        }
         if (mThermalUtils == null) {
             mThermalUtils = new ThermalUtils(this);
         }
@@ -101,10 +105,15 @@ public class ThermalTileService extends TileService {
         }
         int current = mThermalUtils.getGlobalProfile();
         tile.setLabel(getString(R.string.thermal_global_tile_label));
-        tile.setSubtitle(getString(ThermalUtils.getProfileNameRes(current)));
-        tile.setState(current == ThermalUtils.STATE_DEFAULT
-                ? Tile.STATE_INACTIVE
-                : Tile.STATE_ACTIVE);
+        if (ThermalUtils.isThermalDisabled()) {
+            tile.setSubtitle(getString(R.string.powertools_zram_disabled));
+            tile.setState(Tile.STATE_UNAVAILABLE);
+        } else {
+            tile.setSubtitle(getString(ThermalUtils.getProfileNameRes(current)));
+            tile.setState(current == ThermalUtils.STATE_DEFAULT
+                    ? Tile.STATE_INACTIVE
+                    : Tile.STATE_ACTIVE);
+        }
         tile.updateTile();
     }
 }

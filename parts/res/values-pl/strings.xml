@@ -210,4 +210,7 @@
     <string name="powertools_auto_thermal_title">Automatyczne profile termiczne</string>
     <string name="powertools_auto_thermal_summary">Automatycznie ustawiaj profil termiczny według typu aplikacji (gry, aparat, przeglądarka itp.)</string>
     <string name="thermal_auto_profile_label">Auto: %1$s</string>
+    <string name="thermal_disable_title">Wyłącz kontrolę termiczną (mi_thermald)</string>
+    <string name="thermal_disable_summary">Całkowicie zatrzymuje mi_thermald do następnego uruchomienia</string>
+    <string name="thermal_disable_warning">Zatrzymanie mi_thermald wyłącza ograniczanie termiczne Xiaomi, w tym limity temperatury baterii i szybkiego ładowania. Urządzenie może się przegrzewać, szczególnie podczas ładowania lub grania. Kontrola zostaje automatycznie przywrócona po restarcie. Kontynuować?</string>
 </resources>

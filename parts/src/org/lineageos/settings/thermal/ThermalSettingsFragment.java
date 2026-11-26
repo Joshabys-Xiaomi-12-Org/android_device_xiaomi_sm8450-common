@@ -16,6 +16,7 @@
 
 package org.lineageos.settings.thermal;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -50,6 +51,7 @@ public class ThermalSettingsFragment extends SettingsBasePreferenceFragment {
     private ThermalUtils mThermalUtils;
     private Preference mGlobalProfilePref;
     private SwitchPreferenceCompat mAutoThermalPref;
+    private SwitchPreferenceCompat mDisableThermalPref;
     private PreferenceCategory mAppsCategory;
 
     private final List<AppEntry> mAllEntries = new ArrayList<>();
@@ -108,12 +110,58 @@ public class ThermalSettingsFragment extends SettingsBasePreferenceFragment {
         });
         globalCategory.addPreference(mAutoThermalPref);
 
+        mDisableThermalPref = new SwitchPreferenceCompat(context);
+        mDisableThermalPref.setKey("thermal_disable_daemon");
+        mDisableThermalPref.setTitle(R.string.thermal_disable_title);
+        mDisableThermalPref.setSummary(R.string.thermal_disable_summary);
+        mDisableThermalPref.setChecked(ThermalUtils.isThermalDisabled());
+        mDisableThermalPref.setPersistent(false);
+        mDisableThermalPref.setOnPreferenceChangeListener((p, newValue) -> {
+            boolean disable = (Boolean) newValue;
+            if (disable) {
+                new AlertDialog.Builder(requireContext())
+                        .setTitle(R.string.thermal_disable_title)
+                        .setMessage(R.string.thermal_disable_warning)
+                        .setPositiveButton(android.R.string.ok, (d, w) -> {
+                            mThermalUtils.setThermalDisabled(true);
+                            mDisableThermalPref.setChecked(true);
+                            updateThermalControlsEnabled();
+                            ThermalTileService.requestUpdate(requireContext());
+                        })
+                        .setNegativeButton(android.R.string.cancel, null)
+                        .show();
+                return false;
+            } else {
+                mThermalUtils.setThermalDisabled(false);
+                updateThermalControlsEnabled();
+                ThermalTileService.requestUpdate(requireContext());
+                return true;
+            }
+        });
+        globalCategory.addPreference(mDisableThermalPref);
+
         mAppsCategory = new PreferenceCategory(context);
         mAppsCategory.setTitle(R.string.thermal_apps_title);
         screen.addPreference(mAppsCategory);
         setPreferenceScreen(screen);
 
+        updateThermalControlsEnabled();
         loadAppsAsync();
+    }
+
+    private void updateThermalControlsEnabled() {
+        boolean active = !ThermalUtils.isThermalDisabled();
+        if (mGlobalProfilePref != null) {
+            mGlobalProfilePref.setEnabled(active);
+        }
+        if (mAutoThermalPref != null) {
+            mAutoThermalPref.setEnabled(active);
+        }
+        if (mAppsCategory != null) {
+            for (int i = 0; i < mAppsCategory.getPreferenceCount(); i++) {
+                mAppsCategory.getPreference(i).setEnabled(active);
+            }
+        }
     }
 
     @Override
@@ -126,6 +174,10 @@ public class ThermalSettingsFragment extends SettingsBasePreferenceFragment {
         if (mAutoThermalPref != null && mThermalUtils != null) {
             mAutoThermalPref.setChecked(mThermalUtils.isAutoProfilesEnabled());
         }
+        if (mDisableThermalPref != null) {
+            mDisableThermalPref.setChecked(ThermalUtils.isThermalDisabled());
+        }
+        updateThermalControlsEnabled();
         if (!mAllEntries.isEmpty()) {
             refreshEntryStates();
             renderFilteredApps();
@@ -204,6 +256,7 @@ public class ThermalSettingsFragment extends SettingsBasePreferenceFragment {
         Context prefContext = getPreferenceManager().getContext();
         String lowerQuery = mSearchQuery.toLowerCase(Locale.getDefault());
         boolean autoEnabled = mThermalUtils.isAutoProfilesEnabled();
+        boolean thermalActive = !ThermalUtils.isThermalDisabled();
 
         for (AppEntry entry : mAllEntries) {
             if (!TextUtils.isEmpty(lowerQuery)
@@ -215,6 +268,7 @@ public class ThermalSettingsFragment extends SettingsBasePreferenceFragment {
             pref.setKey(entry.packageName);
             pref.setTitle(entry.label);
             pref.setIcon(entry.icon);
+            pref.setEnabled(thermalActive);
             if (mThermalUtils.hasManualStateForPackage(entry.packageName)) {
                 pref.setSummary(ThermalUtils.getProfileNameRes(entry.state));
             } else if (autoEnabled) {

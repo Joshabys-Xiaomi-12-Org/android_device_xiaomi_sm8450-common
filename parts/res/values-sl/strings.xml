@@ -190,4 +190,7 @@
     <string name="powertools_auto_thermal_title">Samodejni toplotni profili</string>
     <string name="powertools_auto_thermal_summary">Samodejno nastavi toplotni profil glede na vrsto aplikacije (igre, kamera, brskalnik itd.)</string>
     <string name="thermal_auto_profile_label">Samod.: %1$s</string>
+    <string name="thermal_disable_title">Onemogoči toplotni nadzor (mi_thermald)</string>
+    <string name="thermal_disable_summary">Popolnoma ustavi mi_thermald do naslednjega ponovnega zagona</string>
+    <string name="thermal_disable_warning">Zaustavitev mi_thermald onemogoči Xiaomijevo toplotno omejevanje, vključno z omejitvami temperature baterije in hitrega polnjenja. Naprava se lahko pregreje. Nadzor se samodejno obnovi po ponovnem zagonu. Nadaljujem?</string>
 </resources>

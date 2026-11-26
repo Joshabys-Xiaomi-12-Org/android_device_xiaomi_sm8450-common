@@ -190,4 +190,7 @@
     <string name="powertools_auto_thermal_title">Automatiske termiske profilar</string>
     <string name="powertools_auto_thermal_summary">Vel termisk profil automatisk etter apptypa (spel, kamera, nettlesar osv.)</string>
     <string name="thermal_auto_profile_label">Auto: %1$s</string>
+    <string name="thermal_disable_title">Deaktiver termisk kontroll (mi_thermald)</string>
+    <string name="thermal_disable_summary">Stoppar mi_thermald heilt fram til neste omstart</string>
+    <string name="thermal_disable_warning">Å stoppe mi_thermald deaktiverer Xiaomi si termiske avgrensing, inkludert temperaturgrenser for batteri og hurtiglading. Eininga kan bli overoppheta. Kontrollen blir automatisk gjenoppretta ved omstart. Halde fram?</string>
 </resources>

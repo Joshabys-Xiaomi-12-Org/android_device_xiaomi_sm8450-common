@@ -210,4 +210,7 @@
     <string name="powertools_auto_thermal_title">ऑटो थर्मल प्रोफ़ाइल</string>
     <string name="powertools_auto_thermal_summary">ऐप के प्रकार (गेम्स, कैमरा, ब्राउज़र आदि) के अनुसार स्वचालित रूप से थर्मल प्रोफ़ाइल सेट करें</string>
     <string name="thermal_auto_profile_label">ऑटो: %1$s</string>
+    <string name="thermal_disable_title">थर्मल नियंत्रण अक्षम करें (mi_thermald)</string>
+    <string name="thermal_disable_summary">अगले रीबूट तक mi_thermald को पूरी तरह रोकता है</string>
+    <string name="thermal_disable_warning">mi_thermald को रोकने से बैटरी और फास्ट-चार्जिंग तापमान सीमाओं सहित Xiaomi की थर्मल थ्रॉटलिंग बंद हो जाती है। विशेष रूप से चार्जिंग या गेमिंग के दौरान डिवाइस अधिक गर्म हो सकता है। रीबूट के बाद यह स्वतः बहाल हो जाता है। जारी रखें?</string>
 </resources>

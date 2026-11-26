@@ -196,4 +196,7 @@
     <string name="powertools_auto_thermal_title">פרופילים תרמיים אוטומטיים</string>
     <string name="powertools_auto_thermal_summary">הגדר פרופיל תרמי אוטומטית לפי סוג האפליקציה (משחקים, מצלמה, דפדפן וכו\')</string>
     <string name="thermal_auto_profile_label">אוטומטי: %1$s</string>
+    <string name="thermal_disable_title">השבת בקרה תרמית (mi_thermald)</string>
+    <string name="thermal_disable_summary">עוצר לחלוטין את mi_thermald עד להפעלה מחדש הבאה</string>
+    <string name="thermal_disable_warning">עצירת mi_thermald משביתה את ההגבלה התרמית של שיאומי, כולל מגבלות טמפרטורה לסוללה ולטעינה מהירה. המכשיר עלול להתחמם יתר על המידה. הבקרה חוזרת אוטומטית לאחר הפעלה מחדש. להמשיך?</string>
 </resources>
