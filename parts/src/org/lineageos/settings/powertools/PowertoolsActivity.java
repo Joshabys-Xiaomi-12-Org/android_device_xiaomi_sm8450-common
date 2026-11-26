@@ -22,7 +22,9 @@ import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.util.TypedValue;
+import android.view.GestureDetector;
 import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
@@ -53,6 +55,8 @@ public class PowertoolsActivity extends CollapsingToolbarBaseActivity
     private LinearLayout mTabsBar;
     private final TextView[] mTabViews = new TextView[TAB_TITLE_RES.length];
     private int mSelectedTab = PowertoolsSettingsFragment.TAB_GENERAL;
+    private GestureDetector mSwipeDetector;
+    private boolean mTouchStartedInTabBar;
 
     @Override
     public boolean isExpressiveDesignEnabled() {
@@ -73,7 +77,57 @@ public class PowertoolsActivity extends CollapsingToolbarBaseActivity
         }
 
         buildTabBar();
+        setupSwipeGesture();
         selectTab(mSelectedTab, savedInstanceState == null);
+    }
+
+    private void setupSwipeGesture() {
+        final float minDistance = dp(64);
+        final float minVelocity = dp(200);
+        mSwipeDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() {
+            @Override
+            public boolean onFling(MotionEvent e1, MotionEvent e2,
+                    float velocityX, float velocityY) {
+                if (e1 == null || e2 == null || mTouchStartedInTabBar) {
+                    return false;
+                }
+                float dx = e2.getX() - e1.getX();
+                float dy = e2.getY() - e1.getY();
+                if (Math.abs(dx) > Math.abs(dy) * 1.5f
+                        && Math.abs(dx) > minDistance
+                        && Math.abs(velocityX) > minVelocity) {
+                    if (dx < 0 && mSelectedTab < TAB_TITLE_RES.length - 1) {
+                        selectTab(mSelectedTab + 1, true);
+                        return true;
+                    } else if (dx > 0 && mSelectedTab > 0) {
+                        selectTab(mSelectedTab - 1, true);
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        if (ev.getActionMasked() == MotionEvent.ACTION_DOWN) {
+            mTouchStartedInTabBar = isPointInsideView(ev.getRawX(), ev.getRawY(), mTabsScroll);
+        }
+        if (mSwipeDetector != null && !mTouchStartedInTabBar) {
+            mSwipeDetector.onTouchEvent(ev);
+        }
+        return super.dispatchTouchEvent(ev);
+    }
+
+    private static boolean isPointInsideView(float rawX, float rawY, View view) {
+        if (view == null) {
+            return false;
+        }
+        int[] loc = new int[2];
+        view.getLocationOnScreen(loc);
+        return rawX >= loc[0] && rawX <= loc[0] + view.getWidth()
+                && rawY >= loc[1] && rawY <= loc[1] + view.getHeight();
     }
 
     @Override
@@ -157,6 +211,7 @@ public class PowertoolsActivity extends CollapsingToolbarBaseActivity
 
         if (replaceFragment) {
             getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
                     .replace(R.id.powertools_tab_content,
                             PowertoolsSettingsFragment.newInstance(mSelectedTab),
                             "powertools_tab_" + mSelectedTab)
